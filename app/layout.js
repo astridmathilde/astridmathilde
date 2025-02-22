@@ -1,4 +1,3 @@
-import {Providers} from "./providers";
 import Link from "next/link";
 import localFont from 'next/font/local';
 import '../assets/scss/global.scss';
@@ -29,7 +28,6 @@ export default function Layout({ children }) {
     <>
     <html lang="en" className={interDisplay.className + " dark"}>
     <Wrapper>
-    <Providers>
     <header id={styles.header}>
     <h1 className={styles.site_title}><a href="/">{siteTitle}</a></h1>
     <nav className={styles.navigation}>
@@ -51,7 +49,6 @@ export default function Layout({ children }) {
     </ul>
     </nav>
     </footer>
-    </Providers>
     </Wrapper>
     </html>
     </>
