@@ -1,3 +1,4 @@
+import Link from "next/link";
 import localFont from 'next/font/local';
 import '../assets/scss/global.scss';
 import Wrapper from './wrapper.js'
@@ -25,7 +26,27 @@ export default function Layout({ children }) {
     <>
     <html lang="en" className={interDisplay.className + " dark"}>
     <Wrapper>
+    <header id={styles.header}>
+    <h1 className={styles.site_title}><a href="/">{siteTitle}</a></h1>
+    <nav className={styles.navigation}>
+    <ul>
+    <li key="work"><Link href="/work">Work</Link></li>
+    <li key="resumee"><Link href="/about">About</Link></li>
+    <li key="lightswitch"><LightSwitch /></li>
+    </ul>
+    </nav>
+    </header>
+    <main id={styles.content} className={styles.entry}>
     {children}
+    </main>
+    <footer id={styles.footer}>
+    <address rel="author">© Astrid Mathilde Boberg</address>
+    <nav className={styles.navigation}>
+    <ul>
+    <li key="colophon"><Link href="/colophon">Colophon</Link></li>
+    </ul>
+    </nav>
+    </footer>
     </Wrapper>
     </html>
     </>
