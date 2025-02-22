@@ -47,7 +47,7 @@ export default function Index() {
     <p>My email is <a href="mailto:heia@astridmathilde.no?subject=Heia!">heia@astridmathilde.no</a>, but you can also write to me on <a href="https://instagram.com/astridmathildeb" target="_blank" rel="nofollow noreferrer">Instagram</a> or <a href="https://www.linkedin.com/in/astridmathilde/" target="_blank" rel="nofollow noreferrer">add me on LinkedIn</a>!</p>
     
     <h2>Further discovery <BlockIcon>🔎</BlockIcon></h2>
-    <p>You can <Link href="/about">learn more about me</Link>, see <Link href="/now">what I am currently reading</Link>, or find out <Link href="/colophon">why I am not using generative AI</Link>.</p>
+    <p>You can <Link href="/about">learn more about me</Link> or find out <Link href="/colophon">why I am not using generative AI</Link>.</p>
     </>
   );
 }

@@ -19,6 +19,10 @@
   a {
     text-decoration-color: transparent;
 
+    &.active {
+      text-decoration-color: white !important;
+    }
+
     @media all and (max-width: $screen-md) {
       display: inline-flex;
       align-items: center;
