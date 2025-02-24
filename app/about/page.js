@@ -9,7 +9,7 @@ import BlockResumee from "../../components/resumee";
 import BlockImage from "../../components/image";
 import { experience, education, skills } from "../../data/resumee";
 
-import portrait from "../../assets/img/about/portrait-astrid-boberg.jpg";
+import portrait from "../../assets/img/about/astrid-mathilde.jpg";
 
 const pageTitle = 'About me';
 
@@ -23,7 +23,7 @@ export default function Resumee() {
     <>
     <BlockRow align="center">
     <BlockColumn>
-    <h2 class={utils.screen_reader_text}>About me</h2>
+    <h2 className={utils.screen_reader_text}>About me</h2>
     <p>I was born in April 1998 (currently 26 <BlockIcon>🎉</BlockIcon>) and I have 6 years experience with digital design and coding after working for design agencies in Harstad, Tromsø and Oslo. In August 2021, I started doing a five year integrated master in design at <a href="https://aho.no" target="_blank" rel="external">The Oslo School of Architecture and Design</a>.</p>
     </BlockColumn>
     <BlockColumn>

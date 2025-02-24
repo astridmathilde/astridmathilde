@@ -21,8 +21,8 @@ $color-link-hover: darken($color-background, 50);
 // Dark Mode
 $dark-color-background: #0b0611;
 $dark-color-text: #dad8e0;
-$dark-color-link: darken($dark-color-text, 40);
-$dark-color-link-hover: darken($dark-color-text, 10);
+$dark-color-link: darken($dark-color-text, 20);
+$dark-color-link-hover: darken($dark-color-text, 50);
 
 // Transitions
 $duration-fast: 0.2s;

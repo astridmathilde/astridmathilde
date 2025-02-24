@@ -1,9 +1,24 @@
+import Link from "next/link";
+import { siteTitle } from "./layout";
+import BlockDisplay from "../components/display";
 import BlockIcon from "../components/icon";
+import BlockResumee from "../components/resumee";
+import BlockProjects from "../components/projects";
+import utils from "../assets/scss/utils.module.scss";
+import style from "../assets/scss/home.module.scss";
+import { projects } from "../data/projects";
+import { experience } from "../data/resumee";
+
+export const metadata = {
+  metadataBase: new URL('https://astridmathilde.no'),
+  title: siteTitle + " – Designer & developer",
+  description: 'Heia! I am a designer and self-taught developer from Northern Norway with a passion for sustainability. Currently I am doing a masters degree in design at The Oslo School of Architecture and Design, specialising in UX design.'
+}
 
 export default function Index() {
   return (
     <>
-    <BlockDisplay>Heia! <BlockIcon>👋</BlockIcon> I am a designer and developer from Northern Norway <BlockIcon>🏔️</BlockIcon> with a passion for sustainability. Currently I am doing a master's degree in design at <a href="https://aho.no/en" target="_blank" rel="external">The Oslo School of Architecture and Design</a>, while leading the product development at <a href="https://www.gemz.fashion/" target="_blank" rel="external">Gemz</a> 💃</BlockDisplay>
+    <BlockDisplay>Heia! <BlockIcon>👋</BlockIcon> I am a designer and self-taught developer from Northern Norway <BlockIcon>🏔️</BlockIcon> with a passion for sustainability. Currently I am doing a master's degree in design at <a href="https://aho.no/en" target="_blank" rel="external">The Oslo School of Architecture and Design</a>, specializing in designing digital products <BlockIcon>👩🏻‍💻.</BlockIcon></BlockDisplay>
     
     
     <h2 className={utils.screen_reader_text}>This is some of my projects 👇</h2>
@@ -20,9 +35,9 @@ export default function Index() {
     ))}
     
     <h2>Life lately <BlockIcon>✨</BlockIcon></h2>
-    <p>Continuing on my third year at <a href="https://aho.no/en" target="_blank" rel="external">The Oslo School of Architecture and Design</a> after having a break. In December I joined the startup <a href="https://www.gemz.fashion/" target="_blank" rel="external">Gemz</a> as their head of product and CTO, currently working on the MVP. I am trying to find a good way to balance this with my school projects. Otherwise I spend my days doing yoga, reading and listening to music. Also, I have started sharing my everyday observations in my own digital space called <a href="https://astrid.observer" rel="external" target="_blank"><em>blikkjournal</em></a>, a journal of things I have seen.</p>
+    <p>Continuing on my third year at <a href="https://aho.no/en" target="_blank" rel="external">The Oslo School of Architecture and Design</a> after having a break. We just finished a pretty intense course in systems oriented design, now returning to the familiarity of interaction design. When I am not working on school projects, I am exploring how to use AI in a more sustainable and resource efficient way, without relying on LLMs (Large Language Models), as a part of my role in <a href="https://www.gemz.fashion/" target="_blank" rel="external">Gemz</a>. Also, I have started sharing my everyday observations in my own digital space called <a href="https://astrid.observer" rel="external" target="_blank"><em>blikkjournal</em></a>.</p>
     
-    <p className={utils.small}>Last updated on February 9th, 2025. Inspired by <a href="https://nownownow.com/about" target="_blank" rel="external">Now</a>.</p>
+    <p className={utils.small}>Last updated on February 25th, 2025. Inspired by <a href="https://nownownow.com/about" target="_blank" rel="external">Now</a>.</p>
     
     
     <h2>Contact <BlockIcon>🤝</BlockIcon></h2>
