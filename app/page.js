@@ -12,7 +12,7 @@ import { experience } from "../data/resumee";
 export const metadata = {
   metadataBase: new URL('https://astridmathilde.no'),
   title: siteTitle + " – Designer & developer",
-  description: 'Heia! I am a designer and self-taught developer from Northern Norway with a passion for sustainability. Currently I am doing a masters degree in design at The Oslo School of Architecture and Design, specialising in UX design.'
+  description: 'Heia! I am a designer and self-taught developer from Northern Norway with a passion for sustainability. Currently I am doing a masters degree in design at The Oslo School of Architecture and Design, specialising in designing digital products.'
 }
 
 export default function Index() {
@@ -35,7 +35,7 @@ export default function Index() {
     ))}
     
     <h2>Life lately <BlockIcon>✨</BlockIcon></h2>
-    <p>Continuing on my third year at <a href="https://aho.no/en" target="_blank" rel="external">The Oslo School of Architecture and Design</a> after having a break. We just finished a pretty intense course in systems oriented design, now returning to the familiarity of interaction design. When I am not working on school projects, I am exploring how to use AI in a more sustainable and resource efficient way, without relying on LLMs (Large Language Models), as a part of my role in <a href="https://www.gemz.fashion/" target="_blank" rel="external">Gemz</a>. Also, I have started sharing my everyday observations in my own digital space called <a href="https://astrid.observer" rel="external" target="_blank"><em>blikkjournal</em></a>.</p>
+    <p>Continuing on my third year at <a href="https://aho.no/en" target="_blank" rel="external">The Oslo School of Architecture and Design</a> after having a break. We just finished a pretty intense course in systems oriented design, now returning to the familiarity of interaction design. When I am not working on school projects, I am exploring how to use AI in a more sustainable and resource efficient way, without relying on LLMs, as a part of my role in <a href="https://www.gemz.fashion/" target="_blank" rel="external">Gemz</a>. Also, I have started sharing my everyday observations in my own digital space called <a href="https://astrid.observer" rel="external" target="_blank"><em>blikkjournal</em></a>.</p>
     
     <p className={utils.small}>Last updated on February 25th, 2025. Inspired by <a href="https://nownownow.com/about" target="_blank" rel="external">Now</a>.</p>
     
