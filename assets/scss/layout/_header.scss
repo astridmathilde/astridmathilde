@@ -4,12 +4,26 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding-top: $padding / 4;
   padding-bottom: $padding;
   font-size: 0.85em;
 
   @media all and (min-width: $screen-md) {
     padding-top: $padding / 4;
     font-size: 0.8em;
+  }
+
+  .site-title,
+  a {
+    font-weight: 390;
+
+    @media all and (min-width: $screen-sm) {
+      font-weight: 380;
+    }
+
+    @media all and (min-width: $screen-md) {
+      font-weight: 370;
+    }
   }
 
   .site_title {

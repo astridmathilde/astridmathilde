@@ -16,7 +16,7 @@ export default function LightSwitch() {
 
   return (
     <>
-    <button onClick={() => setTheme(theme === "dark" ? "light" : "dark")} aria-label="Switch theme"><BlockIcon>{theme === "dark" ? "🌞"  : "🌘"}</BlockIcon></button>
+    <button onClick={() => setTheme(theme === "dark" ? "light" : "dark")} aria-label="Switch theme"><BlockIcon>{theme === "dark" ? "🌘"  : "🌞"}</BlockIcon></button>
     </>
     )
   };

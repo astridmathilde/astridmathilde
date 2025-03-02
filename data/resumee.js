@@ -1,7 +1,7 @@
 export const experience = [
     {
     "id": 10,
-    "time": "December 2024->",
+    "time": "Dec 2024->",
     "position": "Head of Product / CTO",
     "location": {
       "name": "Gemz Technology",
@@ -11,7 +11,7 @@ export const experience = [
   },
   {
     "id": 9,
-    "time": "August 2024–December 2024",
+    "time": "Aug–Dec 2024",
     "position": "Research Assistant",
     "location": {
       "name": "Ocean Industries Concept Lab",

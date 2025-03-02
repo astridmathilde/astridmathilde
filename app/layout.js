@@ -5,31 +5,16 @@ import styles from '../assets/scss/layout.module.scss';
 import Wrapper from './wrapper.js';
 import LightSwitch from './light-switch.js';
 
-const interDisplay = localFont({
+const inter = localFont({
   src: [
     {
-      path: '../assets/fonts/InterDisplay.woff2',
-      weight: '400',
-      style: 'normal',
-    }, 
-    {
-      path: '../assets/fonts/InterDisplay-Light.woff2',
-      weight: '300',
+      path: '../assets/fonts/InterVariable.woff2',
+      weight: '100 900',
       style: 'normal',
     },
     {
-      path: '../assets/fonts/InterDisplay-Medium.woff2',
-      weight: '500',
-      style: 'normal',
-    }, 
-    {
-      path: '../assets/fonts/InterDisplay-SemiBold.woff2',
-      weight: '600',
-      style: 'normal',
-    }, 
-    {
-      path: '../assets/fonts/InterDisplay-Italic.woff2',
-      weight: '400',
+      path: '../assets/fonts/InterVariable-Italic.woff2',
+      weight: '100 900',
       style: 'italic',
     }
   ]
@@ -40,7 +25,7 @@ export const siteTitle = 'Astrid Mathilde';
 export default function Layout({ children }) {
   return (
     <>
-    <html lang="en" className={interDisplay.className + " dark"}>
+    <html lang="en" className={inter.className + " dark"}>
     <Wrapper>
     <header id={styles.header}>
     <h1 className={styles.site_title}><a href="/">{siteTitle}</a></h1>

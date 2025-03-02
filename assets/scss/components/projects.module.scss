@@ -7,6 +7,7 @@
   article {
     display: flex;
     flex-direction: column;
+    font-size: 0.8em;
   }
 
   &:hover,
@@ -34,7 +35,7 @@
       }
 
       @media all and (min-width: $screen-xl) {
-        height: calc(50vw * 0.45);
+        height: calc(50vw * 0.3);
       }
     }
   }
@@ -46,14 +47,15 @@
     .title {
       margin-top: 0.3em;
       margin-bottom: 0;
-      font-size: 0.8em;
+      font-size: 1;
     }
 
     .meta {
       order: -1;
       margin: 0;
       padding: 0.25em 0 0 0;
-      font-size: 0.7em;
+      font-size: 0.85em;
+      font-weight: 380;
       opacity: 0.8;
       filter: alpha(opacity=80);
 
