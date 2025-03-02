@@ -5,7 +5,7 @@
   position: relative;
   align-items: center;
   justify-content: space-between;
-  margin-top: $spacing * 1.5;
+  margin-top: calc($spacing + $padding);
   margin-bottom: $padding / 4;
   font-size: 0.85em;
   font-weight: 390;

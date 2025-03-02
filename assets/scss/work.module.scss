@@ -9,7 +9,7 @@
   @media all and (min-width: $screen-sm) {
     grid-template-columns: 1fr 1fr;
     gap: calc($padding / 2) $padding;
-    margin-bottom: $spacing * 1.5;
+    margin-bottom: $spacing;
 
     img {
       height: 27vw !important;
@@ -18,5 +18,9 @@
 
   @media all and (min-width: $screen-xl) {
     grid-template-columns: 1fr 1fr 1fr;
+
+    img {
+      height: 20vw !important;
+    }
   }
 }
