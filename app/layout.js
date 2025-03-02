@@ -8,8 +8,23 @@ import LightSwitch from './light-switch.js';
 const interDisplay = localFont({
   src: [
     {
-      path: '../assets/fonts/Inter-Display.woff2',
+      path: '../assets/fonts/InterDisplay.woff2',
       weight: '400',
+      style: 'normal',
+    }, 
+    {
+      path: '../assets/fonts/InterDisplay-Light.woff2',
+      weight: '300',
+      style: 'normal',
+    },
+    {
+      path: '../assets/fonts/InterDisplay-Medium.woff2',
+      weight: '500',
+      style: 'normal',
+    }, 
+    {
+      path: '../assets/fonts/InterDisplay-SemiBold.woff2',
+      weight: '600',
       style: 'normal',
     }, 
     {
