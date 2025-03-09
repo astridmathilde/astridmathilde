@@ -45,6 +45,7 @@ export default function Layout({ children }) {
     <address rel="author">© Astrid Mathilde Boberg</address>
     <nav className={styles.navigation}>
     <ul>
+    <li key="now"><Link href="/now">Now</Link></li>
     <li key="colophon"><Link href="/colophon">Colophon</Link></li>
     </ul>
     </nav>

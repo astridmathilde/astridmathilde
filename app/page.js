@@ -35,16 +35,15 @@ export default function Index() {
     ))}
     
     <h2>Life lately <BlockIcon>✨</BlockIcon></h2>
-    <p>Continuing on my third year at <a href="https://aho.no/en" target="_blank" rel="external">The Oslo School of Architecture and Design</a> after having a break. We just finished a pretty intense course in systems oriented design, now returning to the familiarity of interaction design. When I am not working on school projects, I am exploring how to use AI in a more sustainable and resource efficient way, without relying on LLMs, as a part of my role in <a href="https://www.gemz.fashion/" target="_blank" rel="external">Gemz</a>. Also, I have started sharing my everyday observations in my own digital space called <a href="https://astrid.observer" rel="external" target="_blank"><em>blikkjournal</em></a>.</p>
+    <p>Continuing on my third year at <a href="https://aho.no/en" target="_blank" rel="external">The Oslo School of Architecture and Design</a> after having a break. I just finished a pretty intense course in systems oriented design, now returning to the familiarity of designing interactions and experiences, through a project in collaboration with <a href="https://www.rodekors.no/en/" rel="external" target="_blank">Norwegian Red Cross</a>. I have started sharing my everyday observations in my own digital space called <a href="https://astrid.observer" rel="external" target="_blank"><em>blikkjournal</em></a>, it is still a work in progress, but the design is slowly getting into place. Otherwise, I am giving myself the rest I need, and the time to focus on school.</p>
     
-    <p className={utils.small}>Last updated on February 25th, 2025. Inspired by <a href="https://nownownow.com/about" target="_blank" rel="external">Now</a>.</p>
-    
+    <p className={utils.small}>Last updated on March 9th, 2025. Inspired by <a href="https://nownownow.com/about" target="_blank" rel="external">Now</a>.</p>
     
     <h2>Contact <BlockIcon>🤝</BlockIcon></h2>
     <p>My email is <a href="mailto:heia@astridmathilde.no?subject=Heia!">heia@astridmathilde.no</a>, but you can also write to me on <a href="https://instagram.com/astridmathildeb" target="_blank" rel="nofollow noreferrer">Instagram</a> or <a href="https://www.linkedin.com/in/astridmathilde/" target="_blank" rel="nofollow noreferrer">add me on LinkedIn</a>!</p>
     
     <h2>Further discovery <BlockIcon>🔎</BlockIcon></h2>
-    <p>You can <Link href="/about">learn more about me</Link> or find out <Link href="/colophon">why I am not using generative AI</Link>.</p>
+    <p>You can <Link href="/about">learn more about me</Link>, see <Link href="/now">what I am currently listening to</Link>, or find out <Link href="/colophon">why I am not using generative AI</Link>.</p>
     </>
   );
 }
