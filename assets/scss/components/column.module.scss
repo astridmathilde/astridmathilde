@@ -12,6 +12,8 @@
   }
 
   @media all and (max-width: $screen-sm) {
+    width: 100% !important;
+
     &:nth-child(1):has(:not(h2)) {
       margin-top: $spacing;
     }

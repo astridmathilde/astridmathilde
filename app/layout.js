@@ -26,7 +26,7 @@ export const siteTitle = 'Astrid Mathilde';
 export default function Layout({ children }) {
   return (
     <>
-    <html lang="en" className={inter.className + " dark"}>
+    <html lang="en" className={inter.className + " light"}>
     <Wrapper>
     <header id={styles.header} className={"text-medium"}>
     <h1 className={styles.site_title}><a href="/">{siteTitle}</a></h1>
