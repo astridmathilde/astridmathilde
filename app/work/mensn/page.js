@@ -39,9 +39,10 @@ export default function mensn() {
     
     <div className={style.meta}>
     <ul>
-    <li key="project_type"><span className={style.label}>Type of project:</span> {projectID.category} ({projectID.type.toLocaleLowerCase()})</li> 
-    <li key="project_location"><span className={style.label}>Location:</span> <a href={projectID.location.url}>{projectID.location.name}</a></li>
-    <li key="project_time_frame"><span className={style.label}>Time frame:</span> {projectID.time}</li>
+    <li key="project_category"><span className={style.label}>Category: </span>{projectID.category}</li> 
+       <li key="project_type"><span className={style.label}>Type: </span>{projectID.type}</li> 
+    <li key="project_location"><span className={style.label}>Location: </span><a href={projectID.location.url}>{projectID.location.name}</a></li>
+    <li key="project_time_frame"><span className={style.label}>Time frame: </span>{projectID.time}</li>
     </ul>
     </div>
     
@@ -69,12 +70,12 @@ export default function mensn() {
     <BlockImage url={img_prosess_3} width="1093" alt="Flow charts" caption="Flow charts" />
     
     <BlockImage url={img_prosess_4} width="1093" alt="Wireframes on paper" caption="Wireframes on paper"/>
-
+    
     <h3>The result ✅</h3> 
     <p>The app "Mensn" helps you track your period so that you always know what is going on inside your body. With daily check-ins about your symptoms, you will learn how your current menstrual phase is affecting you, and what you can do to feel better.</p>
     
     <BlockImage url={img_proto_1} width="1093" alt="Prototype" />
-
+    
     <BlockImageRow>
     <BlockImage url={img_resultat_1} alt="Resultat" />
     <BlockImage url={img_resultat_2} alt="Resultat" />

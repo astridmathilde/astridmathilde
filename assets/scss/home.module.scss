@@ -3,9 +3,14 @@
 .projects {
   display: grid;
   position: relative;
-  margin-top: $spacing;
-  grid-gap: $padding;  
-  
+  margin-top: $spacing / 1.5;
+  grid-gap: $padding;
+
+  @media all and (max-width: $screen-sm) {
+    grid-auto-columns: -webkit-calc(80% - 25px);
+    grid-auto-columns: calc(80% - 25px);
+  }
+
   @media all and (max-width: $screen-md) {
     left: calc(50% - $padding);
     right: 50%;
@@ -17,23 +22,18 @@
     margin-left: -50vw;
     margin-right: -50vw;
     padding: 0 $padding 0 0;
-    
+
     &:before {
       content: "";
     }
   }
-  
-  @media all and (max-width: $screen-sm) {
-    grid-auto-columns: -webkit-calc(80% - 25px);
-    grid-auto-columns: calc(80% - 25px);
-  }
-  
+
   @media all and (min-width: $screen-sm) and (max-width: $screen-md) {
     grid-auto-columns: -webkit-calc(50% - 80px);
     grid-auto-columns: calc(50% - 80px);
     grid-auto-rows: minmax(40vw, 1fr);
   }
-  
+
   @media all and (min-width: $screen-md) {
     grid-template-columns: 1fr 1fr 1fr;
   }

@@ -14,5 +14,14 @@
 
   figcaption {
     font-size: 0.75em;
+    font-weight: 430;
+
+    @media all and (min-width: $screen-sm) {
+      font-weight: 420;
+    }
+
+    @media all and (min-width: $screen-md) {
+      font-weight: 410;
+    }
   }
 }

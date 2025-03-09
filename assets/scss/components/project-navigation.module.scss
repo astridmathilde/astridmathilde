@@ -20,4 +20,10 @@
       height: 20vw !important;
     }
   }
+
+  @media all and (min-width: $screen-xl) {
+    img {
+      height: 15vw !important;
+    }
+  }
 }

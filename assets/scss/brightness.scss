@@ -1,0 +1,90 @@
+@import "base/variables";
+
+.light {
+  body {
+    background: $color-background;
+    color: $color-text;
+    font-weight: 400;
+
+    a {
+      text-decoration-color: $color-link;
+
+      &:hover,
+      &:focus {
+        text-decoration-color: $color-link-hover;
+      }
+    }
+  }
+}
+
+.dark {
+  body {
+    background: $dark-color-background;
+    color: $dark-color-text;
+    font-weight: 370;
+
+    @media all and (min-width: $screen-sm) {
+      font-weight: 360;
+    }
+
+    @media all and (min-width: $screen-md) {
+      font-weight: 350;
+    }
+
+    @media all and (min-width: $screen-xl) {
+      font-weight: 340;
+    }
+
+    a {
+      text-decoration-color: $dark-color-link;
+
+      &:hover,
+      &:focus {
+        text-decoration-color: $dark-color-link-hover;
+      }
+    }
+
+    #header {
+      .site-title,
+      a {
+        font-weight: 390;
+
+        @media all and (min-width: $screen-sm) {
+          font-weight: 420;
+        }
+
+        @media all and (min-width: $screen-md) {
+          font-weight: 410;
+        }
+      }
+    }
+
+    #content {
+      .time {
+        font-weight: 380;
+      }
+
+      .label {
+        font-weight: 370;
+      }
+
+      .meta {
+        @media all and (min-width: $screen-md) {
+          font-weight: 360;
+        }
+      }
+    }
+
+    #footer {
+      font-weight: 390;
+
+      @media all and (min-width: $screen-sm) {
+        font-weight: 380;
+      }
+
+      @media all and (min-width: $screen-md) {
+        font-weight: 370;
+      }
+    }
+  }
+}

@@ -2,7 +2,6 @@ import Link from "next/link";
 import { siteTitle } from "../layout";
 import utils from "../../assets/scss/utils.module.scss";
 import BlockIcon from "../../components/icon";
-import BlockEmphasis from "../../components/emphasis";
 
 const pageTitle = 'Colophon';
 
@@ -29,10 +28,8 @@ export default function Colophon() {
     
     <p>For this website, I have made sure to keep the design simple and minimize the amount of images and videos. The images are compressed and adapted to the screen resolution. Hosting the site on <a href="https://www.netlify.com/" target="_blank" rel="external">Netlify</a> means that it is running on sustainable energy. And of course, this site is using a modern Javascript framework (<a href="https://nextjs.org/" target="_blank" rel="external">Next.js</a>), which means it is only built when I publish any changes.</p>
     
-    <BlockEmphasis>
-    <p><em>The carbon footprint for this website is 0,12 gram of CO2 per page view.</em></p>
+    <p>The carbon footprint for this website is 0,12 gram of CO2 per page view.</p>
     <p className={utils.small}>Last checked on January 24th, 2025 by <a href="https://www.websitecarbon.com/website/astridmathilde-no/" target="_blank" rel="external noreferrer">websitecarbon.com</a></p>
-    </BlockEmphasis>
     
     <h2>Further discovery <BlockIcon>🔎</BlockIcon></h2>
     <p>You can <a href="https://github.com/astridmathilde/portfolio/" target="_blank" rel="nofollow noreferrer">view the code on Github</a>, find out <Link href="/about">more about me</Link>, or look at <Link href="/work/kahos">one of my projects</Link>.</p>

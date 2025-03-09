@@ -31,7 +31,7 @@ export const experience = [
   },
   {
     "id": 7,
-    "time": "February 2023–June 2024",
+    "time": "Feb 2023–Jun 2024",
     "position": "Student Assistant",
     "location": {
       "name": "Ocean Industries Concept Lab",
@@ -61,7 +61,7 @@ export const experience = [
   },
   {
     "id": 4,
-    "time": "October 2021–May 2022",
+    "time": "Oct 2021–May 2022",
     "position": "Developer",
     "location": {
       "name": "Big Fish",
@@ -71,7 +71,7 @@ export const experience = [
   },
   {
     "id": 3,
-    "time": "March 2019–October 2021",
+    "time": "Mar 2019–Oct 2021",
     "position": "Designer & Developer",
     "location": {
       "name": "Røst Kommunikasjon",
@@ -81,7 +81,7 @@ export const experience = [
   },
   {
     "id": 2,
-    "time": "July 2018–March 2019",
+    "time": "Jul 2018–Mar 2019",
     "position": "Web Developer",
     "location": {
       "name": "Gnist Design",
@@ -91,7 +91,7 @@ export const experience = [
   }, 
   {
     "id": 1,
-    "time": "August 2016–July 2018",
+    "time": "Aug 2016–Jul 2018",
     "position": "Apprenticeship in graphic design",
     "location": {
       "name": "Chili Harstad",
@@ -101,7 +101,7 @@ export const experience = [
   },
   {
     "id": 0,
-    "time": "March 2016–June 2016",
+    "time": "Mar–Jun 2016",
     "position": "Internship in graphic design",
     "location": {
       "name": "The Arctic University of Norway",
@@ -114,7 +114,7 @@ export const experience = [
 export const education = [
   {
     "id": 0,
-    "time": "August 2021->",
+    "time": "Aug 2021->",
     "grade": "Master of Design",
     "location": {
       "name": "The Oslo School of Architecture and Design",

@@ -3,14 +3,19 @@
 #wrapper {
   max-width: $container-content;
   margin: 0 auto;
-  padding: $padding / 5 $padding $padding / 5 $padding;
+  padding: 0 $padding $padding / 5 $padding;
+
+  @media all and (min-width: $screen-sm) {
+    padding-top: $padding / 2;
+    padding-bottom: $padding / 2;
+  }
 
   @media all and (min-width: $screen-md) {
     padding-top: $padding / 1.5;
     padding-bottom: $padding / 1.5;
   }
 
-  @media all and (min-width: $screen-lg) {
+  @media all and (min-width: $screen-xl) {
     padding-top: $padding / 2;
     padding-bottom: $padding / 2;
   }
