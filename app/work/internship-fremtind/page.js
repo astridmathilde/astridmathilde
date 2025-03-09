@@ -47,19 +47,19 @@ export default function fremtind() {
     
     <div className={style.container}>
     
-    <div className={style.meta}>
+    <div className={style.meta + " text-xsmall"}>
     <ul>
-    <li key="project_type"><span className={style.label}>Type of project:</span> {projectID.category}  ({projectID.type.toLocaleLowerCase()})</li>
-    <li key="project_location"><span className={style.label}>Location:</span> <a href={projectID.location.url}>{projectID.location.name}</a></li>
-    <li key="project_time_frame"><span className={style.label}>Time frame:</span> {projectID.time}</li>
-    <li key="project_contributors"><span className={style.label}>Team:</span>
+    <li key="project_type"><span className={style.label + " text-tiny"}>Type of project:</span> {projectID.category}  ({projectID.type.toLocaleLowerCase()})</li>
+    <li key="project_location"><span className={style.label + " text-tiny"}>Location:</span> <a href={projectID.location.url}>{projectID.location.name}</a></li>
+    <li key="project_time_frame"><span className={style.label + " text-tiny"}>Time frame:</span> {projectID.time}</li>
+    <li key="project_contributors"><span className={style.label + " text-tiny"}>Team:</span>
     <ul className={style.contributors}>
     {projectID.team.map((team) => (
       <li key={team} className={style.contributor}>{team}</li>
     ))}
     </ul>
     </li>
-    <li key="project_role"><span className={style.label}>My role:</span> {projectID.role}</li>
+    <li key="project_role"><span className={style.label + " text-tiny"}>My role:</span> {projectID.role}</li>
     <li key="skip_link"><Link href="#result">Skip to result</Link></li>
     </ul>
     </div>

@@ -26,9 +26,9 @@ export const siteTitle = 'Astrid Mathilde';
 export default function Layout({ children }) {
   return (
     <>
-    <html lang="en" className={inter.className + " light"}>
+    <html lang="en" className={inter.className + " dark"}>
     <Wrapper>
-    <header id={styles.header}>
+    <header id={styles.header} className={"text-medium"}>
     <h1 className={styles.site_title}><a href="/">{siteTitle}</a></h1>
     <nav className={styles.navigation}>
     <ul>
@@ -41,7 +41,7 @@ export default function Layout({ children }) {
     <main id={styles.content} className={styles.entry}>
     {children}
     </main>
-    <footer id={styles.footer}>
+    <footer id={styles.footer} className={"text-medium"}>
     <address rel="author">© Astrid Mathilde Boberg</address>
     <nav className={styles.navigation}>
     <ul>

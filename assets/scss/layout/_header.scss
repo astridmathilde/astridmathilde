@@ -7,11 +7,6 @@
   padding-top: $padding / 4;
   padding-bottom: $padding;
   font-size: 0.85em;
-  font-weight: 410;
-
-  @media all and (min-width: $screen-md) {
-    font-weight: 400;
-  }
 
   .site_title {
     margin: 0;

@@ -5,7 +5,6 @@
   margin-top: $spacing;
   line-height: 1.35;
   font-size: 1.2em;
-  font-weight: 380;
 
   @media all and (min-width: $screen-sm) {
     display: flex;
@@ -17,7 +16,6 @@
 
   @media all and (min-width: $screen-lg) {
     font-size: 1.5em;
-    font-weight: 370;
   }
 
   p {

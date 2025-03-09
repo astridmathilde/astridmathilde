@@ -42,11 +42,9 @@
 
     .meta {
       display: block;
-      font-weight: 410;
 
       @media all and (min-width: $screen-md) {
         font-size: 0.8em;
-        font-weight: 395;
       }
 
       .label {

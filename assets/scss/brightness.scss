@@ -1,10 +1,17 @@
 @import "base/variables";
 
+$text_regular: 400;
+$text_medium: 410;
+$text_large: 400;
+$text_small: 420;
+$text_xsmall: 440;
+$text_tiny: 470;
+
 .light {
   body {
     background: $color-background;
     color: $color-text;
-    font-weight: 400;
+    font-weight: $text_regular;
 
     a {
       text-decoration-color: $color-link;
@@ -14,6 +21,67 @@
         text-decoration-color: $color-link-hover;
       }
     }
+
+    h2 {
+      font-weight: $text_medium;
+    }
+
+    h3 {
+      font-weight: $text_medium;
+    }
+
+    h4 {
+      font-weight: $text_xsmall;
+    }
+
+    .text-large {
+      font-weight: text_large;
+
+      @media all and (min-width: $screen-lg) {
+        font-weight: text_large - 30;
+      }
+    }
+
+    .text-medium {
+      font-weight: $text_medium;
+
+      @media all and (min-width: $screen-md) {
+        font-weight: $text_medium - 10;
+      }
+    }
+
+    .text-small {
+      font-weight: $text_small;
+
+      @media all and (min-width: $screen-sm) {
+        font-weight: $text_small - 10;
+      }
+    }
+
+    .text-xsmall,
+    .small {
+      font-weight: $text_xsmall;
+
+      @media all and (min-width: $screen-sm) {
+        font-weight: $text_xsmall - 30;
+      }
+
+      @media all and (min-width: $screen-md) {
+        font-weight: $text_xsmall - 50;
+      }
+    }
+
+    .text-tiny {
+      font-weight: $text_tiny;
+
+      @media all and (min-width: $screen-sm) {
+        font-weight: $text_tiny - 30;
+      }
+
+      @media all and (min-width: $screen-md) {
+        font-weight: $text_tiny - 50;
+      }
+    }
   }
 }
 
@@ -21,19 +89,7 @@
   body {
     background: $dark-color-background;
     color: $dark-color-text;
-    font-weight: 370;
-
-    @media all and (min-width: $screen-sm) {
-      font-weight: 360;
-    }
-
-    @media all and (min-width: $screen-md) {
-      font-weight: 350;
-    }
-
-    @media all and (min-width: $screen-xl) {
-      font-weight: 340;
-    }
+    font-weight: $text_regular - 30;
 
     a {
       text-decoration-color: $dark-color-link;
@@ -44,46 +100,64 @@
       }
     }
 
-    #header {
-      .site-title,
-      a {
-        font-weight: 390;
+    h2 {
+      font-weight: $text_medium - 30;
+    }
 
-        @media all and (min-width: $screen-sm) {
-          font-weight: 420;
-        }
+    h3 {
+      font-weight: $text_medium - 30;
+    }
 
-        @media all and (min-width: $screen-md) {
-          font-weight: 410;
-        }
+    h4 {
+      font-weight: $text_xsmall - 30;
+    }
+
+    .text-large {
+      font-weight: text_large - 30;
+
+      @media all and (min-width: $screen-lg) {
+        font-weight: text_large - 60;
       }
     }
 
-    #content {
-      .time {
-        font-weight: 380;
-      }
+    .text-medium {
+      font-weight: $text_medium - 30;
 
-      .label {
-        font-weight: 370;
-      }
-
-      .meta {
-        @media all and (min-width: $screen-md) {
-          font-weight: 360;
-        }
+      @media all and (min-width: $screen-md) {
+        font-weight: $text_medium - 40;
       }
     }
 
-    #footer {
-      font-weight: 390;
+    .text-small {
+      font-weight: $text_small - 30;
 
       @media all and (min-width: $screen-sm) {
-        font-weight: 380;
+        font-weight: $text_small - 50;
+      }
+    }
+
+    .text-xsmall,
+    .small {
+      font-weight: $text_xsmall;
+
+      @media all and (min-width: $screen-sm) {
+        font-weight: $text_xsmall - 30;
       }
 
       @media all and (min-width: $screen-md) {
-        font-weight: 370;
+        font-weight: $text_xsmall - 60;
+      }
+    }
+
+    .text-tiny {
+      font-weight: $text_tiny;
+
+      @media all and (min-width: $screen-sm) {
+        font-weight: $text_tiny - 30;
+      }
+
+      @media all and (min-width: $screen-md) {
+        font-weight: $text_tiny - 60;
       }
     }
   }

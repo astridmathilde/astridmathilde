@@ -10,8 +10,8 @@ export default function BlockProjects(project) {
       <Link className={style.project} key={project.id} href={"/work/" + project.slug}>
       <article id={project.id}>
       <header>
-      <h3 className={style.title}>{project.title}</h3>
-      <ul className={style.meta}>
+      <h3 className={style.title + " text-small"}>{project.title}</h3>
+      <ul className={style.meta + " text-xsmall"}>
       <li><span className={utils.screen_reader_text}>Type of project:</span> {project.category}</li>
       </ul>
       </header>

@@ -33,12 +33,12 @@ export default function kahos() {
     <BlockImage className={style.thumbnail} url={projects[0].thumbnail} alt={projects[0].title} priority="true" />
     
     <div className={style.container}>
-    <div className={style.meta}>
+    <div className={style.meta + " text-xsmall"}>
     <ul>
-    <li key="project_type"><span className={style.label}>Type of project:</span> {projects[0].category} for a {projects[0].type.toLocaleLowerCase()}</li>
-    <li key="project_location"><span className={style.label}>Location:</span> <a href={projects[0].location.url}>{projects[0].location.name}</a></li>
-    <li key="project_time_frame"><span className={style.label}>Time frame:</span> {projects[0].time}</li>
-    <li key="project_contributors"><span className={style.label}>Contributors:</span>
+    <li key="project_type"><span className={style.label + " text-tiny"}>Type of project:</span> {projects[0].category} for a {projects[0].type.toLocaleLowerCase()}</li>
+    <li key="project_location"><span className={style.label + " text-tiny"}>Location:</span> <a href={projects[0].location.url}>{projects[0].location.name}</a></li>
+    <li key="project_time_frame"><span className={style.label + " text-tiny"}>Time frame:</span> {projects[0].time}</li>
+    <li key="project_contributors"><span className={style.label + " text-tiny"}>Contributors:</span>
     <ul className={style.contributors}>
     {projects[0].team.map((team) => (
       <li key={team} className={style.contributor}>{team}</li>

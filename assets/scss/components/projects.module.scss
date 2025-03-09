@@ -48,7 +48,6 @@
       margin-top: 0.3em;
       margin-bottom: 0;
       font-size: 1;
-      font-weight: 420;
     }
 
     .meta {
@@ -56,13 +55,8 @@
       margin: 0;
       padding: 0.25em 0 0 0;
       font-size: 0.85em;
-      font-weight: 440;
       opacity: 0.8;
       filter: alpha(opacity=80);
-
-      @media all and (min-width: $screen-md) {
-        font-weight: 430;
-      }
 
       li {
         display: inline-block;

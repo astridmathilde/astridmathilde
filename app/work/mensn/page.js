@@ -37,12 +37,12 @@ export default function mensn() {
     
     <div className={style.container}>
     
-    <div className={style.meta}>
+    <div className={style.meta + " text-xsmall"}>
     <ul>
-    <li key="project_category"><span className={style.label}>Category: </span>{projectID.category}</li> 
-       <li key="project_type"><span className={style.label}>Type: </span>{projectID.type}</li> 
-    <li key="project_location"><span className={style.label}>Location: </span><a href={projectID.location.url}>{projectID.location.name}</a></li>
-    <li key="project_time_frame"><span className={style.label}>Time frame: </span>{projectID.time}</li>
+    <li key="project_category"><span className={style.label + " text-tiny"}>Category: </span>{projectID.category}</li> 
+    <li key="project_type"><span className={style.label + " text-tiny"}>Type: </span>{projectID.type}</li> 
+    <li key="project_location"><span className={style.label + " text-tiny"}>Location: </span><a href={projectID.location.url}>{projectID.location.name}</a></li>
+    <li key="project_time_frame"><span className={style.label + " text-tiny"}>Time frame: </span>{projectID.time}</li>
     </ul>
     </div>
     

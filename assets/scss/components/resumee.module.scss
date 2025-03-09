@@ -6,11 +6,6 @@
   justify-content: flex-end;
   align-items: baseline;
   font-size: 0.8em;
-  font-weight: 420;
-
-  @media all and (min-width: $screen-sm) {
-    font-weight: 410;
-  }
 
   .header {
     max-width: $container-text;
@@ -28,7 +23,6 @@
   .time {
     width: 43vw;
     font-size: 0.85em;
-    font-weight: 470;
 
     @media all and (min-width: $screen-xs) {
       width: 20ch;
@@ -36,12 +30,10 @@
 
     @media all and (min-width: $screen-sm) {
       width: 15ch;
-      font-weight: 440;
     }
 
     @media all and (min-width: $screen-md) {
       width: 15ch;
-      font-weight: 420;
     }
   }
 }
