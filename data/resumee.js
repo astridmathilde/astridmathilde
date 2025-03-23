@@ -1,14 +1,4 @@
 export const experience = [
-    {
-    "id": 10,
-    "time": "Dec 2024->",
-    "position": "Head of Product / CTO",
-    "location": {
-      "name": "Gemz Technology",
-      "url": "https://gemz.fashion"
-    },
-    "description": "I am leading the product development of <a href=\"https://www.gemz.fashion/community/\" rel=\"external\" target=\"_blank\">Gemz</a>, a personalized fashion community helping people gain control over their wardrobe and making it even easier to buy and sell second-hand clothes."
-  },
   {
     "id": 9,
     "time": "Aug–Dec 2024",
