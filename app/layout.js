@@ -1,9 +1,10 @@
+import {Providers} from "./providers";
+import LightSwitch from './light-switch.js';
 import Link from "next/link";
 import localFont from 'next/font/local';
 import '../assets/scss/global.scss';
 import styles from '../assets/scss/layout.module.scss';
 import Wrapper from './wrapper.js';
-import LightSwitch from './light-switch.js';
 import '../assets/scss/brightness.scss';
 
 const inter = localFont({
@@ -26,8 +27,9 @@ export const siteTitle = 'Astrid Mathilde';
 export default function Layout({ children }) {
   return (
     <>
-    <html lang="en" className={inter.className + " light"}>
+    <html lang="en" className={inter.className + " dark"}>
     <Wrapper>
+    <Providers>
     <header id={styles.header} className={"text-medium"}>
     <h1 className={styles.site_title}><a href="/">{siteTitle}</a></h1>
     <nav className={styles.navigation}>
@@ -50,6 +52,7 @@ export default function Layout({ children }) {
     </ul>
     </nav>
     </footer>
+    </Providers>
     </Wrapper>
     </html>
     </>
