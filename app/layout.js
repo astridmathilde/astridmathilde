@@ -22,7 +22,7 @@ const inter = localFont({
   ]
 })
 
-export const siteTitle = 'Astrid Mathilde';
+export const siteTitle = 'Astrid Boberg';
 
 export default function Layout({ children }) {
   return (
