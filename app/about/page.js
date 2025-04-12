@@ -16,6 +16,7 @@ const pageTitle = 'About me';
 export const metadata = {
   metadataBase: new URL('https://astridmathilde.no/about'),
   title: pageTitle + ' – ' + siteTitle,
+  description: 'I was born in April 1998 (currently 26) and I have 6 years experience with digital design and coding after working for design agencies in Harstad, Tromsø and Oslo. In August 2021, I started doing a five year integrated masters in design at The Oslo School of Architecture and Design.'
 }
 
 export default function Resumee() {

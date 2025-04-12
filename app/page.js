@@ -12,16 +12,16 @@ import { experience } from "../data/resumee";
 export const metadata = {
   metadataBase: new URL('https://astridmathilde.no'),
   title: siteTitle + " – Designer & developer",
-  description: 'Heia! I am a designer and self-taught developer from Northern Norway with a passion for sustainability. Currently I am doing a masters degree in design at The Oslo School of Architecture and Design, specializing in designing digital products.'
+  description: 'Heia! I am a designer and self-taught developer from Northern Norway, passionate about designing digital products with a low carbon footprint. Currently I am living in Oslo doing a masters degree in design. I enjoy writing things and taking photos of stuff.'
 }
 
 export default function Index() {
   return (
     <>
-    <BlockDisplay>Heia! <BlockIcon>👋</BlockIcon> I am a designer and self-taught developer from Northern Norway <BlockIcon>🏔️</BlockIcon>, passionate about designing digital products with a low carbon footprint. Currently I am living in Oslo doing a master's degree in design. I enjoy writing things and taking photos of stuff.</BlockDisplay>
+    <BlockDisplay>Heia! <BlockIcon>👋</BlockIcon> I am a designer and self-taught developer from Northern Norway, passionate about designing digital products with a low carbon footprint. Currently I am living in Oslo doing a master's degree in design. I enjoy writing things and taking photos of stuff.</BlockDisplay>
     
     
-    <h2 className={utils.screen_reader_text}>This is some of my projects 👇</h2>
+    <h2 className={utils.screen_reader_text}>This is some of my projects</h2>
     
     <div className={style.projects}>
     {projects.toReversed().map((project) => (

@@ -7,7 +7,8 @@ const pageTitle = 'Now';
 
 export const metadata = {
   metadataBase: new URL('https://astridmathilde.no/now'),
-  title: pageTitle + ' – ' + siteTitle
+  title: pageTitle + ' – ' + siteTitle,
+  description: 'Continuing on my third year at the Oslo School of Architecture and Design after having a break. My life currently revolves around a project I am doing in collaboration with Norwegian Red Cross, which I will be working with until the end of May. I am sharing my everyday observations in my own digital space called blikkjournal, and I just joined Bluesky.'
 }
 
 export default function Colophon() {

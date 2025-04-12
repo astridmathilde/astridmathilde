@@ -1,6 +1,7 @@
 import { siteTitle } from "../layout";
 import { projects } from "../../data/projects";
 import style from "../../assets/scss/work.module.scss";
+import utils from "../../assets/scss/utils.module.scss";
 import Link from "next/link";
 import BlockProjects from "../../components/projects";
 import BlockIcon from "../../components/icon";
@@ -9,7 +10,8 @@ const pageTitle = 'My work';
 
 export const metadata = {
   metadataBase: new URL('https://astridmathilde.no/work'),
-  title: pageTitle + ' – ' + siteTitle
+  title: pageTitle + ' – ' + siteTitle,
+    description: 'I am a designer and self-taught developer from Northern Norway, passionate about designing digital products with a low carbon footprint. Currently I am living in Oslo doing a masters degree in design. This is some of my projects!'
 }
 
 export default function Colophon() {
