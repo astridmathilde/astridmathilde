@@ -2,13 +2,13 @@
 
 .entry {
   display: flex;
+  max-width: $container-text + 8ch;
   flex-direction: row-reverse;
   justify-content: flex-end;
   align-items: baseline;
-  font-size: 0.8em;
+  font-size: 0.9em;
 
   .header {
-    max-width: $container-text;
     padding-left: 1em;
 
     @media all and (min-width: $screen-sm) {
@@ -21,19 +21,15 @@
   }
 
   .time {
-    width: 43vw;
+    width: 25ch;
     font-size: 0.85em;
-
-    @media all and (min-width: $screen-xs) {
-      width: 20ch;
-    }
 
     @media all and (min-width: $screen-sm) {
       width: 15ch;
     }
 
-    @media all and (min-width: $screen-md) {
-      width: 15ch;
+    @media all and (min-width: $screen-lg) {
+      width: 17ch;
     }
   }
 }

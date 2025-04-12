@@ -3,11 +3,11 @@
 .project {
   display: block;
   text-decoration: none;
+  font-size: 0.9em;
 
   article {
     display: flex;
     flex-direction: column;
-    font-size: 0.8em;
   }
 
   &:hover,

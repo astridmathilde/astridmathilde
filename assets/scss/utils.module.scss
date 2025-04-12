@@ -21,3 +21,9 @@
 .large {
   font-size: 1.8em;
 }
+
+.display {
+  @media all and (min-width: $screen-lg) {
+    font-size: 1.3em;
+  }
+}

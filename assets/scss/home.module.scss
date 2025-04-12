@@ -1,10 +1,17 @@
 @import "base/variables";
 
+.content {
+  @media all and (min-width: $screen-lg) {
+    font-size: 1.26em;
+  }
+}
+
 .projects {
   display: grid;
   position: relative;
-  margin-top: $spacing / 1.5;
+  margin-top: 0;
   grid-gap: $padding;
+  font-size: 0.87em;
 
   @media all and (max-width: $screen-sm) {
     grid-auto-columns: -webkit-calc(80% - 25px);
