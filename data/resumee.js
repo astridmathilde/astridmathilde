@@ -7,7 +7,7 @@ export const experience = [
       "name": "Ocean Industries Concept Lab",
       "url": "https://oicl.no"
     },
-    "description": "I worked with interaction design on the research project <a href=\"https://www.oicl.no/projects/openzero/\" rel=\"external\" target=\"_blank\">OpenZero</a>, making design standards for user interfaces that enable ship operators to make energy efficient decisions. Also contributed to the new release of the design system <a href=\"https://www.openbridge.no/\" rel=\"external\" target=\"_blank\">OpenBridge</a>."
+    "description": "I worked with interaction design on the research project <a href=\"https://www.oicl.no/projects/openzero/\" rel=\"external\" target=\"_blank\">OpenZero</a>, making design standards for user interfaces that enable ship operators to make energy efficient decisions. Also I contributed to the new release of the design system <a href=\"https://www.openbridge.no/\" rel=\"external\" target=\"_blank\">OpenBridge</a>."
   },
   {
     "id": 8,
