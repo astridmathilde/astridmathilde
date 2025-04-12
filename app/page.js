@@ -18,7 +18,7 @@ export const metadata = {
 export default function Index() {
   return (
     <>
-    <BlockDisplay>Heia! <BlockIcon>👋</BlockIcon> I am a designer and self-taught developer from Northern Norway <BlockIcon>🏔️</BlockIcon> with a passion for sustainability. Currently I am doing a master's degree in design at <a href="https://aho.no/en" target="_blank" rel="external">The Oslo School of Architecture and Design</a>, specializing in designing digital products <BlockIcon>👩🏻‍💻</BlockIcon>.</BlockDisplay>
+    <BlockDisplay>Heia! <BlockIcon>👋</BlockIcon> I am a designer and self-taught developer from Northern Norway <BlockIcon>🏔️</BlockIcon>, passionate about designing digital products with a low carbon footprint. Currently I am living in Oslo doing a master's degree in design. I enjoy writing things and taking photos of stuff.</BlockDisplay>
     
     
     <h2 className={utils.screen_reader_text}>This is some of my projects 👇</h2>
@@ -34,10 +34,10 @@ export default function Index() {
       <BlockResumee id={experience.id} position={experience.position} locationUrl={experience.location.url} locationName={experience.location.name} description={experience.description} time={experience.time} />
     ))}
     
-    <h2>Life lately <BlockIcon>✨</BlockIcon></h2>
-    <p>Continuing on my third year at <a href="https://aho.no/en" target="_blank" rel="external">The Oslo School of Architecture and Design</a> after having a break. I just finished a pretty intense course in systems oriented design, now returning to the familiarity of designing interactions and experiences, through a project in collaboration with <a href="https://www.rodekors.no/en/" rel="external" target="_blank">Norwegian Red Cross</a>, which I will be working with until the end of May. I have started sharing my everyday observations in my own digital space called <a href="https://astrid.observer" rel="external" target="_blank"><em>blikkjournal</em></a>, it is still a work in progress, but the design is slowly getting into place.</p>
+    <h2>What I am doing now <BlockIcon>👀</BlockIcon></h2>
+   <p>Continuing on my third year at the <a href="https://aho.no/en" target="_blank" rel="external">Oslo School of Architecture and Design</a> after having a break. My life currently revolves around a project I am doing in collaboration with <a href="https://www.rodekors.no/en/" rel="external" target="_blank">Norwegian Red Cross</a>, which I will be working with until the end of May. I am sharing my everyday observations in <a href="https://astrid.observer" rel="external" target="_blank">my own digital space called <em>blikkjournal</em></a>, and I just joined <a rel="external nofollow noreferrer" href="https://bsky.app/profile/astridmathilde.no" target="_blank">Bluesky</a>. I like music and I read a lot of books, you can <Link href="now">check it out on my Now-page</Link>. </p>
     
-    <p className={utils.small}>Last updated on March 9th, 2025. Inspired by <a href="https://nownownow.com/about" target="_blank" rel="external">Now</a>.</p>
+    <p className={utils.small}>Last updated on April 12th, 2025. Inspired by <a href="https://nownownow.com/about" target="_blank" rel="external">Now</a>.</p>
     
     <h2>Contact <BlockIcon>🤝</BlockIcon></h2>
     <p>My email is <a href="mailto:heia@astridmathilde.no?subject=Heia!">heia@astridmathilde.no</a>, but you can also <a href="https://www.linkedin.com/in/astridmathilde/" target="_blank" rel="nofollow noreferrer">add me on LinkedIn</a>!</p>
