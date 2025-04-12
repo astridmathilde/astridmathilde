@@ -15,7 +15,7 @@ export default function Colophon() {
   return (
     <>
     <h2>What I am doing now <BlockIcon>👀</BlockIcon></h2>
-   <p>Continuing on my third year at the <a href="https://aho.no/en" target="_blank" rel="external">Oslo School of Architecture and Design</a> after having a break. My life currently revolves around a project I am doing in collaboration with <a href="https://www.rodekors.no/en/" rel="external" target="_blank">Norwegian Red Cross</a>, which I will be working with until the end of May. I am sharing my everyday observations in <a href="https://astrid.observer" rel="external" target="_blank">my own digital space called <em>blikkjournal</em></a>, and I just joined <a rel="external nofollow noreferrer" href="https://bsky.app/profile/astridmathilde.no" target="_blank">Bluesky</a>.</p>
+   <p>Continuing on my third year at the <a href="https://aho.no/en" target="_blank" rel="external">Oslo School of Architecture and Design</a> after having a break. My life currently revolves around a project I am doing in collaboration with <a href="https://www.rodekors.no/en/" rel="external" target="_blank">Norwegian Red Cross</a>, which I will be working with until the end of May. I share my everyday observations in <a href="https://astrid.observer" rel="external" target="_blank">my own digital space called <em>blikkjournal</em></a>, and I just joined <a rel="external nofollow noreferrer" href="https://bsky.app/profile/astridmathilde.no" target="_blank">Bluesky</a>.</p>
     
     <p className={utils.small}>Last updated on April 12th, 2025. Inspired by <a href="https://nownownow.com/about" target="_blank" rel="external">Now</a>.</p>
     

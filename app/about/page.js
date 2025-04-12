@@ -25,12 +25,13 @@ export default function Resumee() {
     <BlockRow align="center">
     <BlockColumn>
     <h2 className={utils.screen_reader_text}>About me</h2>
-    <p>I was born in April 1998 (currently 26 <BlockIcon>🎉</BlockIcon>) and I have 6 years experience with digital design and coding after working for design agencies in Harstad, Tromsø and Oslo. In August 2021, I started doing a five year integrated master's in design at <a href="https://aho.no" target="_blank" rel="external">The Oslo School of Architecture and Design</a>.</p>
+    <p className={utils.display}>I was born in April 1998 (currently 26 <BlockIcon>🎉</BlockIcon>) and I have 6 years experience with digital design and coding after working for design agencies in Harstad, Tromsø and Oslo. In August 2021, I started doing a five year integrated master's in design at <a href="https://aho.no" target="_blank" rel="external">The Oslo School of Architecture and Design</a>.</p>
     </BlockColumn>
-    <BlockColumn width="50">
+    <BlockColumn width="35">
     <BlockImage url={portrait} alt="Astrid Mathilde Boberg" width="1600" height="1600" sizes="(min-width: 670px) 50vw, 100vw" priority />
     </BlockColumn>
     </BlockRow>
+    
     
     <h3>Work experience <BlockIcon>👩🏻‍💻</BlockIcon></h3>
     {experience.map((experience) => (
@@ -63,7 +64,7 @@ export default function Resumee() {
     
     <h2>Further discovery <BlockIcon>🔎</BlockIcon></h2>
     <p>You can find out <Link href="/now">what I have been up to lately</Link>, look at <Link href="/work/mensn">one of my projects</Link>, or see <Link href="/colophon">how I have reduced the carbon emissions on this website.</Link></p>
-
+    
     </>
   )
 }

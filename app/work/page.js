@@ -17,7 +17,7 @@ export const metadata = {
 export default function Colophon() {
   return (
     <>
-    <h2>This is some of my work <BlockIcon>👇</BlockIcon></h2>
+    <h2 className={utils.screen_reader_text}>This is my portfolio</h2>
     <div className={style.work}>
     {projects.toReversed().map((project) => (
       <BlockProjects key={project.id} slug={project.slug} title={project.title} category={project.category} location={project.location.name} thumbnail={project.thumbnail} priority="true" sizes="(min-width: 670px) 50vw, 100vw" />
