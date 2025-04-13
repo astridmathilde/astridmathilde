@@ -30,8 +30,10 @@ export default function kahos() {
     <h2>{projects[0].title}</h2>
     </header>
     
+    <div className={style.thumbnail}>
     <BlockImage className={style.thumbnail} url={projects[0].thumbnail} alt={projects[0].title} priority="true" />
-    
+    </div>
+
     <div className={style.container}>
     <div className={style.meta + " text-xsmall"}>
     <ul>

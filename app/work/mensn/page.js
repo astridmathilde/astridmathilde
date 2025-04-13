@@ -33,7 +33,9 @@ export default function mensn() {
     <h2>{projectID.title}</h2>
     </header>
     
+    <div className={style.thumbnail}>
     <BlockImage className={style.thumbnail} url={projectID.thumbnail} alt={projectID.title} width="1378" height="1008" priority="true" />
+    </div>
     
     <div className={style.container}>
     

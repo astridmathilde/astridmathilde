@@ -4,7 +4,7 @@
   .thumbnail {
     margin-top: 0;
 
-    @media all and (min-width: $screen-lg) {
+    @media all and (min-width: $screen-md) {
       position: relative;
       height: 80vh;
 
