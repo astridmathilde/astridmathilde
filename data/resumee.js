@@ -122,11 +122,11 @@ export const skills = [
     [
       "Accessibility",
       "Design Systems",
+      "Content Design",
       "User Interface Design",
       "User Experience Design",
       "Systems Oriented Design",
       "Service Design",
-      "Product Management",
       "Product Development",
       "Front-End Development"
     ]
@@ -157,7 +157,8 @@ export const skills = [
       "Notion",
       "WordPress",
       "Sanity",
-      "Git"
+      "Git",
+      "Supabase"
     ]
   }
 ];
