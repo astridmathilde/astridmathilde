@@ -5,12 +5,11 @@
   grid-template-columns: 1fr;
   gap: $padding / 2;
   margin-top: $spacing / 2;
-  margin-bottom: $spacing * 2;
+  margin-bottom: $spacing * 1.5;
 
   @media all and (min-width: $screen-sm) {
     grid-template-columns: 1fr 1fr;
     gap: calc($padding / 2) $padding;
-    margin-bottom: $spacing * 1.5;
 
     img {
       height: 27vw !important;

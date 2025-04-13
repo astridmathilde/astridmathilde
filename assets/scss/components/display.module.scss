@@ -4,6 +4,7 @@
   max-width: $container-text;
   margin-top: $spacing;
   line-height: 1.35;
+  font-size: 1.1em;
 
   @media all and (min-width: $screen-xs) {
     display: flex;

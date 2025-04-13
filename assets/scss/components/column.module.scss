@@ -4,6 +4,12 @@
   + .column {
     @media all and (max-width: $screen-sm) {
       padding-top: $padding;
+
+      &:has(h2),
+      &:has(h3),
+      &:has(h4) {
+        padding-top: 0;
+      }
     }
 
     @media all and (min-width: $screen-sm) {
@@ -14,20 +20,21 @@
   @media all and (max-width: $screen-sm) {
     width: 100% !important;
 
+    &:nth-child(1) {
+      h3,
+      h2 {
+        margin-top: 0;
+      }
+    }
+
     &:nth-child(1):has(:not(h2)) {
       margin-top: $spacing;
     }
   }
 
-  @media all and (min-width: $screen-sm) {
-    &:has(h2),
-    &:has(h3),
-    &:has(h4) {
-      h2,
-      h3,
-      h4 {
-        margin-top: 0;
-      }
-    }
+  &:has(h2),
+  &:has(h3),
+  &:has(h4) {
+    margin-top: 0;
   }
 }

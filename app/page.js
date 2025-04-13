@@ -12,13 +12,13 @@ import { experience } from "../data/resumee";
 export const metadata = {
   metadataBase: new URL('https://astridmathilde.no'),
   title: siteTitle + " – Designer & developer",
-  description: 'Heia! I am a designer and self-taught developer from Northern Norway, passionate about designing digital products with a low carbon footprint. Currently I am living in Oslo doing a masters degree in design. I enjoy writing things and taking photos of stuff.'
+  description: 'Heia! I am a designer and self-taught developer from Northern Norway, with a passion for sustainability. Currently I am living in Oslo doing a masters degree in design, specializing in designing digital products. I enjoy writing things and taking photos of stuff.'
 }
 
 export default function Index() {
   return (
     <div className={style.content}>
-    <BlockDisplay location="home">Heia! I am a designer and self-taught developer from Northern Norway <BlockIcon>🏔️</BlockIcon>, passionate about designing digital products with a low carbon footprint. Currently I am living in Oslo doing a master's degree in design. I enjoy writing things and taking photos of stuff.</BlockDisplay>
+    <BlockDisplay location="home">Heia! I am a designer and self-taught developer from Northern Norway <BlockIcon>🏔️</BlockIcon>, with a passion for sustainability. Currently I am living in Oslo doing a master's degree in design, specializing in designing digital products. I enjoy writing things and <a href="https://astrid.observer" rel="external" title="my library of observations" target="_blank">taking photos of stuff</a>.</BlockDisplay>
     
     <h2>Selected projects <BlockIcon>👇</BlockIcon></h2>
     
@@ -38,8 +38,8 @@ export default function Index() {
       <BlockResumee id={experience.id} position={experience.position} locationUrl={experience.location.url} locationName={experience.location.name} description={experience.description} time={experience.time} />
     ))}
     
-    <h2>Contact <BlockIcon>🤝</BlockIcon></h2>
-    <p>My email is <a href="mailto:heia@astridmathilde.no?subject=Heia!">heia@astridmathilde.no</a>, but you can also <a href="https://www.linkedin.com/in/astridmathilde/" target="_blank" rel="nofollow noreferrer">add me on LinkedIn</a>!</p>
+    <h2 className={style.contactHeader}>Contact <BlockIcon>🤝</BlockIcon></h2>
+    <p>My email is <a href="mailto:heia@astridmathilde.no?subject=Heia!">heia@astridmathilde.no</a>, but you can also <a href="https://www.linkedin.com/in/astridmathilde/" target="_blank" rel="nofollow noreferrer">add me on LinkedIn</a> or <a rel="external nofollow noreferrer" href="https://bsky.app/profile/astridmathilde.no" target="_blank">follow me on Bluesky</a>!</p>
     
     <h2>Further discovery <BlockIcon>🔎</BlockIcon></h2>
     <p>You can <Link href="/about">learn more about me</Link>, see <Link href="/now">what I am currently listening to</Link>, or find out <Link href="/colophon">why I am not using generative AI</Link>.</p>

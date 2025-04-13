@@ -2,10 +2,17 @@
 
 .container {
   max-width: $container-text;
-  margin-top: $spacing;
+
+  @media all and (min-width: $screen-md) {
+    margin-top: $spacing * 0.2;
+  }
+
+  div:first-child {
+    margin-top: 0;
+  }
 
   ul {
-    font-size: 0.8em;
+    font-size: 0.9em;
     font-weight: 420;
 
     @media all and (min-width: $screen-sm) {
