@@ -80,16 +80,6 @@ export const experience = [
     "description": "A temporary position where I stepped in for another web developer and coded websites from scratch using WordPress as a CMS. I learned about usability, accessibility, search engine optimization and security."
   }, 
   {
-    "id": 1,
-    "time": "Aug 2016–Jul 2018",
-    "position": "Apprenticeship in graphic design",
-    "location": {
-      "name": "Chili Harstad",
-      "url": "https://chiligroup.no/"
-    },
-    "description": "I worked with websites, prints and ads for companies like Harstad kommune, Consto, Trollfjord Bredbånd and Bil i Nord."
-  },
-  {
     "id": 0,
     "time": "Mar–Jun 2016",
     "position": "Internship in graphic design",
@@ -111,6 +101,16 @@ export const education = [
       "url": "https://aho.no"
     },
     "description": "Specializing in designing digital products and services. In November 2022 I contributed with the establishment of the <a href=\"work/kahos\">student association KAHOS</a>, and up until January 2024 I was responsible for graphic design and marketing."
+  },
+    {
+    "id": 1,
+    "time": "Aug 2016–Jul 2018",
+    "grade": "Craft certificate in graphic design",
+    "location": {
+      "name": "Chiligroup",
+      "url": "https://chiligroup.no/"
+    },
+    "description": "A two-year apprenticeship where I worked with websites, prints and ads for companies like Harstad kommune, Consto, Trollfjord Bredbånd and Bil i Nord."
   }
 ];
 
@@ -123,8 +123,7 @@ export const skills = [
       "Accessibility",
       "Design Systems",
       "Content Design",
-      "User Interface Design",
-      "User Experience Design",
+      "Interaction Design",
       "Systems Oriented Design",
       "Service Design",
       "Product Development",

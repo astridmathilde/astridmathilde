@@ -29,7 +29,7 @@ export default function Index() {
     </div>
     
     <h2>What I am doing now <BlockIcon>👀</BlockIcon></h2>
-    <p>Continuing on my third year at the <a href="https://aho.no/en" target="_blank" rel="external">Oslo School of Architecture and Design</a> after having a break. My life currently revolves around a project I am doing in collaboration with <a href="https://www.rodekors.no/en/" rel="external" target="_blank">Norwegian Red Cross</a>, which I will be working with until the end of May. I share my everyday observations in <a href="https://astrid.observer" rel="external" target="_blank">my own digital space called <em>blikkjournal</em></a>, and I just joined <a rel="external nofollow noreferrer" href="https://bsky.app/profile/astridmathilde.no" target="_blank">Bluesky</a>. I like music and I read a lot of books, you can <Link href="now">check it out on my Now-page</Link>. </p>
+    <p>Continuing on my third year at the <a href="https://aho.no/en" target="_blank" rel="external">Oslo School of Architecture and Design</a> after having a break. My life currently revolves around a project I am doing in collaboration with <a href="https://www.rodekors.no/en/" rel="external" target="_blank">Norwegian Red Cross</a>, which I will be working with until the end of May. I share my everyday observations in <a href="https://astrid.observer" rel="external" target="_blank">my own digital space</a>, and I enjoy listening to music and reading books, you can <Link href="now">check it out on my Now-page</Link>.</p>
     
     <p className={utils.small}>Last updated on April 12th, 2025. Inspired by <a href="https://nownownow.com/about" target="_blank" rel="external">Now</a>.</p>
     
@@ -39,7 +39,7 @@ export default function Index() {
     ))}
     
     <h2 className={style.contactHeader}>Contact <BlockIcon>🤝</BlockIcon></h2>
-    <p>My email is <a href="mailto:heia@astridmathilde.no?subject=Heia!">heia@astridmathilde.no</a>, but you can also <a href="https://www.linkedin.com/in/astridmathilde/" target="_blank" rel="nofollow noreferrer">add me on LinkedIn</a> or <a rel="external nofollow noreferrer" href="https://bsky.app/profile/astridmathilde.no" target="_blank">follow me on Bluesky</a>!</p>
+    <p>My email is <a href="mailto:heia@astridmathilde.no?subject=Heia!">heia@astridmathilde.no</a>, but you can also <a href="https://www.linkedin.com/in/astridmathilde/" target="_blank" rel="nofollow noreferrer">add me on LinkedIn</a>!</p>
     
     <h2>Further discovery <BlockIcon>🔎</BlockIcon></h2>
     <p>You can <Link href="/about">learn more about me</Link>, see <Link href="/now">what I am currently listening to</Link>, or find out <Link href="/colophon">why I am not using generative AI</Link>.</p>
