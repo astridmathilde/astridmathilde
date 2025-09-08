@@ -1,6 +1,6 @@
 export const experience = [
       {
-    "id": 9,
+    "id": 10,
     "time": "Jun–Aug 2025",
     "position": "Designer",
     "location": {
@@ -8,16 +8,6 @@ export const experience = [
       "url": "https://variant.no"
     },
     "description": "With one designer and two developers, I worked for <a href=\"https://www.sparebank1.no/\" rel=\"external\" target=\"_blank\">Sparebank 1</a> in the pensions department, and helped design an MVP that uses a language model to make it faster and easier to handle cases that must be processed manually."
-  },
-    {
-    "id": 9,
-    "time": "Aug–Dec 2024",
-    "position": "Research Assistant",
-    "location": {
-      "name": "Ocean Industries Concept Lab",
-      "url": "https://oicl.no"
-    },
-    "description": "I worked with interaction design on the research project <a href=\"https://www.oicl.no/projects/openzero/\" rel=\"external\" target=\"_blank\">OpenZero</a>, making design standards for user interfaces that enable ship operators to make energy efficient decisions. Also I contributed to the new release of the design system <a href=\"https://www.openbridge.no/\" rel=\"external\" target=\"_blank\">OpenBridge</a>."
   },
   {
     "id": 9,
