@@ -120,7 +120,7 @@ export const education = [
       "name": "The Oslo School of Architecture and Design",
       "url": "https://aho.no"
     },
-    "description": "Specializing in designing digital products and services. In November 2022 I contributed with the establishment of the <a href=\"work/kahos\">student association KAHOS</a>, and up until January 2024 I was responsible for graphic design and marketing."
+    "description": "With a specialization in interaction design. In November 2022 I contributed with the establishment of the <a href=\"work/kahos\">student association KAHOS</a>, and up until January 2024 I was responsible for graphic design and marketing."
   },
     {
     "id": 1,
