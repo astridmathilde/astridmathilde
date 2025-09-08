@@ -1,4 +1,24 @@
 export const experience = [
+      {
+    "id": 9,
+    "time": "Jun–Aug 2025",
+    "position": "Designer",
+    "location": {
+      "name": "Variant Oslo",
+      "url": "https://variant.no"
+    },
+    "description": "With one designer and two developers, I worked for <a href=\"https://www.sparebank1.no/\" rel=\"external\" target=\"_blank\">Sparebank 1</a> in the pensions department, and helped design an MVP that uses a language model to make it faster and easier to handle cases that must be processed manually."
+  },
+    {
+    "id": 9,
+    "time": "Aug–Dec 2024",
+    "position": "Research Assistant",
+    "location": {
+      "name": "Ocean Industries Concept Lab",
+      "url": "https://oicl.no"
+    },
+    "description": "I worked with interaction design on the research project <a href=\"https://www.oicl.no/projects/openzero/\" rel=\"external\" target=\"_blank\">OpenZero</a>, making design standards for user interfaces that enable ship operators to make energy efficient decisions. Also I contributed to the new release of the design system <a href=\"https://www.openbridge.no/\" rel=\"external\" target=\"_blank\">OpenBridge</a>."
+  },
   {
     "id": 9,
     "time": "Aug–Dec 2024",
@@ -12,12 +32,12 @@ export const experience = [
   {
     "id": 8,
     "time": "Summer 2024",
-    "position": "UX Designer",
+    "position": "Designer",
     "location": {
       "name": "Fremtind Forsikring",
       "url": "https://www.fremtind.no/"
     },
-    "description": "A summer internship where I worked in a multi-disiplinary product team with 3 other interns, designing and developing an internal application for <a href=\"/work/internship-fremtind\">managing the configuration of insurance products</a>."
+    "description": "A summer internship where I worked in a product team with 3 other interns, designing and developing an internal application for <a href=\"/work/internship-fremtind\">managing the configuration of insurance products</a>."
   },
   {
     "id": 7,
@@ -32,7 +52,7 @@ export const experience = [
     {
     "id": 6,
     "time": "Summer 2023",
-    "position": "UX Designer",
+    "position": "Designer",
     "location": {
       "name": "SEAM",
       "url": "https://seam.no"
