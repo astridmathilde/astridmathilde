@@ -14,9 +14,9 @@ export default function Colophon() {
   return (
     <>
     <h2>What I am doing now <BlockIcon>👀</BlockIcon></h2>
-    <p>Currently on my fourth year at the <a href="https://aho.no/en" target="_blank" rel="external">Oslo School of Architecture and Design</a> after spending my summer working as a designer at <a href="https://variant.no" target="_blank" rel="external">Variant</a>. I recently switched to a dumb phone – a Punkt MP01 – and I really enjoy that. I have started spending more time in the stable, which I enjoy even more. Apart from that, I have a few small freelance projects going on!</p>
+    <p>Currently on my fourth year at the <a href="https://aho.no/en" target="_blank" rel="external">Oslo School of Architecture and Design</a> after spending my summer working as a designer at <a href="https://variant.no" target="_blank" rel="external">Variant</a>. A few months ago I switched to a dumb phone – a Punkt MP02 – and I really enjoy that. I have started spending more time in the stable, which I enjoy even more. Apart from that, I am doing the finshing touches on a freelance project, and I just deleted Facebook and Instagram (finally <BlockIcon>🎉</BlockIcon>).</p>
     
-    <p className={utils.small}>Last updated on September 8th, 2025. Inspired by <a href="https://nownownow.com/about" target="_blank" rel="external">Now</a>.</p>
+    <p className={utils.small}>Last updated on September 19th, 2025. Inspired by <a href="https://nownownow.com/about" target="_blank" rel="external">Now</a>.</p>
     
     
     <h3>Currently reading <BlockIcon>📚</BlockIcon></h3>
