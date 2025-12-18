@@ -1,7 +1,6 @@
 import Link from "next/link";
 import { siteTitle } from "../layout";
 import utils from "../../assets/scss/utils.module.scss";
-import BlockIcon from "../../components/icon";
 
 const pageTitle = 'Now';
 
@@ -13,22 +12,26 @@ export const metadata = {
 export default function Colophon() {
   return (
     <>
-    <h2>What I am doing now <BlockIcon>👀</BlockIcon></h2>
-    <p>Currently on my fourth year at the <a href="https://aho.no/en" target="_blank" rel="external">Oslo School of Architecture and Design</a> after spending my summer working as a designer at <a href="https://variant.no" target="_blank" rel="external">Variant</a>. A few months ago I switched to a dumb phone – a Punkt MP02 – and I really enjoy that. I have started spending more time in the stable, which I enjoy even more. Apart from that, I am doing the finshing touches on a freelance project, and I just deleted my account on Facebook and Instagram (finally <BlockIcon>🎉</BlockIcon>).</p>
+    <h2>What I am doing now</h2>
+    <p>Just finished the first semester of my fourth year at the <a href="https://aho.no/en" target="_blank" rel="external">Oslo School of Architecture and Design</a>. I still have a minimalist phone, my beloved Punkt MP02, and I actually got rid of my iPhone after dreading it for months. I tried deleting social media, but for a while I was back on Instagram. Taking a break now, though. When I went to Northern Norway for Christmas, I found my old iPod Nano and that made me very happy.</p>
     
-    <p className={utils.small}>Last updated on September 19th, 2025. Inspired by <a href="https://nownownow.com/about" target="_blank" rel="external">Now</a>.</p>
+    <p className={utils.small}>Last updated on December 18th, 2025. Inspired by <a href="https://nownownow.com/about" target="_blank" rel="external">Now</a>.</p>
     
     
-    <h3>Currently reading <BlockIcon>📚</BlockIcon></h3>
+    <h3>Currently reading</h3>
     <ul>
-    <li><em>Av måneskinn gror det ingenting</em>, Torborg Nerdreaas</li>
-    <li><em>The Myth of Sisyphus</em>, Albert Camus</li>
-    <li><em>The Creative Act</em>, Rick Rubin</li>
-    <li><em>Design after Capitalism</em>, Matthew Wizinsky</li>
+    <li><em>Barnet mitt</em>, Hanne Ørstavik</li>
+    <li><em>Design after capitalism</em>, Matthew Wizinsky</li>
     </ul>
     
-    <h2>Further discovery <BlockIcon>🔎</BlockIcon></h2>
-    <p>You can find out <Link href="/about">more about me</Link>, see <Link href="/colophon">how I have reduced the carbon emissions of this website</Link> or <Link href="/work/internship-fremtind">look at one of my projects</Link>.</p>
+    <h3>Music on repeat</h3>
+    <ul>
+    <li>The album <em>Migration</em> by Bonobo</li>
+    <li>The song "To believe" by The Cinematic Orchestra & Moses Sumney</li>
+    </ul>
+    
+    <h2>Further discovery</h2>
+    <p>You can <Link href="/colophon">check out this site's carbon footprint</Link>, find out <Link href="/about">more about me</Link>, or <Link href="/work/internship-fremtind">look at one of my projects</Link>.</p>
     </>
   )
 }
