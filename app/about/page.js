@@ -14,8 +14,7 @@ const pageTitle = 'About me';
 
 export const metadata = {
   metadataBase: new URL('https://astridmathilde.no/about'),
-  title: pageTitle + ' – ' + siteTitle,
-  description: 'I was born in April 1998 (currently 27) and I have 6 years experience with digital design and coding after working for design agencies in Harstad, Tromsø and Oslo. In August 2021, I started doing a five year integrated masters in design at The Oslo School of Architecture and Design.'
+  title: pageTitle + ' – ' + siteTitle
 }
 
 export default function Resumee() {
@@ -24,7 +23,7 @@ export default function Resumee() {
     <BlockRow align="center">
     <BlockColumn>
     <h2 className={utils.screen_reader_text}>About me</h2>
-    <p className={utils.display}>I was born in the far north of Norway in April 1998, but moved to Oslo in 2020 to start studying interaction design. Before that, I spent five years working with web design and development at digital agencies in Harstad and Tromsø, having started coding at the age of 10 and landing my first job as a web developer at 19. As a designer, I care about ethics, privacy and accessibility, but I believe that the climate impact of the digital products we create, is equally important.</p>
+    <p className={utils.display}>I was born in the far north of Norway in April 1998, but moved to Oslo in 2020 to start studying interaction design. Before that, I spent five years working with web design and development at digital agencies in Harstad and Tromsø. As a designer, I believe that the climate impact of the digital products we make, is just as important as privacy and accessibility.</p>
     </BlockColumn>
     <BlockColumn width="35">
     <BlockImage url={portrait} alt="Astrid Mathilde Boberg" width="1242" height="2021" sizes="(min-width: 670px) 50vw, 100vw" priority />
