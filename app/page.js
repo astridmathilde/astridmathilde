@@ -17,7 +17,7 @@ export const metadata = {
 export default function Index() {
   return (
     <div className={style.content}>
-    <BlockDisplay location="home">Heia! I'm a designer and developer from Arctic Norway, currently living in Oslo as an MA design student. Having previously worked with graphic design, web design and development, I now specialize in designing digital products while still working with websites as a freelancer. I also enjoy writing things, <a href="https://blikk.directory" rel="external" title="my library of observations" target="_blank">taking photos of stuff</a> and I have a fascination for digital minimalism.</BlockDisplay>
+    <BlockDisplay location="home">Heia! I am a designer and developer from Arctic Norway, currently living in Oslo as an MA design student. Having previously worked with graphic design, web design and development, I now specialize in designing digital products while still working with websites as a freelancer. I also enjoy writing things, <a href="https://blikk.directory" rel="external" title="my library of observations" target="_blank">taking photos of stuff</a> and I have a fascination for digital minimalism.</BlockDisplay>
     
     <h2>Selected projects</h2>
     <div className={style.projects}>
@@ -26,8 +26,8 @@ export default function Index() {
     ))}
     </div>
     
-    <h2>What I'm doing now</h2>
-    <p>Just finished the first semester of my fourth year at the <a href="https://aho.no/en" target="_blank" rel="external">Oslo School of Architecture and Design</a>, and I'm wrapping up a freelance project I have been working with for the past year. I still have a minimalist phone, my beloved Punkt MP02, and I actually got rid of my iPhone after dreading it for months. I tried deleting social media, but for a while I was back on Instagram. Taking a break now, though. When I went to Northern Norway for Christmas, I found my old iPod Nano and that made me very happy.</p>
+    <h2>What I am doing now</h2>
+    <p>Just finished the first semester of my fourth year at the <a href="https://aho.no/en" target="_blank" rel="external">Oslo School of Architecture and Design</a>, and I am wrapping up a freelance project I have been working with for the past year. I still have a minimalist phone, my beloved Punkt MP02, and I actually got rid of my iPhone after dreading it for months. I tried deleting social media, but for a while I was back on Instagram. Taking a break now, though. When I went to Northern Norway for Christmas, I found my old iPod Nano and that made me very happy.</p>
     
     <p className={utils.small}>Last updated on December 18th, 2025. Inspired by <a href="https://nownownow.com/about" target="_blank" rel="external">Now</a>.</p>
     
