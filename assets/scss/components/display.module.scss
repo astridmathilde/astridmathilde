@@ -1,7 +1,7 @@
 @import "../base/variables";
 
 .display {
-  max-width: $container-text;
+  max-width: $container-text - 4ch;
   margin-top: $spacing;
   line-height: 1.35;
   font-size: 1.1em;
