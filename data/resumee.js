@@ -127,7 +127,7 @@ export const education = [
 export const skills = [
   {
     "id": 0,
-    "title": "Skills ✏️",
+    "title": "Skills",
     "keywords":
     [
       "Accessibility",
@@ -142,7 +142,7 @@ export const skills = [
   },
   {
     "id": 1,
-    "title": "Technology ⚙️",
+    "title": "Technology",
     "keywords":
     [
       "PWA",
@@ -157,7 +157,7 @@ export const skills = [
   },
   {
     "id": 2,
-    "title": "Software 💻",
+    "title": "Software",
     "keywords":
     [
       "Adobe Creative Cloud",
