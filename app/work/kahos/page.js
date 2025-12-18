@@ -77,7 +77,7 @@ export default function kahos() {
     </div>
     </article>
     
-    <h2>Keep looking 👀</h2>
+    <h2>Keep looking</h2>
     <div className={projectNav.container}>
     {projects.filter(project => project.id != '0').toReversed().map((project) => (
       <BlockProjects key={project.id} slug={project.slug} title={project.title} category={project.category} location={project.location.name} thumbnail={project.thumbnail} sizes="(min-width: 400px) 50vw, (min-width: 900px) 33vw, 100vw" />

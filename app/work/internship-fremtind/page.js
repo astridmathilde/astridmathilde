@@ -71,18 +71,18 @@ export default function fremtind() {
     
     <p>I was responsible for project management and visual design, while Kaja, my co-designer, was responsible for planning and facilitating design workshops within the product team. Apart from that, we worked closely together throughout the project.</p> 
     
-    <h3>The background 🔎</h3>
+    <h3>The background</h3>
     <p>Fremtind is offering a number of insurance products to private customers, and they all have different configurations. Previously, the configurations were "hard coded" into Fremtind's applications, making the data difficult to update. To solve this, Fremtind introduced <em>Product Config</em>, a database including every insurance product and their properties. Now it was possible for the applications to fetch the product data using API, and changes made in <em>Product Config</em> would be automatically synchronized across all the applications.</p>
     
-    <h3>The problem 😐</h3>
+    <h3>The problem</h3>
     <p>While <em>Product Config</em> made it easier to update the product data across applications, it was still difficult to view, understand and edit the product configurations. In order to make changes, the product owner had to open the data in a spreadsheet, which consisted of more than a hundred rows and columns, look for the correct cells, edit their values, then send a screenshot of the changes to the system administrator, who would create a SQL statement based on the changes, and run it in the database.</p>
     
     <p>The process was time consuming, and with a high risk of human error.</p>
     
-    <h3>The brief 📃</h3>
+    <h3>The brief</h3>
     <p>We were expected to deliver a web application that fetches the data from "Product Config", making it possible to view the product properties across multiple test environments and make changes. In addition, we were required to use Fremtind's design system <a href="https://jokul.fremtind.no/" target="_blank" rel="external">Jøkul</a>.</p>
     
-    <h3>The process ✏️</h3>
+    <h3>The process</h3>
     <p>Our design process has included the entire team, to ensure that we are all working towards the same goal, and share the same insights and understandings. Involving the developers in the early design phase by inviting them to work on the structure with us, also enabled them to start coding early. In the final design phase we did several iterations with user testing and changes in the design, structure and flow.</p>
     
     <h4>1. Understanding the problem (week 1)</h4>
@@ -124,7 +124,7 @@ export default function fremtind() {
     <BlockImage url={imgProcess9} alt="Programming" /> 
     </BlockImageRow>
     
-    <h3 id="result">The result ✅</h3>
+    <h3 id="result">The result</h3>
     <p>We have delivered a solution that makes it smoother and safer to maintain the product data, by minimizing the risk of human error and giving the product owners a closer relationship to the product. Through an iterative design process, we have also made sure that the solution is user-friendly and efficient to use.</p>
     
     <p>By involving the entire team in the early design phase, we have ensured mutual understanding and shared goals. Additionally, it enabled the developers to start coding early, which made the process more efficient and allowed us to add more functionality than expected for this summer. Inviting developers to join the design workshops also provided different perspectives and viewpoints, and forced us to be more critical about our design choices.</p>
@@ -142,7 +142,7 @@ export default function fremtind() {
     </div>
     </article>
     
-    <h2>Keep looking 👀</h2>
+    <h2>Keep looking</h2>
     <div className={projectNav.container}>
     {projects.filter(project => project.id != '2').toReversed().map((project) => (
       <BlockProjects key={project.id} slug={project.slug} title={project.title} category={project.category} location={project.location.name} thumbnail={project.thumbnail} sizes="(min-width: 400px) 50vw, (min-width: 900px) 33vw, 100vw"/>

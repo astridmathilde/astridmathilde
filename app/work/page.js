@@ -4,7 +4,6 @@ import style from "../../assets/scss/work.module.scss";
 import utils from "../../assets/scss/utils.module.scss";
 import Link from "next/link";
 import BlockProjects from "../../components/projects";
-import BlockIcon from "../../components/icon";
 
 const pageTitle = 'My work';
 
@@ -24,7 +23,7 @@ export default function Colophon() {
     ))}
     </div>
     
-    <h2>Further discovery <BlockIcon>🔎</BlockIcon></h2>
+    <h2>Further discovery</h2>
     <p>You can <Link href="/about">read my resumee</Link>, see <Link href="/now">what I have been up to lately</Link>, or find out <Link href="/colophon">how I built this website</Link>.</p> 
     </>
   )

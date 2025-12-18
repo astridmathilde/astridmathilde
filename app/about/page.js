@@ -2,7 +2,6 @@ import { siteTitle } from "../layout";
 import Link from "next/link";
 import style from "../../assets/scss/components/skills.module.scss";
 import utils from "../../assets/scss/utils.module.scss";
-import BlockIcon from "../../components/icon";
 import BlockRow from "../../components/row";
 import BlockColumn from "../../components/column";
 import BlockResumee from "../../components/resumee";
@@ -32,12 +31,12 @@ export default function Resumee() {
     </BlockColumn>
     </BlockRow>
     
-    <h3>Education <BlockIcon>👩🏻‍🎓</BlockIcon></h3>
+    <h3>Education</h3>
     {education.map((education) => (
       <BlockResumee key={education.id} position={education.grade} locationUrl={education.location.url} locationName={education.location.name} description={education.description} time={education.time} />
     ))}
     
-    <h3>Work experience <BlockIcon>👩🏻‍💻</BlockIcon></h3>
+    <h3>Work experience</h3>
     {experience.map((experience) => (
       <BlockResumee key={experience.id} position={experience.position} locationUrl={experience.location.url} locationName={experience.location.name} description={experience.description} time={experience.time} />
     ))}
@@ -57,11 +56,11 @@ export default function Resumee() {
     </BlockRow>
     </div>
     
-    <h2>Contact <BlockIcon>🤝</BlockIcon></h2>
+    <h2>Contact</h2>
     <p>My email is <a href="mailto:heia@astridmathilde.no?subject=Heia!">heia@astridmathilde.no</a>, but you can also <a href="https://www.linkedin.com/in/astridmathilde/" target="_blank" rel="nofollow noreferrer">add me on LinkedIn</a>!</p>
     
-    <h2>Further discovery <BlockIcon>🔎</BlockIcon></h2>
-    <p>You can find out <Link href="/now">what I have been up to lately</Link>, look at <Link href="/work/mensn">one of my projects</Link>, or read <Link href="/colophon">my thoughts about the usage of generative AI</Link>.</p>
+    <h2>Further discovery</h2>
+    <p>You can find out <Link href="/now">what I have been up to lately</Link>, look at <Link href="/work/mensn">one of my projects</Link>, or see <Link href="/colophon">how I have reduced the carbon emissions on this website.</Link></p>
     
     </>
   )
