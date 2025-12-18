@@ -22,7 +22,7 @@ const inter = localFont({
   ]
 })
 
-export const siteTitle = 'Astrid Mathilde Andersen';
+export const siteTitle = 'Astrid Mathilde Boberg';
 
 export default function Layout({ children }) {
   return (
@@ -44,7 +44,7 @@ export default function Layout({ children }) {
     {children}
     </main>
     <footer id={styles.footer} className={"text-medium"}>
-    <address rel="author">© Astrid Mathilde Andersen</address>
+    <address rel="author">© Astrid Mathilde Boberg</address>
     <nav className={styles.navigation}>
     <ul>
     <li key="colophon"><Link href="/colophon">Colophon</Link></li>

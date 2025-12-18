@@ -28,7 +28,7 @@ export default function Resumee() {
     <p className={utils.display}>I was born in the far north of Norway in April 1998, but moved to Oslo in 2020 to start studying interaction design. Before that, I spent five years working with web design and development at digital agencies in Harstad and Tromsø, having started coding at the age of 10 and landing my first job as a web developer at 19. As a designer, I care about ethics, privacy and accessibility, but I believe that the climate impact of the digital products we create, is equally important.</p>
     </BlockColumn>
     <BlockColumn width="35">
-    <BlockImage url={portrait} alt="Astrid Mathilde Andersen" width="1242" height="2021" sizes="(min-width: 670px) 50vw, 100vw" priority />
+    <BlockImage url={portrait} alt="Astrid Mathilde Boberg" width="1242" height="2021" sizes="(min-width: 670px) 50vw, 100vw" priority />
     </BlockColumn>
     </BlockRow>
     
