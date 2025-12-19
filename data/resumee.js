@@ -1,5 +1,15 @@
 export const experience = [
-      {
+  {
+    "id": 11,
+    "time": "Feb 2021->",
+    "position": "Designer & developer",
+    "location": {
+      "name": "Astrid Boberg",
+      "url": "https://astridboberg.no"
+    },
+    "description": "Designing and developing websites and digital products for companies like Andøy kommune and Lo:Loe Landskap."
+  },
+  {
     "id": 10,
     "time": "Jun–Aug 2025",
     "position": "Designer",
@@ -39,7 +49,7 @@ export const experience = [
     },
     "description": "I contributed with the design and maintenance of <a href=\"https://www.openbridge.no/\" rel=\"external\" target=\"_blank\">OpenBridge</a>, an open-source design system and UI Kit for advanced mairitime workplaces."
   },
-    {
+  {
     "id": 6,
     "time": "Summer 2023",
     "position": "Designer",
@@ -112,7 +122,7 @@ export const education = [
     },
     "description": "With a specialization in interaction design. In November 2022 I contributed with the establishment of the <a href=\"work/kahos\">student association KAHOS</a>, and up until January 2024 I was responsible for graphic design and marketing."
   },
-    {
+  {
     "id": 1,
     "time": "Aug 2016–Jul 2018",
     "grade": "Craft certificate in graphic design",
