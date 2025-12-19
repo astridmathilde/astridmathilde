@@ -18,7 +18,7 @@ export const metadata = {
 export default function Index() {
   return (
     <div className={style.content}>
-    <BlockDisplay location="home">Heia! I am a designer and developer from Arctic Norway, currently living in Oslo as an MA design student. Having previously worked with graphic design, web design and development, I now specialize in designing digital products while still working with websites as a freelancer. I also enjoy writing things, <a href="https://blikk.directory" rel="external" title="my library of observations" target="_blank">taking photos of stuff</a> and I have a fascination for digital minimalism.</BlockDisplay>
+    <BlockDisplay location="home">Heia! I am a designer and developer from Northern Norway, currently living in Oslo as an MA design student. Having previously worked with graphic design, web design and development, I now specialize in designing digital products while still working with websites as a freelancer. I also enjoy writing things, <a href="https://blikk.directory" rel="external" title="my library of observations" target="_blank">taking photos of stuff</a> and I have a fascination for digital minimalism.</BlockDisplay>
     
     <h2 className={utils.screen_reader_text}>Selected projects</h2>
     <div className={style.projects}>
