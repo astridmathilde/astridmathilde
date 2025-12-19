@@ -3,12 +3,12 @@
 .row {
   margin-top: $spacing;
 
-  &:first-child {
-    margin-top: $spacing / 2;
-  }
-
-  @media all and (min-width: $screen-sm) {
+  @media all and (min-width: 566px) {
     display: flex;
     justify-content: space-between;
+  }
+
+  .heading:first-child {
+    margin-top: 0;
   }
 }

@@ -137,7 +137,7 @@ export const skills = [
       "Systems Oriented Design",
       "Service Design",
       "Product Development",
-      "Front-End Development"
+      "Behavioral Design"
     ]
   },
   {
@@ -145,10 +145,10 @@ export const skills = [
     "title": "Technology",
     "keywords":
     [
-      "PWA",
       "HTML",
       "SCSS",
       "PHP",
+      "Python",
       "JSON",
       "Javascript",
       "React",
@@ -167,7 +167,7 @@ export const skills = [
       "WordPress",
       "Sanity",
       "Git",
-      "Supabase"
+      "Visual Studio Code",
     ]
   }
 ];

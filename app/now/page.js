@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { siteTitle } from "../layout";
+import BlockIcon from "../../components/icon";
 import utils from "../../assets/scss/utils.module.scss";
 
 const pageTitle = 'Now';
@@ -30,7 +31,7 @@ export default function Colophon() {
     <li>The song "To believe" by The Cinematic Orchestra & Moses Sumney</li>
     </ul>
     
-    <h2>Further discovery</h2>
+    <h2>Further discovery <BlockIcon>🔎</BlockIcon></h2>
     <p>You can <Link href="/colophon">check out this site's carbon footprint</Link>, find out <Link href="/about">more about me</Link>, or <Link href="/work/internship-fremtind">look at one of my projects</Link>.</p>
     </>
   )

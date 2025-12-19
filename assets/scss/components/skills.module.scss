@@ -12,11 +12,16 @@
   }
 
   ul {
+    padding: 0;
     font-size: 0.9em;
     font-weight: 420;
 
     @media all and (min-width: $screen-sm) {
       font-weight: 410;
+    }
+
+    li {
+      list-style: none;
     }
   }
 }

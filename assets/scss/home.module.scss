@@ -3,7 +3,7 @@
 .projects {
   display: grid;
   position: relative;
-  margin-top: 0;
+  margin-top: $spacing;
   grid-gap: $padding;
   font-size: 0.87em;
 
@@ -38,8 +38,4 @@
   @media all and (min-width: $screen-md) {
     grid-template-columns: 1fr 1fr 1fr;
   }
-}
-
-.contactHeader {
-  margin-top: $spacing * 0.8;
 }
