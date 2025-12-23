@@ -1,5 +1,4 @@
 import {Providers} from "./providers";
-import LightSwitch from './light-switch.js';
 import Link from "next/link";
 import localFont from 'next/font/local';
 import '../assets/scss/global.scss';
@@ -27,7 +26,7 @@ export const siteTitle = 'Astrid Mathilde Boberg';
 export default function Layout({ children }) {
   return (
     <>
-    <html lang="en" className={inter.className + " dark"}>
+    <html lang="en" className={inter.className}>
     <Wrapper>
     <Providers>
     <header id={styles.header} className={"text-medium"}>
@@ -36,7 +35,6 @@ export default function Layout({ children }) {
     <ul>
     <li key="work"><Link href="/work">Work</Link></li>
     <li key="resumee"><Link href="/about">About</Link></li>
-    <li key="lightswitch"><LightSwitch /></li>
     </ul>
     </nav>
     </header>
