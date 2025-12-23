@@ -1,6 +1,7 @@
 import kahos from "../assets/img/projects/kahos/thumbnail.jpg";
 import mensn from "../assets/img/projects/mensn/thumbnail.jpg";
 import fremtind from "../assets/img/projects/internship-fremtind/thumbnail.jpg";
+import svalbardBryggeri from "../assets/img/projects/svalbard-bryggeri/thumbnail.jpg";
 
 export const projects = [
   {
@@ -48,4 +49,22 @@ export const projects = [
     "team": ["Kaja Ronglan (designer)", "Jens Martin Norheim Berget (developer)", "Mads Severin Murvold (developer)"],
     "role": "Design and project management"
   },
+  {
+    "id": 3,
+    "title": "A new website for the world’s northernmost brewery",
+    "short_title": "Svalbard Bryggeri",
+    "thumbnail": svalbardBryggeri,
+    "slug": "svalbard-bryggeri",
+    "type": "Client project",
+    "category": "Website",    
+    "location": {
+      "name": "Røst kommunikasjon",
+      "url": "https://rostkommunikasjon.no"
+    },
+    "time": "May-September 2019 (4 months)",
+    "team": ["Tor Åge Vorren (project manager/art director)", "Simen Fangel (copywriter)", "Knut Åserud (photographer)"],
+    "role": "UX/UI design and web development"
+  },
 ]
+
+
