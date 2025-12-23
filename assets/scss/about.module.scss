@@ -1,0 +1,21 @@
+@import "base/variables";
+
+.about {
+  div:first-of-type {
+    margin-top: $spacing;
+
+    @media all and (min-width: $screen-sm) {
+      margin-top: 1em;
+    }
+
+    @media all and (min-width: $screen-lg) {
+      align-items: center;
+    }
+
+    @media all and (min-width: $screen-sm) and (max-width: $screen-lg) {
+      + div {
+        width: 50vw !important;
+      }
+    }
+  }
+}

@@ -1,8 +1,12 @@
 @import "../base/variables";
 
 .column {
+  p:first-of-type {
+    margin-top: 0;
+  }
+
   + .column {
-    @media all and (max-width: 566px) {
+    @media all and (max-width: $screen-sm) {
       padding-top: $padding;
 
       &:has(h2),
@@ -12,12 +16,12 @@
       }
     }
 
-    @media all and (min-width: 566px) {
+    @media all and (min-width: $screen-sm) {
       padding-left: $padding;
     }
   }
 
-  @media all and (max-width: 566px) {
+  @media all and (max-width: $screen-sm) {
     width: 100% !important;
 
     &:nth-child(1) {

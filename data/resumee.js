@@ -7,7 +7,7 @@ export const experience = [
       "name": "Astrid Boberg",
       "url": "https://astridboberg.no"
     },
-    "description": "Designing and developing websites and digital products for companies like Andøy kommune and Lo:Loe Landskap."
+    "description": "Designing and developing websites and digital products for companies like Andøy kommune and Lo:Lo Landskap."
   },
   {
     "id": 10,
