@@ -28,7 +28,7 @@ export default function About() {
     <BlockColumn>
     <p>I am from Kvænangen/Skjervøy in Northern Norway, and moved to Oslo in 2020 to start studying interaction design. Before that, I spent five years working as a designer and web developer, having learned to code at 10 and getting my first job as a developer at 19. Today, I use coding as a design tool, making it possible to quickly do design iterations and testing.</p>
     
-    <p>When it comes to making digital products, I believe that the climate impact is just as important as privacy and accessibility, especially when we are living in a time where AI is becoming a larger part of our lives and the products we make. I think it is important to keep sustainability in mind when dealing with large language models, and I am curious about how we might include them in our products and at the same time reduce the climate footprint.</p>
+    <p>When it comes to making digital products, I believe that the climate impact is just as important as privacy and accessibility, especially when we are living in a time where AI is increasingly becoming a part of our lives and the products we make. I am curious about how we might integrate Large Language Models into our digital products and reduce their climate footprint at the same time.</p>
     </BlockColumn>
     
     <BlockColumn width="29">
