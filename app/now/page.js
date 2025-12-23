@@ -10,7 +10,7 @@ export const metadata = {
   title: pageTitle + ' – ' + siteTitle
 }
 
-export default function Colophon() {
+export default function Now() {
   return (
     <>
     <h2>What I am doing now</h2>

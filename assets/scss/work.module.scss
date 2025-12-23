@@ -4,22 +4,15 @@
   display: grid;
   grid-template-columns: 1fr;
   gap: $padding;
+  margin-top: $spacing;
   font-size: 0.9em;
 
   @media all and (min-width: $screen-sm) {
     grid-template-columns: 1fr 1fr 1fr;
     gap: $padding;
-
-    img {
-      height: 27vw !important;
-    }
   }
 
   @media all and (min-width: $screen-xl) {
     grid-template-columns: 1fr 1fr 1fr;
-
-    img {
-      height: 20vw !important;
-    }
   }
 }

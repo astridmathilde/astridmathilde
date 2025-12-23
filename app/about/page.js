@@ -19,7 +19,7 @@ export const metadata = {
   title: pageTitle + ' – ' + siteTitle
 }
 
-export default function Resumee() {
+export default function About() {
   return (
     <>
     <h2 className={utils.screen_reader_text}>About me</h2>
