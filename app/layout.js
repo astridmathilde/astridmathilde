@@ -1,6 +1,7 @@
-import {Providers} from "./providers";
 import Link from "next/link";
+import {Providers} from "./providers";
 import localFont from 'next/font/local';
+import LightSwitch from '../components/light-switch.js';
 import '../assets/scss/global.scss';
 import styles from '../assets/scss/layout.module.scss';
 import Wrapper from './wrapper.js';
@@ -26,9 +27,10 @@ export const siteTitle = 'Astrid Mathilde Boberg';
 export default function Layout({ children }) {
   return (
     <>
-    <html lang="en" className={inter.className}>
-    <Wrapper>
+    <html lang="en" className={inter.className} suppressHydrationWarning>
+    <body suppressHydrationWarning>
     <Providers>
+    <Wrapper>
     <header id={styles.header} className={"text-medium"}>
     <h1 className={styles.site_title}><a href="/">Astrid Mathilde</a></h1>
     <nav className={styles.navigation}>
@@ -47,11 +49,13 @@ export default function Layout({ children }) {
     <ul>
     <li key="colophon"><Link href="/colophon">Colophon</Link></li>
     <li key="now"><Link href="/now">Now</Link></li>
+    <li key="lightswitch"><LightSwitch /></li>
     </ul>
     </nav>
     </footer>
-    </Providers>
     </Wrapper>
+    </Providers>
+    </body>
     </html>
     </>
   );
