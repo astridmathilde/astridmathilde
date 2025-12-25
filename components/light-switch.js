@@ -16,8 +16,12 @@ export default function LightSwitch() {
   
   
   return (
-    <>
-    <button onClick={() => setTheme(theme === "dark" ? "light" : "dark")} aria-label={resolvedTheme === "dark" ? "Switch to light mode" : "Switch to dark mode"}><BlockIcon>{resolvedTheme === "dark" ? "🌞"  : "🌘"}</BlockIcon></button>
+    <>    
+    <button 
+    onClick={() => setTheme(theme === "system" && resolvedTheme === "dark" ? "light" : theme === "system" && resolvedTheme === "light" ? "dark" : "system")}
+    aria-label={theme === "system" && resolvedTheme === "dark" ? "Switch to light mode" : theme === "system" && resolvedTheme === "light" ? "Switch to dark mode" : "Switch to default mode"}>
+    <BlockIcon>{theme === "system" && resolvedTheme === "dark" ? "🌞" : theme === "system" && resolvedTheme === "light" ? "🌘" : "🖥️"}</BlockIcon>
+    </button>
     </>
   )
 };

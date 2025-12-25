@@ -1,5 +1,5 @@
 import Link from "next/link";
-import {Providers} from "./providers";
+import {Providers} from "./providers.js";
 import localFont from 'next/font/local';
 import LightSwitch from '../components/light-switch.js';
 import '../assets/scss/global.scss';
@@ -24,11 +24,15 @@ const inter = localFont({
 
 export const siteTitle = 'Astrid Mathilde Boberg';
 
+export const viewport = {
+  colorScheme: 'dark light',
+}
+
 export default function Layout({ children }) {
   return (
     <>
     <html lang="en" className={inter.className} suppressHydrationWarning>
-    <body suppressHydrationWarning>
+    <body>
     <Providers>
     <Wrapper>
     <header id={styles.header} className={"text-medium"}>
@@ -36,7 +40,7 @@ export default function Layout({ children }) {
     <nav className={styles.navigation}>
     <ul>
     <li key="work"><Link href="/work">Work</Link></li>
-    <li key="resumee"><Link href="/about">About</Link></li>
+    <li key="about"><Link href="/about">About</Link></li>
     </ul>
     </nav>
     </header>
