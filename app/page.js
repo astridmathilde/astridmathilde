@@ -1,13 +1,11 @@
 import Link from "next/link";
 import { siteTitle } from "./layout";
 import BlockDisplay from "../components/display";
-import BlockResumee from "../components/resumee";
 import BlockProjects from "../components/projects";
 import BlockIcon from "../components/icon";
 import utils from "../assets/scss/utils.module.scss";
 import style from "../assets/scss/home.module.scss";
 import { projects } from "../data/projects";
-import { experience } from "../data/resumee";
 
 export const metadata = {
   metadataBase: new URL('https://astridmathilde.no'),
@@ -18,7 +16,7 @@ export const metadata = {
 export default function Index() {
   return (
     <div className={style.content}>
-    <BlockDisplay location="home">Heia! I am a designer and developer from Northern Norway, currently living in Oslo as an MA design student. Having previously worked with graphic design, web design and development, I now specialize in designing digital products while still working with websites as a freelancer. I also enjoy writing things, <a href="https://blikk.directory" rel="external" title="my library of observations" target="_blank">taking photos of stuff</a> and I have a fascination for digital minimalism.</BlockDisplay>
+    <BlockDisplay location="home">Heia! I am a designer and developer from Northern Norway, currently living in Oslo as an MA design student. Having previously worked with graphic design, web design and development, I now specialize in designing digital products, while still working with websites as a freelancer. I also enjoy writing things, <a href="https://blikk.directory" rel="external" title="my library of observations" target="_blank">taking photos of stuff</a> and I have a fascination for digital minimalism.</BlockDisplay>
     
     <h2>Selected work <BlockIcon>👇</BlockIcon></h2>
     <div className={style.projects}>

@@ -26,22 +26,23 @@ export default function About() {
     <div className={style.about}>
     <BlockRow>
     <BlockColumn>
-    <p>I am from Kvænangen/Skjervøy in Northern Norway, and moved to Oslo in 2020 to start studying interaction design. Before that, I spent five years working as a designer and web developer, having learned to code at 10 and getting my first job as a developer at 19. Today, I use coding as a design tool, making it possible to quickly do design iterations and testing.</p>
+    <p>I am from Kvænangen/Skjervøy in Northern Norway, and moved to Oslo in 2020 to start studying interaction design. Before that, I spent five years working as a designer and web developer, having learned to code at 10 and getting my first job as a developer at 19. Today, I use coding as a design tool, allowing me to quickly test and iterate.</p>
     
-    <p>When it comes to making digital products, I believe that the climate impact is just as important as privacy and accessibility, especially when we are living in a time where AI is increasingly becoming a large part of our lives and the products we make. I am curious about how we might integrate AI in our digital products and reduce their climate footprint at the same time.</p>
+    <p>When it comes to making digital products, I believe that the climate impact is just as important as privacy and accessibility, especially when we are living in a time where AI is increasingly becoming a large part of our lives and the products we make. I think it is important to keep sustainability in mind when dealing with AI and large language models, and I am curious about how we might integrate these technologies into our digital products and reduce the carbon footprint at the same time.</p>
     </BlockColumn>
     
-    <BlockColumn width="29">
+    <BlockColumn width="30">
     <BlockImage url={portrait} alt="Astrid Mathilde Boberg" width="1242" height="2021" sizes="(min-width: 670px) 50vw, 100vw" priority />
     </BlockColumn>
     </BlockRow>
     </div>
+    
     <h3>Education</h3>
     {education.map((education) => (
       <BlockResumee key={education.id} position={education.grade} locationUrl={education.location.url} locationName={education.location.name} description={education.description} time={education.time} />
     ))}
     
-    <h3>Work experience</h3>
+    <h3>Experience</h3>
     {experience.map((experience) => (
       <BlockResumee key={experience.id} position={experience.position} locationUrl={experience.location.url} locationName={experience.location.name} description={experience.description} time={experience.time} />
     ))}   
