@@ -37,12 +37,6 @@ export default function Layout({ children }) {
     <Wrapper>
     <header id={styles.header} className={"text-medium"}>
     <h1 className={styles.site_title}><a href="/">Astrid Mathilde</a></h1>
-    <nav className={styles.navigation}>
-    <ul>
-    <li key="work"><Link href="/work">Work</Link></li>
-    <li key="about"><Link href="/about">About</Link></li>
-    </ul>
-    </nav>
     </header>
     <main id={styles.content} className={styles.entry}>
     {children}
@@ -51,9 +45,7 @@ export default function Layout({ children }) {
     <address rel="author">© Astrid Mathilde Boberg</address>
     <nav className={styles.navigation}>
     <ul>
-    <li key="colophon"><Link href="/colophon">Colophon</Link></li>
-    <li key="now"><Link href="/now">Now</Link></li>
-    <li key="lightswitch"><LightSwitch /></li>
+    <li key="resumee"><Link href="/resumee">Resumee</Link></li>
     </ul>
     </nav>
     </footer>

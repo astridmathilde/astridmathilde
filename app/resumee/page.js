@@ -1,18 +1,14 @@
 import { siteTitle } from "../layout";
 import Link from "next/link";
-import style from "../../assets/scss/about.module.scss";
 import skillStyle from "../../assets/scss/components/skills.module.scss";
-import utils from "../../assets/scss/utils.module.scss";
 import BlockRow from "../../components/row";
+import BlockDisplay from "../../components/display";
 import BlockColumn from "../../components/column";
 import BlockResumee from "../../components/resumee";
-import BlockImage from "../../components/image";
 import BlockIcon from "../../components/icon";
 import { experience, education, skills } from "../../data/resumee";
 
-import portrait from "../../assets/img/about/astridmathilde.jpeg";
-
-const pageTitle = 'About me';
+const pageTitle = 'My resumee';
 
 export const metadata = {
   metadataBase: new URL('https://astridmathilde.no/about'),
@@ -22,21 +18,6 @@ export const metadata = {
 export default function About() {
   return (
     <>
-    <h2 className={utils.screen_reader_text}>About me</h2>
-    <div className={style.about}>
-    <BlockRow>
-    <BlockColumn>
-    <p>I am from Kvænangen/Skjervøy in Northern Norway, and moved to Oslo in 2020 to start studying interaction design. Before that, I spent five years working as a designer and web developer, having learned to code at 10 and getting my first job as a developer at 19. Today, I use coding as a design tool, allowing me to quickly test and iterate.</p>
-    
-    <p>When it comes to making digital products, I believe that the climate impact is just as important as privacy and accessibility, especially when we are living in a time where AI is increasingly becoming a large part of our lives and the products we make. I think it is important to keep sustainability in mind when dealing with AI and large language models, and I am curious about how we might integrate these technologies into our digital products and reduce the carbon footprint at the same time.</p>
-    </BlockColumn>
-    
-    <BlockColumn width="30">
-    <BlockImage url={portrait} alt="Astrid Mathilde Boberg" width="1242" height="2021" sizes="(min-width: 670px) 50vw, 100vw" priority />
-    </BlockColumn>
-    </BlockRow>
-    </div>
-    
     <h3>Education</h3>
     {education.map((education) => (
       <BlockResumee key={education.id} position={education.grade} locationUrl={education.location.url} locationName={education.location.name} description={education.description} time={education.time} />
@@ -66,7 +47,7 @@ export default function About() {
     <p>My email is <a href="mailto:heia@astridmathilde.no?subject=Heia!">heia@astridmathilde.no</a>, but you can also <a href="https://www.linkedin.com/in/astridmathilde/" target="_blank" rel="nofollow noreferrer">add me on LinkedIn</a>!</p>
     
     <h2>Further discovery <BlockIcon>🔎</BlockIcon></h2>
-    <p>You can find out <Link href="/now">what I have been up to lately</Link>, look at <Link href="/work/mensn">one of my projects</Link>, or see <Link href="/colophon">how I have reduced the carbon emissions on this website.</Link></p>
+    <p>You can view the code for this site on <a href="https://github.com/astridmathilde/astridmathilde">Github</a>, or go back to the <Link href="/">home page</Link>.</p>
     </>
   )
 }
