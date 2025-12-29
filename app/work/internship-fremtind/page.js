@@ -23,7 +23,7 @@ import compareProducts from "../../../assets/img/projects/internship-fremtind/co
 import palette from "../../../assets/img/projects/internship-fremtind/color-palette.jpg";
 
 
-const projectID = projects[2];
+const projectID = projects[1];
 const pageTitle = projectID.short_title;
 
 

@@ -18,7 +18,7 @@ export const projects = [
     "team": ["Eirik Lohne Ruud", "Håkon Skorge", "Rakel Paulsen", "Guro Fløgstad Høvik", "Frida Tørring", "Frans Nygaard", "Per Roppestad Christensen", "Anniken B. Willmann", "Sanna Skeide", "Silje Regine Ekornrud Seim", "Felix Vik"]
   },
   {
-    "id": 2,
+    "id": 1,
     "title": "A better way of managing the configuration of Fremtind's insurance products",
     "short_title": "Product Config Manager",
     "thumbnail": fremtind,
@@ -32,5 +32,5 @@ export const projects = [
     "time": "June–July 2024 (7 weeks)",
     "team": ["Kaja Ronglan (designer)", "Jens Martin Norheim Berget (developer)", "Mads Severin Murvold (developer)"],
     "role": "Design and project management"
-  },
+  }
 ]
