@@ -1,10 +1,8 @@
 import { siteTitle } from "../../layout";
 import { projects } from "../../../data/projects";
 import style from "../../../assets/scss/project.module.scss";
-import projectNav from "../../../assets/scss/components/project-navigation.module.scss";
 import BlockImage from "../../../components/image";
 import BlockImageRow from "../../../components/image_row";
-import BlockProjects from "../../../components/projects";
 
 import img_aho from "../../../assets/img/projects/kahos/aho.jpg";
 import img_logo from "../../../assets/img/projects/kahos/logo.jpg";

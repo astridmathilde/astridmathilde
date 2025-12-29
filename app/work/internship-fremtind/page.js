@@ -2,10 +2,8 @@ import Link from "next/link";
 import { siteTitle } from "../../layout";
 import { projects } from "../../../data/projects";
 import style from "../../../assets/scss/project.module.scss";
-import projectNav from "../../../assets/scss/components/project-navigation.module.scss";
 import BlockImage from "../../../components/image";
 import BlockImageRow from "../../../components/image_row";
-import BlockProjects from "../../../components/projects";
 
 import flowchart from "../../../assets/img/projects/internship-fremtind/flowchart.svg";
 import functions from "../../../assets/img/projects/internship-fremtind/flowchart-finished.jpg";
