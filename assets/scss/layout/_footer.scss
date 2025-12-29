@@ -5,13 +5,6 @@
   position: relative;
   align-items: center;
   justify-content: space-between;
-  margin-top: calc($spacing * 2);
+  margin-top: $spacing / 2;
   margin-bottom: $padding / 4;
-  font-size: 0.85em;
-  font-weight: 410;
-
-  @media all and (min-width: $screen-md) {
-    font-weight: 400;
-    font-size: 0.9em;
-  }
 }

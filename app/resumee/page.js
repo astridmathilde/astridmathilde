@@ -42,12 +42,6 @@ export default function About() {
     ))}
     </BlockRow>
     </div>
-    
-    <h2>Contact <BlockIcon>🤝</BlockIcon></h2>
-    <p>My email is <a href="mailto:heia@astridmathilde.no?subject=Heia!">heia@astridmathilde.no</a>, but you can also <a href="https://www.linkedin.com/in/astridmathilde/" target="_blank" rel="nofollow noreferrer">add me on LinkedIn</a>!</p>
-    
-    <h2>Further discovery <BlockIcon>🔎</BlockIcon></h2>
-    <p>You can view the code for this site on <a href="https://github.com/astridmathilde/astridmathilde">Github</a>, or go back to the <Link href="/">home page</Link>.</p>
     </>
   )
 }
