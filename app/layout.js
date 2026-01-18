@@ -1,19 +1,19 @@
 import {Providers} from "./providers.js";
 import localFont from 'next/font/local';
-import '../assets/scss/global.scss';
-import styles from '../assets/scss/layout.module.scss';
+import './assets/scss/global.scss';
+import styles from './assets/scss/layout.module.scss';
 import Wrapper from './wrapper.js';
-import '../assets/scss/brightness.scss';
+import './assets/scss/brightness.scss';
 
 const inter = localFont({
   src: [
     {
-      path: '../assets/fonts/InterVariable.woff2',
+      path: './assets/fonts/InterVariable.woff2',
       weight: '100 500',
       style: 'normal',
     },
     {
-      path: '../assets/fonts/InterVariable-Italic.woff2',
+      path: './assets/fonts/InterVariable-Italic.woff2',
       weight: '100 500',
       style: 'italic',
     }

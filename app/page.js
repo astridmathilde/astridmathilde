@@ -1,6 +1,6 @@
 import { siteTitle } from "./layout";
 import Link from "next/link";
-import style from "../assets/scss/home.module.scss";
+import style from "./assets/scss/home.module.scss";
 
 export const metadata = {
   metadataBase: new URL('https://astridmathilde.no'),

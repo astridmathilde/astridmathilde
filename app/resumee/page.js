@@ -1,17 +1,14 @@
 import { siteTitle } from "../layout";
-import Link from "next/link";
-import skillStyle from "../../assets/scss/components/skills.module.scss";
-import BlockRow from "../../components/row";
-import BlockDisplay from "../../components/display";
-import BlockColumn from "../../components/column";
-import BlockResumee from "../../components/resumee";
-import BlockIcon from "../../components/icon";
+import skillStyle from "../assets/scss/components/skills.module.scss";
+import BlockRow from "../components/row";
+import BlockColumn from "../components/column";
+import BlockResumee from "../components/resumee";
 import { experience, education, skills } from "../../data/resumee";
 
 const pageTitle = 'My resumee';
 
 export const metadata = {
-  metadataBase: new URL('https://astridmathilde.no/about'),
+  metadataBase: new URL('https://astridmathilde.no/resumee'),
   title: pageTitle + ' – ' + siteTitle
 }
 

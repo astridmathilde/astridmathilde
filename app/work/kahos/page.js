@@ -1,17 +1,17 @@
 import { siteTitle } from "../../layout";
 import { projects } from "../../../data/projects";
-import style from "../../../assets/scss/project.module.scss";
-import BlockImage from "../../../components/image";
-import BlockImageRow from "../../../components/image_row";
+import style from "../../assets/scss/project.module.scss";
+import BlockImage from "../../components/image";
+import BlockImageRow from "../../components/image_row";
 
-import img_aho from "../../../assets/img/projects/kahos/aho.jpg";
-import img_logo from "../../../assets/img/projects/kahos/logo.jpg";
-import img_auditorium from "../../../assets/img/projects/kahos/auditorium.jpg";
-import img_posters from "../../../assets/img/projects/kahos/posters.jpg";
-import img_templates from "../../../assets/img/projects/kahos/templates.jpg";
-import img_forelesning from "../../../assets/img/projects/kahos/forelesning.jpg";
-import img_poster_1 from "../../../assets/img/projects/kahos/poster-1.jpg";
-import img_poster_2 from "../../../assets/img/projects/kahos/poster-2.jpg";
+import img_aho from "../../assets/img/projects/kahos/aho.jpg";
+import img_logo from "../../assets/img/projects/kahos/logo.jpg";
+import img_auditorium from "../../assets/img/projects/kahos/auditorium.jpg";
+import img_posters from "../../assets/img/projects/kahos/posters.jpg";
+import img_templates from "../../assets/img/projects/kahos/templates.jpg";
+import img_forelesning from "../../assets/img/projects/kahos/forelesning.jpg";
+import img_poster_1 from "../../assets/img/projects/kahos/poster-1.jpg";
+import img_poster_2 from "../../assets/img/projects/kahos/poster-2.jpg";
 
 const pageTitle = (projects[0].short_title);
 
