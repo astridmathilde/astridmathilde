@@ -1,5 +1,5 @@
-import kahos from "../assets/img/projects/kahos/thumbnail.jpg";
-import fremtind from "../assets/img/projects/internship-fremtind/thumbnail.jpg";
+import kahos from "../app/assets/img/projects/kahos/thumbnail.jpg";
+import fremtind from "../app/assets/img/projects/internship-fremtind/thumbnail.jpg";
 
 export const projects = [
   {
