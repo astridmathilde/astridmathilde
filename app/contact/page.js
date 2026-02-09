@@ -1,8 +1,7 @@
 import { siteTitle } from "../layout";
+import Link from "next/link";
+
 import utils from "../assets/scss/utils.module.scss";
-import BlockRow from "../components/row";
-import BlockColumn from "../components/column";
-import BlockImage from "../components/image";
 
 const pageTitle = 'Contact';
 
@@ -11,11 +10,9 @@ export const metadata = {
   title: pageTitle + ' – ' + siteTitle
 }
 
-import img from "../assets/img/about/astridmathilde.jpeg";
 export default function Contact() {
   return (
-    <BlockRow>
-    <BlockColumn>
+    <>
     <h2 className={utils.screen_reader_text}>Contact</h2>
     <p>My email is heia@astridmathilde.no, but you can also <a href="https://www.linkedin.com/in/astridmathilde/" target="_blank" rel="nofollow noreferrer">add me on LinkedIn</a>!</p>
     
@@ -28,11 +25,6 @@ export default function Contact() {
     <li><a href="https://www.linkedin.com/in/astridmathilde/" target="_blank" rel="nofollow noreferrer">LinkedIn</a></li>
     </ul>
     </nav>
-    </BlockColumn>
-
-    <BlockColumn width="25">
-      <BlockImage url={img} alt="Astrid Mathilde Boberg" />
-    </BlockColumn>
-    </BlockRow>
+    </>
   )
 }

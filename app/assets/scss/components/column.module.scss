@@ -1,7 +1,8 @@
 @import "../base/variables";
 
 .column {
-  p:first-of-type {
+  p:first-of-type,
+  h2:first-of-type {
     margin-top: 0;
   }
 
@@ -21,15 +22,12 @@
     width: 100% !important;
 
     &:nth-child(1) {
+      margin-top: 0;
+
       h3,
       h2 {
         margin-top: 0;
       }
-    }
-
-    &:nth-child(1):has(:not(h2)),
-    &:nth-child(1):has(:not(h3)) {
-      margin-top: $spacing;
     }
   }
 

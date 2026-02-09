@@ -1,9 +1,10 @@
 import { siteTitle } from "../layout";
+import Link from "next/link";
 import skillStyle from "../assets/scss/components/skills.module.scss";
 import BlockRow from "../components/row";
 import BlockColumn from "../components/column";
 import BlockResumee from "../components/resumee";
-import { experience, education, skills } from "../../data/resumee";
+import { experience, education, skills, achievements } from "../../data/resumee";
 
 const pageTitle = 'My resumee';
 
@@ -12,7 +13,7 @@ export const metadata = {
   title: pageTitle + ' – ' + siteTitle
 }
 
-export default function About() {
+export default function Resumee() {
   return (
     <>
     <h3>Education</h3>
@@ -23,7 +24,13 @@ export default function About() {
     <h3>Experience</h3>
     {experience.map((experience) => (
       <BlockResumee key={experience.id} position={experience.position} locationUrl={experience.location.url} locationName={experience.location.name} description={experience.description} time={experience.time} />
-    ))}   
+    ))}
+    
+    <h3>Achievements</h3>
+    {achievements.map((achievement) => (
+      <BlockResumee key={achievement.id} position={achievement.title} locationUrl={achievement.location.url} locationName={achievement.location.name} time={achievement.year} description={achievement.description} />
+    ))}  
+    
     
     <div className={skillStyle.container}>
     <BlockRow>

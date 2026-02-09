@@ -1,4 +1,5 @@
 import {Providers} from "./providers.js";
+import { useRouter } from "next/router.js";
 import localFont from 'next/font/local';
 import './assets/scss/global.scss';
 import styles from './assets/scss/layout.module.scss';
@@ -25,6 +26,11 @@ export const siteTitle = 'Astrid Mathilde Boberg';
 export const viewport = {
   colorScheme: 'dark light',
 }
+
+const isHomePage = () => {
+  const router = useRouter();
+  return router.pathname === '/' && router.isExact;
+};
 
 export default function Layout({ children }) {
   return (
