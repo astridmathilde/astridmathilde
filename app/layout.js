@@ -1,5 +1,4 @@
-import {Providers} from "./providers.js";
-import { useRouter } from "next/router.js";
+import { ThemeProvider } from 'next-themes';
 import localFont from 'next/font/local';
 import './assets/scss/global.scss';
 import styles from './assets/scss/layout.module.scss';
@@ -23,21 +22,13 @@ const inter = localFont({
 
 export const siteTitle = 'Astrid Mathilde Boberg';
 
-export const viewport = {
-  colorScheme: 'dark light',
-}
-
-const isHomePage = () => {
-  const router = useRouter();
-  return router.pathname === '/' && router.isExact;
-};
 
 export default function Layout({ children }) {
   return (
     <>
     <html lang="en" className={inter.className} suppressHydrationWarning>
     <body>
-    <Providers>
+    <ThemeProvider>
     <Wrapper>
     <header id={styles.header} className={"text-medium"}>
     <h1 className={styles.site_title}><a href="/">{siteTitle}</a></h1>
@@ -46,7 +37,7 @@ export default function Layout({ children }) {
     {children}
     </main>
     </Wrapper>
-    </Providers>
+    </ThemeProvider>
     </body>
     </html>
     </>
