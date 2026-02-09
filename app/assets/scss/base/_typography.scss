@@ -33,7 +33,7 @@ h2 {
 }
 
 h3 {
-  margin-top: variables.$spacing;
+  margin-top: calc(variables.$spacing * 0.8);
 }
 
 h4 {
