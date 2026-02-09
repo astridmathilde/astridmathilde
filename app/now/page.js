@@ -1,9 +1,7 @@
-import Link from "next/link";
 import { siteTitle } from "../layout";
-import BlockIcon from "../../components/icon";
-import utils from "../../assets/scss/utils.module.scss";
+import utils from "../assets/scss/utils.module.scss"
 
-const pageTitle = 'Now';
+const pageTitle = 'Current status';
 
 export const metadata = {
   metadataBase: new URL('https://astridmathilde.no/now'),
@@ -13,26 +11,22 @@ export const metadata = {
 export default function Now() {
   return (
     <>
-    <h2>What I am doing now</h2>
-    <p>Just finished the first semester of my fourth year at the <a href="https://aho.no/en" target="_blank" rel="external">Oslo School of Architecture and Design</a>, and I am wrapping up a freelance project I have been working with for the past year. I still have a minimalist phone, my beloved Punkt MP02, and I actually got rid of my iPhone after dreading it for months. I tried deleting social media, but for a while I was back on Instagram. Taking a break now, though. When I went to Northern Norway for Christmas, I found my old iPod Nano and that made me very happy.</p>
+    <h2 className={utils.screen_reader_text}>Current status</h2>
+    <p>Currently on my fourth year at the <a href="https://aho.no/en" target="_blank" rel="external">Oslo School of Architecture and Design</a>. Otherwise I am focusing on my personal projects, including the development of <a href="https://blikk.directory" rel="external" target="_blank">Blikkjournal</a> (my personal archive of moments and everyday observations) and the website you are browsing right now. After this I am planning to work on some previously neglected writings, and maybe get back into bookbinding.</p>
     
-    <p className={utils.small}>Last updated on December 18th, 2025. Inspired by <a href="https://nownownow.com/about" target="_blank" rel="external">Now</a>.</p>
-    
-    
+    <p className={utils.small}>Last updated on February 4th, 2026. Inspired by <a href="https://nownownow.com/about" target="_blank" rel="external">Now</a>.</p>
+
     <h3>Currently reading</h3>
     <ul>
-    <li><em>Barnet mitt</em>, Hanne Ørstavik</li>
-    <li><em>Design after capitalism</em>, Matthew Wizinsky</li>
+      <li><em>The Creative Act</em>, Rick Rubin</li>
     </ul>
-    
+
     <h3>Music on repeat</h3>
     <ul>
-    <li>The album <em>Migration</em> by Bonobo</li>
-    <li>The song "To believe" by The Cinematic Orchestra & Moses Sumney</li>
+      <li>The album <em>Secret Life</em> by Fred again.. & Bibio</li>
+      <li>The song "someday" by rutherford</li>
+      <li>The band Arctic Monkeys</li>
     </ul>
-    
-    <h2>Further discovery <BlockIcon>🔎</BlockIcon></h2>
-    <p>You can <Link href="/colophon">check out this site's carbon footprint</Link>, find out <Link href="/about">more about me</Link>, or <Link href="/work/internship-fremtind">look at one of my projects</Link>.</p>
     </>
   )
 }

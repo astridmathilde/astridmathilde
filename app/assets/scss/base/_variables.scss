@@ -8,21 +8,21 @@ $screen-xl: 1554px;
 // Containers
 $container-site: 100%;
 $container-content: 150ch;
-$container-text: 70ch;
+$container-text: 69ch;
 $spacing: 3.6em;
 $padding: 3%;
 
 // Light Mode
-$color-background: #f1eff7;
+$color-background: #f9f9fc;
 $color-text: #241438;
-$color-link: darken($color-background, 20);
-$color-link-hover: darken($color-background, 50);
+$color-link: #241438;
+$color-link-hover: #241438;
 
 // Dark Mode
-$dark-color-background: #0b0611;
+$dark-color-background: #040207;
 $dark-color-text: #dad8e0;
-$dark-color-link: darken($dark-color-text, 20);
-$dark-color-link-hover: darken($dark-color-text, 50);
+$dark-color-link: #dad8e0;
+$dark-color-link-hover: #dad8e0;
 
 // Transitions
 $duration-fast: 0.2s;

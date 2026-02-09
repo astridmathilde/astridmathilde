@@ -1,19 +1,17 @@
 import { siteTitle } from "../../layout";
 import { projects } from "../../../data/projects";
-import style from "../../../assets/scss/project.module.scss";
-import projectNav from "../../../assets/scss/components/project-navigation.module.scss";
-import BlockImage from "../../../components/image";
-import BlockImageRow from "../../../components/image_row";
-import BlockProjects from "../../../components/projects";
+import style from "../../assets/scss/project.module.scss";
+import BlockImage from "../../components/image";
+import BlockImageRow from "../../components/image_row";
 
-import img_aho from "../../../assets/img/projects/kahos/aho.jpg";
-import img_logo from "../../../assets/img/projects/kahos/logo.jpg";
-import img_auditorium from "../../../assets/img/projects/kahos/auditorium.jpg";
-import img_posters from "../../../assets/img/projects/kahos/posters.jpg";
-import img_templates from "../../../assets/img/projects/kahos/templates.jpg";
-import img_forelesning from "../../../assets/img/projects/kahos/forelesning.jpg";
-import img_poster_1 from "../../../assets/img/projects/kahos/poster-1.jpg";
-import img_poster_2 from "../../../assets/img/projects/kahos/poster-2.jpg";
+import img_aho from "../../assets/img/projects/kahos/aho.jpg";
+import img_logo from "../../assets/img/projects/kahos/logo.jpg";
+import img_auditorium from "../../assets/img/projects/kahos/auditorium.jpg";
+import img_posters from "../../assets/img/projects/kahos/posters.jpg";
+import img_templates from "../../assets/img/projects/kahos/templates.jpg";
+import img_forelesning from "../../assets/img/projects/kahos/forelesning.jpg";
+import img_poster_1 from "../../assets/img/projects/kahos/poster-1.jpg";
+import img_poster_2 from "../../assets/img/projects/kahos/poster-2.jpg";
 
 const pageTitle = (projects[0].short_title);
 
@@ -76,13 +74,6 @@ export default function kahos() {
     </div>
     </div>
     </article>
-    
-    <h2>Keep looking</h2>
-    <div className={projectNav.container}>
-    {projects.filter(project => project.id != '0').toReversed().map((project) => (
-      <BlockProjects key={project.id} slug={project.slug} title={project.title} category={project.category} location={project.location.name} thumbnail={project.thumbnail} sizes="(min-width: 400px) 50vw, (min-width: 900px) 33vw, 100vw" />
-    ))}
-    </div>
     </>
   )
 }

@@ -1,15 +1,5 @@
 export const experience = [
   {
-    "id": 11,
-    "time": "Feb 2021->",
-    "position": "Designer & developer",
-    "location": {
-      "name": "Astrid Boberg",
-      "url": "https://astridboberg.no"
-    },
-    "description": "Designing and developing websites and digital products for companies like Andøy kommune and Lo:Lo Landskap."
-  },
-  {
     "id": 10,
     "time": "Jun–Aug 2025",
     "position": "Designer",

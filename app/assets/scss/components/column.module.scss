@@ -15,10 +15,6 @@
         padding-top: 0;
       }
     }
-
-    @media all and (min-width: $screen-sm) {
-      padding-left: $padding;
-    }
   }
 
   @media all and (max-width: $screen-sm) {

@@ -1,31 +1,29 @@
 import Link from "next/link";
 import { siteTitle } from "../../layout";
 import { projects } from "../../../data/projects";
-import style from "../../../assets/scss/project.module.scss";
-import projectNav from "../../../assets/scss/components/project-navigation.module.scss";
-import BlockImage from "../../../components/image";
-import BlockImageRow from "../../../components/image_row";
-import BlockProjects from "../../../components/projects";
+import style from "../../assets/scss/project.module.scss";
+import BlockImage from "../../components/image";
+import BlockImageRow from "../../components/image_row";
 
-import flowchart from "../../../assets/img/projects/internship-fremtind/flowchart.svg";
-import functions from "../../../assets/img/projects/internship-fremtind/flowchart-finished.jpg";
-import terms from "../../../assets/img/projects/internship-fremtind/begreper.svg";
+import flowchart from "../../assets/img/projects/internship-fremtind/flowchart.svg";
+import functions from "../../assets/img/projects/internship-fremtind/flowchart-finished.jpg";
+import terms from "../../assets/img/projects/internship-fremtind/begreper.svg";
 
-import imgProcess1 from "../../../assets/img/projects/internship-fremtind/prosess-0.jpg";
-import imgProcess2 from "../../../assets/img/projects/internship-fremtind/prosess-2.jpg";
-import imgProcess3 from "../../../assets/img/projects/internship-fremtind/prosess-3.jpg";
-import imgProcess4 from "../../../assets/img/projects/internship-fremtind/paper-prototypes.jpg";
-import imgProcess7 from "../../../assets/img/projects/internship-fremtind/user-testing.jpg";
-import imgProcess8 from "../../../assets/img/projects/internship-fremtind/prosess-9.jpg";
-import imgProcess9 from "../../../assets/img/projects/internship-fremtind/prosess-10.jpg";
+import imgProcess1 from "../../assets/img/projects/internship-fremtind/prosess-0.jpg";
+import imgProcess2 from "../../assets/img/projects/internship-fremtind/prosess-2.jpg";
+import imgProcess3 from "../../assets/img/projects/internship-fremtind/prosess-3.jpg";
+import imgProcess4 from "../../assets/img/projects/internship-fremtind/paper-prototypes.jpg";
+import imgProcess7 from "../../assets/img/projects/internship-fremtind/user-testing.jpg";
+import imgProcess8 from "../../assets/img/projects/internship-fremtind/prosess-9.jpg";
+import imgProcess9 from "../../assets/img/projects/internship-fremtind/prosess-10.jpg";
 
 
-import imgResult from "../../../assets/img/projects/internship-fremtind/resultat-bilde-3.jpg";
-import compareProducts from "../../../assets/img/projects/internship-fremtind/compare-products.jpg";
-import palette from "../../../assets/img/projects/internship-fremtind/color-palette.jpg";
+import imgResult from "../../assets/img/projects/internship-fremtind/resultat-bilde-3.jpg";
+import compareProducts from "../../assets/img/projects/internship-fremtind/compare-products.jpg";
+import palette from "../../assets/img/projects/internship-fremtind/color-palette.jpg";
 
 
-const projectID = projects[2];
+const projectID = projects[1];
 const pageTitle = projectID.short_title;
 
 
@@ -141,13 +139,6 @@ export default function fremtind() {
     </div>
     </div>
     </article>
-    
-    <h2>Keep looking</h2>
-    <div className={projectNav.container}>
-    {projects.filter(project => project.id != '2').toReversed().map((project) => (
-      <BlockProjects key={project.id} slug={project.slug} title={project.title} category={project.category} location={project.location.name} thumbnail={project.thumbnail} sizes="(min-width: 400px) 50vw, (min-width: 900px) 33vw, 100vw"/>
-    ))}
-    </div>
     </>
   )
 }
