@@ -23,9 +23,9 @@ export default async function About() {
     <h2 className={utils.screen_reader_text}>About me</h2>
     <BlockRow>
     <BlockColumn>
-    <p>I was born in April 1998 (currently 27 years old) in the far north of Norway, and I have been passionate about design and technology ever since I learned to code as a child. I enjoyed taking photos (especially of horses) and wanted to create my own space on the web to publish them, so I started coding websites.</p>
+    <p>I was born in April 1998 (currently 27 years old) in the far north of Norway, and I have been passionate about design and technology ever since I learned to code as a child. I enjoyed taking photos (especially of horses) and wanted to create my own space on the web to publish them, so I started coding websites from scratch on the Notepad of my family's computer.</p>
 
-    <p>After finishing my second year of high school, I spent two years at a design and marketing agency in Harstad as a trainee in graphic design. After this, I started working as a web designer and developer in Tromsø. I worked there for a couple of years before I started studying design at <a href="https://www.aho.no/english/" rel="external" target="_blank">The Oslo School of Architecture and Design</a>.</p>
+    <p>After finishing my second year of high school, I spent two years at a design and marketing agency in Harstad as a trainee in graphic design. After this, I started working as a web designer and developer in Tromsø. I worked there for a couple of years before I moved to Oslo and started studying design at <a href="https://www.aho.no/english/" rel="external" target="_blank">The Oslo School of Architecture and Design</a>.</p>
     
     <p>When I am not at school working on design projects or at home working on my personal projects, you can find me outside with friends, at the yoga studio, or maybe at some venue listening to rock, metal or electronic music.</p>
     </BlockColumn>
