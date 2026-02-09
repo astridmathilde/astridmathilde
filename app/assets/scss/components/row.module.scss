@@ -3,6 +3,10 @@
 .row {
   margin-top: $spacing;
 
+  &:first-child {
+    margin-top: 1em;
+  }
+
   @media all and (min-width: $screen-sm) {
     display: flex;
     justify-content: space-between;
