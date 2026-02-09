@@ -1,4 +1,4 @@
-@import "../base/variables";
+@use "../base/variables";
 
 .image {
   margin: 0;
@@ -7,7 +7,7 @@
     max-width: 100%;
     height: auto;
 
-    @media all and (min-width: $screen-lg) {
+    @media all and (min-width: variables.$screen-lg) {
       min-width: 100%;
     }
   }
@@ -16,11 +16,11 @@
     font-size: 0.75em;
     font-weight: 430;
 
-    @media all and (min-width: $screen-sm) {
+    @media all and (min-width: variables.$screen-sm) {
       font-weight: 420;
     }
 
-    @media all and (min-width: $screen-md) {
+    @media all and (min-width: variables.$screen-md) {
       font-weight: 410;
     }
   }

@@ -13,7 +13,7 @@ export default function Now() {
   return (
     <>
     <h2 className={utils.screen_reader_text}>Current status</h2>
-    <p>Currently on my fourth year at the <a href="https://aho.no/en" target="_blank" rel="external">Oslo School of Architecture and Design</a>. My life is calm and quiet right now, focusing on school assignments and personal projects, including the development of <a href="https://blikk.directory" rel="external" target="_blank">Blikkjournal</a> (my personal archive of moments and everyday observations) and the website you are browsing right now. Until I figure out a better way to structure this site and showcase my work, everything will be more simple and calm than usual, like my life lately :)</p>
+    <p>Currently on my fourth year at the <a href="https://aho.no/en" target="_blank" rel="external">Oslo School of Architecture and Design</a>. My life is calm and quiet right now. I am focusing on school assignments and personal projects, including the development of <a href="https://blikk.directory" rel="external" target="_blank">Blikkjournal</a> (my personal archive of moments and everyday observations) and the website you are browsing right now. Until I figure out a better way to structure this site and showcase my work, everything will be more simple and calm than usual, like my life lately :)</p>
     
     <p className={utils.small}>Last updated on February 9th, 2026. Inspired by <a href="https://nownownow.com/about" target="_blank" rel="external">Now</a>.</p>
     

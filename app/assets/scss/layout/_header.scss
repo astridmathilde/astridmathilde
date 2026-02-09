@@ -1,11 +1,11 @@
-@import "../base/variables";
+@use "../base/variables";
 
 #header {
-  padding-top: $padding;
-  padding-bottom: $padding;
+  padding-top: variables.$padding;
+  padding-bottom: variables.$padding;
   font-size: 0.85em;
 
-  @media all and (min-width: $screen-md) {
+  @media all and (min-width: variables.$screen-md) {
     font-size: 0.9em;
   }
 
@@ -20,7 +20,7 @@
       text-decoration-color: white !important;
     }
 
-    @media all and (max-width: $screen-md) {
+    @media all and (max-width: variables.$screen-md) {
       display: inline-flex;
       align-items: center;
       height: 48px;

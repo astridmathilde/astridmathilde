@@ -1,4 +1,4 @@
-@import "./base/variables";
+@use "base/variables";
 
 .screen_reader_text {
   border: 0;
@@ -23,11 +23,11 @@
 }
 
 .display {
-  @media all and (min-width: $screen-lg) {
+  @media all and (min-width: variables.$screen-lg) {
     font-size: 1.3em;
   }
 }
 
 .sectionTitle {
-  margin-top: $spacing * 1.2;
+  margin-top: variables.$spacing * 1.2;
 }

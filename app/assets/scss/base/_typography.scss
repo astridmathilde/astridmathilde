@@ -1,3 +1,5 @@
+@use "variables";
+
 h1,
 h2,
 h3,
@@ -5,7 +7,7 @@ h4,
 h5,
 h6,
 p {
-  max-width: $container-text;
+  max-width: variables.$container-text;
 }
 
 h1,
@@ -27,19 +29,19 @@ h3 {
 }
 
 h2 {
-  margin-top: $spacing;
+  margin-top: variables.$spacing;
 
   &:first-of-type {
-    margin-top: $spacing / 3;
+    margin-top: calc(variables.$spacing / 3);
   }
 }
 
 h3 {
-  margin-top: $spacing;
+  margin-top: variables.$spacing;
 }
 
 h4 {
-  margin-top: $spacing * 0.6;
+  margin-top: calc(variables.$spacing * 0.6);
   margin-bottom: 0;
   font-size: 0.8em;
   opacity: 0.8;

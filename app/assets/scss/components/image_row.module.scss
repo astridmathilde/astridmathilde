@@ -1,11 +1,11 @@
-@import "../base/variables";
+@use "../base/variables";
 
 .image_row {
   display: grid;
   height: 60vw;
-  margin-top: $padding;
+  margin-top: variables.$padding;
   grid-template-columns: 1fr 1fr;
-  gap: $padding;
+  gap: variables.$padding;
   overflow: hidden;
   
   figure {

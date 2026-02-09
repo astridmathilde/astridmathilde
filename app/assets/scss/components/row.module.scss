@@ -1,16 +1,16 @@
-@import "../base/variables";
+@use "../base/variables";
 
 .row {
-  margin-top: $spacing;
+  margin-top: variables.$spacing;
 
   &:first-child {
     margin-top: 1em;
   }
 
-  @media all and (min-width: $screen-sm) {
+  @media all and (min-width: variables.$screen-sm) {
     display: flex;
     justify-content: space-between;
-    gap: $padding;
+    gap: variables.$padding;
   }
 
   .heading:first-child {

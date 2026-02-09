@@ -1,29 +1,29 @@
-@import "../base/variables";
+@use "../base/variables";
 
 .display {
-  max-width: $container-text - 4ch;
-  margin-top: $spacing;
+  max-width: variables.$container-text - 4ch;
+  margin-top: variables.$spacing;
   line-height: 1.35;
   font-size: 1.1em;
 
-  @media all and (min-width: $screen-xs) {
+  @media all and (min-width: variables.$screen-xs) {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-top: $spacing / 2;
+    margin-top: variables.$spacing / 2;
     min-height: 30vh;
     font-size: 1.2em;
   }
 
-  @media all and (min-width: $screen-sm) {
+  @media all and (min-width: variables.$screen-sm) {
     font-size: 1.3em;
   }
 
-  @media all and (min-width: $screen-md) {
+  @media all and (min-width: variables.$screen-md) {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-top: $spacing / 2;
+    margin-top: variables.$spacing / 2;
     min-height: 45vh;
   }
 

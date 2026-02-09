@@ -1,4 +1,4 @@
-@import "../base/variables";
+@use "../base/variables";
 
 .project {
   display: block;
@@ -26,15 +26,15 @@
       height: calc(50vw);
       object-fit: cover;
 
-      @media all and (min-width: $screen-sm) {
+      @media all and (min-width: variables.$screen-sm) {
         height: calc(50vw * 0.6);
       }
 
-      @media all and (min-width: $screen-md) {
+      @media all and (min-width: variables.$screen-md) {
         height: calc(50vw * 0.4);
       }
 
-      @media all and (min-width: $screen-xl) {
+      @media all and (min-width: variables.$screen-xl) {
         height: calc(50vw * 0.3);
       }
     }

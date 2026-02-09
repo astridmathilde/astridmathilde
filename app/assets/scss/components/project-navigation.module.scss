@@ -1,11 +1,11 @@
-@import "../base/variables";
+@use "../base/variables";
 
 .container {
   display: grid;
   grid-template-columns: 1fr;
-  gap: $padding;
+  gap: variables.$padding;
 
-  @media all and (min-width: $screen-xs) {
+  @media all and (min-width: variables.$screen-xs) {
     grid-template-columns: 1fr 1fr;
 
     img {
@@ -13,7 +13,7 @@
     }
   }
 
-  @media all and (min-width: $screen-lg) {
+  @media all and (min-width: variables.$screen-lg) {
     grid-template-columns: 1fr 1fr 1fr;
 
     img {
@@ -21,7 +21,7 @@
     }
   }
 
-  @media all and (min-width: $screen-xl) {
+  @media all and (min-width: variables.$screen-xl) {
     img {
       height: 15vw !important;
     }

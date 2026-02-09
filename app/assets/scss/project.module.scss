@@ -1,10 +1,10 @@
-@import "base/variables";
+@use "base/variables";
 
 .project {
   .thumbnail {
     margin-top: 0;
 
-    @media all and (min-width: $screen-md) {
+    @media all and (min-width: variables.$screen-md) {
       position: relative;
       height: 80vh;
 
@@ -20,30 +20,30 @@
       }
     }
 
-    @media all and (min-width: $screen-xl) {
+    @media all and (min-width: variables.$screen-xl) {
       height: 70vh;
     }
   }
 
   .container {
     position: relative;
-    margin-top: $spacing / 2;
+    margin-top: variables.$spacing / 2;
 
-    @media all and (min-width: $screen-md) {
+    @media all and (min-width: variables.$screen-md) {
       display: grid;
       grid-template-columns: 3fr 9fr;
       gap: 0 2.5em;
       justify-items: start;
     }
 
-    @media all and (min-width: $screen-lg) {
+    @media all and (min-width: variables.$screen-lg) {
       grid-template-columns: 2fr 9fr;
     }
 
     .meta {
       display: block;
 
-      @media all and (min-width: $screen-md) {
+      @media all and (min-width: variables.$screen-md) {
         font-size: 0.8em;
       }
 
@@ -60,9 +60,9 @@
         margin: 0;
         padding: 0;
 
-        @media all and (min-width: $screen-md) {
+        @media all and (min-width: variables.$screen-md) {
           position: sticky;
-          top: $padding;
+          top: variables.$padding;
         }
 
         li {
@@ -73,7 +73,7 @@
           + li {
             margin-top: 1em;
 
-            @media all and (min-width: $screen-md) {
+            @media all and (min-width: variables.$screen-md) {
               margin-top: 1.5em;
               max-width: 20ch;
             }
@@ -95,9 +95,9 @@
     }
 
     .content {
-      margin-top: $spacing / 2;
+      margin-top: variables.$spacing / 2;
 
-      @media all and (min-width: $screen-md) {
+      @media all and (min-width: variables.$screen-md) {
         margin-top: 0;
       }
 

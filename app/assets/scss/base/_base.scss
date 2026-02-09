@@ -1,3 +1,5 @@
+@use "variables";
+
 *,
 *::before,
 *::after {
@@ -16,15 +18,15 @@ body {
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
 
-  @media all and (min-width: $screen-sm) {
+  @media all and (min-width: variables.$screen-sm) {
     font-size: 16px;
   }
 
-  @media all and (min-width: $screen-md) {
+  @media all and (min-width: variables.$screen-md) {
     font-size: 20px;
   }
 
-  @media all and (min-width: $screen-xl) {
+  @media all and (min-width: variables.$screen-xl) {
     font-size: 24px;
   }
 }
