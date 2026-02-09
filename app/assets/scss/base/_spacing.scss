@@ -1,7 +1,7 @@
 .spacing-section {
-  margin-top: 3.5em; 
-  
-  @media all and (min-width: $screen-lg) {
+  margin-top: 3.5em;
+
+  @media all and (min-width: $screen-xl) {
     margin-top: 5em;
   }
 }

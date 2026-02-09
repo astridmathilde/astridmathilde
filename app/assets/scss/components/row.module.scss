@@ -3,7 +3,7 @@
 .row {
   margin-top: variables.$spacing;
 
-  &:first-child {
+  &:first-of-type {
     margin-top: 1em;
   }
 
