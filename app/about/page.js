@@ -1,5 +1,4 @@
 import { siteTitle } from "../layout";
-import Link from "next/link";
 
 import BlockRow from "../components/row";
 import BlockColumn from "../components/column";
@@ -16,17 +15,19 @@ export const metadata = {
 
 import img from "../assets/img/about/astridmathilde.jpeg";
 
-export default function About() {
+
+
+export default async function About() {
   return (
     <>
     <h2 className={utils.screen_reader_text}>About me</h2>
     <BlockRow>
     <BlockColumn>
-    <p>I am from Kvænangen/Skjervøy in Northern Norway and have always been passionate about design and technology. As a child, I enjoyed taking photos (especially of horses), and that sparked my interest in design and technology when I learned to code at 10 in order to publish my photos on my own website.</p>
+    <p>I was born in April 1998 (currently 27 years old) in the far north of Norway, and I have been passionate about design and technology ever since I learned to code as a child. I enjoyed taking photos (especially of horses) and wanted to create my own space on the web to publish them, so I started coding websites.</p>
+
+    <p>After finishing my second year of high school, I spent two years at a design and marketing agency in Harstad as a trainee in graphic design. After this, I started working as a web designer and developer in Tromsø. I worked there for a couple of years before I started studying design at <a href="https://www.aho.no/english/" rel="external" target="_blank">The Oslo School of Architecture and Design</a>.</p>
     
-    <p>I started my first job as a web designer and developer at 19, after finishing my craft certificate in graphic design. I worked in Tromsø for a couple of years before I moved to Oslo to become a full-time design student at <a href="https://www.aho.no/english/" rel="external" target="_blank">The Oslo School of Architecture and Design</a>.</p>
-    
-    <p>When I am not at school working on design projects or at home working on my personal projects, you can find me in the stable, at the yoga studio or maybe at some venue listening to electronic music.</p>
+    <p>When I am not at school working on design projects or at home working on my personal projects, you can find me outside with friends, at the yoga studio, or maybe at some venue listening to rock, metal or electronic music.</p>
     </BlockColumn>
     
     <BlockColumn width="29">
