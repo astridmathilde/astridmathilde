@@ -1,6 +1,5 @@
-import { siteTitle } from "../layout";
-import utils from "../assets/scss/utils.module.scss"
-import Link from "next/link";
+import { siteTitle } from "../../layout";
+import utils from "../../assets/scss/utils.module.scss"
 
 const pageTitle = 'Current status';
 

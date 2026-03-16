@@ -1,5 +1,5 @@
-import { siteTitle } from "../layout";
-import utils from "../assets/scss/utils.module.scss";
+import { siteTitle } from "../../layout";
+import utils from "../../assets/scss/utils.module.scss";
 
 const pageTitle = 'Colophon';
 

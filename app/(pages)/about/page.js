@@ -1,8 +1,8 @@
-import { siteTitle } from "../layout";
+import { siteTitle } from "../../layout";
 
-import BlockRow from "../components/row";
-import BlockColumn from "../components/column";
-import BlockImage from "../components/image";
+import BlockRow from "../../components/row";
+import BlockColumn from "../../components/column";
+import BlockImage from "../../components/image";
 
 import utils from "../assets/scss/utils.module.scss";
 
