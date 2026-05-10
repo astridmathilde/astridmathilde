@@ -1,11 +1,15 @@
 import { ThemeProvider } from 'next-themes';
+import Link from 'next/link.js';
 import localFont from 'next/font/local';
+
 import './assets/scss/global.scss';
+import './assets/scss/brightness.scss';
+
 import styles from './assets/scss/layout.module.scss';
 import utils from "./assets/scss/utils.module.scss"
-import Link from 'next/link.js';
+
 import Wrapper from './wrapper.js';
-import './assets/scss/brightness.scss';
+import PrimaryNav from './components/navigation/index.js';
 
 const inter = localFont({
   src: [
@@ -30,22 +34,19 @@ export default function Layout({ children }) {
     <>
     <html lang="en" className={inter.className} suppressHydrationWarning>
     <body>
+
     <ThemeProvider>
     <Wrapper>
+
     <header id={styles.header} className={"text-medium"}>
     <h1 className={utils.screen_reader_text}>{siteTitle}</h1>
-    <nav id={styles.primaryNav}>
-    <ul>
-    <li key="intro"><Link href="/">Intro</Link></li>
-    <li key="work"><Link href="/work">Work</Link></li>
-    <li key="now"><Link href="/now">Now</Link></li>
-    <li key="bio"><Link href="/about">Bio</Link></li>
-    </ul>
-    </nav>
+    <PrimaryNav />
     </header>
+
     <main id={styles.content} className={styles.entry}>
     {children}
     </main>
+
     <footer id={styles.footer}>
     <p>© Astrid Mathilde Boberg</p>
     <nav id={styles.secondaryNav}>
@@ -56,8 +57,10 @@ export default function Layout({ children }) {
     </ul>
     </nav>
     </footer>
+
     </Wrapper>
     </ThemeProvider>
+    
     </body>
     </html>
     </>

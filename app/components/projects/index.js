@@ -1,13 +1,13 @@
 import Link from "next/link";
-import BlockImage from "./image";
-import style from "../assets/scss/components/projects.module.scss";
-import utils from "../assets/scss/utils.module.scss";
+import BlockImage from "../image";
+import style from './style.module.scss'; 
+import utils from "../../assets/scss/utils.module.scss";
 
 export default function BlockProjects(project) {
 
   return (
     <>
-      <Link className={style.project} key={project.id} href={"/work/" + project.slug}>
+      <Link className={style.project} href={"/work/" + project.slug}>
       <article id={project.id}>
       <header>
       <h3 className={style.title + " text-small"}>{project.short_title}</h3>

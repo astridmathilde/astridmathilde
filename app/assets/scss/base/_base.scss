@@ -16,6 +16,7 @@ body {
   font-size: 14px;
   line-height: 1.4;
   -webkit-font-smoothing: antialiased;
+  text-transform: lowercase;
   overflow-x: hidden;
 
   @media all and (min-width: variables.$screen-sm) {
@@ -36,7 +37,6 @@ a {
   font-weight: inherit;
   text-decoration: underline;
   text-decoration-thickness: inherit;
-  text-decoration-offset: 4px;
   color: inherit;
 }
 

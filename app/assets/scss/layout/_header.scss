@@ -3,30 +3,14 @@
 #header {
   padding-top: calc(variables.$padding / 2);
   padding-bottom: calc(variables.$padding / 2);
-  font-size: 0.95em;
 
   @media all and (min-width: variables.$screen-sm) {
+    position: sticky;
+    top: variables.$padding;
+    display: flex;
+    height: 90vh;
+    align-items: center;
     padding-top: variables.$padding;
     padding-bottom: variables.$padding;
-    font-size: 0.9em;
-  }
-
-  .site_title {
-    margin: 0;
-  }
-
-  a {
-    text-decoration-color: transparent;
-
-    @media all and (max-width: variables.$screen-md) {
-      display: inline-flex;
-      align-items: center;
-      height: 48px;
-    }
-
-    &:hover,
-    &:focus {
-      text-decoration-color: inherit;
-    }
   }
 }

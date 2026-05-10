@@ -17,7 +17,7 @@ export default function Work() {
     <>
     <h2 className={utils.screen_reader_text}>My work</h2>
     <div className={style.work}>
-    {projects.toReversed().map((project) => (
+    {projects.map((project) => (
       <BlockProjects key={project.id} slug={project.slug} title={project.title} category={project.category} location={project.location.name} thumbnail={project.thumbnail} priority="true" sizes="(min-width: 670px) 50vw, 100vw" />
     ))}
     </div>
