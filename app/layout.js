@@ -37,9 +37,9 @@ export default function Layout({ children }) {
     <nav id={styles.primaryNav}>
     <ul>
     <li key="intro"><Link href="/">Intro</Link></li>
-    <li key="work"><Link href="work">Work</Link></li>
-    <li key="now"><Link href="now">Now</Link></li>
-    <li key="bio"><Link href="about">Bio</Link></li>
+    <li key="work"><Link href="/work">Work</Link></li>
+    <li key="now"><Link href="/now">Now</Link></li>
+    <li key="bio"><Link href="/about">Bio</Link></li>
     </ul>
     </nav>
     </header>

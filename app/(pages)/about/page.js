@@ -4,7 +4,7 @@ import BlockRow from "../../components/row";
 import BlockColumn from "../../components/column";
 import BlockImage from "../../components/image";
 
-import utils from "../assets/scss/utils.module.scss";
+import utils from "../../assets/scss/utils.module.scss";
 
 const pageTitle = 'About me';
 
@@ -13,7 +13,7 @@ export const metadata = {
   title: pageTitle + ' – ' + siteTitle
 }
 
-import img from "../assets/img/about/astridmathilde.jpeg";
+import img from "../../assets/img/about/astridmathilde.jpeg";
 
 
 

@@ -1,5 +1,15 @@
-import kahos from "../assets/img/projects/kahos/thumbnail.jpg";
-import fremtind from "../assets/img/projects/internship-fremtind/thumbnail.jpg";
+import kahos from "../assets/img/projects/thumb-kahos.jpg";
+import fremtind from "../assets/img/projects/thumb-fremtind.jpg";
+import blikkjournal from "../assets/img/projects/thumb-blikkjournal.jpg"
+import sb1 from "../assets/img/projects/thumb-sb1.jpg"
+import redcross from "../assets/img/projects/thumb-redcross.jpg"
+import alphafuel from "../assets/img/projects/thumb-alphafuel.jpg"
+import bams from "../assets/img/projects/thumb-bams.jpg"
+import mensn from "../assets/img/projects/thumb-mensn.jpg"
+import barlindhaug from "../assets/img/projects/thumb-barlindhaug.jpg"
+import svalbard from "../assets/img/projects/thumb-svalbard.jpg"
+import lole from "../assets/img/projects/thumb-lole.jpg"
+import personal from "../assets/img/projects/thumb-personalwebsite.jpg"
 
 export const projects = [
     {
