@@ -20,7 +20,7 @@ import img from "../../assets/img/about/astridmathilde.jpeg";
 export default async function About() {
   return (
     <>
-    <h2 className={utils.screen_reader_text}>About me</h2>
+    <h2>Bio</h2>
     <BlockRow align="center">
     <BlockColumn width="75">
     <p>I was born in April 1998 (currently 27 years old) in the far north of Norway, and I have been passionate about design and technology ever since I learned to code as a child. I enjoyed taking photos (especially of horses) and wanted to create my own space on the web to publish them, so I started coding websites from scratch on my family's computer.</p>

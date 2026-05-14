@@ -15,7 +15,7 @@ export const metadata = {
 }
 
 export default function Index() {
-  const selectedProjects = projects.filter((e) => [12, 11, 10].includes(e.id))
+  const selectedProjects = projects.filter((e) => [12, 11].includes(e.id))
   
   return (
     <>

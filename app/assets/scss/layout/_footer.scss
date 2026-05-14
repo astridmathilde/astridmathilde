@@ -5,8 +5,9 @@
   position: relative;
   align-items: center;
   justify-content: space-between;
-  margin-top: calc(variables.$spacing / 2);
-  margin-bottom: calc(variables.$padding / 4);
+  margin-top: variables.$spacing;
+  margin-bottom: variables.$padding;
+  font-size: 0.8em;
 
   @media all and (min-width: variables.$screen-sm) {
     align-items: flex-end;
@@ -14,9 +15,9 @@
     left: 0;
     bottom: 0;
     width: 100%;
-    height: 15vh;
+    height: variables.$footer-height;
     margin: 0;
-    padding: calc(variables.$spacing) variables.$padding;
+    padding: variables.$padding;
   }
 
   p,

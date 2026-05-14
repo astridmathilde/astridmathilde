@@ -2,7 +2,7 @@
 
 .entry {
   display: flex;
-  max-width: variables.$container-text + 8ch;
+  max-width: variables.$container-text;
   flex-direction: row-reverse;
   justify-content: flex-end;
   align-items: baseline;
