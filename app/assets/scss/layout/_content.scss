@@ -1,11 +1,7 @@
 @use "../base/variables";
 
 #content {
-  @media all and (min-width: variables.$screen-sm) {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    max-width: 63.95vw;
-    padding: 0 2em;
-  }
+  max-width: variables.$container-content + variables.$header-width;
+  margin: 0 auto;
+  padding-left: variables.$header-width;
 }

@@ -13,7 +13,7 @@ export const metadata = {
 export default function Contact() {
   return (
     <>
-    <h2 className={utils.screen_reader_text}>Contact</h2>
+    <h2>Contact</h2>
     <p>My email is heia@astridmathilde.no, but you can also <a href="https://www.linkedin.com/in/astridmathilde/" target="_blank" rel="nofollow noreferrer">add me on LinkedIn</a>!</p>
     
     <h3>Links</h3>

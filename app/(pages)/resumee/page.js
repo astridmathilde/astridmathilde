@@ -15,6 +15,7 @@ export const metadata = {
 export default function Resumee() {
   return (
     <>
+    <h2>{pageTitle}</h2>
     <h3>Education</h3>
     {education.map((education) => (
       <BlockResumee key={education.id} position={education.grade} locationUrl={education.location.url} locationName={education.location.name} description={education.description} time={education.time} />

@@ -1,16 +1,15 @@
 @use "../base/variables";
 
 #header {
-  padding-top: calc(variables.$padding / 2);
-  padding-bottom: calc(variables.$padding / 2);
+  font-size: 1.5em;
 
   @media all and (min-width: variables.$screen-sm) {
-    position: sticky;
+    position: fixed;
     top: variables.$padding;
+    left: variables.$padding;
     display: flex;
-    height: 90vh;
+    width: variables.$header-width;
     align-items: center;
-    padding-top: variables.$padding;
-    padding-bottom: variables.$padding;
+    min-height: calc(100vh - variables.$footer-height);
   }
 }

@@ -13,32 +13,24 @@ p {
 h1,
 h2,
 h3,
-h4,
-h5,
-h6 {
-  margin-top: 1em;
-  margin-bottom: 0.5em;
-  font-size: 1em;
+h4 {
+  margin-bottom: 0;
   font-weight: inherit;
   line-height: 130%;
 }
 
-h2,
-h3 {
-  margin-bottom: 0.7em;
-}
-
 h2 {
   margin-top: variables.$spacing;
+  font-size: 1.25em;
 }
 
 h3 {
   margin-top: calc(variables.$spacing * 0.8);
+  font-size: 1em;
 }
 
 h4 {
   margin-top: calc(variables.$spacing * 0.6);
-  margin-bottom: 0;
   font-size: 0.8em;
   opacity: 0.8;
   filter: alpha(opacity=80);
