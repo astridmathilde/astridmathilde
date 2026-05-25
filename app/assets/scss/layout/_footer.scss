@@ -8,6 +8,7 @@
   margin-top: variables.$spacing;
   margin-bottom: variables.$padding;
   font-size: 0.8em;
+  text-transform: lowercase;
 
   @media all and (min-width: variables.$screen-sm) {
     align-items: flex-end;
@@ -56,15 +57,14 @@
 
 :global(html[data-theme="dark"] footer) {
   background-image: linear-gradient(
-    to bottom,
     rgba(0, 0, 0, 0),
-    variables.$dark-color-background
+    rgba(variables.$dark-color-background, 0.8) 80%,
+    rgba(variables.$dark-color-background, 0.95)
   );
 }
 
 :global(html[data-theme="light"] footer) {
   background-image: linear-gradient(
-    to bottom,
     rgba(0, 0, 0, 0),
     variables.$color-background
   );

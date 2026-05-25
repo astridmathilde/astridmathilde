@@ -158,8 +158,8 @@ export const skills = [
     "title": "Technology",
     "keywords":
     [
-      "HTML",
-      "SCSS",
+      "HTML/SCSS",
+      "Generative AI",
       "PHP",
       "Python",
       "JSON",

@@ -7,25 +7,29 @@ $screen-xl: 1554px;
 
 // Containers
 $container-site: 100%;
-$container-content: 63.8vw;
+$container-content: 100vw;
+$container-padding: 20vw;
 $container-text: 69ch;
-$spacing: 4.7vw;
-$padding: 3.7vw;
 
 // Layout
-$header-width: 9.2vw;
 $content-height: 80vh;
-$footer-height: 15vh;
+$footer-height: 20vh;
+
+// Spacing
+$spacing: 2.5em;
+$padding: 3.7vw;
 
 // Light Mode
-$color-background: #f9f9fc;
+$color-background: #f1eff7;
 $color-text: #241438;
+$color-text-tinted: rgba($color-text, 0.8);
 $color-link: #241438a6;
 $color-link-hover: #241438;
 
 // Dark Mode
 $dark-color-background: #040207;
 $dark-color-text: #dad8e0;
+$dark-color-text-tinted: rgba($dark-color-text, 0.8);
 $dark-color-link: #dad8e0a6;
 $dark-color-link-hover: #dad8e0;
 

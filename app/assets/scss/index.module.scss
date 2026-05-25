@@ -1,0 +1,42 @@
+@use "./base/variables";
+
+.selectedWork {
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+  gap: variables.$padding;
+  margin-top: 2em;
+
+  @media all and (min-width: variables.$screen-sm) {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    gap: variables.$padding;
+  }
+
+  h2 {
+    margin-top: variables.$spacing;
+  }
+
+  /*
+  article {
+  z-index: 1000;
+  position: absolute;
+  max-width: 16vw;
+  margin: 0;
+  
+  &:nth-child(1) {
+  top: variables.$padding;
+  }
+  
+  &:nth-child(2) {
+  top: variables.$padding;
+  right: variables.$padding;
+  }
+  
+  &:nth-child(3) {
+  bottom: variables.$padding;
+  left: 50%;
+  }
+  }*/
+}

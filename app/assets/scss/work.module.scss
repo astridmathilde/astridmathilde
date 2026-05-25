@@ -8,11 +8,7 @@
   font-size: 0.9em;
 
   @media all and (min-width: variables.$screen-sm) {
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
     gap: variables.$padding;
-  }
-
-  @media all and (min-width: variables.$screen-xl) {
-    grid-template-columns: 1fr 1fr 1fr;
   }
 }

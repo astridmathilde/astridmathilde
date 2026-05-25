@@ -1,7 +1,7 @@
 import { siteTitle } from "../../layout";
 import Link from "next/link";
 
-import utils from "../assets/scss/utils.module.scss";
+import utils from "../../assets/scss/utils.module.scss";
 
 const pageTitle = 'Contact';
 

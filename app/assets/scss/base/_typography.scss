@@ -22,6 +22,10 @@ h4 {
 h2 {
   margin-top: variables.$spacing;
   font-size: 1.25em;
+
+  &:first-of-type {
+    margin-top: 0;
+  }
 }
 
 h3 {

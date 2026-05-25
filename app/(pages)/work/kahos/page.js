@@ -1,6 +1,6 @@
 import { siteTitle } from "../../../layout";
 import { projects } from "../../../data/projects";
-import style from "../../assets/scss/project.module.scss";
+import style from "../../assets/scss/single-project.module.scss";
 import BlockImage from "../../../components/image";
 import BlockImageRow from "../../../components/image_row";
 

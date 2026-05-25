@@ -8,3 +8,15 @@
     margin: 0;
   }
 }
+
+:global(html[data-theme="dark"]) {
+  .display {
+    color: variables.$dark-color-text;
+  }
+}
+
+:global(html[data-theme="light"]) {
+  .display {
+    color: variables.$color-text;
+  }
+}

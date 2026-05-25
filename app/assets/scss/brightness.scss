@@ -9,7 +9,7 @@ $text_tiny: 470;
 
 [data-theme="light"] {
   background: variables.$color-background;
-  color: variables.$color-text;
+  color: variables.$color-text-tinted;
   font-weight: $text_regular;
 
   a {
@@ -19,6 +19,12 @@ $text_tiny: 470;
     &:focus {
       text-decoration-color: variables.$color-link-hover;
     }
+  }
+
+  h2,
+  h3,
+  h4 {
+    color: variables.$color-text;
   }
 
   h2 {
@@ -85,7 +91,7 @@ $text_tiny: 470;
 
 [data-theme="dark"] {
   background: variables.$dark-color-background;
-  color: variables.$dark-color-text;
+  color: variables.$dark-color-text-tinted;
   font-weight: $text_regular - 30;
 
   a {
@@ -95,6 +101,12 @@ $text_tiny: 470;
     &:focus {
       text-decoration-color: variables.$dark-color-link-hover;
     }
+  }
+
+  h2,
+  h3,
+  h4 {
+    color: variables.$dark-color-text;
   }
 
   h2 {

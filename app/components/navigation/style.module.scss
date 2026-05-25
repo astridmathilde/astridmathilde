@@ -1,15 +1,25 @@
 @use "../../assets/scss/base/variables";
 
 .primaryNav {
+  z-index: 1000;
+  position: fixed;
+  top: 0;
+  background-color: variables.$dark-color-background;
+  width: 100%;
+  padding: calc(variables.$padding / 2) 0;
+
   ul {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: flex-start;
+    justify-content: space-between;
+
     margin: 0;
     padding: 0;
 
     @media all and (min-width: variables.$screen-md) {
-      gap: 0.5em;
+      flex-direction: column;
+      gap: 0.3em;
     }
 
     li {
@@ -40,6 +50,15 @@
       @media all and (max-width: variables.$screen-md) {
         min-width: 48px;
         height: 36px;
+      }
+    }
+
+    .icon {
+      border-radius: 100%;
+      margin-right: 0.5em;
+
+      @media all and (min-width: variables.$screen-sm) {
+        display: none;
       }
     }
   }

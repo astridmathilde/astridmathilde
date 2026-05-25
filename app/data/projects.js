@@ -2,7 +2,7 @@ import kahos from "../assets/img/projects/thumb-kahos.jpg";
 import fremtind from "../assets/img/projects/thumb-fremtind.jpg";
 import blikkjournal from "../assets/img/projects/thumb-blikkjournal.jpg"
 import sb1 from "../assets/img/projects/thumb-sb1.jpg"
-import redcross from "../assets/img/projects/thumb-redcross.jpg"
+import redcross from "../assets/img/projects/thumb-rk.jpg"
 import alphafuel from "../assets/img/projects/thumb-alphafuel.jpg"
 import bams from "../assets/img/projects/thumb-bams.jpg"
 import mensn from "../assets/img/projects/thumb-mensn.jpg"
@@ -27,7 +27,7 @@ export const projects = [
       "name": "",
       "url": ""
     },
-    "year": "2025",
+    "year": "2026",
     "duration": "",
     "team": [""]
   },
@@ -202,25 +202,6 @@ export const projects = [
     "id": 2,
     "title": "A window into the landscape projects of Lo:Le",
     "short_title": "Lo:Le Landskap",
-    "thumbnail": lole,
-    "slug": "lole-landskap",
-    "type": "Client project",
-    "client": "Lo:Le Landskap og Plan",
-    "category": "Website",
-    "tags": ["web design", "UX"],
-    "role": ["UX design", "development"],
-    "location": {
-      "name": "Røst",
-      "url": "https://rostkommunikasjon.no"
-    },
-    "year": "2019",
-    "duration": "4 months",
-    "team": ["Tor Åge Vorren (project leader)", "Siri Jachlin (graphic designer)"]
-  },
-  {
-    "id": 1,
-    "title": "A window into the landscape projects of Lo:Le",
-    "short_title": "Website for Lo:Le Landskap",
     "thumbnail": lole,
     "slug": "lole-landskap",
     "type": "Client project",

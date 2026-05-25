@@ -9,7 +9,7 @@ import styles from './assets/scss/layout.module.scss';
 import utils from "./assets/scss/utils.module.scss"
 
 import Wrapper from './wrapper.js';
-import PrimaryNav from './components/navigation/index.js';
+import Header from "./header.js";
 
 const inter = localFont({
   src: [
@@ -38,10 +38,7 @@ export default function Layout({ children }) {
     <ThemeProvider>
     <Wrapper>
 
-    <header id={styles.header} className={"text-medium"}>
-    <h1 className={utils.screen_reader_text}>{siteTitle}</h1>
-    <PrimaryNav />
-    </header>
+    <Header />
 
     <main id={styles.content} className={styles.entry}>
     {children}
@@ -53,7 +50,7 @@ export default function Layout({ children }) {
     <ul>
     <li key="resumee"><Link href="/resumee">Resumee</Link></li>
     <li key="colophon"><Link href="/colophon">Colophon</Link></li>
-    <li key="contact"><Link href="/colophon">Contact</Link></li>
+    <li key="contact"><Link href="/contact">Contact</Link></li>
     </ul>
     </nav>
     </footer>

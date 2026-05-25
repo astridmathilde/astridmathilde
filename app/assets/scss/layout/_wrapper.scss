@@ -1,13 +1,15 @@
 @use "../base/variables";
 
 #wrapper {
+  position: relative;
   max-width: variables.$container-site;
   padding: variables.$padding;
+  overflow: hidden;
 
   @media all and (min-width: variables.$screen-sm) {
     display: flex;
     gap: variables.$spacing;
     align-items: center;
-    min-height: calc(100vh - variables.$footer-height);
+    min-height: 100vh;
   }
 }

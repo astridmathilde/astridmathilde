@@ -1,8 +1,10 @@
 @use "../../assets/scss/base/variables";
 
 .column {
-  p:first-of-type,
-  h2:first-of-type {
+  p:first-child,
+  h2:first-child,
+  h3:first-child,
+  h4:first-child {
     margin-top: 0;
   }
 
@@ -24,8 +26,9 @@
     &:nth-child(1) {
       margin-top: 0;
 
+      h2,
       h3,
-      h2 {
+      h4 {
         margin-top: 0;
       }
     }
