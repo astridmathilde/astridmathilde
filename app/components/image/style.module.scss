@@ -1,7 +1,9 @@
 @use "../../assets/scss/base/variables";
 
 .image {
-  margin: 0;
+  + .image {
+    margin-top: variables.$padding;
+  }
 
   img {
     max-width: 100%;
@@ -13,8 +15,10 @@
   }
 
   figcaption {
-    font-size: 0.75em;
+    font-size: 0.8em;
     font-weight: 430;
+    opacity: 0.8;
+    filter: alpha(opacity=80);
 
     @media all and (min-width: variables.$screen-sm) {
       font-weight: 420;
@@ -23,5 +27,11 @@
     @media all and (min-width: variables.$screen-md) {
       font-weight: 410;
     }
+  }
+}
+
+:global(body) {
+  p + .image {
+    margin-top: calc(variables.$padding * 0.8);
   }
 }

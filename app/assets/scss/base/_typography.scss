@@ -22,20 +22,16 @@ h4 {
 h2 {
   margin-top: variables.$spacing;
   font-size: 1.25em;
-
-  &:first-of-type {
-    margin-top: 0;
-  }
 }
 
 h3 {
-  margin-top: calc(variables.$spacing * 0.8);
+  margin-top: variables.$spacing;
   font-size: 1em;
 }
 
 h4 {
-  margin-top: calc(variables.$spacing * 0.6);
-  font-size: 0.8em;
+  margin-top: calc(variables.$spacing * 0.9);
+  font-size: 0.9em;
   opacity: 0.8;
   filter: alpha(opacity=80);
 }

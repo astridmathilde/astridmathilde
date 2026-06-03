@@ -2,6 +2,8 @@ import Link from "next/link";
 import { siteTitle } from "../../../layout";
 import { projects } from "../../../data/projects";
 import style from "../../../assets/scss/single-project.module.scss";
+import utils from "../../../assets/scss/utils.module.scss";
+
 import BlockImage from "../../../components/image";
 import BlockImageRow from "../../../components/image_row";
 
@@ -17,28 +19,25 @@ import imgProcess7 from "../../../assets/img/projects/internship-fremtind/user-t
 import imgProcess8 from "../../../assets/img/projects/internship-fremtind/prosess-9.jpg";
 import imgProcess9 from "../../../assets/img/projects/internship-fremtind/prosess-10.jpg";
 
-
 import imgResult from "../../../assets/img/projects/internship-fremtind/resultat-bilde-3.jpg";
 import compareProducts from "../../../assets/img/projects/internship-fremtind/compare-products.jpg";
 import palette from "../../../assets/img/projects/internship-fremtind/color-palette.jpg";
 
-
-const projectID = projects[1];
+const projectID = projects[4];
 const pageTitle = projectID.short_title;
-
 
 export const metadata = {
   metadataBase: new URL('https://astridmathilde.no/projects/internship-fremtid'),
   title: pageTitle + ' – ' + siteTitle
 }
 
-
 export default function fremtind() {
   return (
     <>
-    <article className={style.project}>
+    <article className={style.singleProject}>
     <header className={style.header}>
     <h2>{projectID.title}</h2>
+    <p><span className={utils.screen_reader_text}>Project: </span> {projectID.short_title}</p>
     </header>
     
     <div className={style.thumbnail}>
@@ -65,6 +64,7 @@ export default function fremtind() {
     </div>
     
     <div className={style.content}>
+    <h3>Overview</h3>
     <p>This project is a part of a summer internship where I worked in a multi-disiplinary product team with three other students from <a href="https://www.ntnu.edu/" target="_blank" rel="external" title="Norwegian University of Science and Technology">NTNU</a> and <a href="https://www.uio.no/english/index.html" target="_blank" rel="external" title="University of Oslo">UiO</a>. We designed and developed the web application <em>Product Config Manager</em> for managing the configuration of Fremtind's insurance products. The application will be used by product owners, functional architects and developers within <a href="https://fremtind.no" target="_blank" rel="external">Fremtind Forsikring</a>.</p>
     
     <p>I was responsible for project management and visual design, while Kaja, my co-designer, was responsible for planning and facilitating design workshops within the product team. Apart from that, we worked closely together throughout the project.</p> 
@@ -81,7 +81,7 @@ export default function fremtind() {
     <p>We were expected to deliver a web application that fetches the data from "Product Config", making it possible to view the product properties across multiple test environments and make changes. In addition, we were required to use Fremtind's design system <a href="https://jokul.fremtind.no/" target="_blank" rel="external">Jøkul</a>.</p>
     
     <h3>The process</h3>
-    <p>Our design process has included the entire team, to ensure that we are all working towards the same goal, and share the same insights and understandings. Involving the developers in the early design phase by inviting them to work on the structure with us, also enabled them to start coding early. In the final design phase we did several iterations with user testing and changes in the design, structure and flow.</p>
+    <p>Our design process has included the entire team, to ensure that we were all working towards the same goal, and share the same insights and understandings. Involving the developers in the early design phase by inviting them to work on the structure with us, also enabled them to start coding early. In the final design phase we did several iterations with user testing and changes in the design, structure and flow.</p>
     
     <h4>1. Understanding the problem (week 1)</h4>
     <p>We spent a lot of time trying to understand the problem. A document with requirement specification were provided, which we all read through, while trying to wrap our heads around the terms and their definitions.</p>

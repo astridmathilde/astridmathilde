@@ -2,6 +2,7 @@ import Link from "next/link";
 
 import { siteTitle } from "../../layout";
 
+import BlockTitle from "../../components/page_title";
 import BlockRow from "../../components/row";
 import BlockColumn from "../../components/column";
 import BlockImage from "../../components/image";
@@ -25,7 +26,7 @@ import img_aho from "../../assets/img/about/mess-at-a-desk.jpg";
 export default async function About() {
   return (
     <>
-    <h2>Bio</h2>
+    <BlockTitle>Bio</BlockTitle>
     <p>I am from Kvænangen/Skjervøy in Northern Norway, and I have been passionate about design and technology ever since I learned to code as a child and discovered the joy of making websites. I also enjoy writing things, <a href="https://blikk.directory" rel="external" title="my library of observations" target="_blank">taking photos of stuff</a>, and I have an interest for digital minimalism and <Link href="colophon" title="this site's climate footprint">web sustainability</Link>.</p>
 
     <BlockRow>

@@ -2,7 +2,6 @@
 
 #header {
   position: fixed;
-
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -13,7 +12,6 @@
   @media all and (max-width: variables.$screen-sm) {
     z-index: 1000;
     top: 0;
-    background-color: variables.$dark-color-background;
     width: 100%;
     padding: calc(variables.$padding / 2) 0;
   }
@@ -38,6 +36,10 @@
       display: flex;
       align-content: center;
       text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
     }
 
     @media all and (min-width: variables.$screen-sm) {
@@ -94,11 +96,19 @@
 :global(html[data-theme="light"]) {
   #header {
     color: variables.$color-text;
+
+    @media all and (max-width: variables.$screen-sm) {
+      background-color: variables.$color-background;
+    }
   }
 }
 
 :global(html[data-theme="dark"]) {
   #header {
     color: variables.$dark-color-text;
+
+    @media all and (max-width: variables.$screen-sm) {
+      background-color: variables.$dark-color-background;
+    }
   }
 }

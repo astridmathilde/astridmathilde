@@ -1,0 +1,7 @@
+@use "../../assets/scss/base/variables";
+
+.title {
+  @media all and (min-width: variables.$screen-sm) {
+    margin-top: 0;
+  }
+}

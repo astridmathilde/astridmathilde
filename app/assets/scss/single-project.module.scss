@@ -1,8 +1,12 @@
 @use "base/variables";
 
-.single-project {
+.singleProject {
   .thumbnail {
-    margin-top: 0;
+    margin-top: variables.$padding;
+
+    @media all and (min-width: variables.$screen-md) {
+      margin-top: calc(variables.$padding * 0.8);
+    }
 
     @media all and (min-width: variables.$screen-md) {
       position: relative;
@@ -22,6 +26,23 @@
 
     @media all and (min-width: variables.$screen-xl) {
       height: 70vh;
+    }
+  }
+
+  .header {
+    display: flex;
+    flex-direction: column;
+    gap: calc(variables.$padding * 0.5);
+    margin-top: variables.$spacing;
+
+    p {
+      order: -1;
+      font-size: 0.9em;
+    }
+
+    h2,
+    p {
+      margin: 0;
     }
   }
 
@@ -99,6 +120,10 @@
 
       @media all and (min-width: variables.$screen-md) {
         margin-top: 0;
+
+        h3:first-child {
+          margin-top: 0;
+        }
       }
 
       figure,
@@ -106,10 +131,6 @@
         &:first-child {
           margin-top: 0;
         }
-      }
-
-      h3 {
-        margin-top: 2.5em;
       }
     }
   }

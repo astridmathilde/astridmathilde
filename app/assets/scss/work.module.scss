@@ -4,8 +4,7 @@
   display: grid;
   grid-template-columns: 1fr;
   gap: variables.$padding;
-  margin-top: variables.$spacing;
-  font-size: 0.9em;
+  margin-top: calc(variables.$spacing * 1.2);
 
   @media all and (min-width: variables.$screen-sm) {
     grid-template-columns: 1fr 1fr;
