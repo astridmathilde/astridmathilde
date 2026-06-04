@@ -4,7 +4,7 @@ export default function BlockDisplay({children}) {
   return (
     <>
     <div className={style.display}>
-    <p>{children}</p>
+    <p class={"text-large"}>{children}</p>
     </div>
     </>
   )

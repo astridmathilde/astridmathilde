@@ -1,0 +1,45 @@
+#headerEntry {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 1em;
+  text-transform: lowercase;
+
+  a {
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  .title {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    font-size: 1em;
+  }
+
+  .title,
+  li {
+    height: 36px;
+  }
+
+  #breadcrumbs {
+    ul,
+    li {
+      padding: 0;
+    }
+
+    ul {
+      display: flex;
+      margin: 0;
+
+      li {
+        display: flex;
+        align-items: center;
+        list-style: none;
+      }
+    }
+  }
+}

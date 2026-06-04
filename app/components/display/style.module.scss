@@ -3,13 +3,14 @@
 .display {
   line-height: 1.35;
   font-size: 1.25em;
-
-  @media all and (max-width: variables.$screen-sm) {
-    margin-top: variables.$spacing;
-  }
+  margin-top: variables.$spacing;
 
   p {
     margin: 0;
+  }
+
+  @media all and (min-width: variables.$screen-lg) {
+    margin-top: calc(variables.$spacing * 2);
   }
 }
 

@@ -1,4 +1,4 @@
-    import { siteTitle } from './layout';
+    import { siteTitle } from './(pages)/layout';
 
     const pageTitle = 'Something bad happened!';
     

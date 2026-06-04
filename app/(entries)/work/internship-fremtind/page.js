@@ -1,9 +1,11 @@
 import Link from "next/link";
-import { siteTitle } from "../../../layout";
+import { siteTitle } from "../../../(pages)/layout";
 import { projects } from "../../../data/projects";
 import style from "../../../assets/scss/single-project.module.scss";
+import layoutStyle from '../../../assets/scss/layout.module.scss';
 import utils from "../../../assets/scss/utils.module.scss";
 
+import HeaderEntry from "../../header";
 import BlockImage from "../../../components/image";
 import BlockImageRow from "../../../components/image_row";
 
@@ -34,6 +36,9 @@ export const metadata = {
 export default function fremtind() {
   return (
     <>
+    <HeaderEntry pageTitle={pageTitle} />
+    <main id="content" className={layoutStyle.entry}>
+
     <article className={style.singleProject}>
     <header className={style.header}>
     <h2>{projectID.title}</h2>
@@ -46,12 +51,12 @@ export default function fremtind() {
     
     <div className={style.container}>
     
-    <div className={style.meta + " text-xsmall"}>
+    <div className={style.meta + " text-small"}>
     <ul>
-    <li key="project_type"><span className={style.label + " text-tiny"}>Type of project:</span> {projectID.category}  ({projectID.type.toLocaleLowerCase()})</li>
-    <li key="project_location"><span className={style.label + " text-tiny"}>Location:</span> <a href={projectID.location.url}>{projectID.location.name}</a></li>
-    <li key="project_time_frame"><span className={style.label + " text-tiny"}>Time frame:</span> {projectID.time}</li>
-    <li key="project_contributors"><span className={style.label + " text-tiny"}>Team:</span>
+    <li key="project_type"><span className={style.label + " text-xsmall"}>Type of project:</span> {projectID.category}  ({projectID.type.toLocaleLowerCase()})</li>
+    <li key="project_location"><span className={style.label + " text-xsmall"}>Location:</span> <a href={projectID.location.url}>{projectID.location.name}</a></li>
+    <li key="project_time_frame"><span className={style.label + " text-xsmall"}>Time frame:</span> {projectID.time}</li>
+    <li key="project_contributors"><span className={style.label + " text-xsmall"}>Team:</span>
     <ul className={style.contributors}>
     {projectID.team.map((team) => (
       <li key={team} className={style.contributor}>{team}</li>
@@ -59,28 +64,26 @@ export default function fremtind() {
     </ul>
     </li>
     <li key="project_role"><span className={style.label + " text-tiny"}>My role:</span> {projectID.role}</li>
-    <li key="skip_link"><Link href="#result">Skip to result</Link></li>
     </ul>
     </div>
     
     <div className={style.content}>
-    <h3>Overview</h3>
     <p>This project is a part of a summer internship where I worked in a multi-disiplinary product team with three other students from <a href="https://www.ntnu.edu/" target="_blank" rel="external" title="Norwegian University of Science and Technology">NTNU</a> and <a href="https://www.uio.no/english/index.html" target="_blank" rel="external" title="University of Oslo">UiO</a>. We designed and developed the web application <em>Product Config Manager</em> for managing the configuration of Fremtind's insurance products. The application will be used by product owners, functional architects and developers within <a href="https://fremtind.no" target="_blank" rel="external">Fremtind Forsikring</a>.</p>
     
     <p>I was responsible for project management and visual design, while Kaja, my co-designer, was responsible for planning and facilitating design workshops within the product team. Apart from that, we worked closely together throughout the project.</p> 
     
-    <h3>The background</h3>
+    <h3>Background</h3>
     <p>Fremtind is offering a number of insurance products to private customers, and they all have different configurations. Previously, the configurations were "hard coded" into Fremtind's applications, making the data difficult to update. To solve this, Fremtind introduced <em>Product Config</em>, a database including every insurance product and their properties. Now it was possible for the applications to fetch the product data using API, and changes made in <em>Product Config</em> would be automatically synchronized across all the applications.</p>
     
-    <h3>The problem</h3>
+    <h3>Problem</h3>
     <p>While <em>Product Config</em> made it easier to update the product data across applications, it was still difficult to view, understand and edit the product configurations. In order to make changes, the product owner had to open the data in a spreadsheet, which consisted of more than a hundred rows and columns, look for the correct cells, edit their values, then send a screenshot of the changes to the system administrator, who would create a SQL statement based on the changes, and run it in the database.</p>
     
     <p>The process was time consuming, and with a high risk of human error.</p>
     
-    <h3>The brief</h3>
+    <h3>Brief</h3>
     <p>We were expected to deliver a web application that fetches the data from "Product Config", making it possible to view the product properties across multiple test environments and make changes. In addition, we were required to use Fremtind's design system <a href="https://jokul.fremtind.no/" target="_blank" rel="external">Jøkul</a>.</p>
     
-    <h3>The process</h3>
+    <h3>Process</h3>
     <p>Our design process has included the entire team, to ensure that we were all working towards the same goal, and share the same insights and understandings. Involving the developers in the early design phase by inviting them to work on the structure with us, also enabled them to start coding early. In the final design phase we did several iterations with user testing and changes in the design, structure and flow.</p>
     
     <h4>1. Understanding the problem (week 1)</h4>
@@ -122,7 +125,7 @@ export default function fremtind() {
     <BlockImage url={imgProcess9} alt="Programming" /> 
     </BlockImageRow>
     
-    <h3 id="result">The result</h3>
+    <h3 id="result">Result</h3>
     <p>We have delivered a solution that makes it smoother and safer to maintain the product data, by minimizing the risk of human error and giving the product owners a closer relationship to the product. Through an iterative design process, we have also made sure that the solution is user-friendly and efficient to use.</p>
     
     <p>By involving the entire team in the early design phase, we have ensured mutual understanding and shared goals. Additionally, it enabled the developers to start coding early, which made the process more efficient and allowed us to add more functionality than expected for this summer. Inviting developers to join the design workshops also provided different perspectives and viewpoints, and forced us to be more critical about our design choices.</p>
@@ -130,15 +133,17 @@ export default function fremtind() {
     <BlockImage url={palette} alt="Color palette" caption="The main page in light and dark mode" /> 
     <BlockImage url={compareProducts} alt="Comparing products" caption="Comparing product data" /> 
     
+    <h3>Reflections</h3>
     <p>Working in a multi-disiplinary product team where we all had different backgrounds, helped me practice articulating my design decisions. It was challenging at times, but it helped with a culture of not being afraid to speak our minds. We were all honest with each other and we dared to have the difficult discussions. I think that was essential for the quality of our delivery.</p>
     
-      <BlockImage url={functions} alt="Flytdiagram" caption="An overview of the application displaying the pages and functions." /> 
+    <BlockImage url={functions} alt="Flytdiagram" caption="An overview of the application displaying the pages and functions." /> 
     
     <BlockImage url={imgResult} alt="Overview of properties" /> 
     
     </div>
     </div>
     </article>
+    </main>
     </>
   )
 }

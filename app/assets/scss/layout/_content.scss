@@ -1,16 +1,13 @@
 @use "../base/variables";
 
 #content {
-  max-width: variables.$container-text;
   margin-top: 6vh;
   overflow-x: hidden;
 
-  @media all and (min-width: variables.$screen-sm) {
+  @media all and (min-width: variables.$screen-lg) {
     max-width: variables.$container-content;
-    margin-top: 10vh;
-    margin-left: 6.25vw;
+    margin-top: 0;
     padding-left: variables.$container-padding;
-    padding-right: calc(variables.$container-padding - 6.25vw);
     padding-bottom: calc(variables.$footer-height / 2);
   }
 }

@@ -1,14 +1,14 @@
 // Breakpoints
-$screen-xs: 400px;
-$screen-sm: 670px;
-$screen-md: 900px;
-$screen-lg: 1320px;
-$screen-xl: 1554px;
+$screen-xs: 236px;
+$screen-sm: 400px;
+$screen-md: 608px;
+$screen-lg: 920px;
+$screen-xl: 1320px;
 
 // Containers
-$container-site: 100%;
-$container-content: 100vw;
-$container-padding: 20vw;
+$container-site: 1600px;
+$container-content: 100%;
+$container-padding: 15vw;
 $container-text: 69ch;
 
 // Layout
@@ -16,8 +16,8 @@ $content-height: 80vh;
 $footer-height: 20vh;
 
 // Spacing
-$spacing: 2em;
-$padding: 3.7vw;
+$spacing: 3em;
+$padding: 2em;
 
 // Border
 $border-radius: 8px;
@@ -25,14 +25,14 @@ $border-radius: 8px;
 // Light Mode
 $color-background: #f1eff7;
 $color-text: #241438;
-$color-text-tinted: rgba($color-text, 0.8);
+$color-text-tinted: rgba($color-text, 0.9);
 $color-link: #241438a6;
 $color-link-hover: #241438;
 
 // Dark Mode
-$dark-color-background: #040207;
+$dark-color-background: #0b0611;
 $dark-color-text: #dad8e0;
-$dark-color-text-tinted: rgba($dark-color-text, 0.8);
+$dark-color-text-tinted: rgba($dark-color-text, 0.9);
 $dark-color-link: #dad8e0a6;
 $dark-color-link-hover: #dad8e0;
 

@@ -1,0 +1,19 @@
+@use "../base/variables";
+
+#footerEntry {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: variables.$spacing;
+  font-size: 1em;
+  text-transform: lowercase;
+
+  a {
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+    }
+  }
+}

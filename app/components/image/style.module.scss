@@ -15,16 +15,16 @@
   }
 
   figcaption {
-    font-size: 0.8em;
+    font-size: 0.75em;
     font-weight: 430;
     opacity: 0.8;
     filter: alpha(opacity=80);
 
-    @media all and (min-width: variables.$screen-sm) {
+    @media all and (min-width: variables.$screen-md) {
       font-weight: 420;
     }
 
-    @media all and (min-width: variables.$screen-md) {
+    @media all and (min-width: variables.$screen-lg) {
       font-weight: 410;
     }
   }

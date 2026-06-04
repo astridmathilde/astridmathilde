@@ -1,4 +1,4 @@
-import { siteTitle } from "../../layout";
+import { siteTitle } from "../layout";
 import { projects } from "../../data/projects";
 import style from "../../assets/scss/work.module.scss";
 import utils from "../../assets/scss/utils.module.scss";
@@ -18,7 +18,7 @@ export default function Work() {
     <h2 className={utils.screen_reader_text}>My work</h2>
     <div className={style.work}>
     {projects.map((project) => (
-      <BlockProject key={project.id} slug={project.slug} title={project.title} category={project.category} year={project.year} thumbnail={project.thumbnail} priority="true" sizes="(min-width: 670px) 50vw, 100vw" />
+      <BlockProject key={project.id} slug={project.slug} short_title={project.short_title} title={project.title} client={project.client} category={project.category} type={project.type} year={project.year} thumbnail={project.thumbnail} priority="true" sizes="(min-width: 670px) 50vw, 100vw" />
     ))}
     </div>
     </>

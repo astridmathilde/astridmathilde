@@ -6,8 +6,9 @@
   gap: variables.$padding;
   margin-top: calc(variables.$spacing * 1.2);
 
-  @media all and (min-width: variables.$screen-sm) {
+  @media all and (min-width: variables.$screen-md) {
     grid-template-columns: 1fr 1fr;
     gap: variables.$padding;
+    margin-top: 0;
   }
 }

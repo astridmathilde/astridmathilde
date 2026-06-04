@@ -3,21 +3,14 @@
 .selectedWork {
   display: grid;
   grid-template-columns: 1fr;
-  align-items: center;
   gap: variables.$padding;
   margin-top: calc(variables.$spacing * 2);
 
-  @media all and (min-width: variables.$screen-sm) {
+  @media all and (min-width: variables.$screen-md) {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    align-items: center;
     gap: variables.$padding;
   }
-
-  h2 {
-    margin-top: variables.$spacing;
-  }
-
   /*
   article {
   z-index: 1000;

@@ -4,12 +4,13 @@
   position: relative;
   max-width: variables.$container-site;
   padding: variables.$padding;
-  overflow: hidden;
 
-  @media all and (min-width: variables.$screen-sm) {
+  @media all and (min-width: variables.$screen-lg) {
     display: flex;
+    flex-direction: column;
     gap: variables.$spacing;
-    align-items: center;
     min-height: 100vh;
+    margin-left: auto;
+    margin-right: auto;
   }
 }

@@ -4,16 +4,16 @@ import { usePathname } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
 
-import styles from "./assets/scss/layout.module.scss";
-import icon from "./apple-icon.png";
+import styles from "../assets/scss/layout.module.scss";
+import icon from "../apple-icon.png";
 
 export default function Header() {
   const pathname = usePathname();
 
   return (
-    <header id={styles.header} className={"text-medium"}>
+    <header id={styles.header} className={"text-large"}>
 
-    <h1 className={styles.title}><Link href="/"><Image className={styles.icon} src={icon} width="20" height="20" alt="" /> astrid</Link></h1>
+    <h1 className={styles.title}><Link href="/"><Image className={styles.icon} src={icon} width="20" height="20" alt="" />astrid mathilde</Link></h1>
 
 
     <nav id="primaryNav" className={styles.nav}>

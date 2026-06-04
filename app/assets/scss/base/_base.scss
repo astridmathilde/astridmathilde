@@ -13,14 +13,25 @@ html {
 body {
   margin: 0;
   padding: 0;
-  font-size: 14px;
+  font-size: 8px;
   line-height: 1.4;
-  text-transform: lowercase;
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
 
+  @media all and (min-width: variables.$screen-xs) {
+    font-size: 12px;
+  }
+
   @media all and (min-width: variables.$screen-sm) {
+    font-size: 14px;
+  }
+
+  @media all and (min-width: variables.$screen-lg) {
     font-size: 16px;
+  }
+
+  @media all and (min-width: variables.$screen-xl) {
+    font-size: 20px;
   }
 }
 
@@ -57,7 +68,7 @@ ul {
     + li {
       padding-top: 0.5em;
 
-      @media all and (min-width: variables.$screen-sm) {
+      @media all and (min-width: variables.$screen-md) {
         padding-top: 0.3em;
       }
     }
@@ -70,7 +81,7 @@ nav {
 
     li {
       + li {
-        @media all and (max-width: variables.$screen-sm) {
+        @media all and (max-width: variables.$screen-md) {
           padding-top: 0;
         }
       }

@@ -9,17 +9,18 @@
   font-size: 1em;
   text-transform: lowercase;
 
-  @media all and (max-width: variables.$screen-sm) {
+  @media all and (max-width: variables.$screen-lg) {
     z-index: 1000;
     top: 0;
+    left: 0;
     width: 100%;
-    padding: calc(variables.$padding / 2) 0;
+    padding: calc(variables.$padding / 2) variables.$padding;
   }
 
-  @media all and (min-width: variables.$screen-sm) {
-    top: variables.$padding;
-    left: variables.$padding;
+  @media all and (min-width: variables.$screen-lg) {
+    //top: variables.$padding;
     min-height: calc(100vh - variables.$footer-height);
+    padding-left: 0;
     font-size: 1.5em;
   }
 
@@ -34,15 +35,20 @@
 
     a {
       display: flex;
-      align-content: center;
+      align-items: center;
+      height: 36px;
       text-decoration: none;
+      opacity: 0.8;
+      filter: alpha(opacity=80);
 
       &:hover {
         text-decoration: underline;
+        opacity: 1;
+        filter: alpha(opacity=100);
       }
     }
 
-    @media all and (min-width: variables.$screen-sm) {
+    @media all and (min-width: variables.$screen-lg) {
       display: none;
     }
   }
@@ -50,18 +56,24 @@
   .nav {
     ul {
       display: flex;
-      gap: 0.3em;
       margin: 0;
+      gap: 1em;
       padding: 0;
 
-      @media all and (min-width: variables.$screen-sm) {
+      @media all and (min-width: variables.$screen-lg) {
         flex-direction: column;
-        gap: 0.3em;
+        gap: 0.6em;
       }
 
       li {
         padding: 0;
         list-style: none;
+
+        @media all and (max-width: variables.$screen-lg) {
+          &:nth-child(1) {
+            display: none;
+          }
+        }
       }
 
       a {
@@ -84,8 +96,7 @@
           cursor: default;
         }
 
-        @media all and (max-width: variables.$screen-md) {
-          min-width: 48px;
+        @media all and (max-width: variables.$screen-lg) {
           height: 36px;
         }
       }
@@ -97,7 +108,7 @@
   #header {
     color: variables.$color-text;
 
-    @media all and (max-width: variables.$screen-sm) {
+    @media all and (max-width: variables.$screen-lg) {
       background-color: variables.$color-background;
     }
   }
@@ -107,7 +118,7 @@
   #header {
     color: variables.$dark-color-text;
 
-    @media all and (max-width: variables.$screen-sm) {
+    @media all and (max-width: variables.$screen-lg) {
       background-color: variables.$dark-color-background;
     }
   }

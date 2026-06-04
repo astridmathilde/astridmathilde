@@ -2,24 +2,24 @@ import { ThemeProvider } from 'next-themes';
 import Link from 'next/link.js';
 import localFont from 'next/font/local';
 
-import './assets/scss/global.scss';
-import './assets/scss/brightness.scss';
+import '../assets/scss/global.scss';
+import '../assets/scss/brightness.scss';
 
-import styles from './assets/scss/layout.module.scss';
-import utils from "./assets/scss/utils.module.scss"
+import styles from '../assets/scss/layout.module.scss';
+import utils from "../assets/scss/utils.module.scss"
 
-import Wrapper from './wrapper.js';
+import Wrapper from '../wrapper.js';
 import Header from "./header.js";
 
 const inter = localFont({
   src: [
     {
-      path: './assets/fonts/InterVariable.woff2',
+      path: '../assets/fonts/InterVariable.woff2',
       weight: '100 500',
       style: 'normal',
     },
     {
-      path: './assets/fonts/InterVariable-Italic.woff2',
+      path: '../assets/fonts/InterVariable-Italic.woff2',
       weight: '100 500',
       style: 'italic',
     }

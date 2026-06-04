@@ -22,27 +22,31 @@ $text_tiny: 470;
   }
 
   h2,
-  h3,
-  h4 {
+  h3 {
     color: variables.$color-text;
   }
 
-  h2 {
-    font-weight: $text_medium;
-  }
-
+  h2,
   h3 {
-    font-weight: $text_medium;
+    font-weight: $text_large;
   }
 
   h4 {
-    font-weight: $text_xsmall;
+    font-weight: $text_small;
+    color: variables.$color-text-tinted;
+    opacity: 0.8;
+    filter: alpha(opacity=80);
+  }
+
+  figcaption {
+    opacity: 0.8;
+    filter: alpha(opacity=80);
   }
 
   .text-large {
     font-weight: text_large;
 
-    @media all and (min-width: variables.$screen-lg) {
+    @media all and (min-width: variables.$screen-xl) {
       font-weight: text_large - 30;
     }
   }
@@ -50,7 +54,7 @@ $text_tiny: 470;
   .text-medium {
     font-weight: $text_medium;
 
-    @media all and (min-width: variables.$screen-md) {
+    @media all and (min-width: variables.$screen-xl) {
       font-weight: $text_medium - 10;
     }
   }
@@ -58,7 +62,7 @@ $text_tiny: 470;
   .text-small {
     font-weight: $text_small;
 
-    @media all and (min-width: variables.$screen-sm) {
+    @media all and (min-width: variables.$screen-md) {
       font-weight: $text_small - 10;
     }
   }
@@ -67,11 +71,11 @@ $text_tiny: 470;
   .small {
     font-weight: $text_xsmall;
 
-    @media all and (min-width: variables.$screen-sm) {
+    @media all and (min-width: variables.$screen-md) {
       font-weight: $text_xsmall - 30;
     }
 
-    @media all and (min-width: variables.$screen-md) {
+    @media all and (min-width: variables.$screen-lg) {
       font-weight: $text_xsmall - 50;
     }
   }
@@ -79,11 +83,11 @@ $text_tiny: 470;
   .text-tiny {
     font-weight: $text_tiny;
 
-    @media all and (min-width: variables.$screen-sm) {
+    @media all and (min-width: variables.$screen-md) {
       font-weight: $text_tiny - 30;
     }
 
-    @media all and (min-width: variables.$screen-md) {
+    @media all and (min-width: variables.$screen-lg) {
       font-weight: $text_tiny - 50;
     }
   }
@@ -104,27 +108,31 @@ $text_tiny: 470;
   }
 
   h2,
-  h3,
-  h4 {
+  h3 {
     color: variables.$dark-color-text;
   }
 
-  h2 {
-    font-weight: $text_medium - 30;
-  }
-
+  h2,
   h3 {
-    font-weight: $text_medium - 30;
+    font-weight: $text_large - 30;
   }
 
   h4 {
-    font-weight: $text_xsmall - 30;
+    font-weight: $text_small - 30;
+    color: variables.$dark-color-text-tinted;
+    opacity: 0.9;
+    filter: alpha(opacity=90);
+  }
+
+  figcaption {
+    opacity: 0.8;
+    filter: alpha(opacity=80);
   }
 
   .text-large {
     font-weight: text_large - 30;
 
-    @media all and (min-width: variables.$screen-lg) {
+    @media all and (min-width: variables.$screen-xl) {
       font-weight: text_large - 60;
     }
   }
@@ -132,7 +140,7 @@ $text_tiny: 470;
   .text-medium {
     font-weight: $text_medium - 30;
 
-    @media all and (min-width: variables.$screen-md) {
+    @media all and (min-width: variables.$screen-lg) {
       font-weight: $text_medium - 40;
     }
   }
@@ -140,7 +148,7 @@ $text_tiny: 470;
   .text-small {
     font-weight: $text_small - 30;
 
-    @media all and (min-width: variables.$screen-sm) {
+    @media all and (min-width: variables.$screen-md) {
       font-weight: $text_small - 50;
     }
   }
@@ -149,11 +157,11 @@ $text_tiny: 470;
   .small {
     font-weight: $text_xsmall;
 
-    @media all and (min-width: variables.$screen-sm) {
+    @media all and (min-width: variables.$screen-md) {
       font-weight: $text_xsmall - 30;
     }
 
-    @media all and (min-width: variables.$screen-md) {
+    @media all and (min-width: variables.$screen-lg) {
       font-weight: $text_xsmall - 60;
     }
   }
@@ -161,11 +169,11 @@ $text_tiny: 470;
   .text-tiny {
     font-weight: $text_tiny;
 
-    @media all and (min-width: variables.$screen-sm) {
+    @media all and (min-width: variables.$screen-md) {
       font-weight: $text_tiny - 30;
     }
 
-    @media all and (min-width: variables.$screen-md) {
+    @media all and (min-width: variables.$screen-lg) {
       font-weight: $text_tiny - 60;
     }
   }

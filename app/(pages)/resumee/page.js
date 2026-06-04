@@ -1,4 +1,4 @@
-import { siteTitle } from "../../layout";
+import { siteTitle } from "../layout";
 import skillStyle from "../../assets/scss/components/skills.module.scss";
 import BlockRow from "../../components/row";
 import BlockColumn from "../../components/column";

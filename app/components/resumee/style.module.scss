@@ -11,7 +11,7 @@
   .header {
     padding-left: 1em;
 
-    @media all and (min-width: variables.$screen-sm) {
+    @media all and (min-width: variables.$screen-md) {
       padding-left: 1.5em;
     }
 
@@ -24,7 +24,7 @@
     width: 20ch;
     font-size: 0.85em;
 
-    @media all and (min-width: variables.$screen-sm) {
+    @media all and (min-width: variables.$screen-md) {
       width: 15ch;
     }
 

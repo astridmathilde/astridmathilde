@@ -33,14 +33,14 @@ export const projects = [
   },
   {
     "id": 11,
-    "title": "Sparebank 1 Forsikring",
-    "short_title": "Sparebank 1 Forsikring",
+    "title": "Reducing manual processes in case handling with AI",
+    "short_title": "Sakshjelperen",
     "thumbnail": sb1,
     "slug": "sparebank1-forsikring",
     "type": "Summer internship",
     "client": "",
-    "category": "Web application",
-    "tags": ["UX design", "design system"],
+    "category": "AI-Powered tool",
+    "tags": ["UX design", "design system", "AI"],
     "role": ["design"],
     "location": {
       "name": "Sparebank 1 Forsikring",
@@ -52,14 +52,14 @@ export const projects = [
   },
   {
     "id": 10,
-    "title": "Norwegian Red Cross",
-    "short_title": "Norwegian Red Cross",
+    "title": "Empowering Volunteers in Difficult Conversations with Children",
+    "short_title": "Norwegian Red Cross helpline",
     "thumbnail": redcross,
     "slug": "norwegian-red-cross",
     "type": "Academic project",
     "client": "Norwegian Red Cross",
-    "category": "Application",
-    "tags": ["UX design", "design system", "artificial intelligence"],
+    "category": "AI-Assisted Tool",
+    "tags": ["UX design", "design system", "AI"],
     "role": ["design"],
     "location": {
       "name": "Oslo School of Architecture and Design",
@@ -72,7 +72,7 @@ export const projects = [
   {
     "id": 9,
     "title": "Transforming the education in design and architecture for a more sustainable future",
-    "short_title": "The student association KAHOS",
+    "short_title": "KAHOS",
     "thumbnail": kahos,
     "slug": "kahos",
     "type": "Student association",
@@ -93,7 +93,7 @@ export const projects = [
     "thumbnail": fremtind,
     "slug": "internship-fremtind",
     "type": "Summer internship",
-    "client": "",
+    "client": "Fremtind Forsikring",
     "category": "Web application",
     "tags": ["UX design", "design system"],
     "role": ["design", "project management"],
@@ -107,12 +107,12 @@ export const projects = [
   },
   {
     "id": 7,
-    "title": "System interface",
+    "title": "A cruise control system for regulating fuel consumption",
     "short_title": "Alpha Fuel Control",
     "thumbnail": alphafuel,
     "slug": "alpha-fuel-control",
     "type": "Research project",
-    "client": "",
+    "client": "OpenZero",
     "category": "System interface",
     "tags": ["software design", "UX", "design system"],
     "role": ["design"],
@@ -146,6 +146,7 @@ export const projects = [
   {
     "id": 5,
     "title": "Helping young girls understand their own menstrual cycle",
+    "short_title": "Mensn",
     "thumbnail": mensn,
     "slug": "mensn",
     "type": "Academic project",
@@ -163,7 +164,7 @@ export const projects = [
   {
     "id": 4,
     "title": "Website for Barlindhaug Eiendom",
-    "short_title": "Website for Barlindhaug Eiendom",
+    "short_title": "Barlindhaug Eiendom",
     "thumbnail": barlindhaug,
     "slug": "barlindhaug",
     "type": "Client project",
@@ -182,7 +183,7 @@ export const projects = [
   {
     "id": 3,
     "title": "A new website for the world's norternmost craft brewery",
-    "short_title": "Website for Svalbard Bryggeri",
+    "short_title": "Svalbard Bryggeri",
     "thumbnail": svalbard,
     "slug": "svalbard-bryggeri",
     "type": "Client project",
@@ -216,24 +217,5 @@ export const projects = [
     "year": "2019",
     "duration": "4 months",
     "team": ["Tor Åge Vorren (project leader)", "Siri Jachlin (graphic designer)"]
-  },
-  {
-    "id": 0,
-    "title": "Personal website",
-    "short_title": "Personal website",
-    "thumbnail": personal,
-    "slug": "personal-website",
-    "type": "Personal project",
-    "client": "",
-    "category": "Website",
-    "tags": ["UX", "UI"],
-    "role": ["design", "development"],
-    "location": {
-      "name": "",
-      "url": ""
-    },
-    "year": "2018",
-    "duration": "Ongoing",
-    "team": [""]
   }
 ]

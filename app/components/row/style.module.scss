@@ -3,23 +3,21 @@
 .row {
   margin-top: variables.$spacing;
 
-  &:first-of-type {
-    margin-top: 1em;
-  }
-
-  @media all and (min-width: variables.$screen-sm) {
+  @media all and (min-width: variables.$screen-md) {
     display: flex;
     justify-content: space-between;
     gap: variables.$padding;
   }
 
   .heading:first-child {
-    @media all and (min-width: variables.$screen-sm) {
+    @media all and (min-width: variables.$screen-md) {
       margin-top: 0;
     }
   }
 
   + .row {
-    margin-top: 0 !important;
+    @media all and (min-width: variables.$screen-md) {
+      // margin-top: calc(variables.$spacing * 2);
+    }
   }
 }

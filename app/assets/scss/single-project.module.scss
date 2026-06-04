@@ -1,6 +1,8 @@
 @use "base/variables";
 
 .singleProject {
+  font-size: 1em;
+
   .thumbnail {
     margin-top: variables.$padding;
 
@@ -34,6 +36,7 @@
     flex-direction: column;
     gap: calc(variables.$padding * 0.5);
     margin-top: variables.$spacing;
+    text-transform: lowercase;
 
     p {
       order: -1;
@@ -48,23 +51,25 @@
 
   .container {
     position: relative;
-    margin-top: variables.$spacing / 2;
+    margin-top: variables.$spacing;
 
     @media all and (min-width: variables.$screen-md) {
       display: grid;
       grid-template-columns: 3fr 9fr;
-      gap: 0 2.5em;
+      gap: 0 variables.$padding;
       justify-items: start;
-    }
-
-    @media all and (min-width: variables.$screen-lg) {
-      grid-template-columns: 2fr 9fr;
     }
 
     .meta {
       display: block;
 
       @media all and (min-width: variables.$screen-md) {
+        position: sticky;
+        top: 1em;
+        font-size: 0.9em;
+      }
+
+      @media all and (min-width: variables.$screen-xl) {
         font-size: 0.8em;
       }
 

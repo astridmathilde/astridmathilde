@@ -1,4 +1,4 @@
-import { siteTitle } from "../../layout";
+import { siteTitle } from "../layout";
 import Link from "next/link";
 
 import utils from "../../assets/scss/utils.module.scss";

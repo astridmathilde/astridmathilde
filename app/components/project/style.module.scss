@@ -11,14 +11,6 @@
     flex-direction: column;
   }
 
-  &:hover,
-  &:focus {
-    .title {
-      text-decoration: underline;
-      text-decoration-color: inherit;
-    }
-  }
-
   figure {
     order: -1;
 
@@ -27,32 +19,45 @@
     }
   }
 
+  &:hover,
+  &:focus {
+    > header {
+      opacity: 0.8;
+      filter: alpha(opacity=80);
+    }
+  }
+
   header {
     display: flex;
-    flex-direction: column;
-
-    .title {
-      margin-top: 0.3em;
-      margin-bottom: 0;
-      font-size: 1em;
-    }
+    justify-content: space-between;
+    margin-top: 0.5em;
+    font-size: 0.85em;
+    opacity: 0.8;
+    filter: alpha(opacity=80);
 
     .meta {
       margin: 0;
-      padding: 0.25em 0 0 0;
-      font-size: 0.85em;
-      opacity: 0.8;
-      filter: alpha(opacity=80);
+      padding: 0;
 
       li {
         display: inline-block;
+        margin: 0;
         padding: 0;
 
-        + li:before {
-          content: "/";
-          padding: 0 0.25em;
+        &.type {
+          + .type {
+            padding-left: 0.25em;
+
+            &:before {
+              content: "/";
+            }
+          }
         }
       }
+    }
+
+    .year {
+      margin: 0;
     }
   }
 }
