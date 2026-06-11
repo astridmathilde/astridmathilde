@@ -1,8 +1,8 @@
-import {Providers} from "./providers.js";
 import localFont from 'next/font/local';
 import './assets/scss/global.scss';
 import styles from './assets/scss/layout.module.scss';
 import Wrapper from './wrapper.js';
+import { Providers } from './providers.js';
 import './assets/scss/brightness.scss';
 
 const inter = localFont({

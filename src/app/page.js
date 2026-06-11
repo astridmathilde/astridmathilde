@@ -16,6 +16,7 @@ export default function Index() {
     <h3>Index</h3>
     <nav>
     <ul>
+    <li><Link href="work">Work</Link></li>
     <li><Link href="now">Now</Link></li>
     <li><Link href="resumee">Resumee</Link></li>
     <li><Link href="contact">Contact</Link></li>
