@@ -1,12 +1,9 @@
 import Link from 'next/link';
 import { client } from '../../sanity/client';
-
-const POSTS_QUERY = `*[
- _type == "project"
- && defined(slug.current)]|order(time.year desc)[0...12]{_id, title, slug, location}`;
+import { ALL_PROJECTS } from '../../sanity/lib/queries';
 
 export default async function Work() {
-  const entries = await client.fetch(POSTS_QUERY, {});
+  const entries = await client.fetch(ALL_PROJECTS, {});
   
   return (
     <>

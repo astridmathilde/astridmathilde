@@ -26,7 +26,7 @@ export const siteTitle = 'Astrid Mathilde Boberg';
 export default function Layout({ children }) {
   return (
     <>
-    <html lang="en" className={inter.className}>
+    <html lang="en" className={inter.className} suppressHydrationWarning>
     <Wrapper>
     <Providers>
     <header id={styles.header} className={"text-medium"}>

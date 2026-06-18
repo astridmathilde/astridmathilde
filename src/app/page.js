@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { client } from '../sanity/client';
+import { RECENT_PROJECTS } from "../sanity/lib/queries";
 import { siteTitle } from "./layout";
 import BlockDisplay from "./components/display";
 import BlockResumee from "./components/resumee";
@@ -13,20 +14,8 @@ export const metadata = {
   title: siteTitle + " – Designer & developer",
 }
 
-const POSTS_QUERY = `*[
-  _type == "project"
-  && defined(slug.current)]|order(time.year desc)[0...3]{
-    _id,
-    title,
-    slug,
-    location,
-    category,
-    thumbnail
-  }
-`;
-
 export default async function Index() {
-  const projects = await client.fetch(POSTS_QUERY, {});
+  const projects = await client.fetch(RECENT_PROJECTS, {});
   
   return (
     <div className={style.content}>
