@@ -24,24 +24,5 @@
         height: 48px;
       }
     }
-
-    button {
-      background: none;
-      border: none;
-      padding: 0;
-      cursor: pointer;
-      font-size: 1.2em;
-
-      @media all and (max-width: $screen-md) {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        height: 48px;
-      }
-
-      + button {
-        padding-left: 0.5em;
-      }
-    }
   }
 }

@@ -6,14 +6,9 @@
   @media all and (min-width: $screen-sm) {
     display: flex;
     justify-content: space-between;
-    gap: $padding;
   }
 
   .heading:first-child {
     margin-top: 0;
-  }
-
-  + .row {
-    margin-top: 0 !important;
   }
 }

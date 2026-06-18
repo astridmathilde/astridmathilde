@@ -3,7 +3,7 @@ import { client } from '../../sanity/client';
 
 const POSTS_QUERY = `*[
  _type == "project"
- && defined(slug.current)]|order(publishedAt desc)[0...12]{_id, title, slug, location}`;
+ && defined(slug.current)]|order(time.year desc)[0...12]{_id, title, slug, location}`;
 
 export default async function Work() {
   const entries = await client.fetch(POSTS_QUERY, {});
@@ -16,7 +16,11 @@ export default async function Work() {
       <li key={entry._id}>
       <Link href={`/work/${entry.slug.current}`}>
       <h3>{entry.title}</h3>
-      <p>{entry.location.name}</p>
+      {entry.location ? (
+        <p>{entry.location.name}</p>
+      ) : null
+      }
+  
       </Link>
       </li>
     ))}

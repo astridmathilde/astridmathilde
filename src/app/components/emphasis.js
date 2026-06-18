@@ -1,4 +1,4 @@
-import style from "../assets/scss/components/emphasis.module.scss";
+import style from "../../assets/scss/components/emphasis.module.scss";
 
 export default function BlockEmphasis({children}) {
   return (
@@ -6,4 +6,4 @@ export default function BlockEmphasis({children}) {
         <div className={style.emphasis}>{children}</div>
     </>
   )
-}
+} 

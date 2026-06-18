@@ -1,4 +1,4 @@
-import styles from '../assets/scss/components/image_row.module.scss';
+import styles from '../../assets/scss/components/image_row.module.scss';
 
 export default function BlockImageRow({children }) {
   return (

@@ -1,4 +1,4 @@
-import style from "../assets/scss/components/resumee.module.scss";
+import style from "../../assets/scss/components/resumee.module.scss";
 
 export default function BlockResumee(entry) {
   return (

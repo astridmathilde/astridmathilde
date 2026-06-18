@@ -1,4 +1,4 @@
-import styles from '../assets/scss/components/column.module.scss';
+import styles from '../../assets/scss/components/column.module.scss';
 
 export default function BlockColumn({width, children, order }) {
   return (

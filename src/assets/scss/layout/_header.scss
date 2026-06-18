@@ -1,7 +1,10 @@
 @import "../base/variables";
 
 #header {
-  padding-top: $padding;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: $padding / 4;
   padding-bottom: $padding;
   font-size: 0.85em;
 

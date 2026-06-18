@@ -1,6 +1,6 @@
-import styles from '../assets/scss/components/display.module.scss';
+import styles from '../../assets/scss/components/display.module.scss';
 
-export default function BlockIcon({children}) {
+export default function BlockDisplay({children}) {
   return (
     <>
     <div className={styles.display + " text-large"}>

@@ -1,4 +1,4 @@
-import styles from '../assets/scss/components/row.module.scss';
+import styles from '../../assets/scss/components/row.module.scss';
 
 export default function BlockRow({align, height, children}) {
   return (
