@@ -329,3 +329,72 @@ export type AllSanitySchemaTypes =
   | SanityAssetSourceData
   | SanityImageAsset
   | Geopoint;
+
+// Source: src/sanity/lib/queries.js
+// Variable: ALL_PROJECTS
+// Query: *[  _type == "project"  && defined(slug.current)]|order(time.year desc)[0...12]{    _id,    title,    slug,    location,    category,    thumbnail  }
+export type ALL_PROJECTS_RESULT = Array<{
+  _id: string;
+  title: string | null;
+  slug: Slug | null;
+  location: {
+    name?: string;
+    website?: string;
+  } | null;
+  category:
+    | "ai-tool"
+    | "app"
+    | "digital-tool"
+    | "graphic-design"
+    | "system-interface"
+    | "web-application"
+    | "website"
+    | null;
+  thumbnail: {
+    asset?: SanityImageAssetReference;
+    media?: unknown;
+    hotspot?: SanityImageHotspot;
+    crop?: SanityImageCrop;
+    alt?: string;
+    _type: "image";
+  } | null;
+}>;
+
+// Source: src/sanity/lib/queries.js
+// Variable: RECENT_PROJECTS
+// Query: *[  _type == "project"  && defined(slug.current)]|order(time.year desc)[0...3]{    _id,    title,    slug,    location,    category,    thumbnail  }
+export type RECENT_PROJECTS_RESULT = Array<{
+  _id: string;
+  title: string | null;
+  slug: Slug | null;
+  location: {
+    name?: string;
+    website?: string;
+  } | null;
+  category:
+    | "ai-tool"
+    | "app"
+    | "digital-tool"
+    | "graphic-design"
+    | "system-interface"
+    | "web-application"
+    | "website"
+    | null;
+  thumbnail: {
+    asset?: SanityImageAssetReference;
+    media?: unknown;
+    hotspot?: SanityImageHotspot;
+    crop?: SanityImageCrop;
+    alt?: string;
+    _type: "image";
+  } | null;
+}>;
+
+// Query TypeMap
+import "@sanity/client";
+declare module "@sanity/client" {
+  interface SanityQueries {
+    '*[\n  _type == "project"\n  && defined(slug.current)]|order(time.year desc)[0...12]{\n    _id,\n    title,\n    slug,\n    location,\n    category,\n    thumbnail\n  }': ALL_PROJECTS_RESULT;
+    '*[\n  _type == "project"\n  && defined(slug.current)]|order(time.year desc)[0...3]{\n    _id,\n    title,\n    slug,\n    location,\n    category,\n    thumbnail\n  }\n': RECENT_PROJECTS_RESULT;
+  }
+}

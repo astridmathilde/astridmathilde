@@ -3,7 +3,7 @@ import Link from "next/link";
 import localFont from 'next/font/local';
 import '../assets/scss/global.scss';
 import styles from '../assets/scss/layout.module.scss';
-import Wrapper from './wrapper.js';
+import Wrapper from './wrapper';
 import '../assets/scss/brightness.scss';
 
 const inter = localFont({
@@ -19,7 +19,7 @@ const inter = localFont({
       style: 'italic',
     }
   ]
-})
+});
 
 export const siteTitle = 'Astrid Mathilde Boberg';
 

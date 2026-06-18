@@ -15,13 +15,13 @@
     "esModuleInterop": true,
     "moduleResolution": "bundler",
     "resolveJsonModule": true,
-    "isolatedModules": true,
     "jsx": "react-jsx",
     "plugins": [
       {
         "name": "next"
       }
-    ]
+    ],
+    "isolatedModules": true
   },
   "include": [
     "next-env.d.ts",
@@ -30,8 +30,8 @@
     "**/*.mts",
     "**/*.ts",
     "**/*.tsx",
-    "src",
-    "sanity.types.ts"
+    "./src",
+    "./sanity.types.ts"
   ],
   "exclude": [
     "node_modules"

@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "@nextui-org/react": "^2.6.11",
+    "@sanity/client": "^7.23.0",
     "@sanity/image-url": "^2.1.1",
     "@sanity/vision": "^6.1.0",
     "@tailwindcss/typography": "^0.5.20",
