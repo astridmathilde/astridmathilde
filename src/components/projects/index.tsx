@@ -1,6 +1,6 @@
 import Link from "next/link";
-import BlockProjectImage from "./project-image";
-import style from "../../assets/scss/components/projects.module.scss";
+import BlockProjectImage from "../project-image";
+import style from './style.module.scss';
 import utils from "../../assets/scss/utils.module.scss";
 
 export default function BlockProjects(project) {

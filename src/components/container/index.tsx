@@ -1,9 +1,9 @@
-import styles from '../../assets/scss/components/container.module.scss';
+import style from './style.module.scss';
 
 export default function Container({children }) {
   return (
     <>
-    <div className={styles.container}>
+    <div className={style.container}>
      { children }
      </div>
     </>

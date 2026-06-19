@@ -2,24 +2,24 @@ import Link from "next/link";
 import { client } from '../sanity/client';
 import { RECENT_PROJECTS } from "../sanity/lib/queries";
 import { siteTitle } from "./layout";
-import BlockDisplay from "./components/display";
-import BlockResumee from "./components/resumee";
-import BlockProjects from "./components/projects";
+import BlockDisplay from "../components/display";
+import BlockResumee from "../components/resumee";
+import BlockProjects from "../components/projects";
 import utils from "../assets/scss/utils.module.scss";
 import style from "../assets/scss/home.module.scss";
 import { experience } from "../data/resumee";
 
-export const metadata = {
+/*export const metadata = {
   metadataBase: new URL('https://astridmathilde.no'),
   title: siteTitle + " – Designer & developer",
-}
+}*/
 
 export default async function Index() {
   const projects = await client.fetch(RECENT_PROJECTS, {});
   
   return (
     <div className={style.content}>
-    <BlockDisplay location="home">Heia! I am a designer and developer from Northern Norway, currently living in Oslo as an MA design student. Having previously worked with graphic design, web design and development, I now specialize in designing digital products while still working with websites as a freelancer. I also enjoy writing things, <a href="https://blikk.directory" rel="external" title="my library of observations" target="_blank">taking photos of stuff</a> and I have a fascination for digital minimalism.</BlockDisplay>
+    <BlockDisplay>Heia! I am a designer and developer from Northern Norway, currently living in Oslo as an MA design student. Having previously worked with graphic design, web design and development, I now specialize in designing digital products while still working with websites as a freelancer. I also enjoy writing things, <a href="https://blikk.directory" rel="external" title="my library of observations" target="_blank">taking photos of stuff</a> and I have a fascination for digital minimalism.</BlockDisplay>
     
     <h2>Recent work</h2>
     <div className={style.projects}>

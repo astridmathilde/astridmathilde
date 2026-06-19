@@ -4,7 +4,7 @@ import projectNav from "../../../assets/scss/components/project-navigation.modul
 
 import { PortableText } from "next-sanity";
 import { client } from "../../../sanity/client";
-import BlockProjectImage from "../../components/project-image";
+import BlockProjectImage from "../.../components/project-image";
 
 import Link from "next/link";
 

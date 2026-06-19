@@ -4,7 +4,7 @@ import { ALL_PROJECTS } from "../../sanity/lib/queries";
 import style from "../../assets/scss/work.module.scss";
 import utils from "../../assets/scss/utils.module.scss";
 import Link from "next/link";
-import BlockProjects from "../components/projects";
+import BlockProjects from ".../components/projects";
 
 const pageTitle = 'My work';
 

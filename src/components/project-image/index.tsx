@@ -1,10 +1,10 @@
 import Image from 'next/image';
-import { urlFor } from "../../sanity/lib/image";
-import styles from '../../assets/scss/components/image.module.scss';
+import { urlFor } from '../../sanity/lib/image';
+import style from '../image/style.module.scss';
 
 export default function BlockProjectImage(image) {
   return (
-    <figure className={styles.image}>
+    <figure className={style.image}>
     <Image
     src={urlFor(image.image).url()}
     width={image.width}

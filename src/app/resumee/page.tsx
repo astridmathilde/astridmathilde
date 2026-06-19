@@ -1,8 +1,8 @@
 import { siteTitle } from "../layout";
 import skillStyle from "../assets/scss/components/skills.module.scss";
-import BlockRow from "../components/row";
-import BlockColumn from "../components/column";
-import BlockResumee from "../components/resumee";
+import BlockRow from ".../components/row";
+import BlockColumn from ".../components/column";
+import BlockResumee from ".../components/resumee";
 import { experience, education, skills } from "../../data/resumee";
 
 const pageTitle = 'My resumee';
