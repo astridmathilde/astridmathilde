@@ -41,6 +41,10 @@ figure {
   margin: 0;
 }
 
+img {
+  border-radius: $border-radius;
+}
+
 ul {
   li + li {
     padding-top: 0.3em;

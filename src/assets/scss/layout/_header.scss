@@ -1,27 +1,35 @@
 @import "../base/variables";
 
 #header {
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  position: fixed;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top: $padding / 4;
-  padding-bottom: $padding;
+  width: 100%;
+  padding: calc($padding * 0.8) $padding;
   font-size: 0.85em;
-
-  @media all and (min-width: $screen-md) {
-    font-size: 0.9em;
-  }
+  text-transform: lowercase;
 
   .site_title {
     margin: 0;
+
+    .icon {
+      border-radius: 100%;
+      margin-right: 0.4em;
+    }
+
+    a {
+      display: flex;
+      align-items: center;
+      height: 36px;
+    }
   }
 
   a {
     text-decoration-color: transparent;
-
-    &.active {
-      text-decoration-color: white !important;
-    }
 
     @media all and (max-width: $screen-md) {
       display: inline-flex;
@@ -32,6 +40,24 @@
     &:hover,
     &:focus {
       text-decoration-color: inherit;
+    }
+  }
+}
+
+:global(html.light) {
+  #header {
+    @media all and (max-width: $screen-md) {
+      background-color: $color-background;
+      padding: calc($padding * 0.4) $padding;
+    }
+  }
+}
+
+:global(html.dark) {
+  #header {
+    @media all and (max-width: $screen-md) {
+      background-color: $dark-color-background;
+      padding: calc($padding * 0.4) $padding;
     }
   }
 }

@@ -2,28 +2,23 @@
 
 .display {
   max-width: $container-text - 4ch;
-  margin-top: $spacing;
+  margin-top: calc($spacing * 1.5);
   line-height: 1.35;
   font-size: 1.1em;
 
   @media all and (min-width: $screen-xs) {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin-top: $spacing / 2;
-    min-height: 30vh;
     font-size: 1.2em;
   }
 
   @media all and (min-width: $screen-sm) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 30vh;
     font-size: 1.3em;
   }
 
   @media all and (min-width: $screen-md) {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin-top: $spacing / 2;
     min-height: 45vh;
   }
 

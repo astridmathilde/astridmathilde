@@ -4,7 +4,7 @@ import projectNav from "../../../assets/scss/components/project-navigation.modul
 
 import { PortableText } from "next-sanity";
 import { client } from "../../../sanity/client";
-import BlockProjectImage from "../.../components/project-image";
+import BlockProjectImage from "../../../components/project-image";
 
 import Link from "next/link";
 
@@ -62,7 +62,7 @@ export default async function ProjectPage({params}) {
 
 <li key="project_year"><span className={style.label + " text-tiny"}>Year:</span> {entry.time.year}</li>
 
-{entry.contributors ? (
+{/*entry.contributors ? (
   <li key="project_contributors"><span className={style.label + " text-tiny"}>Team:</span>
   <ul className={entry.contributors}>
   {entry.contributors.map((team) => (
@@ -70,7 +70,7 @@ export default async function ProjectPage({params}) {
   ))}
   </ul>
   </li>
-) : null
+) : null */
 }
 
 {entry.roles ? (

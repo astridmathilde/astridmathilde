@@ -9,6 +9,7 @@
   margin-bottom: $padding / 4;
   font-size: 0.85em;
   font-weight: 410;
+  text-transform: lowercase;
 
   @media all and (min-width: $screen-md) {
     font-weight: 400;

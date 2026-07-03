@@ -13,16 +13,19 @@ $spacing: 3.6em;
 $padding: 3%;
 
 // Light Mode
-$color-background: #f9f9fc;
+$color-background: #f1eff7;
 $color-text: #241438;
-$color-link: #241438a6;
+$color-link: #2414387a;
 $color-link-hover: #241438;
 
 // Dark Mode
 $dark-color-background: #040207;
 $dark-color-text: #dad8e0;
-$dark-color-link: #dad8e0a6;
+$dark-color-link: #dad8e07a;
 $dark-color-link-hover: #dad8e0;
+
+// Border
+$border-radius: 8px;
 
 // Transitions
 $duration-fast: 0.2s;

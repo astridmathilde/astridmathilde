@@ -4,7 +4,7 @@ import { ALL_PROJECTS } from "../../sanity/lib/queries";
 import style from "../../assets/scss/work.module.scss";
 import utils from "../../assets/scss/utils.module.scss";
 import Link from "next/link";
-import BlockProjects from ".../components/projects";
+import BlockProjects from "../../components/projects";
 
 const pageTitle = 'My work';
 
@@ -21,7 +21,7 @@ export default async function Work() {
     <h2 className={utils.screen_reader_text}>My work</h2>
     <div className={style.work}>
     {projects.map((project) => (
-      <BlockProjects key={project._id} id={project._id} slug={project.slug} title={project.title} category={project.category} location={project.location ? project.location.name : ""} thumbnail={project.thumbnail} priority="true" sizes="(min-width: 670px) 50vw, 100vw" width="2048px" />
+      <BlockProjects key={project._id} id={project._id} slug={project.slug} title={project.title} category={project.category} alt={project.title} location={project.location ? project.location.name : ""} thumbnail={project.thumbnail} priority="true" sizes="(min-width: 670px) 50vw, 100vw" width="2048px" />
     ))}
     </div>
     

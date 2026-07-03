@@ -1,10 +1,12 @@
 import {Providers} from "./providers";
 import Link from "next/link";
 import localFont from 'next/font/local';
+import Image from "next/image";
 import '../assets/scss/global.scss';
-import styles from '../assets/scss/layout.module.scss';
-import Wrapper from './wrapper';
 import '../assets/scss/brightness.scss';
+import styles from '../assets/scss/layout.module.scss';
+import icon from "./apple-icon.png";
+import Wrapper from './wrapper';
 
 const inter = localFont({
   src: [
@@ -30,7 +32,9 @@ export default function Layout({ children }) {
     <Wrapper>
     <Providers>
     <header id={styles.header} className={"text-medium"}>
-    <h1 className={styles.site_title}><a href="/">Astrid Mathilde</a></h1>
+    
+    <h1 className={styles.site_title}><Link href="/"><Image className={styles.icon} src={icon} width="24" height="24" alt="" />Astrid Mathilde</Link></h1>
+
     <nav className={styles.navigation}>
     <ul>
     <li key="work"><Link href="/work">Work</Link></li>
