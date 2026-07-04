@@ -1,16 +1,19 @@
 // Breakpoints
-$screen-xs: 400px;
-$screen-sm: 670px;
-$screen-md: 900px;
-$screen-lg: 1320px;
-$screen-xl: 1554px;
+$screen-xs: 236px;
+$screen-sm: 400px;
+$screen-md: 608px;
+$screen-lg: 920px;
+$screen-xl: 1320px;
 
 // Containers
-$container-site: 100%;
-$container-content: 150ch;
+$container-site: 1600px;
+$container-content: 100%;
 $container-text: 70ch;
 $spacing: 3.6em;
-$padding: 3%;
+$padding: 2em;
+
+// Border
+$border-radius: 8px;
 
 // Light Mode
 $color-background: #f1eff7;
@@ -23,9 +26,6 @@ $dark-color-background: #040207;
 $dark-color-text: #dad8e0;
 $dark-color-link: #dad8e07a;
 $dark-color-link-hover: #dad8e0;
-
-// Border
-$border-radius: 8px;
 
 // Transitions
 $duration-fast: 0.2s;
