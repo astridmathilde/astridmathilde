@@ -21,6 +21,13 @@ h6 {
   font-size: 1em;
   font-weight: inherit;
   line-height: 130%;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
   text-transform: lowercase;
 }
 
@@ -34,20 +41,16 @@ h2 {
 }
 
 h3 {
-  margin-top: variables.$spacing * 0.8;
+  margin-top: calc(variables.$spacing * 0.8);
 }
 
 h4 {
-  margin-top: variables.$spacing * 0.6;
+  margin-top: calc(variables.$spacing * 0.6);
   margin-bottom: 0;
-  font-size: 0.8em;
-  opacity: 0.8;
-  filter: alpha(opacity=80);
+  font-size: 0.9em;
 }
 
 figcaption {
-  opacity: 0.8;
-  filter: alpha(opacity=80);
   font-size: 0.6em;
   text-transform: lowercase;
 }

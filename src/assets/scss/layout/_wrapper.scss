@@ -1,22 +1,7 @@
 @use "../base/variables";
 
 #wrapper {
-  max-width: variables.$container-content;
-  margin: 0 auto;
-  padding: 0 variables.$padding variables.$padding / 5 variables.$padding;
-
-  @media all and (min-width: variables.$screen-sm) {
-    padding-top: variables.$padding / 2;
-    padding-bottom: variables.$padding / 2;
-  }
-
-  @media all and (min-width: variables.$screen-md) {
-    padding-top: variables.$padding / 1.5;
-    padding-bottom: variables.$padding / 1.5;
-  }
-
-  @media all and (min-width: variables.$screen-xl) {
-    padding-top: variables.$padding / 2;
-    padding-bottom: variables.$padding / 2;
-  }
+  position: relative;
+  max-width: variables.$container-site;
+  padding: variables.$padding;
 }

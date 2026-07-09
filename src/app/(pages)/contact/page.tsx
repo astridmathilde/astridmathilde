@@ -1,5 +1,7 @@
 import { siteTitle } from "../layout";
-import utils from "../assets/scss/utils.module.scss"
+import Link from "next/link";
+
+import utils from "../../assets/scss/utils.module.scss";
 
 const pageTitle = 'Contact';
 
@@ -8,10 +10,10 @@ export const metadata = {
   title: pageTitle + ' – ' + siteTitle
 }
 
-export default function Now() {
+export default function Contact() {
   return (
     <>
-    <h2 className={utils.screen_reader_text}>Contact</h2>
+    <h2>Contact</h2>
     <p>My email is heia@astridmathilde.no, but you can also <a href="https://www.linkedin.com/in/astridmathilde/" target="_blank" rel="nofollow noreferrer">add me on LinkedIn</a>!</p>
     
     <h3>Links</h3>
@@ -22,7 +24,7 @@ export default function Now() {
     <li><a href="https://github.com/astridmathilde" rel="external" target="_blank">Github</a></li>
     <li><a href="https://www.linkedin.com/in/astridmathilde/" target="_blank" rel="nofollow noreferrer">LinkedIn</a></li>
     </ul>
-    </nav>    
+    </nav>
     </>
   )
 }

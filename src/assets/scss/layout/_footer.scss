@@ -5,14 +5,68 @@
   position: relative;
   align-items: center;
   justify-content: space-between;
-  margin-top: calc(variables.$spacing * 2);
-  margin-bottom: variables.$padding / 4;
-  font-size: 0.85em;
-  font-weight: 410;
+  margin-top: variables.$spacing;
+  margin-bottom: variables.$padding;
+  font-size: 0.8em;
   text-transform: lowercase;
 
-  @media all and (min-width: variables.$screen-md) {
-    font-weight: 400;
-    font-size: 0.9em;
+  @media all and (min-width: variables.$screen-lg) {
+    align-items: flex-end;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: variables.$footer-height;
+    margin: 0;
+    padding: variables.$padding;
   }
+
+  p,
+  ul {
+    margin: 0;
+    line-height: 2em;
+  }
+
+  ul {
+    display: inline-flex;
+    gap: 1em;
+
+    li {
+      list-style: none;
+      padding: 0;
+
+      &:before {
+        content: "( ";
+      }
+
+      &:after {
+        content: " )";
+      }
+
+      a {
+        text-decoration: none;
+
+        &:hover,
+        &:focus {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
+
+:global(html[data-theme="dark"] footer) {
+  background-image: linear-gradient(
+    rgba(0, 0, 0, 0),
+    rgba(variables.$dark-color-background, 0.8) 80%,
+    rgba(variables.$dark-color-background, 0.95)
+  );
+}
+
+:global(html[data-theme="light"] footer) {
+  background-image: linear-gradient(
+    rgba(0, 0, 0, 0),
+    rgba(variables.$color-background, 0.8) 80%,
+    rgba(variables.$color-background, 0.95)
+  );
 }

@@ -1,9 +1,8 @@
-    import { siteTitle } from './layout';
 
     const pageTitle = 'Something bad happened!';
     
     export const metadata = {
-      title: pageTitle + ' – ' + siteTitle,
+      title: pageTitle,
       description: 'Heia! I am from Northern Norway and I have always been passionate about design and coding.',
     }
     

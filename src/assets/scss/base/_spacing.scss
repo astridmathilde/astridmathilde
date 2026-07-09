@@ -1,9 +1,7 @@
-@use "variables";
-
 .spacing-section {
   margin-top: 3.5em;
 
-  @media all and (min-width: variables.$screen-lg) {
+  @media all and (min-width: $screen-xl) {
     margin-top: 5em;
   }
 }

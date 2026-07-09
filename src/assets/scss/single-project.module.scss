@@ -1,0 +1,141 @@
+@use "base/variables";
+
+.singleProject {
+  font-size: 1em;
+
+  .thumbnail {
+    margin-top: variables.$padding;
+
+    @media all and (min-width: variables.$screen-md) {
+      margin-top: calc(variables.$padding * 0.8);
+    }
+
+    @media all and (min-width: variables.$screen-md) {
+      position: relative;
+      height: 80vh;
+
+      img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+      }
+    }
+
+    @media all and (min-width: variables.$screen-xl) {
+      height: 70vh;
+    }
+  }
+
+  .header {
+    display: flex;
+    flex-direction: column;
+    gap: calc(variables.$padding * 0.5);
+    margin-top: variables.$spacing;
+
+    p {
+      order: -1;
+      font-size: 0.9em;
+    }
+
+    h2,
+    p {
+      margin: 0;
+    }
+  }
+
+  .container {
+    position: relative;
+    margin-top: variables.$spacing;
+
+    @media all and (min-width: variables.$screen-md) {
+      display: grid;
+      grid-template-columns: 3fr 9fr;
+      gap: 0 variables.$padding;
+      justify-items: start;
+    }
+
+    .meta {
+      display: block;
+
+      @media all and (min-width: variables.$screen-md) {
+        position: sticky;
+        top: 1em;
+        font-size: 0.9em;
+      }
+
+      @media all and (min-width: variables.$screen-xl) {
+        font-size: 0.8em;
+      }
+
+      .label {
+        display: block;
+        margin-bottom: 0.4em;
+        font-size: 0.85em;
+        font-weight: 420;
+        opacity: 0.8;
+        filter: alpha(opacity=80);
+      }
+
+      ul {
+        margin: 0;
+        padding: 0;
+
+        @media all and (min-width: variables.$screen-md) {
+          position: sticky;
+          top: variables.$padding;
+        }
+
+        li {
+          list-style: none;
+          margin: 0;
+          padding: 0;
+
+          + li {
+            margin-top: 1em;
+
+            @media all and (min-width: variables.$screen-md) {
+              margin-top: 1.5em;
+              max-width: 20ch;
+            }
+          }
+        }
+
+        &.contributors {
+          li {
+            display: inline;
+
+            + li {
+              &:before {
+                content: ", ";
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .content {
+      margin-top: calc(variables.$spacing / 2);
+
+      @media all and (min-width: variables.$screen-md) {
+        margin-top: 0;
+
+        h3:first-child {
+          margin-top: 0;
+        }
+      }
+
+      figure,
+      p {
+        &:first-child {
+          margin-top: 0;
+        }
+      }
+    }
+  }
+}

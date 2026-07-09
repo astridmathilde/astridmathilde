@@ -17,6 +17,7 @@ body {
   line-height: 1.4;
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
+  text-transform: lowercase;
 
   @media all and (min-width: variables.$screen-xs) {
     font-size: 12px;
@@ -71,6 +72,26 @@ ul {
       @media all and (min-width: variables.$screen-md) {
         padding-top: 0.3em;
       }
+    }
+  }
+}
+
+nav {
+  ul {
+    margin-top: 0;
+
+    li {
+      + li {
+        @media all and (max-width: variables.$screen-md) {
+          padding-top: 0;
+        }
+      }
+    }
+
+    a {
+      display: inline-flex;
+      align-items: center;
+      min-height: 28px;
     }
   }
 }

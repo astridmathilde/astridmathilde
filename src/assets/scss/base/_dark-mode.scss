@@ -1,43 +1,41 @@
-@use "variables";
-
 html.dark {
-  background: variables.$dark-color-background;
-  color: variables.$dark-color-text;
+  background: $dark-color-background;
+  color: $dark-color-text;
   font-weight: 370;
 
-  @media all and (min-width: variables.$screen-sm) {
+  @media all and (min-width: $screen-md) {
     font-weight: 360;
   }
 
-  @media all and (min-width: variables.$screen-md) {
+  @media all and (min-width: $screen-lg) {
     font-weight: 350;
   }
 
-  @media all and (min-width: variables.$screen-xl) {
+  @media all and (min-width: $screen-xl) {
     font-weight: 340;
   }
 
   a {
-    text-decoration-color: variables.$dark-color-link;
+    text-decoration-color: $dark-color-link;
 
     &:hover,
     &:focus {
-      text-decoration-color: variables.$dark-color-link-hover;
+      text-decoration-color: $dark-color-link-hover;
     }
   }
 
   #header {
     .site-title,
     a {
-      font-weight: 390;
+      /*font-weight: 390;
 
-      @media all and (min-width: variables.$screen-sm) {
+      @media all and (min-width: $screen-md) {
         font-weight: 380;
       }
 
-      @media all and (min-width: variables.$screen-md) {
+      @media all and (min-width: $screen-lg) {
         font-weight: 370;
-      }
+      }*/
     }
   }
 
@@ -51,7 +49,7 @@ html.dark {
     }
 
     .meta {
-      @media all and (min-width: variables.$screen-md) {
+      @media all and (min-width: $screen-lg) {
         font-weight: 360;
       }
     }
@@ -60,11 +58,11 @@ html.dark {
   #footer {
     font-weight: 390;
 
-    @media all and (min-width: variables.$screen-sm) {
+    @media all and (min-width: $screen-md) {
       font-weight: 380;
     }
 
-    @media all and (min-width: variables.$screen-md) {
+    @media all and (min-width: $screen-lg) {
       font-weight: 370;
     }
   }

@@ -42,7 +42,6 @@
 
     .meta {
       display: block;
-      text-transform: lowercase;
 
       @media all and (min-width: variables.$screen-md) {
         font-size: 0.8em;

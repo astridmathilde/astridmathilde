@@ -1,27 +1,31 @@
 import Link from "next/link";
-import { client } from '../sanity/client';
-import { RECENT_PROJECTS } from "../sanity/lib/queries";
-import { siteTitle } from "./layout";
-import BlockDisplay from "../components/display";
-import BlockResumee from "../components/resumee";
-import BlockProjects from "../components/projects";
-import utils from "../assets/scss/utils.module.scss";
-import style from "../assets/scss/home.module.scss";
-import { experience } from "../data/resumee";
+//import { Metadata } from "next";
+import { client } from "../../sanity/client";
+import { RECENT_PROJECTS } from "../../sanity/lib/queries";
+//import { siteTitle } from "./layout";
+import BlockDisplay from "../../components/display";
+import BlockProjects from "../../components/projects";
+import utils from "../../assets/scss/utils.module.scss";
+import style from "../../assets/scss/index.module.scss";
 
-/*export const metadata = {
+
+/*export const Metadata = {
   metadataBase: new URL('https://astridmathilde.no'),
   title: siteTitle + " – Designer & developer",
+  description: "Heia! I am a designer and developer from Northern Norway, currently doing a master’s in interaction design in Oslo. With a background in graphic design, web design and development, I now specialise in designing digital products. I also enjoy writing things, and I have an interest for digital minimalism and web sustainability."
+  
 }*/
 
 export default async function Index() {
-  const projects = await client.fetch(RECENT_PROJECTS, {});
+    const projects = await client.fetch(RECENT_PROJECTS, {});
   
   return (
-    <div className={style.content}>
-    <BlockDisplay>Heia! I am a designer and developer from Northern Norway, currently living in Oslo as an MA design student. Having previously worked with graphic design, web design and development, I now specialize in designing digital products while still working with websites as a freelancer. I also enjoy writing things, <a href="https://blikk.directory" rel="external" title="my library of observations" target="_blank">taking photos of stuff</a> and I have a fascination for digital minimalism.</BlockDisplay>
+    <>
+    <h2 className={utils.screen_reader_text}>Introduction</h2>
+    <BlockDisplay>Heia! I am a designer and developer from Northern Norway, currently doing a master's in design at the <a href="https://www.aho.no/english/" rel="external" target="_blank">Oslo School of Architecture and Design</a>. With a background in graphic design and web development, I now specialize in designing digital products, and particularly enjoy working with complexity. I also enjoy writing things, <a href="https://blikk.directory" rel="external" title="my library of observations" target="_blank">taking photos of stuff</a>, and I have an interest for digital minimalism and <Link href="colophon" title="this site's climate footprint">web sustainability</Link>
+    </BlockDisplay>
     
-    <h2>Recent work</h2>
+    <h2 className={utils.screen_reader_text}>Recent work</h2>
     <div className={style.projects}>
     {projects.map((project) => (
       <BlockProjects key={project._id} id={project._id} slug={project.slug} title={project.title} category={project.category} location={project.location ? project.location.name : ""} thumbnail={project.thumbnail} priority="true" sizes="(min-width: 670px) 50vw, 100vw" width="2048px" />
@@ -38,7 +42,7 @@ export default async function Index() {
     
     <h2 className={utils.sectionTitle}>Further discovery</h2>
     <p>You can <Link href="/about">learn more about me</Link>, see <Link href="/now">what I am currently listening to</Link>, or find out <Link href="/colophon">check out this site's carbon footprint</Link>.</p>
-    </div>
+    </>
   );
 }
-  
+
