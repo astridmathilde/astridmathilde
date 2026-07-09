@@ -1,10 +1,10 @@
-@import "../../assets/scss/base/variables";
+@use "../../assets/scss/base/variables";
 
 .container {
-  max-width: $container-text;
+  max-width: variables.$container-text;
 
-  @media all and (min-width: $screen-md) {
-    margin-top: $spacing * 0.2;
+  @media all and (min-width: variables.$screen-md) {
+    margin-top: variables.$spacing * 0.2;
   }
 
   div:first-child {
@@ -16,7 +16,7 @@
     font-size: 0.9em;
     font-weight: 420;
 
-    @media all and (min-width: $screen-sm) {
+    @media all and (min-width: variables.$screen-sm) {
       font-weight: 410;
     }
 

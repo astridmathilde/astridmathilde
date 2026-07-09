@@ -1,4 +1,4 @@
-@import "../base/variables";
+@use "../base/variables";
 
 #header {
   z-index: 1000;
@@ -9,7 +9,7 @@
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  padding: calc($padding * 0.8) $padding;
+  padding: calc(variables.$padding * 0.8) variables.$padding;
   font-size: 0.85em;
   text-transform: lowercase;
 
@@ -31,7 +31,7 @@
   a {
     text-decoration-color: transparent;
 
-    @media all and (max-width: $screen-md) {
+    @media all and (max-width: variables.$screen-md) {
       display: inline-flex;
       align-items: center;
       height: 48px;
@@ -46,18 +46,18 @@
 
 :global(html.light) {
   #header {
-    @media all and (max-width: $screen-md) {
-      background-color: $color-background;
-      padding: calc($padding * 0.4) $padding;
+    @media all and (max-width: variables.$screen-md) {
+      background-color: variables.$color-background;
+      padding: calc(variables.$padding * 0.4) variables.$padding;
     }
   }
 }
 
 :global(html.dark) {
   #header {
-    @media all and (max-width: $screen-md) {
-      background-color: $dark-color-background;
-      padding: calc($padding * 0.4) $padding;
+    @media all and (max-width: variables.$screen-md) {
+      background-color: variables.$dark-color-background;
+      padding: calc(variables.$padding * 0.4) variables.$padding;
     }
   }
 }

@@ -1,9 +1,9 @@
-@import "../../assets/scss/base/variables";
+@use "../../assets/scss/base/variables";
 
 .row {
-  margin-top: $spacing;
+  margin-top: variables.$spacing;
 
-  @media all and (min-width: $screen-sm) {
+  @media all and (min-width: variables.$screen-sm) {
     display: flex;
     justify-content: space-between;
   }

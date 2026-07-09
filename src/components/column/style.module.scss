@@ -1,4 +1,4 @@
-@import "../../assets/scss/base/variables";
+@use "../../assets/scss/base/variables";
 
 .column {
   p:first-of-type {
@@ -6,8 +6,8 @@
   }
 
   + .column {
-    @media all and (max-width: $screen-sm) {
-      padding-top: $padding;
+    @media all and (max-width: variables.$screen-sm) {
+      padding-top: variables.$padding;
 
       &:has(h2),
       &:has(h3),
@@ -16,12 +16,12 @@
       }
     }
 
-    @media all and (min-width: $screen-sm) {
-      padding-left: $padding;
+    @media all and (min-width: variables.$screen-sm) {
+      padding-left: variables.$padding;
     }
   }
 
-  @media all and (max-width: $screen-sm) {
+  @media all and (max-width: variables.$screen-sm) {
     width: 100% !important;
 
     &:nth-child(1) {
@@ -33,7 +33,7 @@
 
     &:nth-child(1):has(:not(h2)),
     &:nth-child(1):has(:not(h3)) {
-      margin-top: $spacing;
+      margin-top: variables.$spacing;
     }
   }
 

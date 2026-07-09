@@ -1,8 +1,8 @@
-@import "../../assets/scss/base/variables";
+@use "../../assets/scss/base/variables";
 
 .entry {
   display: flex;
-  max-width: $container-text + 8ch;
+  max-width: variables.$container-text + 8ch;
   flex-direction: row-reverse;
   justify-content: flex-end;
   align-items: baseline;
@@ -11,7 +11,7 @@
   .header {
     padding-left: 1em;
 
-    @media all and (min-width: $screen-sm) {
+    @media all and (min-width: variables.$screen-sm) {
       padding-left: 1.5em;
     }
 
@@ -24,11 +24,11 @@
     width: 20ch;
     font-size: 0.85em;
 
-    @media all and (min-width: $screen-sm) {
+    @media all and (min-width: variables.$screen-sm) {
       width: 15ch;
     }
 
-    @media all and (min-width: $screen-lg) {
+    @media all and (min-width: variables.$screen-lg) {
       width: 17ch;
     }
   }

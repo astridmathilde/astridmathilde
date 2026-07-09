@@ -1,3 +1,5 @@
+@use "variables";
+
 h1,
 h2,
 h3,
@@ -5,7 +7,7 @@ h4,
 h5,
 h6,
 p {
-  max-width: $container-text;
+  max-width: variables.$container-text;
 }
 
 h1,
@@ -28,15 +30,15 @@ h3 {
 }
 
 h2 {
-  margin-top: $spacing;
+  margin-top: variables.$spacing;
 }
 
 h3 {
-  margin-top: $spacing * 0.8;
+  margin-top: variables.$spacing * 0.8;
 }
 
 h4 {
-  margin-top: $spacing * 0.6;
+  margin-top: variables.$spacing * 0.6;
   margin-bottom: 0;
   font-size: 0.8em;
   opacity: 0.8;

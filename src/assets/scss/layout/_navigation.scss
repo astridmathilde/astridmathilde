@@ -1,3 +1,5 @@
+@use "../base/variables";
+
 .navigation {
   ul {
     display: flex;
@@ -17,7 +19,7 @@
     }
 
     a {
-      @media all and (max-width: $screen-md) {
+      @media all and (max-width: variables.$screen-md) {
         display: inline-flex;
         align-items: center;
         justify-content: center;

@@ -1,18 +1,18 @@
-@import "base/variables";
+@use "base/variables";
 
 .about {
   div:first-of-type {
-    margin-top: $spacing;
+    margin-top: variables.$spacing;
 
-    @media all and (min-width: $screen-sm) {
+    @media all and (min-width: variables.$screen-sm) {
       margin-top: 1em;
     }
 
-    @media all and (min-width: $screen-lg) {
+    @media all and (min-width: variables.$screen-lg) {
       align-items: center;
     }
 
-    @media all and (min-width: $screen-sm) and (max-width: $screen-lg) {
+    @media all and (min-width: variables.$screen-sm) and (max-width: variables.$screen-lg) {
       + div {
         width: 50vw !important;
       }

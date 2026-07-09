@@ -1,4 +1,4 @@
-@import "base/variables";
+@use "base/variables";
 
 $text_regular: 400;
 $text_medium: 410;
@@ -9,16 +9,16 @@ $text_tiny: 470;
 
 .light {
   body {
-    background: $color-background;
-    color: $color-text;
+    background: variables.$color-background;
+    color: variables.$color-text;
     font-weight: $text_regular;
 
     a {
-      text-decoration-color: $color-link;
+      text-decoration-color: variables.$color-link;
 
       &:hover,
       &:focus {
-        text-decoration-color: $color-link-hover;
+        text-decoration-color: variables.$color-link-hover;
       }
     }
 
@@ -35,17 +35,17 @@ $text_tiny: 470;
     }
 
     .text-large {
-      font-weight: text_large;
+      font-weight: $text_large;
 
-      @media all and (min-width: $screen-lg) {
-        font-weight: text_large - 30;
+      @media all and (min-width: variables.$screen-lg) {
+        font-weight: $text_large - 30;
       }
     }
 
     .text-medium {
       font-weight: $text_medium;
 
-      @media all and (min-width: $screen-md) {
+      @media all and (min-width: variables.$screen-md) {
         font-weight: $text_medium - 10;
       }
     }
@@ -53,7 +53,7 @@ $text_tiny: 470;
     .text-small {
       font-weight: $text_small;
 
-      @media all and (min-width: $screen-sm) {
+      @media all and (min-width: variables.$screen-sm) {
         font-weight: $text_small - 10;
       }
     }
@@ -62,11 +62,11 @@ $text_tiny: 470;
     .small {
       font-weight: $text_xsmall;
 
-      @media all and (min-width: $screen-sm) {
+      @media all and (min-width: variables.$screen-sm) {
         font-weight: $text_xsmall - 30;
       }
 
-      @media all and (min-width: $screen-md) {
+      @media all and (min-width: variables.$screen-md) {
         font-weight: $text_xsmall - 50;
       }
     }
@@ -74,11 +74,11 @@ $text_tiny: 470;
     .text-tiny {
       font-weight: $text_tiny;
 
-      @media all and (min-width: $screen-sm) {
+      @media all and (min-width: variables.$screen-sm) {
         font-weight: $text_tiny - 30;
       }
 
-      @media all and (min-width: $screen-md) {
+      @media all and (min-width: variables.$screen-md) {
         font-weight: $text_tiny - 50;
       }
     }
@@ -87,16 +87,16 @@ $text_tiny: 470;
 
 .dark {
   body {
-    background: $dark-color-background;
-    color: $dark-color-text;
+    background: variables.$dark-color-background;
+    color: variables.$dark-color-text;
     font-weight: $text_regular - 30;
 
     a {
-      text-decoration-color: $dark-color-link;
+      text-decoration-color: variables.$dark-color-link;
 
       &:hover,
       &:focus {
-        text-decoration-color: $dark-color-link-hover;
+        text-decoration-color: variables.$dark-color-link-hover;
       }
     }
 
@@ -113,17 +113,17 @@ $text_tiny: 470;
     }
 
     .text-large {
-      font-weight: text_large - 30;
+      font-weight: $text_large - 30;
 
-      @media all and (min-width: $screen-lg) {
-        font-weight: text_large - 60;
+      @media all and (min-width: variables.$screen-lg) {
+        font-weight: $text_large - 60;
       }
     }
 
     .text-medium {
       font-weight: $text_medium - 30;
 
-      @media all and (min-width: $screen-md) {
+      @media all and (min-width: variables.$screen-md) {
         font-weight: $text_medium - 40;
       }
     }
@@ -131,7 +131,7 @@ $text_tiny: 470;
     .text-small {
       font-weight: $text_small - 30;
 
-      @media all and (min-width: $screen-sm) {
+      @media all and (min-width: variables.$screen-sm) {
         font-weight: $text_small - 50;
       }
     }
@@ -140,11 +140,11 @@ $text_tiny: 470;
     .small {
       font-weight: $text_xsmall;
 
-      @media all and (min-width: $screen-sm) {
+      @media all and (min-width: variables.$screen-sm) {
         font-weight: $text_xsmall - 30;
       }
 
-      @media all and (min-width: $screen-md) {
+      @media all and (min-width: variables.$screen-md) {
         font-weight: $text_xsmall - 60;
       }
     }
@@ -152,11 +152,11 @@ $text_tiny: 470;
     .text-tiny {
       font-weight: $text_tiny;
 
-      @media all and (min-width: $screen-sm) {
+      @media all and (min-width: variables.$screen-sm) {
         font-weight: $text_tiny - 30;
       }
 
-      @media all and (min-width: $screen-md) {
+      @media all and (min-width: variables.$screen-md) {
         font-weight: $text_tiny - 60;
       }
     }

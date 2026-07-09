@@ -1,17 +1,17 @@
-@import "../base/variables";
+@use "../base/variables";
 
 #footer {
   display: flex;
   position: relative;
   align-items: center;
   justify-content: space-between;
-  margin-top: calc($spacing * 2);
-  margin-bottom: $padding / 4;
+  margin-top: calc(variables.$spacing * 2);
+  margin-bottom: variables.$padding / 4;
   font-size: 0.85em;
   font-weight: 410;
   text-transform: lowercase;
 
-  @media all and (min-width: $screen-md) {
+  @media all and (min-width: variables.$screen-md) {
     font-weight: 400;
     font-size: 0.9em;
   }
