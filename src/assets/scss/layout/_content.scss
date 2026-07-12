@@ -2,6 +2,10 @@
 
 #content {
   max-width: variables.$container-content;
-  margin: 6vh auto variables.$footer-height auto;
+  margin-bottom: variables.$footer-height;
   overflow-x: hidden;
+
+  @media all and (max-width: variables.$screen-sm) {
+    margin-top: 6vh;
+  }
 }

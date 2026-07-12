@@ -63,6 +63,7 @@ export type Project = {
   _updatedAt: string;
   _rev: string;
   title?: string;
+  short_title?: string;
   slug?: Slug;
   thumbnail?: {
     asset?: SanityImageAssetReference;
@@ -213,6 +214,24 @@ export type Page = {
     _type: "block";
     _key: string;
   }>;
+  further_discovery?: Array<{
+    children?: Array<{
+      marks?: Array<string>;
+      text?: string;
+      _type: "span";
+      _key: string;
+    }>;
+    style?: "normal" | "h1" | "h2" | "h3" | "h4" | "h5" | "h6" | "blockquote";
+    listItem?: "bullet" | "number";
+    markDefs?: Array<{
+      href?: string;
+      _type: "link";
+      _key: string;
+    }>;
+    level?: number;
+    _type: "block";
+    _key: string;
+  }>;
 };
 
 export type SanityImagePaletteSwatch = {
@@ -330,17 +349,22 @@ export type AllSanitySchemaTypes =
   | SanityImageAsset
   | Geopoint;
 
-// Source: src/sanity/lib/queries.js
+// Source: src/sanity/lib/queries.ts
 // Variable: ALL_PROJECTS
-// Query: *[  _type == "project"  && defined(slug.current)]|order(time.year desc)[0...12]{    _id,    title,    slug,    location,    category,    thumbnail  }
+// Query: *[  _type == "project"  && defined(slug.current)]|order(time.year desc)[0...12]{    _id,    short_title,    slug,    location,    time,    type,    category,    partner,    thumbnail  }
 export type ALL_PROJECTS_RESULT = Array<{
   _id: string;
-  title: string | null;
+  short_title: string | null;
   slug: Slug | null;
   location: {
     name?: string;
     website?: string;
   } | null;
+  time: {
+    duration?: string;
+    year?: number;
+  } | null;
+  type: "client" | "internship" | "other" | "personal" | "studio" | null;
   category:
     | "ai-tool"
     | "app"
@@ -350,6 +374,11 @@ export type ALL_PROJECTS_RESULT = Array<{
     | "web-application"
     | "website"
     | null;
+  partner: {
+    label?: string;
+    value?: string;
+    link?: string;
+  } | null;
   thumbnail: {
     asset?: SanityImageAssetReference;
     media?: unknown;
@@ -360,17 +389,22 @@ export type ALL_PROJECTS_RESULT = Array<{
   } | null;
 }>;
 
-// Source: src/sanity/lib/queries.js
+// Source: src/sanity/lib/queries.ts
 // Variable: RECENT_PROJECTS
-// Query: *[  _type == "project"  && defined(slug.current)]|order(time.year desc)[0...3]{    _id,    title,    slug,    location,    category,    thumbnail  }
+// Query: *[  _type == "project"  && defined(slug.current)]|order(time.year desc)[0...3]{    _id,    short_title,    slug,    location,    time,    type,    category,    partner,    thumbnail  }
 export type RECENT_PROJECTS_RESULT = Array<{
   _id: string;
-  title: string | null;
+  short_title: string | null;
   slug: Slug | null;
   location: {
     name?: string;
     website?: string;
   } | null;
+  time: {
+    duration?: string;
+    year?: number;
+  } | null;
+  type: "client" | "internship" | "other" | "personal" | "studio" | null;
   category:
     | "ai-tool"
     | "app"
@@ -380,6 +414,11 @@ export type RECENT_PROJECTS_RESULT = Array<{
     | "web-application"
     | "website"
     | null;
+  partner: {
+    label?: string;
+    value?: string;
+    link?: string;
+  } | null;
   thumbnail: {
     asset?: SanityImageAssetReference;
     media?: unknown;
@@ -394,7 +433,7 @@ export type RECENT_PROJECTS_RESULT = Array<{
 import "@sanity/client";
 declare module "@sanity/client" {
   interface SanityQueries {
-    '*[\n  _type == "project"\n  && defined(slug.current)]|order(time.year desc)[0...12]{\n    _id,\n    title,\n    slug,\n    location,\n    category,\n    thumbnail\n  }': ALL_PROJECTS_RESULT;
-    '*[\n  _type == "project"\n  && defined(slug.current)]|order(time.year desc)[0...3]{\n    _id,\n    title,\n    slug,\n    location,\n    category,\n    thumbnail\n  }\n': RECENT_PROJECTS_RESULT;
+    '*[\n  _type == "project"\n  && defined(slug.current)]|order(time.year desc)[0...12]{\n    _id,\n    short_title,\n    slug,\n    location,\n    time,\n    type,\n    category,\n    partner,\n    thumbnail\n  }': ALL_PROJECTS_RESULT;
+    '*[\n  _type == "project"\n  && defined(slug.current)]|order(time.year desc)[0...3]{\n    _id,\n    short_title,\n    slug,\n    location,\n    time,\n    type,\n    category,\n    partner,\n    thumbnail\n  }\n': RECENT_PROJECTS_RESULT;
   }
 }

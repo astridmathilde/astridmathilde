@@ -1,16 +1,14 @@
-import { siteTitle } from "../layout";
-import skillStyle from "../assets/scss/components/skills.module.scss";
-import BlockRow from ".../components/row";
-import BlockColumn from ".../components/column";
-import BlockResumee from ".../components/resumee";
-import { experience, education, skills } from "../../data/resumee";
+import type { Metadata } from "next";
+import skillStyle from "../../../components/skills/style.module.scss";
+import BlockResumee from "../../../components/resumee";
+import { experience, education, skills, achievements } from "../../../data/resumee";
 
 const pageTitle = 'My resumee';
 
-export const metadata = {
-  metadataBase: new URL('https://astridmathilde.no/resumee'),
-  title: pageTitle + ' – ' + siteTitle
+export const metadata: Metadata = {
+  title: pageTitle,
 }
+
 
 export default function About() {
   return (
@@ -26,19 +24,22 @@ export default function About() {
     ))}   
     
     <div className={skillStyle.container}>
-    <BlockRow>
     {skills.map((skills) => (
-      <BlockColumn key={skills.title}>
+      <div>
       <h3>{skills.title}</h3>
       <ul>
       {skills.keywords.sort().map((keyword) => (
         <li key={keyword}>{keyword}</li>
       ))}
       </ul>
-      </BlockColumn>
+      </div>
     ))}
-    </BlockRow>
     </div>
+    
+    <h3>Awards</h3>
+    {achievements.map((achievement) => (
+      <BlockResumee key={achievement.id} position={achievement.title} locationUrl={achievement.location.url} locationName={achievement.location.name} description={achievement.description} time={achievement.year} />
+    ))}
     </>
   )
 }

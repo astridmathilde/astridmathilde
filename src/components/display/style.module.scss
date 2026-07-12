@@ -3,6 +3,7 @@
 .display {
   max-width: variables.$container-text - 4ch;
   margin-top: calc(variables.$spacing * 1.5);
+  margin-bottom: calc(variables.$spacing * 2);
   line-height: 1.35;
   font-size: 1.1em;
 
@@ -14,12 +15,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    min-height: 30vh;
     font-size: 1.3em;
-  }
-
-  @media all and (min-width: variables.$screen-md) {
-    min-height: 45vh;
   }
 
   p {

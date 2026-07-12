@@ -1,10 +1,16 @@
 import { ThemeProvider } from 'next-themes';
+import type { Metadata } from 'next';
 import localFont from 'next/font/local';
 
 import '../../assets/scss/global.scss';
-import '../../assets/scss/brightness.scss';
 
-import Wrapper from '../wrapper';
+export const metadata: Metadata = {
+  metadataBase: new URL('https://astridmathilde.no/studio'),
+  title: {
+    template: '%s – Studio',
+    default: 'Studio'
+  },
+}
 
 const inter = localFont({
   src: [
@@ -19,24 +25,19 @@ const inter = localFont({
       style: 'italic',
     }
   ]
-})
+});
 
 export default async function Layout({ children }) {
   return (
     <>
     <html lang="en" className={inter.className} suppressHydrationWarning>
-    <body>
-    
     <ThemeProvider>
-    <Wrapper>
 
-    
+    <body>
     {children}
-    
-    </Wrapper>
-    </ThemeProvider>
-    
     </body>
+    
+    </ThemeProvider>
     </html>
     </>
   );

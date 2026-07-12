@@ -13,7 +13,7 @@ export default function Header() {
   return (
     <header id={styles.header} className={"text-large"}>
 
-    <h1 className={styles.title}><Link href="/"><Image className={styles.icon} src={icon} width="20" height="20" alt="" />astrid mathilde</Link></h1>
+    <h1 className={styles.title}><Link href="/"><Image className={styles.icon} src={icon} alt="" />astrid mathilde</Link></h1>
 
 
     <nav id="primaryNav" className={styles.nav}>

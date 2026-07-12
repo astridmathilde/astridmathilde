@@ -1,24 +1,34 @@
 @use "../base/variables";
 
 #footer {
-  display: flex;
   position: relative;
-  align-items: center;
-  justify-content: space-between;
-  margin-top: variables.$spacing;
-  margin-bottom: variables.$padding;
   font-size: 0.8em;
   text-transform: lowercase;
+  margin-top: variables.$spacing;
+  margin-bottom: variables.$padding;
+
+  .container {
+    display: flex;
+    max-width: variables.$container-content;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+    justify-content: space-between;
+  }
 
   @media all and (min-width: variables.$screen-lg) {
-    align-items: flex-end;
     position: fixed;
     left: 0;
     bottom: 0;
     width: 100%;
-    height: variables.$footer-height;
-    margin: 0;
-    padding: variables.$padding;
+    margin-top: 0;
+    margin-bottom: 0;
+
+    .container {
+      align-items: flex-end;
+      height: variables.$footer-height;
+      padding: variables.$padding;
+    }
   }
 
   p,

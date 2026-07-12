@@ -1,23 +1,14 @@
 import Link from "next/link";
-//import { Metadata } from "next";
 import { client } from "../../sanity/client";
 import { RECENT_PROJECTS } from "../../sanity/lib/queries";
-//import { siteTitle } from "./layout";
+import { categoryLabel, typeLabel } from "../../sanity/lib/option-title";
 import BlockDisplay from "../../components/display";
 import BlockProjects from "../../components/projects";
 import utils from "../../assets/scss/utils.module.scss";
 import style from "../../assets/scss/index.module.scss";
 
-
-/*export const Metadata = {
-  metadataBase: new URL('https://astridmathilde.no'),
-  title: siteTitle + " – Designer & developer",
-  description: "Heia! I am a designer and developer from Northern Norway, currently doing a master’s in interaction design in Oslo. With a background in graphic design, web design and development, I now specialise in designing digital products. I also enjoy writing things, and I have an interest for digital minimalism and web sustainability."
-  
-}*/
-
 export default async function Index() {
-    const projects = await client.fetch(RECENT_PROJECTS, {});
+  const projects = await client.fetch(RECENT_PROJECTS, {});
   
   return (
     <>
@@ -25,10 +16,10 @@ export default async function Index() {
     <BlockDisplay>Heia! I am a designer and developer from Northern Norway, currently doing a master's in design at the <a href="https://www.aho.no/english/" rel="external" target="_blank">Oslo School of Architecture and Design</a>. With a background in graphic design and web development, I now specialize in designing digital products, and particularly enjoy working with complexity. I also enjoy writing things, <a href="https://blikk.directory" rel="external" title="my library of observations" target="_blank">taking photos of stuff</a>, and I have an interest for digital minimalism and <Link href="colophon" title="this site's climate footprint">web sustainability</Link>
     </BlockDisplay>
     
-    <h2 className={utils.screen_reader_text}>Recent work</h2>
-    <div className={style.projects}>
+    <h2 className={utils.sectionTitle}>Selected work</h2>
+    <div className={style.selectedWork}>
     {projects.map((project) => (
-      <BlockProjects key={project._id} id={project._id} slug={project.slug} title={project.title} category={project.category} location={project.location ? project.location.name : ""} thumbnail={project.thumbnail} priority="true" sizes="(min-width: 670px) 50vw, 100vw" width="2048px" />
+      <BlockProjects key={project._id} id={project._id} title={project.short_title} slug={project.slug} category={categoryLabel[project.category]} type={typeLabel[project.type]} client={project.partner?.value} year={project.time.year} thumbnail={project.thumbnail} priority="true" sizes="(min-width: 670px) 50vw, 100vw" width="2048px" />
     ))}
     </div>
     

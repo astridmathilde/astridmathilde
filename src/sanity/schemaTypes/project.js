@@ -1,5 +1,6 @@
 // schemas/project.js
-import {defineArrayMember, defineField, defineType} from 'sanity'
+import {defineArrayMember, defineField, defineType} from 'sanity';
+import { CATEGORIES, TYPES } from '../lib/option-title';
 
 export default defineType({
   name: 'project',
@@ -12,11 +13,16 @@ export default defineType({
       type: 'string',
     }),
     defineField({
+      title: 'Short Title',
+      name: 'short_title',
+      type: 'string',
+    }),
+    defineField({
       title: 'Slug',
       name: 'slug',
       type: 'slug',
       options: {
-        source: 'title',
+        source: 'short_title',
       },
     }),
     defineField({
@@ -75,13 +81,7 @@ export default defineType({
       name: 'type',
       type: 'string',
       options: {
-        list: [
-          {title: 'Studio course', value: 'studio'},
-          {title: 'Personal project', value: 'personal'},
-          {title: 'Summer internship', value: 'internship'},
-          {title: 'Client project', value: 'client'},
-          {title: 'Other', value: 'other'},
-        ],
+        list: TYPES
       },
     }),
     defineField({
@@ -95,15 +95,7 @@ export default defineType({
       name: 'category',
       type: 'string',
       options: {
-        list: [
-          {title: 'App', value: 'app'},
-          {title: 'AI-assisted tool', value: 'ai-tool'},
-          {title: 'Digital tool', value: 'digital-tool'},
-          {title: 'Graphic design', value: 'graphic-design'},
-          {title: 'System interface', value: 'system-interface'},
-          {title: 'Website', value: 'website'},
-          {title: 'Web application', value: 'web-application'},
-        ],
+        list: CATEGORIES,
       },
     }),
     defineField({

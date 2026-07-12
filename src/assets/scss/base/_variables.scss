@@ -3,7 +3,7 @@ $screen-xs: 236px;
 $screen-sm: 400px;
 $screen-md: 608px;
 $screen-lg: 920px;
-$screen-xl: 1320px;
+$screen-xl: 1164px;
 
 // Containers
 $container-site: 100%;
@@ -17,7 +17,8 @@ $footer-height: 20vh;
 
 // Spacing
 $spacing: 3em;
-$padding: 2em;
+//$padding: 2em;
+$padding: 3%;
 
 // Border
 $border-radius: 8px;
@@ -32,7 +33,7 @@ $color-link-hover: #241438;
 // Dark Mode
 $dark-color-background: #0b0611;
 $dark-color-text: #dad8e0;
-$dark-color-text-tinted: rgba($dark-color-text, 0.9);
+$dark-color-text-tinted: rgba($dark-color-text, 0.8);
 $dark-color-link: #dad8e0a6;
 $dark-color-link-hover: #dad8e0;
 

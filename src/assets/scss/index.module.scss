@@ -4,32 +4,10 @@
   display: grid;
   grid-template-columns: 1fr;
   gap: variables.$padding;
-  margin-top: calc(variables.$spacing * 2);
 
   @media all and (min-width: variables.$screen-md) {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: variables.$padding;
   }
-  /*
-  article {
-  z-index: 1000;
-  position: absolute;
-  max-width: 16vw;
-  margin: 0;
-  
-  &:nth-child(1) {
-  top: variables.$padding;
-  }
-  
-  &:nth-child(2) {
-  top: variables.$padding;
-  right: variables.$padding;
-  }
-  
-  &:nth-child(3) {
-  bottom: variables.$padding;
-  left: 50%;
-  }
-  }*/
 }

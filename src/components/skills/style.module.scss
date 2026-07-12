@@ -2,26 +2,58 @@
 
 .container {
   max-width: variables.$container-text;
+  margin-top: variables.$spacing;
+  margin-bottom: variables.$spacing;
 
-  @media all and (min-width: variables.$screen-md) {
-    margin-top: variables.$spacing * 0.2;
+  @media all and (min-width: variables.$screen-sm) {
+    display: flex;
+    gap: calc(variables.$spacing / 2);
+    justify-content: space-between;
   }
 
-  div:first-child {
-    margin-top: 0;
-  }
-
-  ul {
-    padding: 0;
-    font-size: 0.9em;
-    font-weight: 420;
-
-    @media all and (min-width: variables.$screen-sm) {
-      font-weight: 410;
+  div {
+    + div {
+      @media all and (max-width: variables.$screen-sm) {
+        padding-top: variables.$padding;
+      }
     }
 
-    li {
-      list-style: none;
+    &:first-child {
+      margin-top: 0;
+    }
+
+    h3:first-child {
+      margin-top: variables.$padding;
+    }
+
+    ul {
+      padding: 0;
+      font-size: 0.9em;
+      font-weight: 420;
+
+      @media all and (min-width: variables.$screen-sm) {
+        font-weight: 410;
+      }
+
+      li {
+        list-style: none;
+      }
+    }
+
+    @media all and (max-width: variables.$screen-sm) {
+      width: 100% !important;
+
+      &:nth-child(1) {
+        h3,
+        h2 {
+          margin-top: 0;
+        }
+      }
+
+      &:nth-child(1):has(:not(h2)),
+      &:nth-child(1):has(:not(h3)) {
+        margin-top: variables.$spacing;
+      }
     }
   }
 }

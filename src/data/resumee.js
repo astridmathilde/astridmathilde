@@ -110,7 +110,7 @@ export const education = [
       "name": "The Oslo School of Architecture and Design",
       "url": "https://aho.no"
     },
-    "description": "With a specialization in interaction design. In November 2022 I contributed with the establishment of the <a href=\"work/kahos\">student association KAHOS</a>, and up until January 2024 I was responsible for graphic design and marketing."
+    "description": "Includes industrial design and service design, but with a specialization in interaction design. Elective courses includes behavioral design, systems-oriented design, branding and platform urbanism – among others."
   },
   {
     "id": 1,
@@ -173,14 +173,24 @@ export const skills = [
 ];
 
 export const achievements = [
+    {
+    "id": 2,
+    "title": "Prize for Material Exploration and Aesthetic Experience",
+    "location": {
+      "name": "AHO WORKS AWARDS",
+      "url": "https://www.aho.no/english/about/news/aho-works-awards-spring-winners-2026.html"
+    },
+    "year": "Spring 2026",
+    "description": "Interaction design project in collaboration with Siemens eMobility"
+  },
   {
     "id": 1,
-    "title": "EGGS prize for sustainability",
+    "title": "Prize for sustainability",
     "location": {
       "name": "AHO WORKS AWARDS",
       "url": "https://aho.no/en/news/aho-works-awards-winners-2022"
     },
-    "year": "2022",
+    "year": "Autumn 2022",
     "description": "As a board member of the student organization KAHOS."
   },
   {
@@ -190,7 +200,7 @@ export const achievements = [
       "name": "The Oslo School of Architecture and Design",
       "url": "https://aho.no"
     },
-    "year": "2022",
+    "year": "Spring 2022",
     "description": "With an interaction design project for the Norwegian Museum of Science and Technology."
   }
 ];

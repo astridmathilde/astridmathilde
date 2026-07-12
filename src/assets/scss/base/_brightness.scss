@@ -1,0 +1,166 @@
+@use "variables";
+
+$text-regular: 400;
+$text-medium: 410;
+$text-large: 400;
+$text-small: 420;
+$text-xsmall: 440;
+$text-tiny: 470;
+
+html {
+  &[data-theme="dark"] {
+    background: variables.$dark-color-background;
+    color: variables.$dark-color-text;
+    font-weight: calc($text-regular - 30);
+
+    a {
+      text-decoration-color: variables.$dark-color-link;
+
+      &:hover,
+      &:focus {
+        text-decoration-color: variables.$dark-color-link-hover;
+      }
+    }
+
+    h2,
+    h3 {
+      font-weight: calc($text-large - 30);
+    }
+
+    h4 {
+      font-weight: calc($text-small - 30);
+      color: variables.$dark-color-text-tinted;
+    }
+
+    figcaption {
+      color: variables.$dark-color-text-tinted;
+    }
+
+    .text-large {
+      font-weight: calc($text-large - 30);
+
+      @media all and (min-width: variables.$screen-xl) {
+        font-weight: calc($text-large - 60);
+      }
+    }
+
+    .text-medium {
+      font-weight: calc($text-medium - 30);
+
+      @media all and (min-width: variables.$screen-lg) {
+        font-weight: calc($text-medium - 40);
+      }
+    }
+
+    .text-small {
+      font-weight: calc($text-small - 30);
+
+      @media all and (min-width: variables.$screen-md) {
+        font-weight: calc($text-small - 50);
+      }
+    }
+
+    .text-xsmall,
+    .small {
+      font-weight: $text-xsmall;
+
+      @media all and (min-width: variables.$screen-md) {
+        font-weight: calc($text-xsmall - 30);
+      }
+
+      @media all and (min-width: variables.$screen-lg) {
+        font-weight: calc($text-xsmall - 60);
+      }
+    }
+
+    .text-tiny {
+      font-weight: $text_tiny;
+
+      @media all and (min-width: variables.$screen-md) {
+        font-weight: calc($text-tiny - 30);
+      }
+
+      @media all and (min-width: variables.$screen-lg) {
+        font-weight: calc($text-tiny - 60);
+      }
+    }
+  }
+
+  &[data-theme="light"] {
+    background: variables.$color-background;
+    color: variables.$color-text;
+    font-weight: $text-regular;
+
+    a {
+      text-decoration-color: variables.$color-link;
+
+      &:hover,
+      &:focus {
+        text-decoration-color: variables.$color-link-hover;
+      }
+    }
+
+    h2,
+    h3 {
+      font-weight: $text-large;
+    }
+
+    h4 {
+      font-weight: $text-small;
+      color: variables.$color-text-tinted;
+    }
+
+    figcaption {
+      color: variables.$color-text-tinted;
+    }
+
+    .text-large {
+      font-weight: $text-large;
+
+      @media all and (min-width: variables.$screen-xl) {
+        font-weight: xalx($text-large - 30);
+      }
+    }
+
+    .text-medium {
+      font-weight: $text-medium;
+
+      @media all and (min-width: variables.$screen-xl) {
+        font-weight: calc($text-medium - 10);
+      }
+    }
+
+    .text-small {
+      font-weight: $text-small;
+
+      @media all and (min-width: variables.$screen-md) {
+        font-weight: calc($text-small - 10);
+      }
+    }
+
+    .text-xsmall,
+    .small {
+      font-weight: $text-xsmall;
+
+      @media all and (min-width: variables.$screen-md) {
+        font-weight: calc($text-xsmall - 30);
+      }
+
+      @media all and (min-width: variables.$screen-lg) {
+        font-weight: calc($text-xsmall - 50);
+      }
+    }
+
+    .text-tiny {
+      font-weight: $text-tiny;
+
+      @media all and (min-width: variables.$screen-md) {
+        font-weight: calc($text-tiny - 30);
+      }
+
+      @media all and (min-width: variables.$screen-lg) {
+        font-weight: calc($text-tiny - 50);
+      }
+    }
+  }
+}

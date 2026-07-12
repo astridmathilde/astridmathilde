@@ -1,11 +1,10 @@
-import { siteTitle } from "../layout";
-import utils from "../../assets/scss/utils.module.scss";
+import type { Metadata } from "next";
+import utils from "../../../assets/scss/utils.module.scss";
 
 const pageTitle = 'Colophon';
 
-export const metadata = {
-  metadataBase: new URL('https://astridmathilde.no/colophon'),
-  title: pageTitle + ' – ' + siteTitle
+export const metadata: Metadata = {
+  title: pageTitle,
 }
 
 export default function Colophon() {

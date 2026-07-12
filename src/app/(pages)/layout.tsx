@@ -1,14 +1,21 @@
 import { ThemeProvider } from 'next-themes';
+import type { Metadata } from 'next';
 import Link from 'next/link.js';
 import localFont from 'next/font/local';
 
-import '../../assets/scss/global.scss';
-import '../../assets/scss/brightness.scss';
-
+import '../../assets/scss/global.scss'
 import styles from '../../assets/scss/layout.module.scss';
 
 import Wrapper from '../wrapper';
 import Header from './header';
+
+export const metadata: Metadata = {
+  metadataBase: new URL('https://astridmathilde.no'),
+  title: {
+    template: '%s – Astrid Mathilde Boberg',
+    default: 'Astrid Mathilde Boberg – Designer & developer'
+  },
+}
 
 const inter = localFont({
   src: [
@@ -25,38 +32,34 @@ const inter = localFont({
   ]
 })
 
-//export const siteTitle = 'Astrid Mathilde Boberg';
-
-
 export default function Layout({ children }) {
   return (
     <>
     <html lang="en" className={inter.className} suppressHydrationWarning>
     <body>
-
     <ThemeProvider>
     <Wrapper>
-
+    
     <Header />
-
+    
     <main id={styles.content}>
     {children}
     </main>
-
+    
     <footer id={styles.footer}>
+    <div className={styles.container}>
     <p>© Astrid Mathilde Boberg</p>
     <nav id={styles.secondaryNav}>
     <ul>
     <li key="resumee"><Link href="/resumee">Resumee</Link></li>
     <li key="colophon"><Link href="/colophon">Colophon</Link></li>
-    <li key="contact"><Link href="/contact">Contact</Link></li>
     </ul>
     </nav>
+    </div>
     </footer>
-
+    
     </Wrapper>
     </ThemeProvider>
-    
     </body>
     </html>
     </>

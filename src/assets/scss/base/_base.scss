@@ -42,6 +42,12 @@ a {
   text-decoration: underline;
   text-decoration-thickness: inherit;
   color: inherit;
+  transition: all 0.1s ease-in-out;
+
+  &:hover,
+  &:focus {
+    transition: all 0.18s ease-in-out;
+  }
 }
 
 figure {

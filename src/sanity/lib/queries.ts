@@ -4,10 +4,13 @@ export const ALL_PROJECTS = defineQuery(`*[
   _type == "project"
   && defined(slug.current)]|order(time.year desc)[0...12]{
     _id,
-    title,
+    short_title,
     slug,
     location,
+    time,
+    type,
     category,
+    partner,
     thumbnail
   }`)
   
@@ -15,10 +18,13 @@ export const ALL_PROJECTS = defineQuery(`*[
   _type == "project"
   && defined(slug.current)]|order(time.year desc)[0...3]{
     _id,
-    title,
+    short_title,
     slug,
     location,
+    time,
+    type,
     category,
+    partner,
     thumbnail
   }
 `);

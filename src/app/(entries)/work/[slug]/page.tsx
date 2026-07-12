@@ -1,18 +1,39 @@
-import { siteTitle } from "../../layout";
-import style from "../../../assets/scss/project.module.scss";
+import type { Metadata, ResolvingMetadata } from "next";
+import style from "../../../../assets/scss/project.module.scss";
 import projectNav from "../../../assets/scss/components/project-navigation.module.scss";
 
 import { PortableText } from "next-sanity";
-import { client } from "../../../sanity/client";
-import BlockProjectImage from "../../../components/project-image";
+import { client } from "../../../../sanity/client";
+import BlockProjectImage from "../../../../components/project-image";
 
 import Link from "next/link";
 
 const entry_QUERY = `*[_type == "project" && slug.current == $slug][0]`;
 const options = { next: { revalidate: 30 } };
+/*
+type Props = {
+  params: Promise<{ slug: string }>
+  searchParams: Promise<{ [key: string]: string | string[] | undefined }>
+}
+ 
+export async function generateMetadata(
+  { params }: Props,
+  parent: ResolvingMetadata
+): Promise<Metadata> {
+  const slug = (await params).slug
 
+  const post = await fetch(`/work/${slug}`).then((res) =>
+    res.json()
+  )
+ 
+  return {
+    title: post.title
+  }
+}*/
+ 
 export default async function ProjectPage({params}) {
   const entry = await client.fetch(entry_QUERY, await params, options);
+  
   
   return (
     <article className={style.project}>
@@ -55,22 +76,22 @@ export default async function ProjectPage({params}) {
     </li>
   ) : null
 }
-
+{/*
 {entry.time.duration ? (
   <li key="project_duration"><span className={style.label + " text-tiny"}>Duration:</span> {entry.time.duration}</li>
 ) : null}
 
 <li key="project_year"><span className={style.label + " text-tiny"}>Year:</span> {entry.time.year}</li>
-
+*/}
 {/*entry.contributors ? (
   <li key="project_contributors"><span className={style.label + " text-tiny"}>Team:</span>
   <ul className={entry.contributors}>
   {entry.contributors.map((team) => (
-    <li key={team} className={style.contributor}>{team}</li>
+  <li key={team} className={style.contributor}>{team}</li>
   ))}
   </ul>
   </li>
-) : null */
+  ) : null */
 }
 
 {entry.roles ? (

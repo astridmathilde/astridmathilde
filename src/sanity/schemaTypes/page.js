@@ -57,5 +57,15 @@ export default defineType({
         }),
       ],
     }),
+    defineField({
+      title: 'Further discovery',
+      name: 'further_discovery',
+      type: 'array',
+      of: [
+        defineArrayMember({
+          type: 'block',
+        }),
+      ],
+    }),
   ],
 })

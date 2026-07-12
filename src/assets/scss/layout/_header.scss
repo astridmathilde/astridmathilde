@@ -1,26 +1,57 @@
 @use "../base/variables";
 
 #header {
-  z-index: 1000;
-  top: 0;
-  left: 0;
-  position: fixed;
   display: flex;
   width: 100%;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  padding: calc(variables.$padding / 2) variables.$padding;
-  font-size: 1em;
+  font-size: 0.85em;
   text-transform: lowercase;
+
+  @media all and (max-width: variables.$screen-sm) {
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    position: fixed;
+    padding-left: variables.$padding;
+    padding-right: variables.$padding;
+  }
+
+  @media all and (min-width: variables.$screen-xs) {
+    padding-top: calc(variables.$padding / 2);
+    padding-bottom: calc(variables.$padding / 2);
+  }
+
+  @media all and (min-width: variables.$screen-sm) {
+    padding-top: variables.$padding;
+    padding-bottom: variables.$padding;
+    font-size: 0.9em;
+  }
 
   .title {
     margin: 0;
-    font-size: 1em;
 
     .icon {
       border-radius: 100%;
       margin-right: 0.5em;
+      width: 10px;
+      height: 10px;
+
+      @media all and (min-width: variables.$screen-xs) {
+        width: 14px;
+        height: 14px;
+      }
+
+      @media all and (min-width: variables.$screen-sm) {
+        width: 20px;
+        height: 20px;
+      }
+
+      @media all and (min-width: variables.$screen-xl) {
+        width: 24px;
+        height: 24px;
+      }
     }
 
     a {
