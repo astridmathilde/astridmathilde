@@ -27,12 +27,16 @@ body {
     font-size: 14px;
   }
 
-  @media all and (min-width: variables.$screen-lg) {
+  @media all and (min-width: variables.$screen-md) {
     font-size: 16px;
   }
 
-  @media all and (min-width: variables.$screen-xl) {
+  @media all and (min-width: variables.$screen-lg) {
     font-size: 20px;
+  }
+
+  @media all and (min-width: variables.$screen-xxl) {
+    font-size: 24px;
   }
 }
 

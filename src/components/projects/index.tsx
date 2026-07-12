@@ -8,7 +8,7 @@ export default function BlockProjects(project) {
     <>
     <Link className={style.project} href={"/work/" + project.slug.current}>
     <article id={project._id}>
-    <header>
+    <header className={"lower-opacity"}>
     <h3 className={utils.screen_reader_text}>{project.title}</h3>
     <ul className={style.meta}>
     <li className={style.type}><span className={utils.screen_reader_text}>Category:</span>{project.category}</li>

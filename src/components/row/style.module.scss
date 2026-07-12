@@ -1,8 +1,12 @@
 @use "../../assets/scss/base/variables";
 
 .row {
+  @media all and (max-width: variables.$screen-lg) {
+    align-items: start !important;
+  }
+
   + .row {
-    @media all and (min-width: variables.$screen-md) and (max-width: variables.$screen-xl) {
+    @media all and (min-width: variables.$screen-md) {
       margin-top: variables.$spacing;
     }
   }

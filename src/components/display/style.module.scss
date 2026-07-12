@@ -1,9 +1,9 @@
 @use "../../assets/scss/base/variables";
 
 .display {
-  max-width: variables.$container-text - 4ch;
-  margin-top: calc(variables.$spacing * 1.5);
-  margin-bottom: calc(variables.$spacing * 2);
+  max-width: calc(variables.$container-text - 4ch);
+  margin-top: variables.$spacing;
+  margin-bottom: variables.$spacing;
   line-height: 1.35;
   font-size: 1.1em;
 
@@ -15,7 +15,13 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    margin-bottom: calc(variables.$spacing * 2);
     font-size: 1.3em;
+  }
+
+  @media all and (min-width: variables.$screen-md) {
+    margin-top: calc(variables.$spacing * 0.8);
+    margin-bottom: calc(variables.$spacing * 2);
   }
 
   p {

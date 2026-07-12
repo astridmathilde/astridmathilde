@@ -38,6 +38,10 @@ h3 {
 
 h2 {
   margin-top: variables.$spacing;
+
+  &:first-of-type {
+    margin-top: 0;
+  }
 }
 
 h3 {

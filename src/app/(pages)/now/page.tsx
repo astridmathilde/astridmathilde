@@ -13,7 +13,7 @@ export default function Now() {
     <h2>{pageTitle}</h2>
     <p>Currently on my fourth year at the <a href="https://aho.no/en" target="_blank" rel="external">Oslo School of Architecture and Design</a>. Otherwise I am focusing on my personal projects, including the development of <a href="https://blikk.directory" rel="external" target="_blank">Blikkjournal</a> (my personal archive of moments and everyday observations) and the website you are browsing right now. After this I am planning to work on some previously neglected writings, and maybe get back into bookbinding.</p>
     
-    <p className={utils.small}>Last updated on February 4th, 2026. Inspired by <a href="https://nownownow.com/about" target="_blank" rel="external">Now</a>.</p>
+    <p className={utils.small + " color-subtle"}>Last updated on February 4th, 2026. Inspired by <a href="https://nownownow.com/about" target="_blank" rel="external">Now</a>.</p>
 
     <h3>Currently reading</h3>
     <ul>

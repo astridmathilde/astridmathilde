@@ -36,6 +36,15 @@ html {
       color: variables.$dark-color-text-tinted;
     }
 
+    .color-subtle {
+      color: variables.$dark-color-text-tinted;
+    }
+
+    .lower-opacity {
+      opacity: 0.7;
+      filter: alpha(opacity=70);
+    }
+
     .text-large {
       font-weight: calc($text-large - 30);
 
@@ -112,6 +121,15 @@ html {
 
     figcaption {
       color: variables.$color-text-tinted;
+    }
+
+    .color-subtle {
+      color: variables.$color-text-tinted;
+    }
+
+    .lower-opacity {
+      opacity: 0.8;
+      filter: alpha(opacity=80);
     }
 
     .text-large {

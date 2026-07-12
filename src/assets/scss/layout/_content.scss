@@ -2,10 +2,11 @@
 
 #content {
   max-width: variables.$container-content;
+  margin-top: 6vh;
   margin-bottom: variables.$footer-height;
   overflow-x: hidden;
 
-  @media all and (max-width: variables.$screen-sm) {
-    margin-top: 6vh;
+  @media all and (min-width: variables.$screen-md) {
+    margin-top: variables.$spacing;
   }
 }
