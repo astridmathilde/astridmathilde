@@ -1,6 +1,12 @@
 @use "base/variables";
 
 .project {
+  margin-top: 6vh;
+
+  @media all and (min-width: variables.$screen-md) {
+    margin-top: variables.$spacing;
+  }
+
   .thumbnail {
     margin-top: 0;
 
@@ -78,15 +84,16 @@
               max-width: 20ch;
             }
           }
-        }
 
-        &.contributors {
-          li {
-            display: inline;
+          &.roles,
+          &.contributors {
+            li {
+              display: inline;
 
-            + li {
-              &:before {
-                content: ", ";
+              + li {
+                &:before {
+                  content: ", ";
+                }
               }
             }
           }

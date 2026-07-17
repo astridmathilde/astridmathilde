@@ -47,15 +47,13 @@ export default function Layout({ children }) {
     </main>
     
     <footer id={styles.footer}>
-    <div className={styles.container}>
-    <p>© Astrid Mathilde Boberg</p>
+    <p className={"color-subtle"}>© Astrid Mathilde Boberg</p>
     <nav id={styles.secondaryNav}>
     <ul>
     <li key="resumee"><Link href="/resumee">Resumee</Link></li>
     <li key="colophon"><Link href="/colophon">Colophon</Link></li>
     </ul>
     </nav>
-    </div>
     </footer>
     
     </Wrapper>

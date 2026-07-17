@@ -1,34 +1,29 @@
 @use "../base/variables";
 
 #footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   position: relative;
   font-size: 0.8em;
   text-transform: lowercase;
   margin-top: variables.$spacing;
   margin-bottom: variables.$padding;
 
-  .container {
-    display: flex;
-    max-width: variables.$container-content;
-    margin-left: auto;
-    margin-right: auto;
-    align-items: center;
-    justify-content: space-between;
-  }
-
   @media all and (min-width: variables.$screen-lg) {
+    align-items: flex-end;
     position: fixed;
     left: 0;
     bottom: 0;
     width: 100%;
+    height: variables.$footer-height;
+    padding: variables.$padding;
     margin-top: 0;
     margin-bottom: 0;
+  }
 
-    .container {
-      align-items: flex-end;
-      height: variables.$footer-height;
-      padding: variables.$padding;
-    }
+  @media all and (min-width: variables.$screen-xl) {
+    height: calc(variables.$footer-height + 5vh);
   }
 
   p,
@@ -59,6 +54,8 @@
         &:hover,
         &:focus {
           text-decoration: underline;
+          opacity: 1 !important;
+          filter: alpha(opacity=100) !important;
         }
       }
     }
@@ -71,6 +68,11 @@
     rgba(variables.$dark-color-background, 0.8) 80%,
     rgba(variables.$dark-color-background, 0.95)
   );
+
+  a {
+    opacity: 0.8;
+    filter: alpha(opacity=80);
+  }
 }
 
 :global(html[data-theme="light"] footer) {
@@ -79,4 +81,9 @@
     rgba(variables.$color-background, 0.8) 80%,
     rgba(variables.$color-background, 0.95)
   );
+
+  a {
+    opacity: 0.9;
+    filter: alpha(opacity=90);
+  }
 }

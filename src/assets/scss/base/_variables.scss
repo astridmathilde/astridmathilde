@@ -3,12 +3,13 @@ $screen-xs: 236px;
 $screen-sm: 400px;
 $screen-md: 608px;
 $screen-lg: 1016px;
-$screen-xl: 1164px;
-$screen-xxl: 1400px;
+$screen-xl: 1352px;
+$screen-xxl: 1864px;
+$screen-xxxl: 2312px;
 
 // Containers
 $container-site: 100%;
-$container-content: 1600px;
+$container-content: 2000px;
 $container-padding: 15vw;
 $container-text: 69ch;
 
@@ -42,26 +43,6 @@ $dark-color-link-hover: #dad8e0;
 $duration-fast: 0.2s;
 $duration-normal: 0.4s;
 $duration-slow: 0.6s;
-
-$ease: cubic-bezier(0.29, 0, 0.28, 1); // https://cubic-bezier.com/#.29,0,.28,1
-$ease-in: cubic-bezier(
-  0.41,
-  0.03,
-  1,
-  1
-); // https://cubic-bezier.com/#.41,.03,1,1
-$ease-out: cubic-bezier(
-  0,
-  0.08,
-  0.47,
-  1
-); // https://cubic-bezier.com/#0,.08,.47,1
-$ease-in-out: cubic-bezier(
-  0.45,
-  0,
-  0.55,
-  1
-); // https://cubic-bezier.com/#.45,0,.55,1
 
 // Animation
 @keyframes fadeIn {

@@ -1,14 +1,26 @@
 @use "../scss/base/variables";
 
 .work {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: variables.$padding;
   margin-top: calc(variables.$spacing * 1.2);
 
-  @media all and (min-width: variables.$screen-md) {
+  a + a {
+    margin-top: variables.$padding;
+  }
+
+  @media all and (min-width: variables.$screen-sm) {
+    display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: variables.$padding;
+    grid-template-rows: max-content;
+    grid-auto-rows: 1fr;
+    gap: 0 calc(variables.$padding * 2);
     margin-top: 0;
+
+    a {
+      align-content: center;
+    }
+  }
+
+  @media all and (min-width: variables.$screen-xl) {
+    grid-template-columns: 1fr 1fr 1fr;
   }
 }

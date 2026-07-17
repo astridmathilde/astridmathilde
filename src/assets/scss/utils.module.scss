@@ -32,3 +32,7 @@
 .sectionTitle {
   margin-top: variables.$spacing * 1.2;
 }
+
+.content_container {
+  max-width: variables.$container-content;
+}

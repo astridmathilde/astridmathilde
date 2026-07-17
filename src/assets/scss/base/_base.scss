@@ -35,8 +35,16 @@ body {
     font-size: 20px;
   }
 
-  @media all and (min-width: variables.$screen-xxl) {
+  @media all and (min-width: variables.$screen-xl) {
     font-size: 24px;
+  }
+
+  @media all and (min-width: variables.$screen-xxl) {
+    font-size: 28px;
+  }
+
+  @media all and (min-width: variables.$screen-xxxl) {
+    font-size: 32px;
   }
 }
 

@@ -1,7 +1,6 @@
 @use "../base/variables";
 
 #content {
-  max-width: variables.$container-content;
   margin-top: 6vh;
   margin-bottom: variables.$footer-height;
   overflow-x: hidden;

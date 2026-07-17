@@ -2,7 +2,7 @@
 
 .project {
   display: block;
-  margin-bottom: variables.$padding;
+  align-content: center;
   font-size: 0.9em;
   text-decoration: none;
 
@@ -15,12 +15,14 @@
     order: -1;
     transition: all variables.$duration-fast ease-in-out;
 
-    @media all and (min-width: variables.$screen-md) {
+    @media all and (min-width: variables.$screen-lg) {
       opacity: 0.9;
       filter: alpha(opacity=90);
     }
 
     img {
+      max-width: 100%;
+      height: auto;
       border-radius: variables.$border-radius;
     }
   }
@@ -29,8 +31,8 @@
     display: flex;
     justify-content: space-between;
     margin-top: 0.5em;
-    font-size: 0.85em;
-    transition: all variables.$duration-fast variables.$ease-out;
+    font-size: 0.8em;
+    transition: all variables.$duration-fast ease-in-out;
 
     .meta {
       margin: 0;
@@ -49,6 +51,12 @@
             padding: 0;
           }
         }
+
+        &.category {
+          @media all and (max-width: 880px) {
+            display: none;
+          }
+        }
       }
     }
 
@@ -60,7 +68,7 @@
   &:hover,
   &:focus {
     header {
-      transition: all variables.$duration-fast variables.$ease-in;
+      transition: all variables.$duration-fast ease-in-out;
 
       .meta li,
       .year {

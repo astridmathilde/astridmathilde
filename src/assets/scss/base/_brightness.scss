@@ -33,7 +33,8 @@ html {
     }
 
     figcaption {
-      color: variables.$dark-color-text-tinted;
+      opacity: 0.7;
+      filter: alpha(opacity=70);
     }
 
     .color-subtle {
@@ -120,7 +121,8 @@ html {
     }
 
     figcaption {
-      color: variables.$color-text-tinted;
+      opacity: 0.8;
+      filter: alpha(opacity=80);
     }
 
     .color-subtle {

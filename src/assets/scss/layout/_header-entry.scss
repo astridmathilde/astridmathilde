@@ -1,9 +1,21 @@
+@use "../base/variables";
+
 #headerEntry {
   display: flex;
   flex-direction: row;
   align-items: center;
   font-size: 1em;
   text-transform: lowercase;
+
+  @media all and (min-width: variables.$screen-xs) {
+    padding-top: calc(variables.$padding / 2);
+    padding-bottom: calc(variables.$padding / 2);
+  }
+
+  @media all and (min-width: variables.$screen-sm) {
+    padding-top: variables.$padding;
+    padding-bottom: variables.$padding;
+  }
 
   a {
     text-decoration: none;
