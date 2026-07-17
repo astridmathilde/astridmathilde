@@ -11,12 +11,12 @@ export default function BlockProjects(project) {
     <header className={"lower-opacity"}>
     <h3 className={utils.screen_reader_text}>{project.title}</h3>
     <ul className={style.meta}>
-    <li className={style.type}><span className={utils.screen_reader_text}>Category:</span>{project.category}</li>
     <li className={style.type}>{project.client ? project.client : project.type}</li>
+    <li className={style.category}><span className={utils.screen_reader_text}>Category:</span>{project.category}</li>
     </ul>
     <p className={style.year}><span className={utils.screen_reader_text}>Year:</span>{project.year}</p>
     </header>
-    <BlockProjectImage image={project.thumbnail} width={3994} height={2993} priority="true" alt={project.thumbnail.alt}/>
+    <BlockProjectImage image={project.thumbnail} width={project.width} height={project.height} priority="true" alt={project.alt}/>
     </article>
     </Link>
     </>

@@ -11,8 +11,19 @@ export default defineType({
       type: 'string',
     }),
     defineField({
+      title: 'Slug',
+      name: 'slug',
+      type: 'slug',
+      options: {
+        source: 'title',
+      },
+    }),
+    defineField({
       title: 'Content',
       name: 'content',
+      hidden: ({document}) => {
+        return document?.slug?.current == 'work'
+      },
       type: 'array',
       of: [
         defineArrayMember({
@@ -20,5 +31,23 @@ export default defineType({
         }),
       ],
     }),
+    defineField({
+      title: 'Projects',
+      name: 'project_selector',
+      hidden: ({document}) => {
+        return document?.slug?.current !== 'work'
+      },
+      type: 'array',
+      of: [
+        {
+          type: 'reference',
+          to: [
+            {
+              type: 'project'
+            }
+          ],
+        }
+      ],
+    })
   ],
 })

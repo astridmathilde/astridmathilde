@@ -1,39 +1,28 @@
-import type { Metadata, ResolvingMetadata } from "next";
+import Link from "next/link";
+import { client } from "../../../../sanity/client";
+import { PortableText } from "next-sanity";
+
+import { categoryLabel, typeLabel } from "../../../../sanity/lib/option-title";
+
 import style from "../../../../assets/scss/project.module.scss";
 import projectNav from "../../../assets/scss/components/project-navigation.module.scss";
 
-import { PortableText } from "next-sanity";
-import { client } from "../../../../sanity/client";
 import BlockProjectImage from "../../../../components/project-image";
-
-import Link from "next/link";
+import BlockImage from "../../../../components/image";
 
 const entry_QUERY = `*[_type == "project" && slug.current == $slug][0]`;
 const options = { next: { revalidate: 30 } };
-/*
-type Props = {
-  params: Promise<{ slug: string }>
-  searchParams: Promise<{ [key: string]: string | string[] | undefined }>
-}
- 
-export async function generateMetadata(
-  { params }: Props,
-  parent: ResolvingMetadata
-): Promise<Metadata> {
-  const slug = (await params).slug
 
-  const post = await fetch(`/work/${slug}`).then((res) =>
-    res.json()
-  )
- 
-  return {
-    title: post.title
-  }
-}*/
- 
 export default async function ProjectPage({params}) {
   const entry = await client.fetch(entry_QUERY, await params, options);
-  
+
+  const components = {
+    types: {
+      image: ({value}) => (
+        <BlockImage value={value.asset._ref} caption={value.caption} />
+      ),
+    },
+  }
   
   return (
     <article className={style.project}>
@@ -53,12 +42,12 @@ export default async function ProjectPage({params}) {
     
     <li key="project_category">
     <span className={style.label + " text-tiny"}>Category:</span>
-    {entry.category}
+    {categoryLabel[entry.category]}
     </li> 
     
     <li key="project_type">
     <span className={style.label + " text-tiny"}>Type of project:</span>
-    {entry.type === 'other' ? entry.other_type : entry.type}
+    {entry.type === 'other' ? typeLabel[entry.other_type] : typeLabel[entry.type]}
     </li>
     
     {entry.partner ? (
@@ -76,38 +65,41 @@ export default async function ProjectPage({params}) {
     </li>
   ) : null
 }
-{/*
-{entry.time.duration ? (
-  <li key="project_duration"><span className={style.label + " text-tiny"}>Duration:</span> {entry.time.duration}</li>
-) : null}
 
-<li key="project_year"><span className={style.label + " text-tiny"}>Year:</span> {entry.time.year}</li>
-*/}
-{/*entry.contributors ? (
-  <li key="project_contributors"><span className={style.label + " text-tiny"}>Team:</span>
-  <ul className={entry.contributors}>
-  {entry.contributors.map((team) => (
-  <li key={team} className={style.contributor}>{team}</li>
-  ))}
-  </ul>
-  </li>
-  ) : null */
-}
+  {entry.time.duration || entry.time.year ? (
+  <li key="project_duration"><span className={style.label + " text-tiny"}>{entry.time.duration ? "Time:" : "Year:"}</span> {entry.time.duration ? entry.time.duration + " (" + entry.time.year + ")" : entry.time.year }</li>
+  ) : null}
 
-{entry.roles ? (
-  <li key="project_roles"><span className={style.label + " text-tiny"}>My role:</span>
-  <ul className={entry.roles}>
-  {entry.roles.map((role) => (
-    <li key={role} className={style.role}>{role}</li>
-  ))}
-  </ul>
-  </li>
-) : null
+  
+  {entry.contributors ? (
+    <li key="project_contributors" className={style.contributors}><span className={style.label + " text-tiny"}>Team:</span>
+    <ul>
+    {entry.contributors.map((team) => (
+    <li key={team._key}>
+      {team.website ? (
+        <a href={team.website} target="_blank" rel="external">{team.name}</a>
+      ) : team.name}
+      </li>
+    ))}
+    </ul>
+    </li>
+    ) : null 
+  }
+  
+  {entry.roles ? (
+    <li key="project_roles" className={style.roles}><span className={style.label + " text-tiny"}>My role:</span>
+    <ul>
+    {entry.roles.map((role) => (
+      <li key={role} className={style.role}>{role}</li>
+    ))}
+    </ul>
+    </li>
+  ) : null
 }
 
 {entry.links ? (
   <li key="project_links"><span className={style.label + " text-tiny"}>Links:</span>
-  <ul className={entry.links}>
+  <ul className={style.links}>
   {entry.links.map((link) => (
     <li key={link} className={style.link}>
     <Link href={link.url} rel="external" target="_blank">{link.title}</Link>
@@ -122,7 +114,7 @@ export default async function ProjectPage({params}) {
 </div>
 
 <div className={style.content}>
-{Array.isArray(entry.description) && <PortableText value={entry.description} />}
+{Array.isArray(entry.description) && <PortableText value={entry.description} components={components} />}
 </div>
 </div>
 

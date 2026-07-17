@@ -11,20 +11,9 @@ export const ALL_PROJECTS = defineQuery(`*[
     type,
     category,
     partner,
-    thumbnail
+    thumbnail{
+      ...,
+      "width": asset->metadata.dimensions.width,
+      "height": asset->metadata.dimensions.height
+    }
   }`)
-  
-  export const RECENT_PROJECTS = defineQuery(`*[
-  _type == "project"
-  && defined(slug.current)]|order(time.year desc)[0...3]{
-    _id,
-    short_title,
-    slug,
-    location,
-    time,
-    type,
-    category,
-    partner,
-    thumbnail
-  }
-`);
