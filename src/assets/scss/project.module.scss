@@ -33,7 +33,8 @@
 
   .container {
     position: relative;
-    margin-top: variables.$spacing / 2;
+    margin-top: calc(variables.$spacing / 2);
+    margin-bottom: variables.$spacing;
 
     @media all and (min-width: variables.$screen-md) {
       display: grid;
@@ -117,6 +118,32 @@
 
       h3 {
         margin-top: 2.5em;
+
+        &:first-child {
+          margin-top: 0;
+        }
+      }
+    }
+  }
+
+  .projectNav {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: calc(variables.$padding / 4);
+
+    @media all and (min-width: variables.$screen-md) {
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: variables.$padding;
+
+      img {
+        object-fit: cover;
+        height: 20vw !important;
+      }
+    }
+
+    @media all and (min-width: variables.$screen-xl) {
+      img {
+        height: 15vw !important;
       }
     }
   }

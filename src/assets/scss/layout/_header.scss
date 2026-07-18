@@ -43,38 +43,6 @@
   .title {
     margin: 0;
 
-    .icon {
-      border-radius: 100%;
-      margin-right: 0.5em;
-      width: 10px;
-      height: 10px;
-
-      @media all and (min-width: variables.$screen-xs) {
-        width: 14px;
-        height: 14px;
-      }
-
-      @media all and (min-width: variables.$screen-sm) {
-        width: 20px;
-        height: 20px;
-      }
-
-      @media all and (min-width: variables.$screen-xl) {
-        width: 24px;
-        height: 24px;
-      }
-
-      @media all and (min-width: variables.$screen-xxl) {
-        width: 28px;
-        height: 28px;
-      }
-
-      @media all and (min-width: variables.$screen-xxxl) {
-        width: 32px;
-        height: 32px;
-      }
-    }
-
     a {
       display: flex;
       align-items: center;

@@ -20,8 +20,11 @@
   }
 
   @media all and (min-width: variables.$screen-md) {
-    margin-top: calc(variables.$spacing * 0.8);
-    margin-bottom: calc(variables.$spacing * 2);
+    margin-bottom: calc(variables.$spacing * 0.8);
+  }
+
+  @media all and (min-width: variables.$screen-lg) {
+    margin-bottom: calc(variables.$spacing * 1.5);
   }
 
   p {

@@ -4,9 +4,14 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-top: variables.$spacing;
+  margin-top: calc(variables.$spacing * 2);
+  margin-bottom: variables.$padding;
   font-size: 1em;
   text-transform: lowercase;
+
+  @media all and (min-width: variables.$screen-md) {
+    margin-top: variables.$spacing;
+  }
 
   a {
     text-decoration: none;
