@@ -9,7 +9,13 @@ export default function BlockImage({value, caption}) {
   return (
     <>
     <figure className={style.image}>
-    <Image src={urlFor(value).url()} alt={value.alt || ""} loading="lazy" width={width} height={height} />
+    <Image
+    src={urlFor(value).url()}
+    alt={value.alt || ""}
+    loading="lazy"
+    width={width}
+    height={height}
+    />
      {caption ? (
         <figcaption> 
           {caption}

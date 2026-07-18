@@ -1,15 +1,19 @@
 import { Image } from 'next-sanity/image';
 import { urlFor } from '../../sanity/lib/image';
+import { getImageDimensions } from '@sanity/asset-utils';
 import style from '../image/style.module.scss';
 
-export default function BlockProjectImage({value, width, height, alt}) {
+export default function BlockProjectImage({value}) {
+  const {width, height} = getImageDimensions(value); 
+
   return (
     <figure className={style.image}>
     <Image
-    src={urlFor(value).url()}
+    src={urlFor(value).url()} 
+    alt={value.alt || ""}
+    loading="lazy"
     width={width}
     height={height}
-    alt={alt}
     />
     </figure>
   );

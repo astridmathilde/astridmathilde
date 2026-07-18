@@ -35,7 +35,7 @@ export default async function ProjectPage({params}) {
     </header>
     
     <div className={style.thumbnail}>
-    <BlockProjectImage value={entry.thumbnail} alt={entry.short_title} width={3994} height={2993} />
+    <BlockProjectImage value={entry.thumbnail}/>
     </div>
     
     <div className={style.container}>
