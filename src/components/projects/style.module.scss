@@ -13,7 +13,15 @@
 
   figure {
     order: -1;
+    border-radius: variables.$border-radius;
     transition: all variables.$duration-fast ease-in-out;
+
+    @media all and (min-width: variables.$screen-md) {
+      display: flex;
+      overflow: hidden;
+      align-items: center;
+      max-height: 60vw;
+    }
 
     @media all and (min-width: variables.$screen-lg) {
       opacity: 0.9;
@@ -23,7 +31,6 @@
     img {
       max-width: 100%;
       height: auto;
-      border-radius: variables.$border-radius;
     }
   }
 

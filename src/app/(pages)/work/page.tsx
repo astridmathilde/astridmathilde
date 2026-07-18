@@ -46,9 +46,7 @@ export default async function Work() {
       <BlockProjects key={project._id} id={project._id} slug={project.slug} shortTitle={project.short_title} category={categoryLabel[project.category]} type={project.type === 'other' ? project.other_type : typeLabel[project.type]} client={project.partner?.value} year={project.time.year} alt={project.short_title} thumbnail={project.thumbnail} priority="true" sizes="(min-width: 670px) 50vw, 100vw" />
     ))}
     </div>
-    
-    <h2 className={utils.sectionTitle}>Further discovery</h2>
-    <p>You can <Link href="/about">read my resumee</Link>, see <Link href="/now">what I have been up to lately</Link>, or find out <Link href="/colophon">how I built this website</Link>.</p> 
+
     </>
   )
 }
