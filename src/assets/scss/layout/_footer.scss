@@ -26,6 +26,10 @@
     height: calc(variables.$footer-height + 5vh);
   }
 
+  @media all and (min-width: variables.$screen-xxl) {
+    padding-bottom: calc(variables.$padding * 0.8);
+  }
+
   p,
   ul {
     margin: 0;

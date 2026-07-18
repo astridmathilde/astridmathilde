@@ -55,6 +55,12 @@
       position: fixed;
       top: variables.$padding;
       right: variables.$padding;
+      padding-top: 1.6vw;
+    }
+
+    @media all and (min-width: variables.$screen-xxl) {
+      top: variables.$padding;
+      padding-top: 1.4vw;
     }
 
     ul {
