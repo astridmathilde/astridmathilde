@@ -12,7 +12,10 @@
 
     @media all and (min-width: variables.$screen-md) {
       position: relative;
-      height: 80vh;
+    }
+
+    @media all and (min-width: variables.$screen-md) {
+      height: 70vw;
 
       img {
         position: absolute;
@@ -26,8 +29,8 @@
       }
     }
 
-    @media all and (min-width: variables.$screen-xl) {
-      height: 70vh;
+    @media all and (min-width: variables.$screen-xxl) {
+      height: 60vw;
     }
   }
 
@@ -45,6 +48,10 @@
 
     @media all and (min-width: variables.$screen-lg) {
       grid-template-columns: 2fr 9fr;
+    }
+
+    @media all and (min-width: variables.$screen-xl) {
+      margin-bottom: calc(variables.$spacing * 2);
     }
 
     .meta {
@@ -137,13 +144,23 @@
 
       img {
         object-fit: cover;
-        height: 20vw !important;
+        height: 24vw !important;
       }
     }
 
     @media all and (min-width: variables.$screen-xl) {
       img {
-        height: 15vw !important;
+        height: 20vw !important;
+      }
+    }
+
+    ul {
+      li {
+        &:nth-child(2) {
+          @media all and (min-width: variables.$screen-md) and (max-width: 886px) {
+            display: none;
+          }
+        }
       }
     }
   }

@@ -12,11 +12,15 @@ import BlockImage from "../../../../components/image";
 import BlockProjects from "../../../../components/projects";
 
 const entry_QUERY = `*[_type == "project" && slug.current == $slug][0]`;
-const moreEntries_QUERY = `*[_type == "project" && slug.current != $slug]|order(time.year desc)[0...3]`;
+  const moreEntries_QUERY = `*[_type == "project" && slug.current != $slug] | order(time.year desc)[0...3]{
+    _id, short_title, slug, location, time, type, other_type, category, partner, thumbnail
+  }`;
+
 const options = { next: { revalidate: 30 } };
 
 export default async function ProjectPage({params}) {
   const entry = await client.fetch(entry_QUERY, await params, options);
+
   const moreEntries = await client.fetch(moreEntries_QUERY, await params, options);
   
   const components = {

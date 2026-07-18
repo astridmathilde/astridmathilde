@@ -19,20 +19,7 @@ export const metadata: Metadata = {
 const ALL_PROJECTS = defineQuery(`*[
   _type == "project"
   && defined(slug.current)]|order(time.year desc)[0...12]{
-    _id,
-    short_title,
-    slug,
-    location,
-    time,
-    type,
-    other_type,
-    category,
-    partner,
-    thumbnail{
-      ...,
-      "width": asset->metadata.dimensions.width,
-      "height": asset->metadata.dimensions.height
-    }
+  _id, short_title, slug, location, time, type, other_type, category, partner, thumbnail
   }`)
 
 export default async function Work() {

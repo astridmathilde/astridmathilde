@@ -13,6 +13,10 @@
     margin-top: variables.$spacing;
   }
 
+  @media all and (min-width: variables.$screen-xl) {
+    margin-bottom: calc(variables.$spacing / 2);
+  }
+
   a {
     text-decoration: none;
 
