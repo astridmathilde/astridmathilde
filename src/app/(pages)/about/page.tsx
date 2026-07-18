@@ -18,6 +18,7 @@ import img2 from "../../../assets/img/about/clutter.jpg";
 export default async function About() {
   return (
     <>
+    <div className={utils.content_container}>
     <BlockRow align="center" height="auto">
     <BlockColumn width="70" order="0">
     <h2 className={utils.screen_reader_text}>Bio</h2>
@@ -45,9 +46,9 @@ export default async function About() {
     <BlockColumn width="30" order="-1">
     <BlockImage caption="My everyday carry as a design student" url={img2} alt="Everyday carry" width="1242" height="2021" sizes="(min-width: 670px) 50vw, 100vw" priority />
     </BlockColumn>
-    
-    
+  
     </BlockRow>
+    </div>
     </>
   )
 }

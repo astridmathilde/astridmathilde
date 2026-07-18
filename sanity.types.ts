@@ -22,6 +22,7 @@ export type Module = {
   _updatedAt: string;
   _rev: string;
   title?: string;
+  slug?: Slug;
   content?: Array<{
     children?: Array<{
       marks?: Array<string>;
@@ -40,6 +41,12 @@ export type Module = {
     _type: "block";
     _key: string;
   }>;
+};
+
+export type Slug = {
+  _type: "slug";
+  current?: string;
+  source?: string;
 };
 
 export type SanityImageAssetReference = {
@@ -162,12 +169,6 @@ export type SanityImageHotspot = {
   y?: number;
   height?: number;
   width?: number;
-};
-
-export type Slug = {
-  _type: "slug";
-  current?: string;
-  source?: string;
 };
 
 export type Page = {
@@ -333,12 +334,12 @@ export type Geopoint = {
 
 export type AllSanitySchemaTypes =
   | Module
+  | Slug
   | SanityImageAssetReference
   | SanityFileAssetReference
   | Project
   | SanityImageCrop
   | SanityImageHotspot
-  | Slug
   | Page
   | SanityImagePaletteSwatch
   | SanityImagePalette
@@ -351,7 +352,7 @@ export type AllSanitySchemaTypes =
 
 // Source: src/sanity/lib/queries.ts
 // Variable: ALL_PROJECTS
-// Query: *[  _type == "project"  && defined(slug.current)]|order(time.year desc)[0...12]{    _id,    short_title,    slug,    location,    time,    type,    category,    partner,    thumbnail  }
+// Query: *[  _type == "project"  && defined(slug.current)]|order(time.year desc)[0...12]{    _id,    short_title,    slug,    location,    time,    type,    category,    partner,    thumbnail{      ...,      "width": asset->metadata.dimensions.width,      "height": asset->metadata.dimensions.height    }  }
 export type ALL_PROJECTS_RESULT = Array<{
   _id: string;
   short_title: string | null;
@@ -386,12 +387,14 @@ export type ALL_PROJECTS_RESULT = Array<{
     crop?: SanityImageCrop;
     alt?: string;
     _type: "image";
+    width: number | null;
+    height: number | null;
   } | null;
 }>;
 
 // Source: src/sanity/lib/queries.ts
 // Variable: RECENT_PROJECTS
-// Query: *[  _type == "project"  && defined(slug.current)]|order(time.year desc)[0...3]{    _id,    short_title,    slug,    location,    time,    type,    category,    partner,    thumbnail  }
+// Query: *[  _type == "project"  && defined(slug.current)]|order(time.year desc)[0...3]{    _id,    short_title,    slug,    location,    time,    type,    category,    partner,    thumbnail{      ...,      "width": asset->metadata.dimensions.width,      "height": asset->metadata.dimensions.height    }  }
 export type RECENT_PROJECTS_RESULT = Array<{
   _id: string;
   short_title: string | null;
@@ -426,6 +429,8 @@ export type RECENT_PROJECTS_RESULT = Array<{
     crop?: SanityImageCrop;
     alt?: string;
     _type: "image";
+    width: number | null;
+    height: number | null;
   } | null;
 }>;
 
@@ -433,7 +438,7 @@ export type RECENT_PROJECTS_RESULT = Array<{
 import "@sanity/client";
 declare module "@sanity/client" {
   interface SanityQueries {
-    '*[\n  _type == "project"\n  && defined(slug.current)]|order(time.year desc)[0...12]{\n    _id,\n    short_title,\n    slug,\n    location,\n    time,\n    type,\n    category,\n    partner,\n    thumbnail\n  }': ALL_PROJECTS_RESULT;
-    '*[\n  _type == "project"\n  && defined(slug.current)]|order(time.year desc)[0...3]{\n    _id,\n    short_title,\n    slug,\n    location,\n    time,\n    type,\n    category,\n    partner,\n    thumbnail\n  }\n': RECENT_PROJECTS_RESULT;
+    '*[\n  _type == "project"\n  && defined(slug.current)]|order(time.year desc)[0...12]{\n    _id,\n    short_title,\n    slug,\n    location,\n    time,\n    type,\n    category,\n    partner,\n    thumbnail{\n      ...,\n      "width": asset->metadata.dimensions.width,\n      "height": asset->metadata.dimensions.height\n    }\n  }': ALL_PROJECTS_RESULT;
+    '*[\n  _type == "project"\n  && defined(slug.current)]|order(time.year desc)[0...3]{\n    _id,\n    short_title,\n    slug,\n    location,\n    time,\n    type,\n    category,\n    partner,\n    thumbnail{\n      ...,\n      "width": asset->metadata.dimensions.width,\n      "height": asset->metadata.dimensions.height\n    }\n  }\n': RECENT_PROJECTS_RESULT;
   }
 }

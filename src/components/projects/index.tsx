@@ -16,7 +16,7 @@ export default function BlockProjects(project) {
     </ul>
     <p className={style.year}><span className={utils.screen_reader_text}>Year:</span>{project.year}</p>
     </header>
-    <BlockProjectImage image={project.thumbnail} width={project.width} height={project.height} priority="true" alt={project.alt}/>
+    <BlockProjectImage value={project.thumbnail} width={project.width} height={project.height} alt={project.alt}/>
     </article>
     </Link>
     </>

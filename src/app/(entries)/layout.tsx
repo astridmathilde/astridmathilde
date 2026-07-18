@@ -6,6 +6,7 @@ import localFont from 'next/font/local';
 import '../../assets/scss/global.scss';
 import styles from '../../assets/scss/layout.module.scss';
 
+import HeaderEntry from './header';
 import Wrapper from "../wrapper";
 
 export const metadata: Metadata = {
@@ -35,6 +36,8 @@ export default async function Layout({ children }) {
     <ThemeProvider>
     <Wrapper>
     
+    <HeaderEntry pageTitle="hei" />
+
     {children}
     
     <footer id={styles.footerEntry}>

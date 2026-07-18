@@ -2,18 +2,15 @@ import { Image } from 'next-sanity/image';
 import { urlFor } from '../../sanity/lib/image';
 import style from '../image/style.module.scss';
 
-export default function BlockProjectImage(image) {
+export default function BlockProjectImage({value, width, height, alt}) {
   return (
     <figure className={style.image}>
     <Image
-    src={urlFor(image.image).url()}
-    width={image.width}
-    height={image.height}
-    alt={image.alt}
+    src={urlFor(value).url()}
+    width={width}
+    height={height}
+    alt={alt}
     />
-    {image.caption ? (
-      <figcaption>{image.caption}</figcaption>
-    ) : null}
     </figure>
   );
 }
