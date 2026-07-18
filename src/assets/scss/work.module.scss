@@ -10,7 +10,7 @@
   @media all and (min-width: variables.$screen-md) {
     display: grid;
     overflow: hidden;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
     grid-template-rows: max-content;
     grid-auto-rows: max-content;
     gap: calc(variables.$padding / 3) calc(variables.$padding * 2);
@@ -48,5 +48,9 @@
         }
       }
     }
+  }
+
+  @media all and (min-width: variables.$screen-xxl) {
+    grid-template-columns: repeat(3, 1fr);
   }
 }

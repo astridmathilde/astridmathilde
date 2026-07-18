@@ -2,7 +2,7 @@
 
 .display {
   max-width: calc(variables.$container-text - 4ch);
-  margin-top: variables.$spacing;
+  margin-top: calc(variables.$spacing * 0.4);
   margin-bottom: variables.$spacing;
   line-height: 1.35;
   font-size: 1.1em;
@@ -15,16 +15,22 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-bottom: calc(variables.$spacing * 2);
+    margin-top: 0;
+    //margin-bottom: calc(variables.$spacing * 2);
     font-size: 1.3em;
   }
 
   @media all and (min-width: variables.$screen-md) {
-    margin-bottom: calc(variables.$spacing * 0.8);
+    margin-top: calc(variables.$spacing * 0.4);
   }
 
   @media all and (min-width: variables.$screen-lg) {
+    margin-top: variables.$spacing;
     margin-bottom: calc(variables.$spacing * 1.5);
+  }
+
+  @media all and (min-width: variables.$screen-xl) {
+    margin-top: calc(variables.$spacing * 0.7);
   }
 
   p {
