@@ -28,7 +28,7 @@ export default async function EntryLayout({ children, params }) {
     
     <footer id={styles.footerEntry}>
     <Link href="/work"><span aria-hidden="true">{"<-"} </span>Back to all work</Link>
-    <p>© Astrid Mathilde Boberg</p>
+    <p className={"color-subtle"}>© Astrid Mathilde Boberg</p>
     </footer>
     </>
   );

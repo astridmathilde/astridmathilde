@@ -1,7 +1,9 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { sanityFetch } from "../../../../sanity/client";
 import { PortableText } from "next-sanity";
 
+import { getEntry } from "../../../../sanity/lib/data";
 import { ENTRY_QUERY, RELATED_ENTRIES_QUERY } from "../../../../sanity/lib/queries";
 import { categoryLabel, typeLabel } from "../../../../sanity/lib/option-title";
 
@@ -12,13 +14,25 @@ import BlockProjectImage from "../../../../components/project-image";
 import BlockImage from "../../../../components/image";
 import BlockProjects from "../../../../components/projects";
 
-export default async function ProjectPage({params}) {
-  const entry = await sanityFetch({
-    query: ENTRY_QUERY,
-    params: await params,
-    revalidate: 60
-  });
-  
+
+export async function generateMetadata({
+  params,
+}: {
+  params: { slug: string } }): Promise<Metadata> {
+  const entry = await getEntry(params);
+  return {
+    title: entry.short_title,
+    description: entry.description,
+  }
+}
+
+export default async function ProjectPage({
+  params,
+}: {
+  params: Promise<{ slug: string }>
+}) {
+  const entry = await getEntry(params);
+
   const moreEntries = await sanityFetch({
     query: RELATED_ENTRIES_QUERY,
     params: await params,
