@@ -5,13 +5,13 @@ import style from '../image/style.module.scss';
 
 export default function BlockProjectImage({value}) {
   const {width, height} = getImageDimensions(value); 
-
+  
   return (
     <figure className={style.image}>
     <Image
     src={urlFor(value).url()} 
     alt={value.alt || ""}
-    loading="lazy"
+    loading={value.loading || "lazy"}
     width={width}
     height={height}
     />

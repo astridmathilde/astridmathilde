@@ -3,7 +3,7 @@
 import { usePathname } from "next/navigation";
 import { useParams } from "next/navigation";
 import Link from "next/link";
-import styles from "../../assets/scss/layout.module.scss";
+import styles from "../../../../assets/scss/layout.module.scss";
 
 export default function HeaderEntry({pageTitle}) {
   const params = useParams();
