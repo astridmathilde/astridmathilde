@@ -110,7 +110,7 @@
     }
 
     .content {
-      margin-top: variables.$spacing / 2;
+      margin-top: calc(variables.$spacing / 2);
 
       @media all and (min-width: variables.$screen-md) {
         margin-top: 0;

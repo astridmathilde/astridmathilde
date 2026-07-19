@@ -1,9 +1,13 @@
 @use "../base/variables";
 
 #content {
-  margin-top: 6vh;
+  margin-top: calc(6vh + (variables.$padding * 2));
   margin-bottom: variables.$footer-height;
   overflow-x: hidden;
+
+  @media all and (min-width: variables.$screen-sm) {
+    margin-top: 6vh;
+  }
 
   @media all and (min-width: variables.$screen-md) {
     margin-top: variables.$spacing;
