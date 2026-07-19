@@ -1,7 +1,8 @@
 import Link from "next/link";
-import { client } from "../../../../sanity/client";
+import { sanityFetch } from "../../../../sanity/client";
 import { PortableText } from "next-sanity";
 
+import { ENTRY_QUERY, RELATED_ENTRIES_QUERY } from "../../../../sanity/lib/queries";
 import { categoryLabel, typeLabel } from "../../../../sanity/lib/option-title";
 
 import style from "../../../../assets/scss/project.module.scss";
@@ -11,17 +12,18 @@ import BlockProjectImage from "../../../../components/project-image";
 import BlockImage from "../../../../components/image";
 import BlockProjects from "../../../../components/projects";
 
-const entry_QUERY = `*[_type == "project" && slug.current == $slug][0]`;
-  const moreEntries_QUERY = `*[_type == "project" && slug.current != $slug] | order(time.year desc)[0...3]{
-    _id, short_title, slug, location, time, type, other_type, category, partner, thumbnail
-  }`;
-
-const options = { next: { revalidate: 30 } };
-
 export default async function ProjectPage({params}) {
-  const entry = await client.fetch(entry_QUERY, await params, options);
-
-  const moreEntries = await client.fetch(moreEntries_QUERY, await params, options);
+  const entry = await sanityFetch({
+    query: ENTRY_QUERY,
+    params: await params,
+    revalidate: 60
+  });
+  
+  const moreEntries = await sanityFetch({
+    query: RELATED_ENTRIES_QUERY,
+    params: await params,
+    revalidate: 60
+  });
   
   const components = {
     types: {
@@ -39,7 +41,7 @@ export default async function ProjectPage({params}) {
     </header>
     
     <div className={style.thumbnail}>
-    <BlockProjectImage value={entry.thumbnail}/>
+    <BlockProjectImage value={entry.thumbnail} />
     </div>
     
     <div className={style.container}>

@@ -15,6 +15,13 @@
 export declare const internalGroqTypeReferenceTo: unique symbol;
 
 // Source: schema.json
+export type ProjectReference = {
+  _ref: string;
+  _type: "reference";
+  _weak?: boolean;
+  [internalGroqTypeReferenceTo]?: "project";
+};
+
 export type Module = {
   _id: string;
   _type: "module";
@@ -41,6 +48,11 @@ export type Module = {
     _type: "block";
     _key: string;
   }>;
+  project_selector?: Array<
+    {
+      _key: string;
+    } & ProjectReference
+  >;
 };
 
 export type Slug = {
@@ -333,6 +345,7 @@ export type Geopoint = {
 };
 
 export type AllSanitySchemaTypes =
+  | ProjectReference
   | Module
   | Slug
   | SanityImageAssetReference
@@ -349,96 +362,3 @@ export type AllSanitySchemaTypes =
   | SanityAssetSourceData
   | SanityImageAsset
   | Geopoint;
-
-// Source: src/sanity/lib/queries.ts
-// Variable: ALL_PROJECTS
-// Query: *[  _type == "project"  && defined(slug.current)]|order(time.year desc)[0...12]{    _id,    short_title,    slug,    location,    time,    type,    category,    partner,    thumbnail{      ...,      "width": asset->metadata.dimensions.width,      "height": asset->metadata.dimensions.height    }  }
-export type ALL_PROJECTS_RESULT = Array<{
-  _id: string;
-  short_title: string | null;
-  slug: Slug | null;
-  location: {
-    name?: string;
-    website?: string;
-  } | null;
-  time: {
-    duration?: string;
-    year?: number;
-  } | null;
-  type: "client" | "internship" | "other" | "personal" | "studio" | null;
-  category:
-    | "ai-tool"
-    | "app"
-    | "digital-tool"
-    | "graphic-design"
-    | "system-interface"
-    | "web-application"
-    | "website"
-    | null;
-  partner: {
-    label?: string;
-    value?: string;
-    link?: string;
-  } | null;
-  thumbnail: {
-    asset?: SanityImageAssetReference;
-    media?: unknown;
-    hotspot?: SanityImageHotspot;
-    crop?: SanityImageCrop;
-    alt?: string;
-    _type: "image";
-    width: number | null;
-    height: number | null;
-  } | null;
-}>;
-
-// Source: src/sanity/lib/queries.ts
-// Variable: RECENT_PROJECTS
-// Query: *[  _type == "project"  && defined(slug.current)]|order(time.year desc)[0...3]{    _id,    short_title,    slug,    location,    time,    type,    category,    partner,    thumbnail{      ...,      "width": asset->metadata.dimensions.width,      "height": asset->metadata.dimensions.height    }  }
-export type RECENT_PROJECTS_RESULT = Array<{
-  _id: string;
-  short_title: string | null;
-  slug: Slug | null;
-  location: {
-    name?: string;
-    website?: string;
-  } | null;
-  time: {
-    duration?: string;
-    year?: number;
-  } | null;
-  type: "client" | "internship" | "other" | "personal" | "studio" | null;
-  category:
-    | "ai-tool"
-    | "app"
-    | "digital-tool"
-    | "graphic-design"
-    | "system-interface"
-    | "web-application"
-    | "website"
-    | null;
-  partner: {
-    label?: string;
-    value?: string;
-    link?: string;
-  } | null;
-  thumbnail: {
-    asset?: SanityImageAssetReference;
-    media?: unknown;
-    hotspot?: SanityImageHotspot;
-    crop?: SanityImageCrop;
-    alt?: string;
-    _type: "image";
-    width: number | null;
-    height: number | null;
-  } | null;
-}>;
-
-// Query TypeMap
-import "@sanity/client";
-declare module "@sanity/client" {
-  interface SanityQueries {
-    '*[\n  _type == "project"\n  && defined(slug.current)]|order(time.year desc)[0...12]{\n    _id,\n    short_title,\n    slug,\n    location,\n    time,\n    type,\n    category,\n    partner,\n    thumbnail{\n      ...,\n      "width": asset->metadata.dimensions.width,\n      "height": asset->metadata.dimensions.height\n    }\n  }': ALL_PROJECTS_RESULT;
-    '*[\n  _type == "project"\n  && defined(slug.current)]|order(time.year desc)[0...3]{\n    _id,\n    short_title,\n    slug,\n    location,\n    time,\n    type,\n    category,\n    partner,\n    thumbnail{\n      ...,\n      "width": asset->metadata.dimensions.width,\n      "height": asset->metadata.dimensions.height\n    }\n  }\n': RECENT_PROJECTS_RESULT;
-  }
-}
