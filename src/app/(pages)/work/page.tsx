@@ -1,7 +1,5 @@
-import { sanityFetch } from "../../../sanity/client";
 import type { Metadata } from "next";
-
-import { ENTRIES_QUERY } from "../../../sanity/lib/queries";
+import { getAllEntries } from "../../../sanity/lib/data";
 import { categoryLabel, typeLabel } from "../../../sanity/lib/option-title";
 import BlockProjects from "../../../components/projects";
 
@@ -15,10 +13,7 @@ export const metadata: Metadata = {
 }
 
 export default async function Work() {
-  const projects = await sanityFetch({
-  query: ENTRIES_QUERY,
-  tags: ['entries'],
-})
+  const projects = await getAllEntries();
 
   return (
     <>

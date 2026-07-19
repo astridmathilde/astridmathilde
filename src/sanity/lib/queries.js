@@ -2,7 +2,7 @@ import { defineQuery } from "next-sanity";
 
 export const ENTRIES_QUERY = defineQuery(
   `*[_type == "project"
-  && defined(slug.current)]|order(time.year desc)[0...12]{
+  && defined(slug.current)]|order(time.year desc){
   _id, short_title, slug, location, time, type, other_type, category, partner, thumbnail
   }`
 );
@@ -12,7 +12,7 @@ export const ENTRY_QUERY = defineQuery(
 );
 
 export const RELATED_ENTRIES_QUERY = defineQuery(
-  `*[_type == "project" && slug.current != $slug] | order(time.year desc)[0...3]{
+  `*[_type == "project" && slug.current != $slug] | order(time.year desc){
     _id, short_title, slug, location, time, type, other_type, category, partner, thumbnail
   }`
 );

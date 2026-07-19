@@ -1,10 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { sanityFetch } from "../../../../sanity/client";
 import { PortableText } from "next-sanity";
 
-import { getEntry } from "../../../../sanity/lib/data";
-import { ENTRY_QUERY, RELATED_ENTRIES_QUERY } from "../../../../sanity/lib/queries";
+import { getEntry, getMoreEntries } from "../../../../sanity/lib/data";
 import { categoryLabel, typeLabel } from "../../../../sanity/lib/option-title";
 
 import style from "../../../../assets/scss/project.module.scss";
@@ -32,12 +30,8 @@ export default async function ProjectPage({
   params: Promise<{ slug: string }>
 }) {
   const entry = await getEntry(params);
-
-  const moreEntries = await sanityFetch({
-    query: RELATED_ENTRIES_QUERY,
-    params: await params,
-    revalidate: 60
-  });
+  const moreEntries = await getMoreEntries(params);
+  const randomEntries = moreEntries.sort(() => 0.5 - Math.random()).slice(0, 3);
   
   const components = {
     types: {
@@ -143,7 +137,7 @@ export default async function ProjectPage({
 
 <h2 className={utils.sectionTitle}>Keep looking</h2>
 <div className={style.projectNav}>
-{moreEntries.map((entry) => (
+{randomEntries.map((entry) => (
   <BlockProjects key={entry._id} id={entry._id} slug={entry.slug} shortTitle={entry.short_title} category={categoryLabel[entry.category]} type={entry.type === 'other' ? entry.other_type : typeLabel[entry.type]} client={entry.partner?.value} year={entry.time.year} alt={entry.short_title} thumbnail={entry.thumbnail} width={600} height={300} priority="true" sizes="(min-width: 670px) 50vw, 100vw" />
 ))}
 </div>
