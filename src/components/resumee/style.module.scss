@@ -2,13 +2,14 @@
 
 .entry {
   display: flex;
-  max-width: variables.$container-text + 8ch;
+  //  max-width: variables.$container-text + 8ch;
   flex-direction: row-reverse;
-  justify-content: flex-end;
+  justify-content: space-between;
   align-items: baseline;
   font-size: 0.9em;
 
   .header {
+    width: 100%;
     padding-left: 1em;
 
     @media all and (min-width: variables.$screen-sm) {
@@ -21,10 +22,14 @@
   }
 
   .time {
-    width: 20ch;
+    width: 12ch;
     font-size: 0.85em;
 
     @media all and (min-width: variables.$screen-sm) {
+      width: 10ch;
+    }
+
+    @media all and (min-width: variables.$screen-md) {
       width: 15ch;
     }
 
