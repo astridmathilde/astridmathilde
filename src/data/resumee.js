@@ -1,5 +1,14 @@
 export const experience = [
   {
+    "id": 11,
+    "time": "Dec 2024–Jan 2026",
+    "position": "Designer and developer",
+    "location": {
+      "name": "Self-employed"
+    },
+    "description": "Worked with design and development of websites and digital tools for companies in Northern Norway, and was the product leader and CTO of a startup company."
+  },
+  {
     "id": 10,
     "time": "Jun–Aug 2025",
     "position": "Designer",
@@ -132,12 +141,12 @@ export const skills = [
     [
       "Accessibility",
       "Design Systems",
-      "Content Design",
       "Interaction Design",
       "Systems Oriented Design",
       "Service Design",
       "Product Development",
-      "Behavioral Design"
+      "Behavioral Design",
+      "Strategic design"
     ]
   },
   {
@@ -145,11 +154,11 @@ export const skills = [
     "title": "Technology",
     "keywords":
     [
+      "Generative AI",
       "HTML",
       "SCSS",
       "PHP",
       "Python",
-      "JSON",
       "Javascript",
       "React",
       "Next.js"
@@ -160,20 +169,20 @@ export const skills = [
     "title": "Software",
     "keywords":
     [
+      "Affinity",
       "Adobe Creative Cloud",
       "Figma",
-      "Blender",
       "Notion",
       "WordPress",
       "Sanity",
       "Git",
-      "Visual Studio Code",
+      "Claude Code"
     ]
   }
 ];
 
 export const achievements = [
-    {
+  {
     "id": 2,
     "title": "Prize for Material Exploration and Aesthetic Experience",
     "location": {

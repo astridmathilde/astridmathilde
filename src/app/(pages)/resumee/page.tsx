@@ -20,8 +20,13 @@ export default function About() {
     
     <h3>Experience</h3>
     {experience.map((experience) => (
-      <BlockResumee key={experience.id} position={experience.position} locationUrl={experience.location.url} locationName={experience.location.name} description={experience.description} time={experience.time} />
+      <BlockResumee key={experience.id} position={experience.position} locationUrl={experience.location?.url} locationName={experience.location.name} description={experience.description} time={experience.time} />
     ))}   
+    
+    <h3>Awards</h3>
+    {achievements.map((achievement) => (
+      <BlockResumee key={achievement.id} position={achievement.title} locationUrl={achievement.location.url} locationName={achievement.location.name} description={achievement.description} time={achievement.year} />
+    ))}
     
     <div className={skillStyle.container}>
     {skills.map((skills) => (
@@ -35,11 +40,6 @@ export default function About() {
       </div>
     ))}
     </div>
-    
-    <h3>Awards</h3>
-    {achievements.map((achievement) => (
-      <BlockResumee key={achievement.id} position={achievement.title} locationUrl={achievement.location.url} locationName={achievement.location.name} description={achievement.description} time={achievement.year} />
-    ))}
     </>
   )
 }
