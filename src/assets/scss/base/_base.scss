@@ -71,14 +71,9 @@ img {
 }
 
 ul {
-  margin-inline-start: 0.5em;
-  padding-inline-start: 0;
+  padding-inline-start: 1em;
   list-style-type: circle;
-  list-style-position: inside;
-
-  @media all and (min-width: variables.$screen-xs) {
-    margin-inline-start: 0.1em;
-  }
+  list-style-position: outside;
 
   li {
     margin: 0;
