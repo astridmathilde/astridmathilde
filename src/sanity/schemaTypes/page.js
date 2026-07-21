@@ -19,9 +19,56 @@ export default defineType({
       },
     }),
     defineField({
+      title: 'Introduction',
+      name: 'intro',
+      type: 'array',
+      hidden: ({document}) => {
+        return document?.slug?.current != 'index'
+      },
+      of: [
+        defineArrayMember({
+          type: 'block',
+        }),
+      ],
+    }),
+    defineField({
+      title: 'Projects',
+      name: 'project_selector',
+      hidden: ({document}) => {
+        return document?.slug?.current !== 'index'
+      },
+      type: 'array',
+      of: [
+        {
+          type: 'reference',
+          to: [
+            {
+              type: 'project'
+            }
+          ],
+        }
+      ],
+    }),
+    defineField({
+      title: 'Contact',
+      name: 'contact',
+      type: 'array',
+      hidden: ({document}) => {
+        return document?.slug?.current != 'index'
+      },
+      of: [
+        defineArrayMember({
+          type: 'block',
+        }),
+      ],
+    }),
+    defineField({
       title: 'Content',
       name: 'content',
       type: 'array',
+      hidden: ({document}) => {
+        return document?.slug?.current == 'index'
+      },
       of: [
         defineArrayMember({
           type: 'block',

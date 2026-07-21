@@ -1,5 +1,6 @@
 import { defineQuery } from "next-sanity";
 
+/* ENTRIES */
 export const ENTRIES_QUERY = defineQuery(
   `*[_type == "project"
   && defined(slug.current)]|order(time.year desc){
@@ -23,28 +24,21 @@ export const ENTRY_TITLE_QUERY = defineQuery(
     }`
 );
 
-/* INDEX */ 
-export const INDEX_INTRO = defineQuery(
-  `*[_type == "module" && slug.current == "intro"][0]`
-);
-
-export const INDEX_ENTRIES = defineQuery(
-  `*[_type == "module" && slug.current == "work"][0]{
-  project_selector[]->{
+/* PAGES */ 
+export const INDEX_QUERY = defineQuery(
+  `*[_type == "page" && slug.current == "index"][0]{
+  intro, contact, further_discovery,
+    project_selector[]->{
     _id, short_title, slug, location, time, type, category, partner, thumbnail
   }
-}`
+    }`
 );
 
-export const NOW = defineQuery(
+export const NOW_QUERY = defineQuery(
+  `*[_type == "page" && slug.current == "now"][0]`
+);
+
+/* MODULES */
+export const STATUS_QUERY = defineQuery(
   `*[_type == "module" && slug.current == "now"][0]`
 );
-
-export const CONTACT = defineQuery(
-  `*[_type == "module" && slug.current == "contact"][0]`
-);
-
-export const INDEX_DISCOVERY = defineQuery(
-  `*[_type == "page" && slug.current == "index"][0]`
-);
-
