@@ -3,6 +3,8 @@ import type { Metadata } from "next";
 import { PortableText } from "next-sanity";
 
 import BlockImage from "../../../components/image";
+import BlockRow from "../../../components/row";
+import BlockColumn from "../../../components/column";
 import BlockResumee from "../../../components/resumee";
 import { experience, education, skills, achievements } from "../../../data/resumee";
 
@@ -28,10 +30,19 @@ export default async function About() {
   return (
     <>
     <h2 className={utils.screen_reader_text}>{bio.title}</h2>
+    <BlockRow align="center" height="auto">
+    <BlockColumn width="70" order="0">
     <PortableText value={bio.content} components={components} />
-
+    </BlockColumn>
+    {bio.portrait ? (
+      <BlockColumn width="30" order="0">
+      <BlockImage value={bio.portrait} alt="Astrid Mathilde Boberg" />
+      </BlockColumn>
+    ) : null }
+    </BlockRow>
+    
     <h2 className={utils.screen_reader_text}>Resumee</h2>
-
+    
     <h3>Education</h3>
     {education.map((education) => (
       <BlockResumee key={education.id} position={education.grade} locationUrl={education.location.url} locationName={education.location.name} description={education.description} time={education.time} />
@@ -59,6 +70,13 @@ export default async function About() {
       </div>
     ))}
     </div>
+    
+    {bio.further_discovery ? (
+      <>
+      <h2 className={utils.sectionTitle}>Further discovery</h2>
+      <PortableText value={bio.further_discovery} />
+      </>
+    ) : ""}
     </>
   )
 }
