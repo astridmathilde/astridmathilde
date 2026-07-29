@@ -105,6 +105,21 @@ export default defineType({
       ],
     }),
     defineField({
+      title: 'Portrait',
+      name: 'portrait',
+      type: 'image',
+      hidden: ({document}) => {
+        return document?.slug?.current != 'bio'
+      },
+      fields: [
+        defineField({
+          name: 'alt',
+          type: 'string',
+          title: 'Alternative text',
+        }),
+      ],
+    }),
+    defineField({
       title: 'Further discovery',
       name: 'further_discovery',
       type: 'array',
