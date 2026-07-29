@@ -38,7 +38,15 @@ export const NOW_QUERY = defineQuery(
   `*[_type == "page" && slug.current == "now"][0]`
 );
 
+export const BIO_QUERY = defineQuery(
+  `*[_type == "page" && slug.current == "bio"][0]`
+);
+
 /* MODULES */
 export const STATUS_QUERY = defineQuery(
   `*[_type == "module" && slug.current == "now"][0]`
+);
+
+export const LINKS_QUERY = defineQuery(
+  `*[_type == "module" && slug.current == "links"][0]`
 );

@@ -17,7 +17,7 @@ export default function PageLayout({ children }) {
     <p className={"color-subtle"}>© Astrid Mathilde Boberg</p>
     <nav id={styles.secondaryNav}>
     <ul>
-    <li key="resumee"><Link href="/resumee">Resumee</Link></li>
+    <li key="links"><Link href="/links">Links</Link></li>
     <li key="colophon"><Link href="/colophon">Colophon</Link></li>
     </ul>
     </nav>

@@ -1,18 +1,37 @@
+import { getBio } from "../../../sanity/lib/data";
 import type { Metadata } from "next";
-import skillStyle from "../../../components/skills/style.module.scss";
+import { PortableText } from "next-sanity";
+
+import BlockImage from "../../../components/image";
 import BlockResumee from "../../../components/resumee";
 import { experience, education, skills, achievements } from "../../../data/resumee";
 
-const pageTitle = 'My resumee';
+import utils from "../../../assets/scss/utils.module.scss";
+import skillStyle from "../../../components/skills/style.module.scss";
+
+const pageTitle = 'Bio';
 
 export const metadata: Metadata = {
   title: pageTitle,
 }
 
-
-export default function About() {
+export default async function About() {
+  const bio = await getBio();
+  const components = {
+    types: {
+      image: ({value}) => (
+        <BlockImage value={value.asset._ref} caption={value.caption} />
+      ),
+    },
+  }
+  
   return (
     <>
+    <h2 className={utils.screen_reader_text}>{bio.title}</h2>
+    <PortableText value={bio.content} components={components} />
+
+    <h2 className={utils.screen_reader_text}>Resumee</h2>
+
     <h3>Education</h3>
     {education.map((education) => (
       <BlockResumee key={education.id} position={education.grade} locationUrl={education.location.url} locationName={education.location.name} description={education.description} time={education.time} />
