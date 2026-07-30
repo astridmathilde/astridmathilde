@@ -1,6 +1,6 @@
 import { cache } from 'react'
 import { sanityFetch } from '../client'
-import { ENTRY_QUERY, ENTRIES_QUERY, RELATED_ENTRIES_QUERY, INDEX_QUERY, NOW_QUERY, BIO_QUERY, STATUS_QUERY, LINKS_QUERY } from './queries';
+import { ENTRY_QUERY, ENTRIES_QUERY, RELATED_ENTRIES_QUERY, INDEX_QUERY, NOW_QUERY, BIO_QUERY, STATUS_QUERY, LINKS_QUERY, COLOPHON_QUERY } from './queries';
 
 /* PROJECTS */
 export const getEntry = cache(async (params) => {
@@ -49,6 +49,14 @@ export const getNow = cache(async () => {
 export const getBio = cache(async () => {
   const result = await sanityFetch({
     query: BIO_QUERY,
+    tags: ['page']
+  });
+  return result;
+});
+
+export const getColophon = cache(async () => {
+  const result = await sanityFetch({
+    query: COLOPHON_QUERY,
     tags: ['page']
   });
   return result;

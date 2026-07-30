@@ -42,6 +42,10 @@ export const BIO_QUERY = defineQuery(
   `*[_type == "page" && slug.current == "bio"][0]`
 );
 
+export const COLOPHON_QUERY = defineQuery(
+  `*[_type == "page" && slug.current == "colophon"][0]`
+);
+
 /* MODULES */
 export const STATUS_QUERY = defineQuery(
   `*[_type == "module" && slug.current == "now"][0]`
