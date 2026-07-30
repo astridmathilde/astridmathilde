@@ -1,0 +1,51 @@
+@use "./base/variables";
+
+.blikkjournal {
+  text-decoration: none;
+
+  .link {
+    text-decoration: underline;
+  }
+
+  @media all and (max-width: variables.$screen-md) {
+    opacity: 1 !important;
+    filter: alpha(opacity=100) !important;
+  }
+
+  &:hover,
+  &:focus {
+    @media all and (min-width: variables.$screen-md) {
+      opacity: 1 !important;
+      filter: alpha(opacity=100) !important;
+    }
+  }
+
+  figure {
+    max-width: 70%;
+    margin: calc(variables.$spacing / 2) auto 0 auto;
+    padding-bottom: variables.$padding;
+    rotate: -10deg;
+
+    @media all and (min-width: variables.$screen-md) {
+      max-width: 100%;
+      margin-top: 0;
+      padding: 0;
+    }
+
+    @media all and (min-width: variables.$screen-lg) {
+      max-width: 85%;
+    }
+
+    @media all and (min-width: variables.$screen-xl) {
+      max-width: 70%;
+    }
+
+    figcaption {
+      @media all and (max-width: variables.$screen-md),
+        all and (min-width: 1220px) {
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+  }
+}
