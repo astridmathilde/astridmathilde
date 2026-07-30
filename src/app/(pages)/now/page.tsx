@@ -28,49 +28,49 @@ export default async function Now() {
     const currentYear = today.getFullYear();
     const nextYear = currentYear + 1;
     
-    const dayBeforeSummer = new Date(currentYear + "-06-20");
-    const startOfSummer = new Date(currentYear + "-06-21");
-    const dayBeforeSummerEnds = new Date(currentYear + "-09-21");
-    const endOfSummer = new Date(currentYear + "-09-22");
-    const nextSummer = new Date (nextYear + "-06-21");
+    const dayBeforeSummer = new Date(currentYear + "-06-20").getTime();
+    const startOfSummer = new Date(currentYear + "-06-21").getTime();
+    const dayBeforeSummerEnds = new Date(currentYear + "-09-21").getTime();
+    const endOfSummer = new Date(currentYear + "-09-22").getTime();
+    const nextSummer = new Date (nextYear + "-06-21").getTime();
     
     // First day of summer 
-    if (today.getTime() === startOfSummer.getTime()) {
+    if (today.getTime() === startOfSummer) {
       return "This is the first day of summer";
     }
     
     // The day before summer starts
-    else if (today.getTime() === dayBeforeSummer.getTime()) {
+    else if (today.getTime() === dayBeforeSummer) {
       return "Tomorrow it is summer";
     }
     
     // The day before summer ends
-    else if (today.getTime() === dayBeforeSummerEnds.getTime()) {
+    else if (today.getTime() === dayBeforeSummerEnds) {
       return "Tomorrow is the last day of summer";
     }
     
     // Last day of summer 
-    else if (today.getTime() === endOfSummer.getTime()) {
+    else if (today.getTime() === endOfSummer) {
       return "This is the last day of summer";
     }
     
     // Days left of summer
-    else if (today >= startOfSummer && today <= endOfSummer) {
-      const numberOfDays = Math.round((endOfSummer - today) / dayTime);
+    else if (today.getTime() >= startOfSummer && today.getTime() <= endOfSummer) {
+      const numberOfDays = Math.round((endOfSummer - today.getTime()) / dayTime);
       
       return "It is " + numberOfDays + " days left of summer";
     }
     
     // Days until summer
-    if (today >= startOfSummer && today <= endOfSummer) {
-      const numberOfDays = Math.round((today - startOfSummer) / dayTime);
+    if (today.getTime() >= startOfSummer && today.getTime() <= endOfSummer) {
+      const numberOfDays = Math.round((today.getTime() - startOfSummer) / dayTime);
       
       return "It is " + numberOfDays + " days until summer";
     }
     
     // Days until next summer 
     else {
-      const numberOfDays = Math.round((nextSummer - today) / dayTime);
+      const numberOfDays = Math.round((nextSummer - today.getTime()) / dayTime);
       
       return "It is " + numberOfDays + " days until summer";
     }  
