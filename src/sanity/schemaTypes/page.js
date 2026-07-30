@@ -117,6 +117,11 @@ export default defineType({
           type: 'string',
           title: 'Alternative text',
         }),
+        defineField({
+          name: 'caption',
+          type: 'string',
+          title: 'Caption',
+        }),
       ],
     }),
     defineField({
