@@ -101,7 +101,7 @@ export default async function Now() {
       const country = entry.properties?.Country?.select?.name;
       
       return (
-        <a className={"lower-opacity " + styles.blikkjournal} href="https://blikk.directory" rel="external" target="_blank" title="See my blikkjournal!">
+        <a key={entry.id} className={"lower-opacity " + styles.blikkjournal} href="https://blikk.directory" rel="external" target="_blank" title="See my blikkjournal!">
         <figure key={entryId}>
         <Image src={imgUrl} alt="Latest image from my blikkjournal" style={{maxWidth: "100%", height: "auto"}} width="600" height="600" />
         <figcaption>

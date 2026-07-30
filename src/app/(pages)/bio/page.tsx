@@ -39,11 +39,11 @@ export default async function About() {
     </BlockColumn>
     <BlockColumn width="30" order="0">
     {bio.portrait ? (
-      <BlockImage value={bio.portrait} alt="Astrid Mathilde Boberg" />
+      <BlockImage value={bio.portrait} caption="" alt="Astrid Mathilde Boberg" />
     ) : (
       <figure>
-        <Image src={imgAbout} style={{maxWidth: "100%", height: "auto"}} width="600" height="600" />
-        <figcaption>Walking outside :)</figcaption>
+        <Image alt="Astrid Mathilde Boberg" src={imgAbout} style={{maxWidth: "100%", height: "auto"}} width="600" height="600" />
+        <figcaption>Walking outside {":)"}</figcaption>
       </figure>
        
     ) }
@@ -69,7 +69,7 @@ export default async function About() {
     
     <div className={skillStyle.container}>
     {skills.map((skills) => (
-      <div>
+      <div key={skills.id}>
       <h3>{skills.title}</h3>
       <ul>
       {skills.keywords.sort().map((keyword) => (
