@@ -1,4 +1,5 @@
 import { Client } from "@notionhq/client";
+import { isFullPage } from '@notionhq/client'
 import { unstable_cache } from "next/cache";
 
 const notion = new Client({
@@ -16,7 +17,7 @@ export async function getBlikkjournal() {
   });
   
   return {
-    results: response.results,
+    results: response.results.filter(isFullPage),
   };
 }
 

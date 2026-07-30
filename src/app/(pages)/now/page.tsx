@@ -95,10 +95,10 @@ export default async function Now() {
     {blikkjournal.map((entry) => {
       const entryId = entry.id;
       const imgUrl = `/api/images/${entryId}`;
-      const title = entry.properties?.Title?.title[0]?.plain_text;
-      const location = entry.properties?.Place?.select?.name;
-      const city = entry.properties?.City?.select?.name;
-      const country = entry.properties?.Country?.select?.name;
+      const title = (entry.properties.Title as any)?.title?.[0]?.plain_text;
+      const location = (entry.properties.Place as any)?.select?.name;
+      const city = (entry.properties.City as any)?.select?.name;
+      const country = (entry.properties.Country as any)?.select?.name;
       
       return (
         <a key={entry.id} className={"lower-opacity " + styles.blikkjournal} href="https://blikk.directory" rel="external" target="_blank" title="See my blikkjournal!">
