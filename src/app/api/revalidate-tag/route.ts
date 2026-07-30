@@ -31,7 +31,7 @@ export async function POST(req: NextRequest) {
         { status: 400 }
       )
     }
-    revalidateTag(body._type)
+    revalidateTag(body._type, null);
     return NextResponse.json({ body })
   } catch (err: unknown) {
     console.error(err)
