@@ -1,0 +1,114 @@
+@use "variables";
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-feature-settings: "cv05", "cv10", "cv01", "cv02", "cv03", "cv04";
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 8px;
+  line-height: 1.4;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+  text-transform: lowercase;
+
+  @media all and (min-width: variables.$screen-xs) {
+    font-size: 12px;
+  }
+
+  @media all and (min-width: variables.$screen-sm) {
+    font-size: 14px;
+  }
+
+  @media all and (min-width: variables.$screen-md) {
+    font-size: 16px;
+  }
+
+  @media all and (min-width: variables.$screen-lg) {
+    font-size: 20px;
+  }
+
+  @media all and (min-width: variables.$screen-xl) {
+    font-size: 24px;
+  }
+
+  @media all and (min-width: variables.$screen-xxl) {
+    font-size: 28px;
+  }
+
+  @media all and (min-width: variables.$screen-xxxl) {
+    font-size: 32px;
+  }
+}
+
+a {
+  font-size: inherit;
+  font-weight: inherit;
+  text-decoration: underline;
+  text-decoration-thickness: inherit;
+  color: inherit;
+  transition: all 0.1s ease-in-out;
+
+  &:hover,
+  &:focus {
+    transition: all 0.18s ease-in-out;
+  }
+}
+
+figure {
+  margin: 0;
+}
+
+img {
+  border-radius: variables.$border-radius;
+}
+
+ul {
+  padding-inline-start: 1.5em;
+  list-style-type: circle;
+  list-style-position: outside;
+
+  li {
+    margin: 0;
+    padding: 0;
+
+    + li {
+      padding-top: 0.5em;
+
+      @media all and (min-width: variables.$screen-md) {
+        padding-top: 0.3em;
+      }
+    }
+  }
+}
+
+nav {
+  ul {
+    margin-top: 0;
+
+    li {
+      + li {
+        @media all and (max-width: variables.$screen-md) {
+          padding-top: 0;
+        }
+      }
+    }
+
+    a {
+      display: inline-flex;
+      align-items: center;
+      min-height: 28px;
+    }
+  }
+}
+
+address {
+  font-style: normal;
+}

@@ -1,10 +1,22 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {
-}
-const path = require('path')
 
-module.exports = {
+import path from 'path';
+import { fileURLToPath } from 'url';
+
+const __dirname = fileURLToPath(new URL('.', import.meta.url));
+
+const nextConfig = {
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'cdn.sanity.io',
+      },
+    ],
+  },
   turbopack: {
     root: path.join(__dirname, '..'),
   },
-}
+};
+
+export default nextConfig;

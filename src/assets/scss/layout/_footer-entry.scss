@@ -1,0 +1,28 @@
+@use "../base/variables";
+
+#footerEntry {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: calc(variables.$spacing * 2);
+  margin-bottom: variables.$padding;
+  font-size: 1em;
+  text-transform: lowercase;
+
+  @media all and (min-width: variables.$screen-md) {
+    margin-top: variables.$spacing;
+  }
+
+  @media all and (min-width: variables.$screen-xl) {
+    margin-bottom: calc(variables.$spacing / 2);
+  }
+
+  a {
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+    }
+  }
+}

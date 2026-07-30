@@ -1,0 +1,66 @@
+@use "variables";
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul {
+  max-width: variables.$container-text;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+  font-size: 1em;
+  font-weight: inherit;
+  line-height: 130%;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-transform: lowercase;
+}
+
+h2,
+h3 {
+  margin-bottom: 0.7em;
+}
+
+h2 {
+  margin-top: variables.$spacing;
+
+  &:first-of-type {
+    margin-top: 0;
+  }
+}
+
+h3 {
+  //margin-top: calc(variables.$spacing * 0.8);
+  margin-top: variables.$spacing;
+}
+
+h4 {
+  margin-top: calc(variables.$spacing * 0.6);
+  margin-bottom: 0;
+  font-size: 0.9em;
+}
+
+figcaption {
+  font-size: 0.6em;
+  text-transform: lowercase;
+
+  p {
+    margin: 0;
+  }
+}

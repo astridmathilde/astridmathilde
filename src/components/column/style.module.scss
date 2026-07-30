@@ -1,0 +1,46 @@
+@use "../../assets/scss/base/variables";
+
+.column {
+  p:first-of-type,
+  h2:first-of-type {
+    margin-top: 0;
+  }
+
+  + .column {
+    @media all and (max-width: variables.$screen-md) {
+      padding-top: variables.$padding;
+
+      &:has(h2),
+      &:has(h3),
+      &:has(h4) {
+        padding-top: 0;
+      }
+    }
+  }
+
+  @media all and (max-width: variables.$screen-md) {
+    width: 100% !important;
+
+    &:nth-child(1) {
+      margin-top: 0;
+
+      h3,
+      h2 {
+        &:nth-child(1) {
+          margin-top: 0;
+        }
+      }
+    }
+
+    &:nth-child(1):has(:not(h2)),
+    &:nth-child(1):has(:not(h3)) {
+      margin-top: variables.$spacing;
+    }
+  }
+
+  &:has(h2),
+  &:has(h3),
+  &:has(h4) {
+    margin-top: 0;
+  }
+}

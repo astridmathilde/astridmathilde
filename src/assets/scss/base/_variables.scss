@@ -1,0 +1,57 @@
+// Breakpoints
+$screen-xs: 236px;
+$screen-sm: 400px;
+$screen-md: 608px;
+$screen-lg: 1016px;
+$screen-xl: 1408px;
+$screen-xxl: 1864px;
+$screen-xxxl: 2312px;
+
+// Containers
+$container-site: 100%;
+$container-content: 2000px;
+$container-padding: 15vw;
+$container-text: 69ch;
+
+// Layout
+$content-height: 80vh;
+$footer-height: 20vh;
+
+// Spacing
+$spacing: 3em;
+$padding: 3%;
+
+// Border
+$border-radius: 8px;
+
+// Light Mode
+$color-background: #f1eff7;
+$color-text: rgba(#241438, 0.9);
+$color-text-tinted: rgba($color-text, 0.7);
+$color-link: #2414385e;
+$color-link-hover: #241438;
+
+// Dark Mode
+$dark-color-background: #0b0611;
+$dark-color-text: #dad8e0;
+$dark-color-text-tinted: rgba($dark-color-text, 0.8);
+$dark-color-link: #dad8e0a6;
+$dark-color-link-hover: #dad8e0;
+
+// Transitions
+$duration-fast: 0.2s;
+$duration-normal: 0.4s;
+$duration-slow: 0.6s;
+
+// Animation
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    filter: alpha(opacity=0);
+  }
+
+  100% {
+    opacity: 1;
+    filter: alpha(opacity=100);
+  }
+}

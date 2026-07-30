@@ -1,0 +1,16 @@
+@use "../base/variables";
+
+/*#wrapper {
+  position: relative;
+  max-width: variables.$container-site;
+  padding: variables.$padding;
+}*/
+#wrapper {
+  max-width: variables.$container-site;
+  margin: 0 auto;
+  padding: 0 variables.$padding;
+
+  @media all and (max-width: variables.$screen-sm) {
+    padding-top: variables.$padding;
+  }
+}

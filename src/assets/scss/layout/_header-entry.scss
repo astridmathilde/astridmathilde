@@ -1,0 +1,72 @@
+@use "../base/variables";
+
+#headerEntry {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 0.85em;
+  text-transform: lowercase;
+
+  @media all and (min-width: variables.$screen-xs) {
+    padding-top: calc(variables.$padding / 2);
+    padding-bottom: calc(variables.$padding / 2);
+  }
+
+  @media all and (min-width: variables.$screen-sm) {
+    padding-top: variables.$padding;
+    padding-bottom: variables.$padding;
+  }
+
+  a {
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  .title {
+    display: flex;
+    align-items: center;
+    margin: 0;
+  }
+
+  .title,
+  li {
+    height: 36px;
+  }
+
+  #breadcrumbs {
+    ul,
+    li {
+      padding: 0;
+    }
+
+    ul {
+      display: flex;
+      margin: 0;
+
+      li {
+        display: flex;
+        align-items: center;
+        list-style: none;
+
+        &:before {
+          content: "/";
+          padding-left: 0.25em;
+          padding-right: 0.25em;
+        }
+
+        &.currentPage {
+          opacity: 0.7;
+          filter: alpha(opacity=70);
+        }
+
+        &.parentPage {
+          opacity: 0.9;
+          filter: alpha(opacity=80);
+        }
+      }
+    }
+  }
+}

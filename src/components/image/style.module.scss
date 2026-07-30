@@ -1,0 +1,27 @@
+@use "../../assets/scss/base/variables";
+
+.image {
+  margin-top: variables.$padding;
+
+  img {
+    max-width: 100%;
+    height: auto;
+
+    @media all and (min-width: variables.$screen-lg) {
+      min-width: 100%;
+    }
+  }
+
+  figcaption {
+    font-size: 0.75em;
+    font-weight: 430;
+
+    @media all and (min-width: variables.$screen-sm) {
+      font-weight: 420;
+    }
+
+    @media all and (min-width: variables.$screen-md) {
+      font-weight: 410;
+    }
+  }
+}

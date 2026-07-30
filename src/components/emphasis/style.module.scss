@@ -1,0 +1,15 @@
+@use "../../assets/scss/base/variables";
+
+.emphasis {
+  margin-top: 1.3em;
+  font-size: 1.3em;
+
+  p {
+    margin: 0;
+
+    + p {
+      margin-top: 1em;
+      font-size: 0.55em;
+    }
+  }
+}
