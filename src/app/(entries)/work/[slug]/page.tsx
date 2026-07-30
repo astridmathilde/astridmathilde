@@ -36,7 +36,7 @@ export default async function ProjectPage({
   const components = {
     types: {
       image: ({value}) => (
-        <BlockImage value={value.asset._ref} caption={value.caption} />
+        <BlockImage alt={value.alt} value={value.asset._ref} caption={value.caption} />
       ),
     },
   }
