@@ -1,11 +1,9 @@
 import { revalidateTag } from 'next/cache'
 import { type NextRequest, NextResponse } from 'next/server'
 import { parseBody } from 'next-sanity/webhook'
-
 type WebhookPayload = {
   _type: string
 }
-
 export async function POST(req: NextRequest) {
   try {
     if (!process.env.SANITY_REVALIDATE_SECRET) {
@@ -31,7 +29,7 @@ export async function POST(req: NextRequest) {
         { status: 400 }
       )
     }
-    revalidateTag(body._type, null);
+    revalidateTag(body._type, null)
     return NextResponse.json({ body })
   } catch (err: unknown) {
     console.error(err)
