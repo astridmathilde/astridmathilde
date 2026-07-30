@@ -34,7 +34,7 @@ export default async function Index() {
     
     {now ? (
       <>
-      <h2 className={utils.sectionTitle}>{now.title}</h2>
+      <h2 className={utils.sectionTitle}>Current status</h2>
       <BlockCurrentStatus content={now.content} date={now._updatedAt} />
       </>
     ) : ""}

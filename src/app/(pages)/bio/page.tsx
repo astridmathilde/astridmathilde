@@ -1,5 +1,6 @@
 import { getBio } from "../../../sanity/lib/data";
 import type { Metadata } from "next";
+import Image from "next/image";
 import { PortableText } from "next-sanity";
 
 import BlockImage from "../../../components/image";
@@ -10,6 +11,8 @@ import { experience, education, skills, achievements } from "../../../data/resum
 
 import utils from "../../../assets/scss/utils.module.scss";
 import skillStyle from "../../../components/skills/style.module.scss";
+
+import imgAbout from "../../../assets/img/about/astrid.jpg";
 
 const pageTitle = 'Bio';
 
@@ -34,11 +37,17 @@ export default async function About() {
     <BlockColumn width="70" order="0">
     <PortableText value={bio.content} components={components} />
     </BlockColumn>
+    <BlockColumn width="30" order="0">
     {bio.portrait ? (
-      <BlockColumn width="30" order="0">
       <BlockImage value={bio.portrait} alt="Astrid Mathilde Boberg" />
-      </BlockColumn>
-    ) : null }
+    ) : (
+      <figure>
+        <Image src={imgAbout} style={{maxWidth: "100%", height: "auto"}} width="600" height="600" />
+        <figcaption>Walking outside :)</figcaption>
+      </figure>
+       
+    ) }
+    </BlockColumn>
     </BlockRow>
     
     <h2 className={utils.screen_reader_text}>Resumee</h2>
