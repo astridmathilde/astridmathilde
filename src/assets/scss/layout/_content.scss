@@ -3,7 +3,7 @@
 #content {
   margin-top: calc(6vh + (variables.$padding * 2));
   margin-bottom: variables.$footer-height;
-  overflow-x: hidden;
+  overflow-x: visible;
 
   @media all and (min-width: variables.$screen-sm) {
     margin-top: 6vh;

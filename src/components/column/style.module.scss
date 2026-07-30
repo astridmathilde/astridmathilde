@@ -23,7 +23,9 @@
     &:nth-child(1) {
       h3,
       h2 {
-        margin-top: 0;
+        &:nth-child(1) {
+          margin-top: 0;
+        }
       }
     }
 
