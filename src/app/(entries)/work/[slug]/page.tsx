@@ -64,7 +64,7 @@ export async function generateMetadata({
       
       <li key="project_type">
       <span className={style.label + " text-tiny"}>Type of project:</span>
-      {entry.type === 'other' ? typeLabel[entry.other_type] : typeLabel[entry.type]}
+      {entry.type === 'other' ? entry.other_type : typeLabel[entry.type]}
       </li>
       
       {entry.partner ? (
