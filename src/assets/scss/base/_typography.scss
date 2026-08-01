@@ -46,7 +46,6 @@ h2 {
 }
 
 h3 {
-  //margin-top: calc(variables.$spacing * 0.8);
   margin-top: variables.$spacing;
 }
 
@@ -57,8 +56,12 @@ h4 {
 }
 
 figcaption {
-  font-size: 0.6em;
+  font-size: 0.75em;
   text-transform: lowercase;
+
+  @media all and (min-width: variables.$screen-sm) {
+    font-size: 0.6em;
+  }
 
   p {
     margin: 0;

@@ -6,7 +6,7 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  font-size: 0.85em;
+  font-size: 0.95em;
   text-transform: lowercase;
 
   @media all and (max-width: variables.$screen-sm) {
@@ -16,6 +16,7 @@
     position: fixed;
     padding-left: variables.$padding;
     padding-right: variables.$padding;
+    font-size: 0.85em;
   }
 
   @media all and (min-width: variables.$screen-xs) {

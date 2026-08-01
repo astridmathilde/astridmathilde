@@ -5,10 +5,10 @@
   margin-top: calc(variables.$spacing * 0.4);
   margin-bottom: variables.$spacing;
   line-height: 1.35;
-  font-size: 1.1em;
+  font-size: 1.2em;
 
   @media all and (min-width: variables.$screen-xs) {
-    font-size: 1.15em;
+    font-size: 1em;
     margin-top: calc(variables.$spacing * 1.5);
   }
 
@@ -17,12 +17,13 @@
     flex-direction: column;
     justify-content: center;
     margin-top: 0;
-    font-size: 1.3em;
+    font-size: 1.2em;
   }
 
   @media all and (min-width: variables.$screen-md) {
     margin-top: calc(variables.$spacing * 1);
     margin-bottom: calc(variables.$spacing * 1.25);
+    font-size: 1.3em;
   }
 
   @media all and (min-width: variables.$screen-lg) {
