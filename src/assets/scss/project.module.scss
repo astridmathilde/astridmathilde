@@ -163,11 +163,7 @@
   .projectNav {
     display: grid;
     grid-template-columns: 1fr;
-    gap: calc(variables.$padding / 1.5);
-
-    @media all and (min-width: variables.$screen-sm) {
-      gap: calc(variables.$padding / 2);
-    }
+    gap: calc(variables.$padding / 2);
 
     img {
       object-fit: cover;
