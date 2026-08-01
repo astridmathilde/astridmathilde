@@ -17,90 +17,90 @@ export async function generateMetadata({
   params,
 }: {
   params: { slug: string } }): Promise<Metadata> {
-  const entry = await getEntry(params);
-  return {
-    title: entry.short_title,
-    description: entry.description,
-  }
-}
-
-export default async function ProjectPage({
-  params,
-}: {
-  params: Promise<{ slug: string }>
-}) {
-  const entry = await getEntry(params);
-  const moreEntries = await getMoreEntries(params);
-  const randomEntries = moreEntries.sort(() => 0.5 - Math.random()).slice(0, 3);
-  
-  const components = {
-    types: {
-      image: ({value}) => (
-        <BlockImage alt={value.alt} value={value.asset._ref} caption={value.caption} />
-      ),
-    },
+    const entry = await getEntry(params);
+    return {
+      title: entry.short_title,
+      description: entry.description,
+    }
   }
   
-  return (
-    <article className={style.project}>
+  export default async function ProjectPage({
+    params,
+  }: {
+    params: Promise<{ slug: string }>
+  }) {
+    const entry = await getEntry(params);
+    const moreEntries = await getMoreEntries(params);
+    const randomEntries = moreEntries.sort(() => 0.5 - Math.random()).slice(0, 3);
     
-    <header className={style.header}>
-    <h2>{entry.title}</h2>
-    </header>
+    const components = {
+      types: {
+        image: ({value}: any) => (
+          <BlockImage alt={value.alt} value={value.asset._ref} caption={value.caption} />
+        )
+      },
+    }
     
-    <div className={style.thumbnail}>
-    <BlockProjectImage value={entry.thumbnail} />
-    </div>
+    return (
+      <article className={style.project}>
+      
+      <header className={style.header}>
+      <h2>{entry.title}</h2>
+      </header>
+      
+      <div className={style.thumbnail}>
+      <BlockProjectImage value={entry.thumbnail} />
+      </div>
+      
+      <div className={style.container}>
+      
+      <div className={style.meta + " text-xsmall"}>
+      <ul>
+      
+      <li key="project_category">
+      <span className={style.label + " text-tiny"}>Category:</span>
+      {categoryLabel[entry.category]}
+      </li> 
+      
+      <li key="project_type">
+      <span className={style.label + " text-tiny"}>Type of project:</span>
+      {entry.type === 'other' ? typeLabel[entry.other_type] : typeLabel[entry.type]}
+      </li>
+      
+      {entry.partner ? (
+        <li key="project_partner">
+        <span className={style.label + " text-tiny"}>{entry.partner.label}</span>
+        {entry.partner.link ? <a href={entry.partner.link} rel="external" target="_blank">{entry.partner.value}</a> : entry.partner.value}
+        </li>
+      ) : null
+    }
     
-    <div className={style.container}>
-    
-    <div className={style.meta + " text-xsmall"}>
-    <ul>
-    
-    <li key="project_category">
-    <span className={style.label + " text-tiny"}>Category:</span>
-    {categoryLabel[entry.category]}
-    </li> 
-    
-    <li key="project_type">
-    <span className={style.label + " text-tiny"}>Type of project:</span>
-    {entry.type === 'other' ? typeLabel[entry.other_type] : typeLabel[entry.type]}
-    </li>
-    
-    {entry.partner ? (
-      <li key="project_partner">
-      <span className={style.label + " text-tiny"}>{entry.partner.label}</span>
-      {entry.partner.link ? <a href={entry.partner.link} rel="external" target="_blank">{entry.partner.value}</a> : entry.partner.value}
+    {entry.location ? (
+      <li key="project_location">
+      <span className={style.label + " text-tiny"}>Location:</span>
+      {entry.location.website ? <a href={entry.location.website} rel="external" target="_blank">{entry.location.name}</a> : entry.location.name}
       </li>
     ) : null
   }
   
-  {entry.location ? (
-    <li key="project_location">
-    <span className={style.label + " text-tiny"}>Location:</span>
-    {entry.location.website ? <a href={entry.location.website} rel="external" target="_blank">{entry.location.name}</a> : entry.location.name}
+  {entry.time.duration || entry.time.year ? (
+    <li key="project_duration"><span className={style.label + " text-tiny"}>{entry.time.duration ? "Time:" : "Year:"}</span> {entry.time.duration ? entry.time.duration + " (" + entry.time.year + ")" : entry.time.year }</li>
+  ) : null}
+  
+  
+  {entry.contributors ? (
+    <li key="project_contributors" className={style.contributors}><span className={style.label + " text-tiny"}>Team:</span>
+    <ul>
+    {entry.contributors.map((team) => (
+      <li key={team._key}>
+      {team.website ? (
+        <a href={team.website} target="_blank" rel="external">{team.name}</a>
+      ) : team.name}
+      </li>
+    ))}
+    </ul>
     </li>
-  ) : null
-}
-
-{entry.time.duration || entry.time.year ? (
-  <li key="project_duration"><span className={style.label + " text-tiny"}>{entry.time.duration ? "Time:" : "Year:"}</span> {entry.time.duration ? entry.time.duration + " (" + entry.time.year + ")" : entry.time.year }</li>
-) : null}
-
-
-{entry.contributors ? (
-  <li key="project_contributors" className={style.contributors}><span className={style.label + " text-tiny"}>Team:</span>
-  <ul>
-  {entry.contributors.map((team) => (
-    <li key={team._key}>
-    {team.website ? (
-      <a href={team.website} target="_blank" rel="external">{team.name}</a>
-    ) : team.name}
-    </li>
-  ))}
-  </ul>
-  </li>
-) : null 
+  ) : null 
 }
 
 {entry.roles ? (
@@ -115,10 +115,10 @@ export default async function ProjectPage({
 }
 
 {entry.links ? (
-  <li key="project_links"><span className={style.label + " text-tiny"}>Links:</span>
-  <ul className={style.links}>
+  <li key="project_links" className={style.links}><span className={style.label + " text-tiny"}>Links:</span>
+  <ul>
   {entry.links.map((link) => (
-    <li key={link} className={style.link}>
+    <li key={link.title} className={style.link}>
     <Link href={link.url} rel="external" target="_blank">{link.title}</Link>
     </li>
   ))}
