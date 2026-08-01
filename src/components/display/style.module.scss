@@ -8,7 +8,8 @@
   font-size: 1.1em;
 
   @media all and (min-width: variables.$screen-xs) {
-    font-size: 1.2em;
+    font-size: 1.15em;
+    margin-top: calc(variables.$spacing * 1.5);
   }
 
   @media all and (min-width: variables.$screen-sm) {
@@ -16,21 +17,17 @@
     flex-direction: column;
     justify-content: center;
     margin-top: 0;
-    //margin-bottom: calc(variables.$spacing * 2);
     font-size: 1.3em;
   }
 
   @media all and (min-width: variables.$screen-md) {
-    margin-top: calc(variables.$spacing * 0.4);
+    margin-top: calc(variables.$spacing * 1);
+    margin-bottom: calc(variables.$spacing * 1.25);
   }
 
   @media all and (min-width: variables.$screen-lg) {
-    margin-top: variables.$spacing;
+    margin-top: calc(variables.$spacing * 1.25);
     margin-bottom: calc(variables.$spacing * 1.5);
-  }
-
-  @media all and (min-width: variables.$screen-xl) {
-    margin-top: calc(variables.$spacing * 0.7);
   }
 
   p {
