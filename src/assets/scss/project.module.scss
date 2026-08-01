@@ -138,8 +138,16 @@
         }
       }
 
-      figure + figure {
-        margin-top: calc(variables.$spacing / 2);
+      figure {
+        margin-top: calc(variables.$spacing * 0.6) !important;
+
+        + figure {
+          margin-top: calc(variables.$spacing * 0.5) !important;
+        }
+
+        figcaption {
+          margin-bottom: calc(variables.$spacing * 0.5);
+        }
       }
 
       h3 {
