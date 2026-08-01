@@ -4,6 +4,7 @@ import { PortableText } from "next-sanity";
 
 import { getCurrentStatus, getNow } from "../../../sanity/lib/data";
 import { getBlikkjournal } from "../../../lib/notion";
+import DaysUntilSummer from "../../../components/days-until-summer/page";
 
 import BlockRow from "../../../components/row";
 import BlockColumn from "../../../components/column";
@@ -21,69 +22,15 @@ export const metadata: Metadata = {
 export default async function Now() {
   const status = await getCurrentStatus();
   const now = await getNow();
-  const today = new Date();
-  
-  function summerCount() {
-    const dayTime = 1000 * 60 * 60 * 24;
-    const currentYear = today.getFullYear();
-    const nextYear = currentYear + 1;
     
-    const dayBeforeSummer = new Date(currentYear + "-06-20").getTime();
-    const startOfSummer = new Date(currentYear + "-06-21").getTime();
-    const dayBeforeSummerEnds = new Date(currentYear + "-09-21").getTime();
-    const endOfSummer = new Date(currentYear + "-09-22").getTime();
-    const nextSummer = new Date (nextYear + "-06-21").getTime();
-    
-    // First day of summer 
-    if (today.getTime() === startOfSummer) {
-      return "This is the first day of summer";
-    }
-    
-    // The day before summer starts
-    else if (today.getTime() === dayBeforeSummer) {
-      return "Tomorrow it is summer";
-    }
-    
-    // The day before summer ends
-    else if (today.getTime() === dayBeforeSummerEnds) {
-      return "Tomorrow is the last day of summer";
-    }
-    
-    // Last day of summer 
-    else if (today.getTime() === endOfSummer) {
-      return "This is the last day of summer";
-    }
-    
-    // Days left of summer
-    else if (today.getTime() >= startOfSummer && today.getTime() <= endOfSummer) {
-      const numberOfDays = Math.round((endOfSummer - today.getTime()) / dayTime);
-      
-      return "It is " + numberOfDays + " days left of summer";
-    }
-    
-    // Days until summer
-    if (today.getTime() >= startOfSummer && today.getTime() <= endOfSummer) {
-      const numberOfDays = Math.round((today.getTime() - startOfSummer) / dayTime);
-      
-      return "It is " + numberOfDays + " days until summer";
-    }
-    
-    // Days until next summer 
-    else {
-      const numberOfDays = Math.round((nextSummer - today.getTime()) / dayTime);
-      
-      return "It is " + numberOfDays + " days until summer";
-    }  
-  }
-  
-  // Last image from Blikkjournal
+  // Latest image from Blikkjournal
   const [{ results: blikkjournal}] = await Promise.all([
     getBlikkjournal()
   ]);
   
   return (
     <>
-    <h2>Today is {today.toLocaleString('en-US', { month: 'long', day: '2-digit', year: 'numeric', timeZone: 'Europe/Oslo'})}. {summerCount()}.</h2>
+    <h2><DaysUntilSummer /></h2>
     <BlockCurrentStatus content={status.content} date={now._updatedAt} />
     
     <BlockRow align="top" height="auto">
