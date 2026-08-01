@@ -53,14 +53,9 @@
     @media all and (min-width: variables.$screen-xl) {
       z-index: 1000;
       position: fixed;
-      top: variables.$padding;
+      top: 2.7vw;
       right: variables.$padding;
-      padding-top: 1.6vw;
-    }
-
-    @media all and (min-width: variables.$screen-xxl) {
-      top: variables.$padding;
-      padding-top: 1.4vw;
+      padding-top: 0;
     }
 
     ul {
