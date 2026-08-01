@@ -37,7 +37,7 @@
   .container {
     position: relative;
     margin-top: calc(variables.$spacing / 2);
-    margin-bottom: variables.$spacing;
+    margin-bottom: calc(variables.$spacing * 1.25);
 
     @media all and (min-width: variables.$screen-md) {
       display: grid;
@@ -155,7 +155,16 @@
   .projectNav {
     display: grid;
     grid-template-columns: 1fr;
-    gap: calc(variables.$padding / 4);
+    gap: calc(variables.$padding / 1.5);
+
+    @media all and (min-width: variables.$screen-sm) {
+      gap: calc(variables.$padding / 2);
+    }
+
+    img {
+      object-fit: cover;
+      height: 70vw !important;
+    }
 
     @media all and (min-width: variables.$screen-md) {
       grid-template-columns: 1fr 1fr 1fr;
@@ -167,8 +176,9 @@
       }
     }
 
-    @media all and (min-width: variables.$screen-xl) {
+    @media all and (min-width: variables.$screen-lg) {
       img {
+        object-fit: cover;
         height: 20vw !important;
       }
     }
