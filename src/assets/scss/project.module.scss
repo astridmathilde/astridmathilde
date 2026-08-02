@@ -138,13 +138,17 @@
         }
       }
 
-      figure {
+      figure,
+      video {
         margin-top: calc(variables.$spacing * 0.6) !important;
 
-        + figure {
+        + figure,
+        + video {
           margin-top: calc(variables.$spacing * 0.5) !important;
         }
+      }
 
+      figure {
         figcaption {
           margin-bottom: calc(variables.$spacing * 0.5);
         }
