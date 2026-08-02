@@ -71,7 +71,14 @@ figure {
   }
 }
 
-img {
+video {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+img,
+video {
   border-radius: variables.$border-radius;
 }
 
