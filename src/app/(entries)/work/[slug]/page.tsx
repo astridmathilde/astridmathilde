@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { PortableText } from "next-sanity";
-import { getFileAsset } from "@sanity/asset-utils";
 
 import { getEntry, getMoreEntries } from "../../../../sanity/lib/data";
 import { categoryLabel, typeLabel } from "../../../../sanity/lib/option-title";
@@ -11,8 +10,8 @@ import utils from "../../../../assets/scss/utils.module.scss";
 
 import BlockProjectImage from "../../../../components/project-image";
 import BlockImage from "../../../../components/image";
+import BlockVideo from "../../../../components/video";
 import BlockProjects from "../../../../components/projects";
-
 
 export async function generateMetadata({
   params,
@@ -39,18 +38,9 @@ export async function generateMetadata({
         image: ({value}: any) => (
           <BlockImage alt={value.alt} value={value.asset._ref} caption={value.caption} />
         ),
-        video: ({value}: any) => {
-          const fileAsset = getFileAsset(value.asset._ref, {
-            projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID,
-            dataset: process.env.NEXT_PUBLIC_SANITY_DATASET
-          });
-          const url = typeof fileAsset === "string" ? fileAsset : fileAsset.url ?? "";
-          return (
-            <video autoPlay muted playsInline loop>
-              <source src={url} type={value.asset?.mimeType ?? 'video/mp4'} />
-            </video>
-          );
-        }
+        video: ({value}: any) => (
+          <BlockVideo asset={value.asset._ref} type={value.asset?.mimeType} />
+        )
       },
     }
     
