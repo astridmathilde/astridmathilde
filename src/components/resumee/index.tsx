@@ -5,7 +5,7 @@ export default function BlockResumee(entry) {
     <>
     <article key={entry.id} className={style.entry + " text-small"}>
     <header className={style.header}>
-    <h3 className={style.position}>{entry.position} @
+    <h3 className={style.position}>{entry.position + " @ "}
       {entry.locationUrl ? (
          <a href={entry.locationUrl}>{entry.locationName}</a>
       ) : entry.locationName}
