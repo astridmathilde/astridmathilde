@@ -1,6 +1,6 @@
-currently doing my [diploma project](https://diploma.astridmathilde.no) @ aho
+currently doing my [diploma project](https://diploma.astridmathilde.no) @ the oslo school of architecture and design
 
-Links:
+links:
 
 - [personal website](https://astridmathilde.no)
 - [blikkjournal](https://blikk.directory)
