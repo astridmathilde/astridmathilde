@@ -1,5 +1,6 @@
-currently doing my [diploma project](https://diploma.astridmathilde.no) @ AHO
-links:
+currently doing my [diploma project](https://diploma.astridmathilde.no) @ aho
+
+Links:
 
 - [personal website](https://astridmathilde.no)
 - [blikkjournal](https://blikk.directory)
