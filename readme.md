@@ -1,5 +1,4 @@
-currently doing my [diploma project](https://diplom.astridmathilde.no)
-
+currently doing my [diploma project](https://diploma.astridmathilde.no) @ AHO
 links:
 
 - [personal website](https://astridmathilde.no)
