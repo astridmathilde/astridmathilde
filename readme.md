@@ -1,6 +1,4 @@
-designer & developer
-master of design @ the oslo school of architecture and design
-currently doing my [diploma project on digital minimalism ](https://diplom.astridmathilde.no) 
+currently doing my [diploma project](https://diplom.astridmathilde.no)
 
 links:
 
