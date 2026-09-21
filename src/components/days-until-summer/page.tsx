@@ -2,6 +2,22 @@
 
 import { useState, useEffect } from 'react'
 
+const dateKeyFormatter = new Intl.DateTimeFormat('en-CA', {
+  timeZone: 'Europe/Oslo',
+  year: 'numeric',
+  month: '2-digit',
+  day: '2-digit',
+});
+
+function dateKey(date: Date) {
+  return dateKeyFormatter.format(date);
+}
+
+function dateKeyToUTC(key: string) {
+  const [year, month, day] = key.split('-').map(Number);
+  return Date.UTC(year, month - 1, day);
+}
+
 export default function DaysUntilSummer() {
 
   const [currentDay, setCurrentDay] = useState<Date>(new Date());
@@ -11,60 +27,53 @@ export default function DaysUntilSummer() {
     const currentDay = new Date();
     setCurrentDay(currentDay);
 
-    const currentYear = currentDay.getFullYear();
+    const currentYear = Number(dateKey(currentDay).slice(0, 4));
     setCurrentYear(currentYear);
   }, []);
-  
+
   function summerCount() {
     const dayTime = 1000 * 60 * 60 * 24;
-    const nextYear = currentYear + 1;
-    
-    const dayBeforeSummer = new Date(currentYear + "-06-20").getTime();
-    const startOfSummer = new Date(currentYear + "-06-21").getTime();
-    const dayBeforeSummerEnds = new Date(currentYear + "-09-21").getTime();
-    const endOfSummer = new Date(currentYear + "-09-22").getTime();
-    const nextSummer = new Date (nextYear + "-06-21").getTime();
-    
-    // First day of summer 
-    if (currentDay.getTime() === startOfSummer) {
+    const today = dateKey(currentDay);
+
+    const dayBeforeSummer = currentYear + "-06-20";
+    const startOfSummer = currentYear + "-06-21";
+    const dayBeforeSummerEnds = currentYear + "-09-21";
+    const endOfSummer = currentYear + "-09-22";
+    const nextSummer = (currentYear + 1) + "-06-21";
+
+    // First day of summer
+    if (today === startOfSummer) {
       return "This is the first day of summer";
     }
-    
+
     // The day before summer starts
-    else if (currentDay.getTime() === dayBeforeSummer) {
+    else if (today === dayBeforeSummer) {
       return "Tomorrow it is summer";
     }
-    
+
     // The day before summer ends
-    else if (currentDay.getTime() === dayBeforeSummerEnds) {
+    else if (today === dayBeforeSummerEnds) {
       return "Tomorrow is the last day of summer";
     }
-    
-    // Last day of summer 
-    else if (currentDay.getTime() === endOfSummer) {
+
+    // Last day of summer
+    else if (today === endOfSummer) {
       return "This is the last day of summer";
     }
-    
+
     // Days left of summer
-    else if (currentDay.getTime() >= startOfSummer && currentDay.getTime() <= endOfSummer) {
-      const numberOfDays = Math.round((endOfSummer - currentDay.getTime()) / dayTime);
-      
+    else if (today >= startOfSummer && today <= endOfSummer) {
+      const numberOfDays = (dateKeyToUTC(endOfSummer) - dateKeyToUTC(today)) / dayTime;
+
       return "It is " + numberOfDays + " days left of summer";
     }
-    
-    // Days until summer
-    if (currentDay.getTime() >= startOfSummer && currentDay.getTime() <= endOfSummer) {
-      const numberOfDays = Math.round((currentDay.getTime() - startOfSummer) / dayTime);
-      
+
+    // Days until next summer
+    else {
+      const numberOfDays = (dateKeyToUTC(nextSummer) - dateKeyToUTC(today)) / dayTime;
+
       return "It is " + numberOfDays + " days until summer";
     }
-    
-    // Days until next summer 
-    else {
-      const numberOfDays = Math.round((nextSummer - currentDay.getTime()) / dayTime);
-      
-      return "It is " + numberOfDays + " days until summer";
-    }  
   }
   
   return (
