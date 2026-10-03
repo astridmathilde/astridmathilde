@@ -61,7 +61,7 @@ export default async function Index() {
       </BlockColumn>
 
       <BlockColumn width="30" order="0">
-      <Blikkjournal />
+      <Blikkjournal mode="random" />
       </BlockColumn>
       
       </BlockRow>

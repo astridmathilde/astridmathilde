@@ -9,11 +9,11 @@ const notion = new Client({
 
 const dataSourceId = process.env.NOTION_DATA_SOURCE_ID;
 
-export async function getBlikkjournal() {  
+export async function getBlikkjournal(count = 1) {  
   const response = await notion.dataSources.query({
     data_source_id: dataSourceId,
     sorts: [{ property: "Time", direction: "descending" }],
-    page_size: 1,
+    page_size: count,
   });
   
   return {
