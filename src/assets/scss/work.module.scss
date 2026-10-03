@@ -13,8 +13,8 @@
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: max-content;
     grid-auto-rows: max-content;
-    gap: calc(variables.$padding / 3) calc(variables.$padding * 2);
-    min-height: 340vw;
+    gap: calc(variables.$padding * 0) calc(variables.$padding * 2);
+    min-height: 270vw;
 
     a {
       align-content: center;
