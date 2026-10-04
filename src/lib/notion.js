@@ -9,16 +9,22 @@ const notion = new Client({
 
 const dataSourceId = process.env.NOTION_DATA_SOURCE_ID;
 
-export async function getBlikkjournal(count = 1) {  
-  const response = await notion.dataSources.query({
-    data_source_id: dataSourceId,
-    sorts: [{ property: "Time", direction: "descending" }],
-    page_size: count,
-  });
-  
-  return {
-    results: response.results.filter(isFullPage),
-  };
+export async function getBlikkjournal(count = 1) {
+  return unstable_cache(
+    async () => {
+      const response = await notion.dataSources.query({
+        data_source_id: dataSourceId,
+        sorts: [{ property: "Time", direction: "descending" }],
+        page_size: count,
+      });
+
+      return {
+        results: response.results.filter(isFullPage),
+      };
+    },
+    ["blikkjournal", String(count)],
+    { tags: ["blikkjournal"] }
+  )();
 }
 
 export async function getSingleBlikkjournal(pageId) {
