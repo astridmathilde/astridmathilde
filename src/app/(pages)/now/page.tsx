@@ -30,7 +30,7 @@ export default async function Now() {
     </BlockColumn>
     
     <BlockColumn width="30" order="0">
-    <Blikkjournal priority />
+    <Blikkjournal />
     </BlockColumn>
     </BlockRow>
     
