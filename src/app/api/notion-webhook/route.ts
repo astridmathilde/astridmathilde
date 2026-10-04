@@ -3,12 +3,7 @@ import { type NextRequest, NextResponse } from 'next/server'
 
 export async function POST(req: NextRequest) {
   try {
-    const rawBody = await req.text()
-
-    /* TEMP: logging raw body so the webhook verification token shows up in Netlify function logs */
-    console.log('notion webhook body:', rawBody)
-
-    const body = JSON.parse(rawBody)
+    const body = JSON.parse(await req.text())
 
     const type: string = body?.type ?? ''
     if (type.startsWith('page.')) {
