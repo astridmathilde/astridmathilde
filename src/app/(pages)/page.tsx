@@ -53,18 +53,8 @@ export default async function Index() {
     
     {index ? (
       <>
-      <BlockRow align="center" height="auto">
-
-      <BlockColumn width="70" order="0">
       <h2 className={utils.sectionTitle}>Further discovery</h2>
       <PortableText value={index.further_discovery} />
-      </BlockColumn>
-
-      <BlockColumn width="30" order="0">
-      <Blikkjournal mode="random" />
-      </BlockColumn>
-      
-      </BlockRow>
       </>
     ) : ""}
     

@@ -15,7 +15,7 @@ export async function getBlikkjournal(count = 1) {
       const response = await notion.dataSources.query({
         data_source_id: dataSourceId,
         sorts: [{ property: "Time", direction: "descending" }],
-        page_size: count,
+        page_size: 1,
       });
 
       return {

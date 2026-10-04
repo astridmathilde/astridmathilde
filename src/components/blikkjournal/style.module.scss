@@ -2,6 +2,7 @@
 
 .blikkjournal {
   text-decoration: none;
+  font-size: 0.9em;
 
   .link {
     text-decoration: underline;
@@ -41,8 +42,7 @@
     }
 
     figcaption {
-      @media all and (max-width: variables.$screen-md),
-        all and (min-width: 1220px) {
+      @media all and (max-width: variables.$screen-md) {
         display: flex;
         justify-content: space-between;
       }
