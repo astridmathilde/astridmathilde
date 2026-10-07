@@ -4,6 +4,7 @@
   @media all and (min-width: variables.$screen-md) {
     display: flex;
     gap: variables.$padding;
+    min-height: 400vh;
   }
 
   .work {
@@ -15,12 +16,10 @@
 
     @media all and (min-width: variables.$screen-md) {
       display: grid;
-      overflow: hidden;
       grid-template-columns: repeat(2, 1fr);
       grid-template-rows: max-content;
       grid-auto-rows: max-content;
-      gap: calc(variables.$padding * 0.8) calc(variables.$padding * 2);
-      min-height: 220vw;
+      gap: calc(variables.$padding / 2) calc(variables.$padding * 2);
 
       a {
         align-content: center;
