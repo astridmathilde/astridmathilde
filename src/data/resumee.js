@@ -180,7 +180,8 @@ export const skills = [
       "WordPress",
       "Sanity",
       "Git",
-      "Claude Code"
+      "Claude Code",
+      "OpenCode"
     ]
   }
 ];
