@@ -123,7 +123,7 @@ export const education = [
       "name": "The Oslo School of Architecture and Design",
       "url": "https://aho.no"
     },
-    "description": "Includes industrial design and service design, but with a specialization in interaction design. Elective courses includes behavioral design, systems-oriented design, branding and platform urbanism – among others."
+    "description": "Includes industrial design, service design and systems-oriented design, but with a specialization in interaction design and strategic design. Elective courses includes behavioral design, systems-oriented design, branding and platform urbanism – among others."
   },
   {
     "id": 1,
