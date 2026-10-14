@@ -1,14 +1,5 @@
 export const experience = [
   {
-    "id": 11,
-    "time": "Dec 2024–Jan 2026",
-    "position": "Designer and developer",
-    "location": {
-      "name": "Self-employed"
-    },
-    "description": "Worked with design and development of websites and digital tools for companies in Northern Norway, and was the product leader and CTO of a startup company."
-  },
-  {
     "id": 10,
     "time": "Dec 2024–Jan 2026",
     "position": "Designer and developer",
