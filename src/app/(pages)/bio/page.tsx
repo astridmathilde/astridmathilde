@@ -43,7 +43,6 @@ export default async function About() {
     ) : (
       <figure>
         <Image alt="Astrid Mathilde Boberg" src={imgAbout} style={{maxWidth: "100%", height: "auto"}} width="600" height="600" />
-        <figcaption>Walking outside {":)"}</figcaption>
       </figure>
        
     ) }
