@@ -5,6 +5,7 @@
   margin-top: calc(variables.$spacing * 1.5);
   margin-bottom: variables.$spacing;
   line-height: 1.35;
+  letter-spacing: 1%;
   font-size: 1.2em;
 
   @media all and (min-width: variables.$screen-sm) {
@@ -17,7 +18,7 @@
   @media all and (min-width: variables.$screen-md) {
     margin-top: calc(variables.$spacing * 1);
     margin-bottom: calc(variables.$spacing * 1.25);
-    font-size: 1.3em;
+    font-size: 1.5em;
   }
 
   @media all and (min-width: variables.$screen-lg) {
