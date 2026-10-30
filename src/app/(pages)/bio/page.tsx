@@ -48,19 +48,7 @@ export default async function About() {
     ) }
     </BlockColumn>
     </BlockRow>
-    
-    <h2 className={utils.screen_reader_text}>Resumee</h2>
-    
-    <h3>Education</h3>
-    {education.map((education) => (
-      <BlockResumee key={education.id} position={education.grade} locationUrl={education.location.url} locationName={education.location.name} description={education.description} time={education.time} />
-    ))}
-    
-    <h3>Experience</h3>
-    {experience.map((experience) => (
-      <BlockResumee key={experience.id} position={experience.position} locationUrl={experience.location?.url} locationName={experience.location.name} description={experience.description} time={experience.time} />
-    ))}   
-    
+  
     <h3>Awards</h3>
     {achievements.map((achievement) => (
       <BlockResumee key={achievement.id} position={achievement.title} locationUrl={achievement.location.url} locationName={achievement.location.name} description={achievement.description} time={achievement.year} />
