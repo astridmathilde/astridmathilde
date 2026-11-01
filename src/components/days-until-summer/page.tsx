@@ -78,7 +78,7 @@ export default function DaysUntilSummer() {
   
   return (
     <>
-    today is {currentDay.toLocaleString('en-US', { month: 'long', day: '2-digit', year: 'numeric', timeZone: 'Europe/Oslo'})}. {summerCount()}.
+    Today is {currentDay.toLocaleString('en-US', { month: 'long', day: '2-digit', year: 'numeric', timeZone: 'Europe/Oslo'})}. {summerCount()}.
     </>
   );
 }
