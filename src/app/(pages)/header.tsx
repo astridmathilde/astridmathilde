@@ -4,6 +4,7 @@ import { usePathname } from "next/navigation";
 import Link from "next/link";
 
 import HeaderIcon from "../../components/header-icon";
+import LightSwitch from "../../components/light-switch";
 import styles from "../../assets/scss/layout.module.scss";
 
 export default function Header() {
@@ -19,6 +20,7 @@ export default function Header() {
     <li key="work"><Link href="/work" className={pathname === "/work" ? styles.active : ""}>Work</Link></li>
     <li key="now"><Link href="/now" className={pathname === "/now" ? styles.active : ""}>Now</Link></li>
     <li key="bio"><Link href="/bio" className={pathname === "/bio" ? styles.active : ""}>Bio</Link></li>
+    <li key="lightswitch"><LightSwitch /></li>
     </ul>
     </nav>
     </header>
