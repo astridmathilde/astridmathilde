@@ -1,6 +1,19 @@
+export const education = [
+  {
+    "id": 0,
+    "time": "Aug 2021->",
+    "grade": "Master of Design",
+    "location": {
+      "name": "The Oslo School of Architecture and Design",
+      "url": "https://aho.no"
+    },
+    "description": "With a specialization in digital products, strategic design and interaction design, I have worked with solving real-life challenges for organizations like UNDP, Norwegian Red Cross, Deichman Oslo and Siemens. Additionally, the education has given both practical experience and theoretical knowledge within the design fields of industrial design, service design and systems-oriented design. Elective courses includes behavioral design, branding and platform urbanism."
+  }
+];
+
 export const experience = [
   {
-    "id": 10,
+    "id": 11,
     "time": "Dec 2024–Jan 2026",
     "position": "Designer and developer",
     "type": "Part-time",
@@ -10,17 +23,17 @@ export const experience = [
     "description": "Worked with design and development of websites and digital tools for companies in Northern Norway, and was the product leader and CTO of a startup company."
   },
   {
-    "id": 9,
+    "id": 10,
     "time": "Summer 2025",
     "position": "Designer",
     "location": {
       "name": "Variant Oslo",
       "url": "https://variant.no"
     },
-    "description": "With one designer and two developers, I worked for <a href=\"https://www.sparebank1.no/\" rel=\"external\" target=\"_blank\">Sparebank 1</a> in the pensions department, and helped design an MVP that uses a language model to make it faster and easier to handle cases that must be processed manually."
+    "description": "With one designer and two developers, I worked for <a href=\"https://astridmathilde.no/work/sakshjelper1\">Sparebank 1</a> in the pensions department, and helped design an MVP based on user insight that uses a language model to make it faster and easier to handle cases that must be processed manually. The project included gathering user insight through facilitating workshops and conducting interviews, and we built the solution through an iterative design process where we tested the product on users and made improvements based on feedback and observations."
   },
   {
-    "id": 8,
+    "id": 9,
     "time": "Aug–Des 2024",
     "position": "Designer and research assistant",
     "location": {
@@ -30,17 +43,17 @@ export const experience = [
     "description": "A full-time internship where I worked with interaction design on the research project <a href=\"https://www.oicl.no/projects/openzero/\" rel=\"external\" target=\"_blank\">OpenZero</a>, making design standards for user interfaces that enable ship operators to make energy efficient decisions. I also contributed to the new release of the design system <a href=\"https://www.openbridge.no/\" rel=\"external\" target=\"_blank\">OpenBridge</a>."
   },
   {
-    "id": 7,
+    "id": 8,
     "time": "Summer 2024",
     "position": "Designer",
     "location": {
       "name": "Fremtind Forsikring",
       "url": "https://www.fremtind.no/"
     },
-    "description": "A summer internship where I worked in a product team with 3 other interns, designing and developing an internal application for <a href=\"/work/internship-fremtind\">managing the configuration of insurance products</a>."
+    "description": "I was designer and project leader in a product team with two developers and one designer, designing and developing an internal application for <a href=\"/work/internship-fremtind\">managing the configuration of insurance products</a>. The solution was based on an iterative design process where we user tested as early and often as possible. I led the design process and ensured aligned goals within the team, and contributed to creating a psychological safe environment. The final delivery went beyond what was expected."
   },
   {
-    "id": 6,
+    "id": 7,
     "time": "Feb 2023–Jun 2024",
     "position": "Student Assistant",
     "type": "Part-time",
@@ -51,7 +64,7 @@ export const experience = [
     "description": "I contributed with the design and maintenance of <a href=\"https://www.openbridge.no/\" rel=\"external\" target=\"_blank\">OpenBridge</a>, an open-source design system and UI Kit for advanced mairitime workplaces."
   },
   {
-    "id": 5,
+    "id": 6,
     "time": "Summer 2023",
     "position": "Designer",
     "location": {
@@ -61,7 +74,7 @@ export const experience = [
     "description": "Together with another student and under the guidance of the <a href=\"https://www.openbridge.no/\" rel=\"external\" target=\"_blank\">OpenBridge</a> team, I designed an <a href=\"https://www.seam.no/insights/seam-and-aho-collaborate-on-innovative-bridge-alert-management-system\" rel=\"external\" target=\"_blank\">innovative alert system</a> providing ship operators with rapid situational awareness upon entering the bridge."
   },
   {
-    "id": 4,
+    "id": 5,
     "time": "Summer 2022",
     "position": "Designer",
     "location": {
@@ -71,7 +84,7 @@ export const experience = [
     "description": "I worked with social media for <a href=\"https://becour.com/\" rel=\"external\" target=\"_blank\">Becour</a> and helped design a landing page for <a href=\"https://marbly.com/\" rel=\"external\" target=\"_blank\">Marbly</a>, a platform that makes it easier for companies to source renewable energy."
   },
   {
-    "id": 3,
+    "id": 4,
     "time": "Oct 2021–May 2022",
     "position": "Developer",
     "type": "Part-time",
@@ -82,7 +95,7 @@ export const experience = [
     "description": "A part-time position alongside my design studies. Together with another developer, I was coding websites and landing pages for companies like <a href=\"https://hagal.com/\" rel=\"external\" target=\"_blank\">Hagal</a> and <a href=\"https://gullruten.no/\" rel=\"external\" target=\"_blank\">Stiftelsen Gullruten</a>."
   },
   {
-    "id": 2,
+    "id": 3,
     "time": "Mar 2019–Oct 2021",
     "position": "Designer & Developer",
     "location": {
@@ -92,7 +105,7 @@ export const experience = [
     "description": "I designed and coded websites for companies like <a href=\"https://lolelandskap.no/\" rel=\"external\" target=\"_blank\">Lo:Le Landskap</a>, Barlindhaug Eiendom, Svalbard Bryggeri, and Norinnova. I worked closely with each client, and also had the opportunity to help facilitate design workshops."
   },
   {
-    "id": 1,
+    "id": 2,
     "time": "Jul 2018–Mar 2019",
     "position": "Web Developer",
     "location": {
@@ -101,6 +114,17 @@ export const experience = [
     },
     "description": "A temporary position where I stepped in for another web developer and coded websites from scratch using WordPress as a CMS. I learned about usability, accessibility, search engine optimization and security."
   }, 
+    {
+    "id": 1,
+    "time": "Aug 2016–Jul 2018",
+    "position": "Apprenticeship in graphic design",
+    "type": "Full-time",
+    "location": {
+      "name": "Chiligroup",
+      "url": "https://chiligroup.no"
+    },
+    "description": "I worked with websites, prints and ads for companies like Harstad kommune, Consto, Trollfjord Bredbånd and Bil i Nord."
+  },
   {
     "id": 0,
     "time": "Mar–Jun 2016",
@@ -111,29 +135,6 @@ export const experience = [
       "url": "https://en.uit.no/startsida"
     },
     "description": "Two days a week as part of a subject in high school. I designed illustrations, posters and brochures for the university."
-  }
-];
-
-export const education = [
-  {
-    "id": 0,
-    "time": "Aug 2021->",
-    "grade": "Master of Design",
-    "location": {
-      "name": "The Oslo School of Architecture and Design",
-      "url": "https://aho.no"
-    },
-    "description": "Includes industrial design, service design and systems-oriented design, but with a specialization in interaction design and strategic design. Elective courses includes behavioral design, systems-oriented design, branding and platform urbanism – among others."
-  },
-  {
-    "id": 1,
-    "time": "Aug 2016–Jul 2018",
-    "grade": "Craft certificate in graphic design",
-    "location": {
-      "name": "Chiligroup",
-      "url": "https://chiligroup.no/"
-    },
-    "description": "A two-year apprenticeship where I worked with websites, prints and ads for companies like Harstad kommune, Consto, Trollfjord Bredbånd and Bil i Nord."
   }
 ];
 
