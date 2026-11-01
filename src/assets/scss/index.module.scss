@@ -2,10 +2,10 @@
 
 .selectedWork {
   a + a {
-    margin-top: variables.$padding;
+    margin-top: calc(variables.$padding * 2);
   }
 
-  @media all and (min-width: variables.$screen-md) {
+  @media all and (min-width: variables.$screen-col) {
     display: flex;
     gap: variables.$padding;
 

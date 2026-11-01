@@ -16,7 +16,11 @@
 
 .small {
   margin-top: 0;
-  font-size: 0.7em;
+  font-size: 0.8em;
+
+  @media all and (min-width: variables.$screen-lg) {
+    font-size: 0.7em;
+  }
 }
 
 .large {

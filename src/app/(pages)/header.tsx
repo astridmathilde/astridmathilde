@@ -3,7 +3,6 @@
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 
-import HeaderIcon from "../../components/header-icon";
 import LightSwitch from "../../components/light-switch";
 import styles from "../../assets/scss/layout.module.scss";
 
@@ -11,9 +10,9 @@ export default function Header() {
   const pathname = usePathname();
 
   return (
-    <header id={styles.header} className={"text-large"}>
+    <header id={styles.header} className={"text-small"}>
 
-    <h1 className={styles.title}><Link href="/"><HeaderIcon />astrid mathilde</Link></h1>
+    <h1 className={styles.title}><Link href="/">Astrid Mathilde</Link></h1>
 
     <nav id="primaryNav" className={styles.nav}>
     <ul>

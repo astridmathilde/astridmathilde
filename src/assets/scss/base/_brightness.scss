@@ -138,7 +138,7 @@ html {
       font-weight: $text-large;
 
       @media all and (min-width: variables.$screen-xl) {
-        font-weight: xalx($text-large - 30);
+        font-weight: calc($text-large - 30);
       }
     }
 
