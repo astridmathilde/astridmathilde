@@ -3,6 +3,7 @@
 import {useTheme} from "next-themes";
 import { useEffect, useState } from "react";
 import BlockIcon from "../icon";
+import style from "./style.module.scss";
 
 export default function LightSwitch() {
   const [mounted, setMounted] = useState(false);
@@ -16,7 +17,7 @@ export default function LightSwitch() {
 
   return (
     <>
-    <button onClick={() => setTheme(theme === "dark" ? "light" : "dark")} aria-label="Switch theme"><BlockIcon>{theme === "dark" ? "🌞"  : "🌘"}</BlockIcon></button>
+    <button className={style.button} onClick={() => setTheme(theme === "dark" ? "light" : "dark")} aria-label="Switch theme"><BlockIcon>{theme === "dark" ? "🌞"  : "🌘"}</BlockIcon></button>
     </>
     )
   };
