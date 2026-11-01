@@ -3,8 +3,13 @@
 .project {
   display: block;
   align-content: center;
-  font-size: 0.9em;
+  font-size: 0.8em;
   text-decoration: none;
+  text-transform: lowercase;
+
+  @media all and (min-width: variables.$screen-lg) {
+    font-size: 0.7em;
+  }
 
   article {
     display: flex;
@@ -16,7 +21,7 @@
     border-radius: variables.$border-radius;
     transition: all variables.$duration-fast ease-in-out;
 
-    @media all and (min-width: variables.$screen-md) {
+    @media all and (min-width: variables.$screen-col) {
       display: flex;
       overflow: hidden;
       align-items: center;
@@ -38,7 +43,6 @@
     display: flex;
     justify-content: space-between;
     margin-top: 0.5em;
-    font-size: 0.8em;
     transition: all variables.$duration-fast ease-in-out;
 
     .meta {
