@@ -1,8 +1,8 @@
 import { cache } from 'react'
 import { sanityFetch } from '../client'
-import { ENTRY_QUERY, ENTRIES_QUERY, RELATED_ENTRIES_QUERY, INDEX_QUERY, NOW_QUERY, BIO_QUERY, STATUS_QUERY, LINKS_QUERY } from './queries';
+import { ENTRY_QUERY, ENTRIES_QUERY, RELATED_ENTRIES_QUERY, INDEX_QUERY, NOW_QUERY, BIO_QUERY, STATUS_QUERY, LINKS_QUERY, COLOPHON_QUERY } from './queries';
 
-/* ENTRIES */
+/* PROJECTS */
 export const getEntry = cache(async (params) => {
   const result = await sanityFetch({
     query: ENTRY_QUERY,
@@ -15,8 +15,7 @@ export const getEntry = cache(async (params) => {
 export const getAllEntries = cache(async () => {
   const result = await sanityFetch({
     query: ENTRIES_QUERY,
-    revalidate: 60
-    //tags: ['entries']
+    tags: ['project']
   });
   return result;
 });
@@ -25,8 +24,7 @@ export const getMoreEntries = cache(async (params) => {
   const result = await sanityFetch({
     query: RELATED_ENTRIES_QUERY,
     params: await params,
-    revalidate: 60
-    //tags: ['entries']
+    tags: ['project']
   });
   return result;
 });
@@ -35,8 +33,7 @@ export const getMoreEntries = cache(async (params) => {
 export const getIndex = cache(async () => {
   const result = await sanityFetch({
     query: INDEX_QUERY,
-    revalidate: 60
-    //tags: ['index']
+    tags: ['page']
   });
   return result;
 });
@@ -44,18 +41,23 @@ export const getIndex = cache(async () => {
 export const getNow = cache(async () => {
   const result = await sanityFetch({
     query: NOW_QUERY,
-    revalidate: 60
-    //tags: ['now']
+    tags: ['page']
   });
   return result;
 });
 
-
 export const getBio = cache(async () => {
   const result = await sanityFetch({
     query: BIO_QUERY,
-    //revalidate: 60
-    //tags: ['bio']
+    tags: ['page']
+  });
+  return result;
+});
+
+export const getColophon = cache(async () => {
+  const result = await sanityFetch({
+    query: COLOPHON_QUERY,
+    tags: ['page']
   });
   return result;
 });
@@ -64,8 +66,7 @@ export const getBio = cache(async () => {
 export const getCurrentStatus = cache(async () => {
   const result = await sanityFetch({
     query: STATUS_QUERY,
-    revalidate: 60
-    //tags: ['status']
+    tags: ['module']
   });
   return result;
 });
@@ -73,8 +74,7 @@ export const getCurrentStatus = cache(async () => {
 export const getLinks = cache(async () => {
   const result = await sanityFetch({
     query: LINKS_QUERY,
-    revalidate: 60
-    //tags: ['links']
+    tags: ['module']
   });
   return result;
 });

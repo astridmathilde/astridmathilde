@@ -3,6 +3,7 @@ import { createClient, type QueryParams  } from "next-sanity";
 export const client = createClient({
   projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID,
   dataset: process.env.NEXT_PUBLIC_SANITY_DATASET,
+  perspective: 'published',
   apiVersion: "2026-05-15",
   useCdn: false,
 });

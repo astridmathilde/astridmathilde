@@ -3,7 +3,7 @@ import { urlFor } from '../../sanity/lib/image';
 import { getImageDimensions } from '@sanity/asset-utils';
 import style from './style.module.scss';
 
-export default function BlockImage({value, caption}) {
+export default function BlockImage({value, caption, alt}) {
    const {width, height} = getImageDimensions(value); 
 
   return (
@@ -11,7 +11,7 @@ export default function BlockImage({value, caption}) {
     <figure className={style.image}>
     <Image
     src={urlFor(value).url()}
-    alt={value.alt || ""}
+    alt={alt}
     loading="lazy"
     width={width}
     height={height}

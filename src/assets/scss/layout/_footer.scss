@@ -20,6 +20,11 @@
     padding: variables.$padding;
     margin-top: 0;
     margin-bottom: 0;
+    pointer-events: none;
+
+    * {
+      pointer-events: auto;
+    }
   }
 
   @media all and (min-width: variables.$screen-xl) {

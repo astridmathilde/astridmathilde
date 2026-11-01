@@ -5,15 +5,22 @@
 */
 
 import { getSingleBlikkjournal } from '../../../../lib/notion';
-import { NextResponse } from 'next/server';
+import { NextResponse, revalidateTag } from 'next/server';
 
 export async function GET(request, { params }) {
   const { entryId } = await params;
   
   try {
     const entry = await getSingleBlikkjournal(entryId); 
-    const imgUrl = entry.properties.Image.files[0]?.file.url;     
-    const imageResponse = await fetch(imgUrl);
+    let imgUrl = entry.properties.Image.files[0]?.file.url;     
+    let imageResponse = await fetch(imgUrl);
+
+    if (!imageResponse.ok) {
+      revalidateTag('singleEntry', null);
+      const freshEntry = await getSingleBlikkjournal(entryId);
+      imgUrl = freshEntry.properties.Image.files[0]?.file.url;
+      imageResponse = await fetch(imgUrl);
+    }
     
     const headers = {
       'Content-Type': imageResponse.headers.get('content-type'),

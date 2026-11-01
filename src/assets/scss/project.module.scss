@@ -37,13 +37,14 @@
   .container {
     position: relative;
     margin-top: calc(variables.$spacing / 2);
-    margin-bottom: variables.$spacing;
+    margin-bottom: calc(variables.$spacing * 1.25);
 
     @media all and (min-width: variables.$screen-md) {
       display: grid;
       grid-template-columns: 3fr 9fr;
       gap: 0 2.5em;
       justify-items: start;
+      margin-bottom: calc(variables.$spacing * 2);
     }
 
     @media all and (min-width: variables.$screen-lg) {
@@ -105,6 +106,20 @@
               }
             }
           }
+
+          &.links {
+            ul {
+              li + li {
+                margin-top: 0.2em;
+              }
+
+              a {
+                &:after {
+                  content: " ->";
+                }
+              }
+            }
+          }
         }
       }
     }
@@ -123,6 +138,22 @@
         }
       }
 
+      figure,
+      video {
+        margin-top: calc(variables.$spacing * 0.6) !important;
+
+        + figure,
+        + video {
+          margin-top: calc(variables.$spacing * 0.5) !important;
+        }
+      }
+
+      figure {
+        figcaption {
+          margin-bottom: calc(variables.$spacing * 0.5);
+        }
+      }
+
       h3 {
         margin-top: 2.5em;
 
@@ -136,7 +167,12 @@
   .projectNav {
     display: grid;
     grid-template-columns: 1fr;
-    gap: calc(variables.$padding / 4);
+    gap: calc(variables.$padding / 2);
+
+    img {
+      object-fit: cover;
+      height: 70vw !important;
+    }
 
     @media all and (min-width: variables.$screen-md) {
       grid-template-columns: 1fr 1fr 1fr;
@@ -148,8 +184,9 @@
       }
     }
 
-    @media all and (min-width: variables.$screen-xl) {
+    @media all and (min-width: variables.$screen-lg) {
       img {
+        object-fit: cover;
         height: 20vw !important;
       }
     }

@@ -13,6 +13,7 @@ const nextConfig = {
         hostname: 'cdn.sanity.io',
       },
     ],
+    formats: ['image/avif', 'image/webp'],
   },
   turbopack: {
     root: path.join(__dirname, '..'),

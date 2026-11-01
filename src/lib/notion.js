@@ -1,4 +1,5 @@
 import { Client } from "@notionhq/client";
+import { isFullPage } from '@notionhq/client'
 import { unstable_cache } from "next/cache";
 
 const notion = new Client({
@@ -8,16 +9,22 @@ const notion = new Client({
 
 const dataSourceId = process.env.NOTION_DATA_SOURCE_ID;
 
-export async function getBlikkjournal() {  
-  const response = await notion.dataSources.query({
-    data_source_id: dataSourceId,
-    sorts: [{ property: "Time", direction: "descending" }],
-    page_size: 1,
-  });
-  
-  return {
-    results: response.results,
-  };
+export async function getBlikkjournal(count = 1) {
+  return unstable_cache(
+    async () => {
+      const response = await notion.dataSources.query({
+        data_source_id: dataSourceId,
+        sorts: [{ property: "Time", direction: "descending" }],
+        page_size: 1,
+      });
+
+      return {
+        results: response.results.filter(isFullPage),
+      };
+    },
+    ["blikkjournal", String(count)],
+    { tags: ["blikkjournal"] }
+  )();
 }
 
 export async function getSingleBlikkjournal(pageId) {
