@@ -14,35 +14,4 @@
       margin-top: 0 !important;
     }
   }
-
-  @media all and (min-width: variables.$screen-lg) {
-    a {
-      header {
-        transition: all variables.$duration-fast ease-in-out;
-      }
-
-      figure {
-        opacity: 0.85;
-        filter: alpha(opacity=85);
-        transition: all variables.$duration-fast ease-in-out;
-      }
-
-      &:hover,
-      &:focus {
-        header {
-          opacity: 0.75 !important;
-          filter: alpha(opacity=75) !important;
-          transition: all variables.$duration-normal ease-in-out;
-
-          li,
-          p {
-            text-decoration: underline;
-            text-decoration-color: inherit;
-            text-underline-offset: 2px;
-            text-decoration-skip-ink: none;
-          }
-        }
-      }
-    }
-  }
 }
