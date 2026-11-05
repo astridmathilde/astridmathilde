@@ -101,6 +101,11 @@
     @media all and (max-width: variables.$screen-md) {
       background-color: variables.$color-background;
     }
+
+    a,
+    a.active {
+      text-decoration-color: variables.$color-link-hover;
+    }
   }
 }
 
@@ -110,6 +115,11 @@
 
     @media all and (max-width: variables.$screen-md) {
       background-color: variables.$dark-color-background;
+    }
+
+    a,
+    a.active {
+      text-decoration-color: variables.$dark-color-link-hover;
     }
   }
 }
